@@ -1,1 +1,1 @@
-S3_OPENGL_Projet
+OpenGL Project on IMAC 3rd Semester
