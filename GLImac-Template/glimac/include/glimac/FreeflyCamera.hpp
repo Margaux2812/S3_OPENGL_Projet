@@ -18,10 +18,10 @@ namespace glimac {
 
 		//Méthodes
 		void computeDirectionVectors(glm::vec3 &m_FrontVector, glm::vec3 &m_LeftVector, glm::vec3 &m_UpVector, const float m_fPhi, const float m_fTheta);
-		void moveLeft(const float t);
-		void moveFront(const float t);
-		void rotateLeft(const float degrees);
-		void rotateUp(const float degrees);
+		void moveLeft(const float &t);
+		void moveFront(const float &t);
+		void rotateLeft(const float &degrees);
+		void rotateUp(const float &degrees);
 		glm::mat4 getViewMatrix() const;
 	};
 }

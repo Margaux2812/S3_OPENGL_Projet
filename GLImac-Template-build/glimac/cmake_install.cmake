@@ -1,4 +1,4 @@
-# Install script for directory: /home/margaux/Documents/S3_OPENGL/GLImac-Template/glimac
+# Install script for directory: /home/margaux/Documents/S3_OPENGL_Projet/GLImac-Template/glimac
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL/GLImac-Template
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet/GLImac-Template
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL/GLImac-Template-build
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet/GLImac-Template-build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL/GLImac-Template-build/CMakeFiles /home/margaux/Documents/S3_OPENGL/GLImac-Template-build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/GLImac-Template-build/CMakeFiles /home/margaux/Documents/S3_OPENGL_Projet/GLImac-Template-build/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL/GLImac-Template-build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/GLImac-Template-build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -122,175 +122,6 @@ glimac: cmake_check_build_system
 glimac/fast:
 	$(MAKE) -f glimac/CMakeFiles/glimac.dir/build.make glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo5_disque_couleur
-
-# Build rule for target.
-TP1_exo5_disque_couleur: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo5_disque_couleur
-.PHONY : TP1_exo5_disque_couleur
-
-# fast build rule for target.
-TP1_exo5_disque_couleur/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo5_disque_couleur.dir/build.make TP1/CMakeFiles/TP1_exo5_disque_couleur.dir/build
-.PHONY : TP1_exo5_disque_couleur/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo7_buffer_index_cercle
-
-# Build rule for target.
-TP1_exo7_buffer_index_cercle: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo7_buffer_index_cercle
-.PHONY : TP1_exo7_buffer_index_cercle
-
-# fast build rule for target.
-TP1_exo7_buffer_index_cercle/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo7_buffer_index_cercle.dir/build.make TP1/CMakeFiles/TP1_exo7_buffer_index_cercle.dir/build
-.PHONY : TP1_exo7_buffer_index_cercle/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo1_triangle_blanc
-
-# Build rule for target.
-TP1_exo1_triangle_blanc: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo1_triangle_blanc
-.PHONY : TP1_exo1_triangle_blanc
-
-# fast build rule for target.
-TP1_exo1_triangle_blanc/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build.make TP1/CMakeFiles/TP1_exo1_triangle_blanc.dir/build
-.PHONY : TP1_exo1_triangle_blanc/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo6_buffer_index
-
-# Build rule for target.
-TP1_exo6_buffer_index: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo6_buffer_index
-.PHONY : TP1_exo6_buffer_index
-
-# fast build rule for target.
-TP1_exo6_buffer_index/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo6_buffer_index.dir/build.make TP1/CMakeFiles/TP1_exo6_buffer_index.dir/build
-.PHONY : TP1_exo6_buffer_index/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo2_triangle_couleur
-
-# Build rule for target.
-TP1_exo2_triangle_couleur: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo2_triangle_couleur
-.PHONY : TP1_exo2_triangle_couleur
-
-# fast build rule for target.
-TP1_exo2_triangle_couleur/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo2_triangle_couleur.dir/build.make TP1/CMakeFiles/TP1_exo2_triangle_couleur.dir/build
-.PHONY : TP1_exo2_triangle_couleur/fast
-
-#=============================================================================
-# Target rules for targets named TP1_SDLtemplate
-
-# Build rule for target.
-TP1_SDLtemplate: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_SDLtemplate
-.PHONY : TP1_SDLtemplate
-
-# fast build rule for target.
-TP1_SDLtemplate/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_SDLtemplate.dir/build.make TP1/CMakeFiles/TP1_SDLtemplate.dir/build
-.PHONY : TP1_SDLtemplate/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo3_structure_vertex
-
-# Build rule for target.
-TP1_exo3_structure_vertex: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo3_structure_vertex
-.PHONY : TP1_exo3_structure_vertex
-
-# fast build rule for target.
-TP1_exo3_structure_vertex/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build.make TP1/CMakeFiles/TP1_exo3_structure_vertex.dir/build
-.PHONY : TP1_exo3_structure_vertex/fast
-
-#=============================================================================
-# Target rules for targets named TP1_exo4_quad_couleur
-
-# Build rule for target.
-TP1_exo4_quad_couleur: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP1_exo4_quad_couleur
-.PHONY : TP1_exo4_quad_couleur
-
-# fast build rule for target.
-TP1_exo4_quad_couleur/fast:
-	$(MAKE) -f TP1/CMakeFiles/TP1_exo4_quad_couleur.dir/build.make TP1/CMakeFiles/TP1_exo4_quad_couleur.dir/build
-.PHONY : TP1_exo4_quad_couleur/fast
-
-#=============================================================================
-# Target rules for targets named TP2_exo1_triangle_couleur
-
-# Build rule for target.
-TP2_exo1_triangle_couleur: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP2_exo1_triangle_couleur
-.PHONY : TP2_exo1_triangle_couleur
-
-# fast build rule for target.
-TP2_exo1_triangle_couleur/fast:
-	$(MAKE) -f TP2/CMakeFiles/TP2_exo1_triangle_couleur.dir/build.make TP2/CMakeFiles/TP2_exo1_triangle_couleur.dir/build
-.PHONY : TP2_exo1_triangle_couleur/fast
-
-#=============================================================================
-# Target rules for targets named TP2_exo2_triangle_nb
-
-# Build rule for target.
-TP2_exo2_triangle_nb: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP2_exo2_triangle_nb
-.PHONY : TP2_exo2_triangle_nb
-
-# fast build rule for target.
-TP2_exo2_triangle_nb/fast:
-	$(MAKE) -f TP2/CMakeFiles/TP2_exo2_triangle_nb.dir/build.make TP2/CMakeFiles/TP2_exo2_triangle_nb.dir/build
-.PHONY : TP2_exo2_triangle_nb/fast
-
-#=============================================================================
-# Target rules for targets named TP2_exo3_mandelbroot
-
-# Build rule for target.
-TP2_exo3_mandelbroot: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP2_exo3_mandelbroot
-.PHONY : TP2_exo3_mandelbroot
-
-# fast build rule for target.
-TP2_exo3_mandelbroot/fast:
-	$(MAKE) -f TP2/CMakeFiles/TP2_exo3_mandelbroot.dir/build.make TP2/CMakeFiles/TP2_exo3_mandelbroot.dir/build
-.PHONY : TP2_exo3_mandelbroot/fast
-
-#=============================================================================
-# Target rules for targets named TP2_exo4
-
-# Build rule for target.
-TP2_exo4: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP2_exo4
-.PHONY : TP2_exo4
-
-# fast build rule for target.
-TP2_exo4/fast:
-	$(MAKE) -f TP2/CMakeFiles/TP2_exo4.dir/build.make TP2/CMakeFiles/TP2_exo4.dir/build
-.PHONY : TP2_exo4/fast
-
-#=============================================================================
-# Target rules for targets named TP2_exo5
-
-# Build rule for target.
-TP2_exo5: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP2_exo5
-.PHONY : TP2_exo5
-
-# fast build rule for target.
-TP2_exo5/fast:
-	$(MAKE) -f TP2/CMakeFiles/TP2_exo5.dir/build.make TP2/CMakeFiles/TP2_exo5.dir/build
-.PHONY : TP2_exo5/fast
 
 #=============================================================================
 # Target rules for targets named TP3_exo_7
@@ -383,45 +214,6 @@ TP3_exo_5/fast:
 	$(MAKE) -f TP3/CMakeFiles/TP3_exo_5.dir/build.make TP3/CMakeFiles/TP3_exo_5.dir/build
 .PHONY : TP3_exo_5/fast
 
-#=============================================================================
-# Target rules for targets named TP_template_SDLtemplate
-
-# Build rule for target.
-TP_template_SDLtemplate: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TP_template_SDLtemplate
-.PHONY : TP_template_SDLtemplate
-
-# fast build rule for target.
-TP_template_SDLtemplate/fast:
-	$(MAKE) -f TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build.make TP_template/CMakeFiles/TP_template_SDLtemplate.dir/build
-.PHONY : TP_template_SDLtemplate/fast
-
-#=============================================================================
-# Target rules for targets named TPgarbage_SDLtemplate
-
-# Build rule for target.
-TPgarbage_SDLtemplate: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TPgarbage_SDLtemplate
-.PHONY : TPgarbage_SDLtemplate
-
-# fast build rule for target.
-TPgarbage_SDLtemplate/fast:
-	$(MAKE) -f TPgarbage/CMakeFiles/TPgarbage_SDLtemplate.dir/build.make TPgarbage/CMakeFiles/TPgarbage_SDLtemplate.dir/build
-.PHONY : TPgarbage_SDLtemplate/fast
-
-#=============================================================================
-# Target rules for targets named TPgarbage_foo
-
-# Build rule for target.
-TPgarbage_foo: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 TPgarbage_foo
-.PHONY : TPgarbage_foo
-
-# fast build rule for target.
-TPgarbage_foo/fast:
-	$(MAKE) -f TPgarbage/CMakeFiles/TPgarbage_foo.dir/build.make TPgarbage/CMakeFiles/TPgarbage_foo.dir/build
-.PHONY : TPgarbage_foo/fast
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -431,19 +223,6 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
 	@echo "... glimac"
-	@echo "... TP1_exo5_disque_couleur"
-	@echo "... TP1_exo7_buffer_index_cercle"
-	@echo "... TP1_exo1_triangle_blanc"
-	@echo "... TP1_exo6_buffer_index"
-	@echo "... TP1_exo2_triangle_couleur"
-	@echo "... TP1_SDLtemplate"
-	@echo "... TP1_exo3_structure_vertex"
-	@echo "... TP1_exo4_quad_couleur"
-	@echo "... TP2_exo1_triangle_couleur"
-	@echo "... TP2_exo2_triangle_nb"
-	@echo "... TP2_exo3_mandelbroot"
-	@echo "... TP2_exo4"
-	@echo "... TP2_exo5"
 	@echo "... TP3_exo_7"
 	@echo "... TP3_exo_2"
 	@echo "... TP3_exo_6"
@@ -451,9 +230,6 @@ help:
 	@echo "... TP3_exo_3"
 	@echo "... TP3_exo_4"
 	@echo "... TP3_exo_5"
-	@echo "... TP_template_SDLtemplate"
-	@echo "... TPgarbage_SDLtemplate"
-	@echo "... TPgarbage_foo"
 .PHONY : help
 
 
