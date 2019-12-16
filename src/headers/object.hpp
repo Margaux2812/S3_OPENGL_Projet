@@ -2,7 +2,6 @@
 
 #include <glm/glm.hpp>
 
-#include "shader.h"
 
 // HERITE DE OBJET
 
@@ -17,20 +16,23 @@ private:
     glm::vec3 position;
     unsigned int m_vao;
     unsigned int m_ib;
-    Shader m_shader;
+    std::string m_VertexShader;
+    std::string m_FragmentShader;
 
 
     ///// GETTER //////
     unsigned int Object::getVao();
     unsigned int Object::getIb();
-    Shader Object::getShader();
+    std::string Object::getVertexShader();
+    std::string Object::getFrangmentShader();
     glm::vec3 Object::getPosition();
 
 
     ///// SETTER //////
     void Object::setVao(unsigned int newVao);
-    void Object::setIb(unsigned int IbVao));
-    void Object::setShader(Shader newShader);
+    void Object::setIb(unsigned int IbVao);
+    void Object::setVertexShader(std::string newVS);
+    void Object::setFrangmentShader(std::string newFs);
     void Object::setPosition(glm::vec3 newPos);
 
     
