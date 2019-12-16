@@ -2,7 +2,7 @@
 
 #include <glm/glm.hpp>
 
-#include "object.h"
+#include "object.hpp"
 
 // HERITE DE OBJET
 

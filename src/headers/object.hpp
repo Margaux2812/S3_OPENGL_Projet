@@ -1,9 +1,9 @@
 #pragma once
 
 #include <glm/glm.hpp>
-
-
-// HERITE DE OBJET
+#include <glimac/SDLWindowManager.hpp>
+#include <glimac/glm.hpp>
+#include <string>
 
 class Object  {
 public:
