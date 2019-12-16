@@ -1,5 +1,5 @@
 #include <glimac/SDLWindowManager.hpp>
-#include <GL/glad.h>
+#include <glad/glad.h>
 #include <iostream>
 #include <glimac/Program.hpp>
 #include <glimac/FilePath.hpp>

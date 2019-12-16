@@ -1,7 +1,5 @@
 #pragma once
 
-#include <glm/glm.hpp>
-
 #include "object.hpp"
 
 // HERITE DE OBJET
