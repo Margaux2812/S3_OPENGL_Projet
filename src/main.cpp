@@ -1,5 +1,5 @@
 #include <glimac/SDLWindowManager.hpp>
-#include <GL/glew.h>
+#include <GL/glad.h>
 #include <iostream>
 #include <glimac/Program.hpp>
 #include <glimac/FilePath.hpp>
@@ -12,15 +12,15 @@ using namespace glimac;
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(1920, 1050, "WORLD_IMACker");
-    // Initialize glew for OpenGL3+ support
-    GLenum glewInitError = glewInit();
-    if(GLEW_OK != glewInitError) {
-        std::cerr << glewGetErrorString(glewInitError) << std::endl;
+    // Initialize glad for OpenGL3+ support
+    GLenum gladInitError = gladInit();
+    if(GLAD_OK != gladInitError) {
+        std::cerr << gladGetErrorString(gladInitError) << std::endl;
         return EXIT_FAILURE;
     }
 
     std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
-    std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
+    std::cout << "GLAD Version : " << gladGetString(GLAD_VERSION) << std::endl;
 
     /*********************************
      * HERE SHOULD COME THE INITIALIZATION CODE
