@@ -34,7 +34,6 @@ private:
     void Object::setVertexShader(std::string newVS);
     void Object::setFrangmentShader(std::string newFs);
     void Object::setPosition(glm::vec3 newPos);
-
     
 };
 
