@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _Selector_hpp_
+#define _Selector_hpp_
 
 #include "object.hpp"
 
@@ -13,3 +14,5 @@ public:
     void drawSelector();
     
 };
+
+#endif

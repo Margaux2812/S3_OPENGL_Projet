@@ -1,4 +1,5 @@
-#pragma once
+#ifndef _Object_hpp_
+#define _Object_hpp_
 
 #include <glm/glm.hpp>
 #include <glimac/SDLWindowManager.hpp>
@@ -37,6 +38,4 @@ private:
     
 };
 
-
-
-
+#endif
