@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o"
   "CMakeFiles/opengl-tutorials.dir/src/app.cpp.o"
   "CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o"
   "CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o"
@@ -6,6 +7,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/opengl-tutorials.dir/src/main.cpp.o"
   "CMakeFiles/opengl-tutorials.dir/src/object.cpp.o"
   "CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o"
+  "CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o"
   "CMakeFiles/opengl-tutorials.dir/src/util.cpp.o"
   "bin/opengl-tutorials.pdb"
   "bin/opengl-tutorials"

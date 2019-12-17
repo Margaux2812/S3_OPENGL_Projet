@@ -57,9 +57,22 @@ include CMakeFiles/opengl-tutorials.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/opengl-tutorials.dir/flags.make
 
+CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
+CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o: src/FreeflyCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/FreeflyCamera.cpp"
+
+CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/FreeflyCamera.cpp" > CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.i
+
+CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/FreeflyCamera.cpp" -o CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.s
+
 CMakeFiles/opengl-tutorials.dir/src/app.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/app.cpp.o: src/app.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/app.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/app.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/app.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/app.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/app.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/opengl-tutorials.dir/src/app.cpp.s: cmake_force
 
 CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o: src/camera.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/camera.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/camera.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/opengl-tutorials.dir/src/camera.cpp.s: cmake_force
 
 CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o: src/cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/cube.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/cube.cpp.i: cmake_force
@@ -98,7 +111,7 @@ CMakeFiles/opengl-tutorials.dir/src/cube.cpp.s: cmake_force
 
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: src/gl_exception.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/gl_exception.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.i: cmake_force
@@ -111,7 +124,7 @@ CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.s: cmake_force
 
 CMakeFiles/opengl-tutorials.dir/src/main.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/main.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/main.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/main.cpp.i: cmake_force
@@ -124,7 +137,7 @@ CMakeFiles/opengl-tutorials.dir/src/main.cpp.s: cmake_force
 
 CMakeFiles/opengl-tutorials.dir/src/object.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/object.cpp.o: src/object.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/object.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/object.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/object.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/object.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/object.cpp.i: cmake_force
@@ -137,7 +150,7 @@ CMakeFiles/opengl-tutorials.dir/src/object.cpp.s: cmake_force
 
 CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o: src/selector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/selector.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/selector.cpp.i: cmake_force
@@ -148,9 +161,22 @@ CMakeFiles/opengl-tutorials.dir/src/selector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl-tutorials.dir/src/selector.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/selector.cpp" -o CMakeFiles/opengl-tutorials.dir/src/selector.cpp.s
 
+CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
+CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o: src/shader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/shader.cpp"
+
+CMakeFiles/opengl-tutorials.dir/src/shader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/opengl-tutorials.dir/src/shader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/shader.cpp" > CMakeFiles/opengl-tutorials.dir/src/shader.cpp.i
+
+CMakeFiles/opengl-tutorials.dir/src/shader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/opengl-tutorials.dir/src/shader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/shader.cpp" -o CMakeFiles/opengl-tutorials.dir/src/shader.cpp.s
+
 CMakeFiles/opengl-tutorials.dir/src/util.cpp.o: CMakeFiles/opengl-tutorials.dir/flags.make
 CMakeFiles/opengl-tutorials.dir/src/util.cpp.o: src/util.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/util.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/opengl-tutorials.dir/src/util.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/opengl-tutorials.dir/src/util.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/util.cpp"
 
 CMakeFiles/opengl-tutorials.dir/src/util.cpp.i: cmake_force
@@ -163,6 +189,7 @@ CMakeFiles/opengl-tutorials.dir/src/util.cpp.s: cmake_force
 
 # Object files for target opengl-tutorials
 opengl__tutorials_OBJECTS = \
+"CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o" \
 "CMakeFiles/opengl-tutorials.dir/src/app.cpp.o" \
 "CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o" \
 "CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o" \
@@ -170,11 +197,13 @@ opengl__tutorials_OBJECTS = \
 "CMakeFiles/opengl-tutorials.dir/src/main.cpp.o" \
 "CMakeFiles/opengl-tutorials.dir/src/object.cpp.o" \
 "CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o" \
+"CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o" \
 "CMakeFiles/opengl-tutorials.dir/src/util.cpp.o"
 
 # External object files for target opengl-tutorials
 opengl__tutorials_EXTERNAL_OBJECTS =
 
+bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/app.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o
@@ -182,13 +211,14 @@ bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/main.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/object.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o
+bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/src/util.cpp.o
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/build.make
 bin/opengl-tutorials: /usr/lib/x86_64-linux-gnu/libGL.so
 bin/opengl-tutorials: /usr/lib/x86_64-linux-gnu/libGLU.so
 bin/opengl-tutorials: libGLAD.a
 bin/opengl-tutorials: CMakeFiles/opengl-tutorials.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/opengl-tutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Linking CXX executable bin/opengl-tutorials"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/opengl-tutorials.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

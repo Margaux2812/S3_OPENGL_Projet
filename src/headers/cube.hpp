@@ -10,7 +10,6 @@ public:
     Cube(glm::vec3 position); // Nécessaire ? Ou ajouter : Object(glm::vec3 position)
     ~Cube();
 
-<<<<<<< Updated upstream
     void print();
     void drawCube();
     void addCube();

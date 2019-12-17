@@ -12,23 +12,19 @@ int main(int argc, char *argv[]) {
     App app;
     Cube myCube;
     Cube myCube2;
+
+
+    ////***MAP WORLD***////
+
+    
+    ////**************////
     // Créer un tableau fixe de cube invisibles
     // Init chaque cube
     // Créer le selecteur
 
 
     glClearColor(1, 0, 1, 1);
-
-<<<<<<< Updated upstream
     while (app.isRunning()) {
-=======
-    Cube myCube(glm::vec3(0, 0, 0));
-
-    // Application loop:
-    bool done = false;
-    while(!done) {
-        // Event loop:
->>>>>>> Stashed changes
         SDL_Event e;
         while (SDL_PollEvent(&e)) {
             switch (e.type) {
@@ -53,20 +49,10 @@ int main(int argc, char *argv[]) {
             };
         }
 
-<<<<<<< Updated upstream
         app.beginFrame();
 
         myCube.drawCube();
         myCube2.drawCube();
-=======
-        /*********************************
-         * HERE SHOULD COME THE RENDERING CODE
-         *********************************/
-        cube.draw();
-        // Update the display
-        windowManager.swapBuffers();
-    }
->>>>>>> Stashed changes
 
         app.endFrame();
     }

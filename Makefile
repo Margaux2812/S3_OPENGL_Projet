@@ -163,6 +163,33 @@ lib/glad/src/glad.c.s:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/lib/glad/src/glad.c.s
 .PHONY : lib/glad/src/glad.c.s
 
+src/FreeflyCamera.o: src/FreeflyCamera.cpp.o
+
+.PHONY : src/FreeflyCamera.o
+
+# target to build an object file
+src/FreeflyCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o
+.PHONY : src/FreeflyCamera.cpp.o
+
+src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
+
+.PHONY : src/FreeflyCamera.i
+
+# target to preprocess a source file
+src/FreeflyCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.i
+.PHONY : src/FreeflyCamera.cpp.i
+
+src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
+
+.PHONY : src/FreeflyCamera.s
+
+# target to generate assembly for a file
+src/FreeflyCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.s
+.PHONY : src/FreeflyCamera.cpp.s
+
 src/app.o: src/app.cpp.o
 
 .PHONY : src/app.o
@@ -352,6 +379,33 @@ src/selector.cpp.s:
 	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/selector.cpp.s
 .PHONY : src/selector.cpp.s
 
+src/shader.o: src/shader.cpp.o
+
+.PHONY : src/shader.o
+
+# target to build an object file
+src/shader.cpp.o:
+	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o
+.PHONY : src/shader.cpp.o
+
+src/shader.i: src/shader.cpp.i
+
+.PHONY : src/shader.i
+
+# target to preprocess a source file
+src/shader.cpp.i:
+	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/shader.cpp.i
+.PHONY : src/shader.cpp.i
+
+src/shader.s: src/shader.cpp.s
+
+.PHONY : src/shader.s
+
+# target to generate assembly for a file
+src/shader.cpp.s:
+	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/shader.cpp.s
+.PHONY : src/shader.cpp.s
+
 src/util.o: src/util.cpp.o
 
 .PHONY : src/util.o
@@ -392,6 +446,9 @@ help:
 	@echo "... lib/glad/src/glad.o"
 	@echo "... lib/glad/src/glad.i"
 	@echo "... lib/glad/src/glad.s"
+	@echo "... src/FreeflyCamera.o"
+	@echo "... src/FreeflyCamera.i"
+	@echo "... src/FreeflyCamera.s"
 	@echo "... src/app.o"
 	@echo "... src/app.i"
 	@echo "... src/app.s"
@@ -413,6 +470,9 @@ help:
 	@echo "... src/selector.o"
 	@echo "... src/selector.i"
 	@echo "... src/selector.s"
+	@echo "... src/shader.o"
+	@echo "... src/shader.i"
+	@echo "... src/shader.s"
 	@echo "... src/util.o"
 	@echo "... src/util.i"
 	@echo "... src/util.s"
