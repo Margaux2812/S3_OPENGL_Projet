@@ -1,5 +1,5 @@
 #pragma once
-#include <glimac/glm.hpp>
+#include "../../lib/glimac/include/glimac/glm.hpp"
 
 namespace glimac {
 

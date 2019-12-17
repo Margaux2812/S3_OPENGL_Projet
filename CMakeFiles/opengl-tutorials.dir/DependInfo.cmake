@@ -4,16 +4,16 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/FreeflyCamera.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/app.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/app.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/camera.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/cube.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/gl_exception.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/main.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/main.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/object.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/object.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/selector.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/shader.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o"
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/util.cpp" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/opengl-tutorials.dir/src/util.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/app.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/app.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/camera.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/gl_exception.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/main.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/object.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/object.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/shader.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/util.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/opengl-tutorials.dir/src/util.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -27,7 +27,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/GLAD.dir/DependInfo.cmake"
+  "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/GLAD.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

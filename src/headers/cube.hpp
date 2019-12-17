@@ -11,7 +11,7 @@ public:
     ~Cube();
 
     void print();
-    void drawCube();
+    void draw();
     void addCube();
     void extrudeCube();
     void digCube();

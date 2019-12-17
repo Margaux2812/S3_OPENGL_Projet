@@ -1,7 +1,6 @@
-#include "cube.hpp"
-
+#include "headers/cube.hpp"
 #include <glm/gtc/matrix_transform.hpp>
-#include "gl_exception.hpp"
+#include "headers/gl_exception.hpp"
 
 namespace cubeData {
     //    v6----- v5
@@ -161,7 +160,7 @@ void Cube::draw() {
     m_shader.setUniformMat4f("uModel", modelMat);
 
     // Draw call
-    glDrawElements(GL_TRIANGLES, std::size(cubeData::indices), GL_UNSIGNED_SHORT, (void*) 0);
+    glDrawElements(GL_TRIANGLES, (cubeData::indices).size(), GL_UNSIGNED_SHORT, (void*) 0);
 }
 
 

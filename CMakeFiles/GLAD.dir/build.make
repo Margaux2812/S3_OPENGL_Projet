@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3"
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3"
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # Include any dependencies generated for this target.
 include CMakeFiles/GLAD.dir/depend.make
@@ -59,16 +59,16 @@ include CMakeFiles/GLAD.dir/flags.make
 
 CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o: CMakeFiles/GLAD.dir/flags.make
 CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o: lib/glad/src/glad.c
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o   -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/lib/glad/src/glad.c"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building C object CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o"
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -o CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o   -c /home/margaux/Documents/S3_OPENGL_Projet/lib/glad/src/glad.c
 
 CMakeFiles/GLAD.dir/lib/glad/src/glad.c.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/GLAD.dir/lib/glad/src/glad.c.i"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/lib/glad/src/glad.c" > CMakeFiles/GLAD.dir/lib/glad/src/glad.c.i
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/margaux/Documents/S3_OPENGL_Projet/lib/glad/src/glad.c > CMakeFiles/GLAD.dir/lib/glad/src/glad.c.i
 
 CMakeFiles/GLAD.dir/lib/glad/src/glad.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/GLAD.dir/lib/glad/src/glad.c.s"
-	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/lib/glad/src/glad.c" -o CMakeFiles/GLAD.dir/lib/glad/src/glad.c.s
+	/usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/lib/glad/src/glad.c -o CMakeFiles/GLAD.dir/lib/glad/src/glad.c.s
 
 # Object files for target GLAD
 GLAD_OBJECTS = \
@@ -80,7 +80,7 @@ GLAD_EXTERNAL_OBJECTS =
 libGLAD.a: CMakeFiles/GLAD.dir/lib/glad/src/glad.c.o
 libGLAD.a: CMakeFiles/GLAD.dir/build.make
 libGLAD.a: CMakeFiles/GLAD.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLAD.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking C static library libGLAD.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/GLAD.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GLAD.dir/link.txt --verbose=$(VERBOSE)
 
@@ -94,6 +94,6 @@ CMakeFiles/GLAD.dir/clean:
 .PHONY : CMakeFiles/GLAD.dir/clean
 
 CMakeFiles/GLAD.dir/depend:
-	cd "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles/GLAD.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/margaux/Documents/S3_OPENGL_Projet /home/margaux/Documents/S3_OPENGL_Projet /home/margaux/Documents/S3_OPENGL_Projet /home/margaux/Documents/S3_OPENGL_Projet /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/GLAD.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/GLAD.dir/depend
 

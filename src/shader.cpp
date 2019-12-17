@@ -1,4 +1,4 @@
-#include "shader.hpp"
+#include "headers/shader.hpp"
 
 #include <fstream>
 #include <string>

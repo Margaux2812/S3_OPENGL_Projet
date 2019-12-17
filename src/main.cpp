@@ -5,8 +5,8 @@
 #include <glm/gtc/matrix_transform.hpp>
 #include <string>
 
-#include "app.hpp"
-#include "cube.hpp"
+#include "headers/app.hpp"
+#include "headers/cube.hpp"
 
 int main(int argc, char *argv[]) {
     App app;

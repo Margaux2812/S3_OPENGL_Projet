@@ -1,4 +1,4 @@
-#include "../include/glimac/FreeflyCamera.hpp"
+#include "headers/FreeflyCamera.hpp"
 #include <math.h>
 
 namespace glimac {
