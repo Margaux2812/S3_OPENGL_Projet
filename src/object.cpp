@@ -4,11 +4,11 @@
 
         ///// CONSTRUCTORS & DESTRUCTOR //////
 
-        Object::Object() : m_vao(0), m_ib(0), m_position(0), m_shader("res/shaders/basic.vert", "res/shaders/basic.frag"){
-            
+        Object::Object() : m_vao(0), m_ib(0), m_position(0), m_shader("/shaders/basic.vert", "/shaders/basic.frag"){
+
         }
 
-        Object::Object(glm::vec3 position) : m_vao(0), m_ib(0), m_position(position), m_shader("res/shaders/basic.vert", "res/shaders/basic.frag"){
+        Object::Object(glm::vec3 position) : m_vao(0), m_ib(0), m_position(position), m_shader("/shaders/basic.vert", "/shaders/basic.frag"){
 
         }
 

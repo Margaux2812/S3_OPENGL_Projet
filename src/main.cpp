@@ -12,6 +12,10 @@ int main(int argc, char *argv[]) {
     App app;
     Cube myCube;
     Cube myCube2;
+    // Créer un tableau fixe de cube invisibles
+    // Init chaque cube
+    // Créer le selecteur
+
 
     glClearColor(1, 0, 1, 1);
 

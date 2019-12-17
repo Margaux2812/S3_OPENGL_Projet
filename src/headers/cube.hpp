@@ -12,7 +12,8 @@ public:
 
     void print();
     void drawCube();
-    void extrudeCube(glm::vec3 position);
+    void addCube();
+    void extrudeCube();
     void digCube();
     void deleteCube();
     

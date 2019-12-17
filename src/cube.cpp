@@ -165,7 +165,11 @@ void Cube::drawCube() {
 }
 
 
-    void Cube::extrudeCube(glm::vec3 position){
+    void Cube::addCube(){
+
+    }
+
+    void Cube::extrudeCube(){
     }
 
     void Cube::digCube(){
