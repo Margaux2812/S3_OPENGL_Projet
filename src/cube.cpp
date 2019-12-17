@@ -150,7 +150,7 @@ void Cube::print(){
    int print = 1;
 }
 
-void Cube::drawCube() {
+void Cube::draw() {
     // Bind
     glBindVertexArray(m_vao);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib);
