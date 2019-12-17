@@ -42,8 +42,8 @@ int main(int argc, char *argv[]) {
 
         app.beginFrame();
 
-        myCube.draw();
-        myCube2.draw();
+        myCube.drawCube();
+        myCube2.drawCube();
 
         app.endFrame();
     }

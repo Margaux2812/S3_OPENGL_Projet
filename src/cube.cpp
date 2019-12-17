@@ -1,6 +1,6 @@
 #include "cube.hpp"
 
-// #include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 #include "gl_exception.hpp"
 
 namespace cubeData {
@@ -14,7 +14,7 @@ namespace cubeData {
     const glm::vec3 positions[] = {
         // Front v0,v1,v2,v3
         glm::vec3(1, 1, 1), glm::vec3(-1, 1, 1), glm::vec3(-1, -1, 1), glm::vec3(1, -1, 1),
-        // Right v0,v3,v4,v5
+        // Right v0,v3,v4        },v5
         glm::vec3(1, 1, 1), glm::vec3(1, -1, 1), glm::vec3(1, -1, -1), glm::vec3(1, 1, -1),
         // Top v0,v5,v6,v1	
         glm::vec3(1, 1, 1), glm::vec3(1, 1, -1), glm::vec3(-1, 1, -1), glm::vec3(-1, 1, 1), 
@@ -45,45 +45,37 @@ namespace cubeData {
     };
 }
 
-
-
-
-Cube::Cube(glm::vec3 position) 
-    : m_vao(0), 
-    m_ib(0), 
-    position(position = glm::vec3(0, 0, 0)), 
-    m_shader("res/shaders/basic.vert", "res/shaders/basic.frag")
-{
+Cube::Cube() : Object(){
     // ------------------ Vertex Buffer
     unsigned int posVB;
     {
-        GLCall(glGenBuffers(1, &posVB));
-        GLCall(glBindBuffer(GL_ARRAY_BUFFER, posVB));
-        GLCall(glBufferData(GL_ARRAY_BUFFER, sizeof(cubeData::positions), cubeData::positions, GL_STATIC_DRAW));
-        GLCall(glBindBuffer(GL_ARRAY_BUFFER, 0));
+        glGenBuffers(1, &posVB);
+        glBindBuffer(GL_ARRAY_BUFFER, posVB);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(cubeData::positions), cubeData::positions, GL_STATIC_DRAW);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
     }
     
     // ------------------ Vertex Array
     {
-        GLCall(glGenVertexArrays(1, &m_vao));
-        GLCall(glBindVertexArray(m_vao));
+        glGenVertexArrays(1, &m_vao);
+        glBindVertexArray(m_vao);
 
         // Vertex input description
         {
-            GLCall(glEnableVertexAttribArray(0));
-            GLCall(glBindBuffer(GL_ARRAY_BUFFER, posVB));
-            GLCall(glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), NULL));
+            glEnableVertexAttribArray(0);
+            glBindBuffer(GL_ARRAY_BUFFER, posVB);
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), NULL);
         }
         
-        GLCall(glBindVertexArray(0));
+        glBindVertexArray(0);
     }
 
     // ------------------ Index buffer
     {
-        GLCall(glGenBuffers(1, &m_ib));
-        GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib));
-        GLCall(glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cubeData::indices), cubeData::indices, GL_STATIC_DRAW));
-        GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0));
+        glGenBuffers(1, &m_ib);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cubeData::indices), cubeData::indices, GL_STATIC_DRAW);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     }
 
     // ------------------ Default values for uniforms
@@ -101,20 +93,84 @@ Cube::Cube(glm::vec3 position)
     m_shader.unbind();
 }
 
+Cube::Cube(glm::vec3 position) : Object(position){
+       // ------------------ Vertex Buffer
+    unsigned int posVB;
+    {
+        glGenBuffers(1, &posVB);
+        glBindBuffer(GL_ARRAY_BUFFER, posVB);
+        glBufferData(GL_ARRAY_BUFFER, sizeof(cubeData::positions), cubeData::positions, GL_STATIC_DRAW);
+        glBindBuffer(GL_ARRAY_BUFFER, 0);
+    }
+    
+    // ------------------ Vertex Array
+    {
+        glGenVertexArrays(1, &m_vao);
+        glBindVertexArray(m_vao);
+
+        // Vertex input description
+        {
+            glEnableVertexAttribArray(0);
+            glBindBuffer(GL_ARRAY_BUFFER, posVB);
+            glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 3 * sizeof(float), NULL);
+        }
+        
+        glBindVertexArray(0);
+    }
+
+    // ------------------ Index buffer
+    {
+        glGenBuffers(1, &m_ib);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib);
+        glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(cubeData::indices), cubeData::indices, GL_STATIC_DRAW);
+        glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    }
+
+    // ------------------ Default values for uniforms
+    m_shader.bind();
+    {
+        glm::mat4 modelMat = glm::mat4(1.0f);
+        m_shader.setUniformMat4f("uModel", modelMat);
+    }
+    {
+        glm::mat4 viewMat = glm::translate(glm::mat4(1.0f), glm::vec3(0.0f, 0.0f, -10.0f));
+        glm::mat4 projMat = glm::perspective(glm::radians(45.0f), 1.0f, 0.1f, 100.0f);
+        glm::mat4 viewProjMat = projMat * viewMat;
+        m_shader.setUniformMat4f("uViewProj", viewProjMat);
+    }
+    m_shader.unbind();
+} 
+
+
 Cube::~Cube()
-{
+{}
+
+
+void Cube::print(){
+   int print = 1;
 }
 
 void Cube::drawCube() {
     // Bind
-    GLCall(glBindVertexArray(m_vao));
-    GLCall(glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib));
+    glBindVertexArray(m_vao);
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib);
     m_shader.bind();
 
     // Update model mat uniform
-    glm::mat4 modelMat = glm::translate(glm::mat4(1.0f), position);
+    glm::mat4 modelMat = glm::translate(glm::mat4(1.0f), m_position);
     m_shader.setUniformMat4f("uModel", modelMat);
 
     // Draw call
-    GLCall(glDrawElements(GL_TRIANGLES, std::size(cubeData::indices), GL_UNSIGNED_SHORT, (void*) 0));
+    glDrawElements(GL_TRIANGLES, std::size(cubeData::indices), GL_UNSIGNED_SHORT, (void*) 0);
 }
+
+
+    void Cube::extrudeCube(glm::vec3 position){
+    }
+
+    void Cube::digCube(){
+
+    }
+    void Cube::deleteCube(){
+
+    }

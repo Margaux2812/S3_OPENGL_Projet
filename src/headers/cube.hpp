@@ -4,13 +4,15 @@
 
 // HERITE DE OBJET
 
-class Cube : virtual public Object {
+class Cube : public Object {
 public:
+    Cube();
     Cube(glm::vec3 position); // Nécessaire ? Ou ajouter : Object(glm::vec3 position)
     ~Cube();
 
+    void print();
     void drawCube();
-    Cube extrudeCube();
+    void extrudeCube(glm::vec3 position);
     void digCube();
     void deleteCube();
     

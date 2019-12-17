@@ -1,39 +1,35 @@
 #pragma once
 
 #include <glm/glm.hpp>
-#include <glimac/SDLWindowManager.hpp>
-#include <glimac/glm.hpp>
+
+#include "shader.hpp"
 #include <string>
 
 class Object  {
 public:
-    Object::Object();
-    Object::Object(glm::vec3 position);
-    virtual ~Object(void);       // Le destructeur virtuel.
-    virtual void print(void) =0; // Fonction virtuelle pure.
+    Object();
+    Object(glm::vec3 position);
+    virtual ~Object();       // Le destructeur virtuel.
+    virtual void print() =0; // Fonction virtuelle pure.
 
 public : 
     glm::vec3 m_position;
 
 
-private:
+protected:
     unsigned int m_vao;
     unsigned int m_ib;
-    std::string m_VertexShader;
-    std::string m_FragmentShader;
+    Shader m_shader;
 
 
     ///// GETTER //////
-    unsigned int Object::getVao();
-    unsigned int Object::getIb();
-    std::string Object::getVertexShader();
-    std::string Object::getFrangmentShader();
+    unsigned int getVao();
+    unsigned int getIb();
+    Shader getShader();
 
 
     ///// SETTER //////
-    void Object::setVao(unsigned int newVao);
-    void Object::setIb(unsigned int newIB);
-    void Object::setVertexShader(std::string newVS);
-    void Object::setFrangmentShader(std::string newFs);
-    
+    void setVao(unsigned int newVao);
+    void setIb(unsigned int newIB);
+    void setShader(std::string newVS, std::string newFs);    
 };

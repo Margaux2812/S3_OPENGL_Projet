@@ -4,18 +4,16 @@
 
         ///// CONSTRUCTORS & DESTRUCTOR //////
 
-        Object::Object(){
-            m_position=glm::vec3(0,0,0);
+        Object::Object() : m_vao(0), m_ib(0), m_position(0), m_shader("res/shaders/basic.vert", "res/shaders/basic.frag"){
+            
         }
 
-        Object::Object(glm::vec3 position){
-            m_position=position;
+        Object::Object(glm::vec3 position) : m_vao(0), m_ib(0), m_position(position), m_shader("res/shaders/basic.vert", "res/shaders/basic.frag"){
+
         }
 
-        Object::~Object(void){
-        return ;
-        }
 
+        Object::~Object(){}
 
 
         ///// GETTER //////
@@ -25,12 +23,10 @@
         unsigned int Object::getIb(){
             return m_ib;
         }
-        std::string Object::getVertexShader(){
-            return m_VertexShader;
+        Shader Object::getShader(){
+            return m_shader;
         }
-        std::string Object::getFrangmentShader(){
-            return m_FragmentShader;
-        }
+
 
 
         ///// SETTER //////
@@ -41,12 +37,7 @@
             m_ib=newIb;
 
         }
-        void Object::setVertexShader(std::string newVS){
-            m_VertexShader=newVS;
-
-        }
-        void Object::setFrangmentShader(std::string newFs){
-            m_FragmentShader=newFs;
-
+        void Object::setShader(std::string newVs, std::string newFs){
+            m_shader.setPath(newVs, newFs);
         }
         
