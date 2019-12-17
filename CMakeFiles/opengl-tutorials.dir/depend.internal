@@ -447,6 +447,10 @@ CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o
  lib/glm/vector_relational.hpp
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o
  /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/gl_exception.cpp
+ /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/headers/gl_exception.hpp
+ lib/debug_break/debug_break.h
+ lib/glad/include/KHR/khrplatform.h
+ lib/glad/include/glad/glad.h
  lib/spdlog/common-inl.h
  lib/spdlog/common.h
  lib/spdlog/details/backtracer-inl.h
@@ -858,6 +862,7 @@ CMakeFiles/opengl-tutorials.dir/src/object.cpp.o
 CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o
  /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/selector.cpp
 CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o
+ /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/headers/gl_exception.hpp
  /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/headers/shader.hpp
  /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src/shader.cpp
  lib/debug_break/debug_break.h

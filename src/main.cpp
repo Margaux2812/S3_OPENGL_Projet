@@ -18,9 +18,7 @@ int main(int argc, char *argv[]) {
     // Créer un tableau fixe de cube invisibles
 
     // uint nbCubeLines = 10;
-    // uint nbCubeRows = 10;
-    // uint nbCubeProf = 10;
-    // Cube mapCube[30]; // On aura 30 cubes dans notre map
+    // Cube mapCube[nbCubeLines*nbCubesLines*nbCubesLines];
 
     ////**************////
 
@@ -54,15 +52,15 @@ int main(int argc, char *argv[]) {
 
         app.beginFrame();
 
-        myCube.drawCube();
-        myCube2.drawCube();
+        myCube.draw();
+        myCube2.draw();
 
 
         // // Edit cube position + Draw them
         // uint countCube = 0;
         // for (uint line=0; line<=nbCubeLines; line++){
-        //     for (uint row=0; row<=nbCubeRows; row++){
-        //         for (uint prof=0; prof<=nbCubeProf; prof++){
+        //     for (uint row=0; row<=nbCubeLines; row++){
+        //         for (uint prof=0; prof<=nbCubeLine; prof++){
         //             mapCube[countCube].drawCube();                            
         //             mapCube[countCube].m_position.x=line;    // Initialise lignes (X)                      
         //             mapCube[countCube].m_position.y=row;     // Initialise colonnes (Y)                       

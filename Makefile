@@ -56,17 +56,6 @@ CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENG
 #=============================================================================
 # Targets provided globally by CMake.
 
-# Special rule for the target rebuild_cache
-rebuild_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
-	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
-.PHONY : rebuild_cache
-
-# Special rule for the target rebuild_cache
-rebuild_cache/fast: rebuild_cache
-
-.PHONY : rebuild_cache/fast
-
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
@@ -77,6 +66,17 @@ edit_cache:
 edit_cache/fast: edit_cache
 
 .PHONY : edit_cache/fast
+
+# Special rule for the target rebuild_cache
+rebuild_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Running CMake to regenerate build system..."
+	/usr/bin/cmake -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR)
+.PHONY : rebuild_cache
+
+# Special rule for the target rebuild_cache
+rebuild_cache/fast: rebuild_cache
+
+.PHONY : rebuild_cache/fast
 
 # The main all target
 all: cmake_check_build_system
@@ -124,17 +124,17 @@ GLAD/fast:
 .PHONY : GLAD/fast
 
 #=============================================================================
-# Target rules for targets named opengl-tutorials
+# Target rules for targets named WORLDIMACKER
 
 # Build rule for target.
-opengl-tutorials: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 opengl-tutorials
-.PHONY : opengl-tutorials
+WORLDIMACKER: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 WORLDIMACKER
+.PHONY : WORLDIMACKER
 
 # fast build rule for target.
-opengl-tutorials/fast:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/build
-.PHONY : opengl-tutorials/fast
+WORLDIMACKER/fast:
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/build
+.PHONY : WORLDIMACKER/fast
 
 lib/glad/src/glad.o: lib/glad/src/glad.c.o
 
@@ -169,7 +169,7 @@ src/FreeflyCamera.o: src/FreeflyCamera.cpp.o
 
 # target to build an object file
 src/FreeflyCamera.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/FreeflyCamera.cpp.o
 .PHONY : src/FreeflyCamera.cpp.o
 
 src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
@@ -178,7 +178,7 @@ src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
 
 # target to preprocess a source file
 src/FreeflyCamera.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/FreeflyCamera.cpp.i
 .PHONY : src/FreeflyCamera.cpp.i
 
 src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
@@ -187,7 +187,7 @@ src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
 
 # target to generate assembly for a file
 src/FreeflyCamera.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/FreeflyCamera.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/FreeflyCamera.cpp.s
 .PHONY : src/FreeflyCamera.cpp.s
 
 src/app.o: src/app.cpp.o
@@ -196,7 +196,7 @@ src/app.o: src/app.cpp.o
 
 # target to build an object file
 src/app.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/app.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/app.cpp.o
 .PHONY : src/app.cpp.o
 
 src/app.i: src/app.cpp.i
@@ -205,7 +205,7 @@ src/app.i: src/app.cpp.i
 
 # target to preprocess a source file
 src/app.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/app.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/app.cpp.i
 .PHONY : src/app.cpp.i
 
 src/app.s: src/app.cpp.s
@@ -214,7 +214,7 @@ src/app.s: src/app.cpp.s
 
 # target to generate assembly for a file
 src/app.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/app.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/app.cpp.s
 .PHONY : src/app.cpp.s
 
 src/camera.o: src/camera.cpp.o
@@ -223,7 +223,7 @@ src/camera.o: src/camera.cpp.o
 
 # target to build an object file
 src/camera.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/camera.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/camera.cpp.o
 .PHONY : src/camera.cpp.o
 
 src/camera.i: src/camera.cpp.i
@@ -232,7 +232,7 @@ src/camera.i: src/camera.cpp.i
 
 # target to preprocess a source file
 src/camera.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/camera.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/camera.cpp.i
 .PHONY : src/camera.cpp.i
 
 src/camera.s: src/camera.cpp.s
@@ -241,7 +241,7 @@ src/camera.s: src/camera.cpp.s
 
 # target to generate assembly for a file
 src/camera.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/camera.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/camera.cpp.s
 .PHONY : src/camera.cpp.s
 
 src/cube.o: src/cube.cpp.o
@@ -250,7 +250,7 @@ src/cube.o: src/cube.cpp.o
 
 # target to build an object file
 src/cube.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/cube.cpp.o
 .PHONY : src/cube.cpp.o
 
 src/cube.i: src/cube.cpp.i
@@ -259,7 +259,7 @@ src/cube.i: src/cube.cpp.i
 
 # target to preprocess a source file
 src/cube.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/cube.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/cube.cpp.i
 .PHONY : src/cube.cpp.i
 
 src/cube.s: src/cube.cpp.s
@@ -268,7 +268,7 @@ src/cube.s: src/cube.cpp.s
 
 # target to generate assembly for a file
 src/cube.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/cube.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/cube.cpp.s
 .PHONY : src/cube.cpp.s
 
 src/gl_exception.o: src/gl_exception.cpp.o
@@ -277,7 +277,7 @@ src/gl_exception.o: src/gl_exception.cpp.o
 
 # target to build an object file
 src/gl_exception.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/gl_exception.cpp.o
 .PHONY : src/gl_exception.cpp.o
 
 src/gl_exception.i: src/gl_exception.cpp.i
@@ -286,7 +286,7 @@ src/gl_exception.i: src/gl_exception.cpp.i
 
 # target to preprocess a source file
 src/gl_exception.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/gl_exception.cpp.i
 .PHONY : src/gl_exception.cpp.i
 
 src/gl_exception.s: src/gl_exception.cpp.s
@@ -295,7 +295,7 @@ src/gl_exception.s: src/gl_exception.cpp.s
 
 # target to generate assembly for a file
 src/gl_exception.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/gl_exception.cpp.s
 .PHONY : src/gl_exception.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -304,7 +304,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -313,7 +313,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -322,7 +322,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/object.o: src/object.cpp.o
@@ -331,7 +331,7 @@ src/object.o: src/object.cpp.o
 
 # target to build an object file
 src/object.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/object.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/object.cpp.o
 .PHONY : src/object.cpp.o
 
 src/object.i: src/object.cpp.i
@@ -340,7 +340,7 @@ src/object.i: src/object.cpp.i
 
 # target to preprocess a source file
 src/object.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/object.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/object.cpp.i
 .PHONY : src/object.cpp.i
 
 src/object.s: src/object.cpp.s
@@ -349,7 +349,7 @@ src/object.s: src/object.cpp.s
 
 # target to generate assembly for a file
 src/object.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/object.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/object.cpp.s
 .PHONY : src/object.cpp.s
 
 src/selector.o: src/selector.cpp.o
@@ -358,7 +358,7 @@ src/selector.o: src/selector.cpp.o
 
 # target to build an object file
 src/selector.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/selector.cpp.o
 .PHONY : src/selector.cpp.o
 
 src/selector.i: src/selector.cpp.i
@@ -367,7 +367,7 @@ src/selector.i: src/selector.cpp.i
 
 # target to preprocess a source file
 src/selector.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/selector.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/selector.cpp.i
 .PHONY : src/selector.cpp.i
 
 src/selector.s: src/selector.cpp.s
@@ -376,7 +376,7 @@ src/selector.s: src/selector.cpp.s
 
 # target to generate assembly for a file
 src/selector.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/selector.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/selector.cpp.s
 .PHONY : src/selector.cpp.s
 
 src/shader.o: src/shader.cpp.o
@@ -385,7 +385,7 @@ src/shader.o: src/shader.cpp.o
 
 # target to build an object file
 src/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/shader.cpp.o
 .PHONY : src/shader.cpp.o
 
 src/shader.i: src/shader.cpp.i
@@ -394,7 +394,7 @@ src/shader.i: src/shader.cpp.i
 
 # target to preprocess a source file
 src/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/shader.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/shader.cpp.i
 .PHONY : src/shader.cpp.i
 
 src/shader.s: src/shader.cpp.s
@@ -403,7 +403,7 @@ src/shader.s: src/shader.cpp.s
 
 # target to generate assembly for a file
 src/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/shader.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/shader.cpp.s
 .PHONY : src/shader.cpp.s
 
 src/util.o: src/util.cpp.o
@@ -412,7 +412,7 @@ src/util.o: src/util.cpp.o
 
 # target to build an object file
 src/util.cpp.o:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/util.cpp.o
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/util.cpp.o
 .PHONY : src/util.cpp.o
 
 src/util.i: src/util.cpp.i
@@ -421,7 +421,7 @@ src/util.i: src/util.cpp.i
 
 # target to preprocess a source file
 src/util.cpp.i:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/util.cpp.i
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/util.cpp.i
 .PHONY : src/util.cpp.i
 
 src/util.s: src/util.cpp.s
@@ -430,7 +430,7 @@ src/util.s: src/util.cpp.s
 
 # target to generate assembly for a file
 src/util.cpp.s:
-	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/src/util.cpp.s
+	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/src/util.cpp.s
 .PHONY : src/util.cpp.s
 
 # Help Target
@@ -439,10 +439,10 @@ help:
 	@echo "... all (the default if no target is provided)"
 	@echo "... clean"
 	@echo "... depend"
-	@echo "... rebuild_cache"
-	@echo "... GLAD"
 	@echo "... edit_cache"
-	@echo "... opengl-tutorials"
+	@echo "... GLAD"
+	@echo "... rebuild_cache"
+	@echo "... WORLDIMACKER"
 	@echo "... lib/glad/src/glad.o"
 	@echo "... lib/glad/src/glad.i"
 	@echo "... lib/glad/src/glad.s"

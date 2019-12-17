@@ -446,6 +446,10 @@ CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o: lib/glm/vec4.hpp
 CMakeFiles/opengl-tutorials.dir/src/cube.cpp.o: lib/glm/vector_relational.hpp
 
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: src/gl_exception.cpp
+CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: src/headers/gl_exception.hpp
+CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: lib/debug_break/debug_break.h
+CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: lib/glad/include/KHR/khrplatform.h
+CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: lib/glad/include/glad/glad.h
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: lib/spdlog/common-inl.h
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: lib/spdlog/common.h
 CMakeFiles/opengl-tutorials.dir/src/gl_exception.cpp.o: lib/spdlog/details/backtracer-inl.h
@@ -857,6 +861,7 @@ CMakeFiles/opengl-tutorials.dir/src/object.cpp.o: lib/glm/vector_relational.hpp
 
 CMakeFiles/opengl-tutorials.dir/src/selector.cpp.o: src/selector.cpp
 
+CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o: src/headers/gl_exception.hpp
 CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o: src/headers/shader.hpp
 CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o: src/shader.cpp
 CMakeFiles/opengl-tutorials.dir/src/shader.cpp.o: lib/debug_break/debug_break.h

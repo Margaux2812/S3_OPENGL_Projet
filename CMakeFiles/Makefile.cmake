@@ -48,5 +48,5 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/GLAD.dir/DependInfo.cmake"
-  "CMakeFiles/opengl-tutorials.dir/DependInfo.cmake"
+  "CMakeFiles/WORLDIMACKER.dir/DependInfo.cmake"
   )

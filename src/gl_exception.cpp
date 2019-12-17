@@ -1,4 +1,4 @@
-#include "/headers/gl_exception.hpp"
+#include "headers/gl_exception.hpp"
 
 #include <spdlog/spdlog.h>
 

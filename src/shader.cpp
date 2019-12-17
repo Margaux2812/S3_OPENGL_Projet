@@ -1,4 +1,5 @@
 #include "headers/shader.hpp"
+#include "headers/gl_exception.hpp"
 
 #include <fstream>
 #include <string>
@@ -8,16 +9,7 @@
 #include <glad/glad.h>
 #include <debug_break/debug_break.h>
 
-#include "gl_exception.hpp"
 
-Shader::Shader() 
-: m_filePathVertex("basic.vert"), m_filePathFragment("basic.frag"), m_rendererID(0)
-{
-	std::string vertexShader = parseShader("basic.vert");
-	std::string fragmentShader = parseShader("basic.frag");
-	m_rendererID = createPipeline(vertexShader, fragmentShader);
-
-}
 
 Shader::Shader(const std::string& filepathVertex, const std::string& filepathFragment)
 	: m_filePathVertex(filepathVertex), m_filePathFragment(filepathFragment), m_rendererID(0)
