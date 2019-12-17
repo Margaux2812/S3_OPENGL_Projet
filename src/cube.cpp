@@ -149,7 +149,7 @@ void Cube::print(){
    int print = 1;
 }
 
-void Cube::draw() {
+void Cube::drawCube() {
     // Bind
     glBindVertexArray(m_vao);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ib);
@@ -160,7 +160,7 @@ void Cube::draw() {
     m_shader.setUniformMat4f("uModel", modelMat);
 
     // Draw call
-    glDrawElements(GL_TRIANGLES, (cubeData::indices).size(), GL_UNSIGNED_SHORT, (void*) 0);
+    glDrawElements(GL_TRIANGLES, std::size(cubeData::indices), GL_UNSIGNED_SHORT, (void*) 0);
 }
 
 
