@@ -1,49 +1,52 @@
-#include <glimac/SDLWindowManager.hpp>
+#include <SDL2/SDL.h>
 #include <glad/glad.h>
-#include <iostream>
-#include <glimac/Program.hpp>
-#include <glimac/FilePath.hpp>
-#include <vector>
-#include <glm/gtc/constants.hpp>
-#include <glimac/glm.hpp>
+#include <spdlog/spdlog.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <string>
 
-using namespace glimac;
+#include "app.hpp"
+#include "cube.hpp"
 
-int main(int argc, char** argv) {
-    // Initialize SDL and open a window
-    SDLWindowManager windowManager(1920, 1050, "WORLD_IMACker");
-    // Initialize glad for OpenGL3+ support
-    GLenum gladInitError = gladInit();
-    if(GLAD_OK != gladInitError) {
-        std::cerr << gladGetErrorString(gladInitError) << std::endl;
-        return EXIT_FAILURE;
-    }
+int main(int argc, char *argv[]) {
+    App app;
+    Cube myCube;
+    Cube myCube2;
 
-    std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
-    std::cout << "GLAD Version : " << gladGetString(GLAD_VERSION) << std::endl;
+    glClearColor(1, 0, 1, 1);
 
-    /*********************************
-     * HERE SHOULD COME THE INITIALIZATION CODE
-     *********************************/
-
-    // Application loop:
-    bool done = false;
-    while(!done) {
-        // Event loop:
+    while (app.isRunning()) {
         SDL_Event e;
-        while(windowManager.pollEvent(e)) {
-            if(e.type == SDL_QUIT) {
-                done = true; // Leave the loop after this iteration
-            }
+        while (SDL_PollEvent(&e)) {
+            switch (e.type) {
+            case SDL_QUIT: app.exit();
+
+            case SDL_KEYDOWN:
+                if (e.key.keysym.scancode == SDL_SCANCODE_LEFT) {
+                    myCube.m_position.x--;
+                } else if (e.key.keysym.scancode == SDL_SCANCODE_RIGHT) {
+                    myCube.m_position.x++;
+                } else if (e.key.keysym.scancode == SDL_SCANCODE_UP) {
+                    myCube.m_position.y++;
+                } else if (e.key.keysym.scancode == SDL_SCANCODE_DOWN) {
+                    myCube.m_position.y--;
+                } else if (e.key.keysym.scancode == SDL_SCANCODE_PAGEUP) {
+                    myCube.m_position.z++;
+                } else if (e.key.keysym.scancode == SDL_SCANCODE_PAGEDOWN) {
+                    myCube.m_position.z--;
+                }
+
+            default: break;
+            };
         }
 
-        /*********************************
-         * HERE SHOULD COME THE RENDERING CODE
-         *********************************/
+        app.beginFrame();
 
-        // Update the display
-        windowManager.swapBuffers();
+        myCube.draw();
+        myCube2.draw();
+
+        app.endFrame();
     }
-
-    return EXIT_SUCCESS;
+    
+    return 0;
 }

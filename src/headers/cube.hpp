@@ -1,5 +1,4 @@
-#ifndef _Cube_hpp_
-#define _Cube_hpp_
+#pragma once
 
 #include "object.hpp"
 
@@ -16,5 +15,3 @@ public:
     void deleteCube();
     
 };
-
-#endif

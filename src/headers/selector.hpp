@@ -8,7 +8,7 @@
 class Selector : virtual public Object {
 public:
     Selector();
-    Selector(glm::vec3 position); // Nécessaire ? Ou ajouter : Object(glm::vec3 position)
+    Selector(glm::vec3 position);
     ~Selector();
 
     void drawSelector();
