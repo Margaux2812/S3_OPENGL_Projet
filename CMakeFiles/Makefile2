@@ -59,10 +59,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
+CMAKE_SOURCE_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3"
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
+CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3"
 
 #=============================================================================
 # Target rules for target CMakeFiles/GLAD.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 CMakeFiles/GLAD.dir/all:
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/depend
 	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=1,2 "Built target GLAD"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=1,2 "Built target GLAD"
 .PHONY : CMakeFiles/GLAD.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/GLAD.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/GLAD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 2
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 2
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GLAD.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 0
 .PHONY : CMakeFiles/GLAD.dir/rule
 
 # Convenience name for target.
@@ -108,7 +108,7 @@ clean: CMakeFiles/GLAD.dir/clean
 CMakeFiles/opengl-tutorials.dir/all: CMakeFiles/GLAD.dir/all
 	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/depend
 	$(MAKE) -f CMakeFiles/opengl-tutorials.dir/build.make CMakeFiles/opengl-tutorials.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target opengl-tutorials"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target opengl-tutorials"
 .PHONY : CMakeFiles/opengl-tutorials.dir/all
 
 # Include target in all.
@@ -118,9 +118,9 @@ all: CMakeFiles/opengl-tutorials.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/opengl-tutorials.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 13
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 13
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/opengl-tutorials.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 0
 .PHONY : CMakeFiles/opengl-tutorials.dir/rule
 
 # Convenience name for target.

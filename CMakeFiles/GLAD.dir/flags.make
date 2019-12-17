@@ -6,5 +6,5 @@ C_FLAGS =
 
 C_DEFINES = 
 
-C_INCLUDES = -I/usr/include/SDL2 -I/home/margaux/Documents/S3_OPENGL_Projet/lib/glad/include -I/home/margaux/Documents/S3_OPENGL_Projet/lib -I/home/margaux/Documents/S3_OPENGL_Projet/src 
+C_INCLUDES = -I/usr/include/SDL2 -I"/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/lib/glad/include" -I"/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/lib" -I"/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/src" 
 

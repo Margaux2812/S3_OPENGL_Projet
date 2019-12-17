@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glad/src/glad.c
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/lib/glad/src/glad.c
 stdio.h
 -
 stdlib.h
