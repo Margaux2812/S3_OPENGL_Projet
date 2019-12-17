@@ -12,15 +12,18 @@ int main(int argc, char *argv[]) {
     App app;
     Cube myCube;
     Cube myCube2;
-
+    // Selector mySelect();
 
     ////***MAP WORLD***////
-
-    
-    ////**************////
     // Créer un tableau fixe de cube invisibles
-    // Init chaque cube
-    // Créer le selecteur
+
+    // uint nbCubeLines = 10;
+    // uint nbCubeRows = 10;
+    // uint nbCubeProf = 10;
+    // Cube mapCube[30]; // On aura 30 cubes dans notre map
+
+    ////**************////
+
 
 
     glClearColor(1, 0, 1, 1);
@@ -53,6 +56,23 @@ int main(int argc, char *argv[]) {
 
         myCube.drawCube();
         myCube2.drawCube();
+
+
+        // // Edit cube position + Draw them
+        // uint countCube = 0;
+        // for (uint line=0; line<=nbCubeLines; line++){
+        //     for (uint row=0; row<=nbCubeRows; row++){
+        //         for (uint prof=0; prof<=nbCubeProf; prof++){
+        //             mapCube[countCube].drawCube();                            
+        //             mapCube[countCube].m_position.x=line;    // Initialise lignes (X)                      
+        //             mapCube[countCube].m_position.y=row;     // Initialise colonnes (Y)                       
+        //             mapCube[countCube].m_position.z=prof;    // Initialise profondeur (Z)                       
+        //             countCube++;
+        //         }
+        //     }
+        // }    
+
+
 
         app.endFrame();
     }
