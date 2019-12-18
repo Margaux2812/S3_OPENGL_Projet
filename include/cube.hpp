@@ -1,6 +1,7 @@
 #pragma once
 
 #include <GL/glew.h>
+#include "TYPECUBE.hpp"
 
 class Cube{
 	private:
