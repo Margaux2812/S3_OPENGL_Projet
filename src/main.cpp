@@ -74,10 +74,10 @@ int main(int argc, char** argv) {
                     /*S key to move backward*/
                     case SDLK_s: camera.moveFront(-speed);
                     break;
-                    /*Q key to move forward*/
+                    /*Q key to move left*/
                     case SDLK_q: camera.moveLeft(speed);
                     break;
-                    /*D key to move backward*/
+                    /*D key to move right*/
                     case SDLK_d: camera.moveLeft(-speed);
                     break;
 
