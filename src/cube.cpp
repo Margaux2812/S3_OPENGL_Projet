@@ -110,6 +110,11 @@ Cube::Cube(){
     glBindVertexArray(0); //Debinder la VAO
 };
 
+Cube::~Cube(){
+	glDeleteBuffers(1, &m_vbo);
+    glDeleteVertexArrays(1, &m_vao);
+}
+
 void Cube::draw(){
     //Il faudra bind le shader ici
 
@@ -122,6 +127,11 @@ void Cube::draw(){
     glBindVertexArray(0); //Debinder la VAO
 };
 
+
+Cube Cube::findFromPosition(Cube &mapCube, glm::vec3 position){
+    Cube mycube;
+    // for (int i=0; i<mapCube; i++ )
+    return mycube;
 void Cube::updateGPU(){
     glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
     glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * m_positionsCubes.data(), GL_STATIC_DRAW);
@@ -137,3 +147,78 @@ Cube::~Cube(){
 	glDeleteBuffers(1, &m_vbo);
     glDeleteVertexArrays(1, &m_vao);
 }
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// GETTERS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+
+		GLuint Cube::getVao(){
+            return m_vao;
+        }
+		GLuint Cube::getVbo(){
+            return m_vbo;
+        }
+		GLuint Cube::getIbo(){
+            return m_ibo;
+        }
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// SETTERS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+		void Cube::setVao(GLuint newVao){
+            m_vao=newVao;
+        }
+		void Cube::setVbo(GLuint newVbo){
+            m_vbo=newVbo;
+        }
+		void Cube::setIbo(GLuint newIbo){
+            m_ibo=newIbo;
+        }
+
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////// CUBE MANAGER ////////////////////////
+///////////////////////////////////////////////////////////////
+
+
+    // void Cube::addCube(std::string vs, std::string fs){ // Affiche image du cube // Passer en paramètre les shaders voulus adaptés au typeCube // Créer un enum des types de cubes
+        
+    //     /////// A DEPLACER AU MOMENT OU ON SELECTINNE LE TYPE DE CUBE ///////
+
+    //     // if (type == SAND){
+    //     //     vs="shaders.sand.vs.glsl";
+    //     //     fs="shaders.sand.fs.glsl";
+    //     // }
+
+    //     /////////////////////////////////////////////////////////////////////
+
+    //     // m_shader.setPath(vs, fs);
+    // }
+
+
+    // void Cube::deleteCube(){ // Delete image du cube
+    //     // std::string vs="shaders/transparent.vs.glsl";
+    //     // std::string fs="shaders/transparent.fs.glsl";
+
+    //     // m_shader.setPath(vs, fs);
+    // }
+
+    // void Cube::extrudeCube(Cube &mapCube){ // Faire un while pour selectionner le premier cube vide
+    //     float newZ = m_position.z++;
+    //     glm::vec3 posNewCube = glm::vec3(m_position.x,m_position.y,newZ); 
+    //     Cube extrCube = findFromPosition(mapCube, posNewCube);
+    //     // Dans le main de selection : Recherche cube where position = this.position.z++ && .x && .y
+    //     extrCube.addCube(m_shader.getVS, m_shader.getFS);
+    // }
+
+    //     void Cube::digCube(Cube &mapCube){ // Faire un while pour selectionner le premier cube non vide
+    //     float newZ = m_position.z--;
+    //     glm::vec3 posNewCube = glm::vec3(m_position.x,m_position.y,newZ); 
+    //     Cube digCube = findFromPosition(mapCube, posNewCube);
+    //     // Dans le main de selection : Recherche cube where position = this.position.z++ && .x && .y
+    //     digCube.deleteCube();
+    // }
