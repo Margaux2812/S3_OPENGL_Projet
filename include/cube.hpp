@@ -1,6 +1,7 @@
 #pragma once
 
 #include <GL/glew.h>
+#include "TYPECUBE.hpp"
 #include "../lib/glimac/include/glm.hpp"
 #include <vector>
 
@@ -15,7 +16,7 @@ class Cube{
 
 		// glm::vec3 m_position;
 		// Shader m_shader;
-		// TYPECUBE m_typeCube;
+		TYPECUBE m_type;
 
 	public :
 		Cube();
@@ -28,9 +29,9 @@ class Cube{
 		GLuint getVao();
 		GLuint getVbo();
 		GLuint getIbo();
-		// glm::vec3 getPosition();
+		glm::vec3 getPosition();
 		// Shader getShader();
-		// TypeCube getType();
+		TYPECUBE getType();
 
 		///// SETTERS /////
 

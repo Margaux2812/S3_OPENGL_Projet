@@ -179,6 +179,17 @@ void Cube::deleteCube(glm::vec3 position){
             return m_ibo;
         }
 
+        glm::vec3 Cube::getPosition(){
+            return m_position;
+        }
+		// Shader Cube::getShader(){
+        //     return m_shader;
+        // }
+		TYPECUBE Cube::getType(){
+            return m_type;
+        }
+
+
 ///////////////////////////////////////////////////////////////
 /////////////////////////// SETTERS ///////////////////////////
 ///////////////////////////////////////////////////////////////
@@ -191,6 +202,17 @@ void Cube::deleteCube(glm::vec3 position){
         }
 		void Cube::setIbo(GLuint newIbo){
             m_ibo=newIbo;
+        }
+
+        void Cube::setPosition(glm::vec3 newPos){
+            m_position=newPos;
+        }
+		// void Cube::setShader(std::string newVs, std::string newFs){
+        //     m_shader.setVS(newVS);
+        //     m_shader.setFS(newFS);
+        // }
+		void Cube::setType(TYPECUBE newType){
+            m_type =newType;
         }
 
 
