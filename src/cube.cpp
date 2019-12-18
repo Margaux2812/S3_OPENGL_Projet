@@ -128,13 +128,18 @@ void Cube::draw(){
 };
 
 
-Cube Cube::findFromPosition(Cube &mapCube, glm::vec3 position){
-    Cube mycube;
-    // for (int i=0; i<mapCube; i++ )
-    return mycube;
+int Cube::findFromPosition(glm::vec3 position){
+    for (int i=0; i<m_positionsCubes.size(); i++ ){
+        if(glm::length(position-m_positionsCubes[i]) < 0.1f){
+            return i;
+        }
+    }
+    return -1;
+}
+
 void Cube::updateGPU(){
     glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
-    glBufferData(GL_ARRAY_BUFFER, sizeof(glm::vec3) * m_positionsCubes.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
@@ -143,11 +148,16 @@ void Cube::addCube(glm::vec3 position){
     updateGPU();
 }
 
-Cube::~Cube(){
-	glDeleteBuffers(1, &m_vbo);
-    glDeleteVertexArrays(1, &m_vao);
-}
+void deleteCube(glm::vec3 position){
+    int index = findFromPosition(position);
+    if(index != -1){
+        int lastIndex = m_positionsCubes - 1;
+        std::swap(m_positionsCubes[index], m_positionsCubes[lastIndex]);
+        m_positionsCubes.pop_back();
 
+        updateGPU();
+    }
+}
 
 ///////////////////////////////////////////////////////////////
 /////////////////////////// GETTERS ///////////////////////////

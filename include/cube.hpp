@@ -40,9 +40,10 @@ class Cube{
 
 		///// MANAGER /////
 
-		Cube findFromPosition(Cube &mapCube, glm::vec3 position);
-		void addCube(std::string vs, std::string fs);
-		void deleteCube();
+		int findFromPosition(glm::vec3 position);
+		void Cube::updateGPU();
+		void addCube(glm::vec3 position);
+		void deleteCube(glm::vec3 position);
 		void extrudeCube(Cube &mapCube);
 		void digCube(Cube &mapCube);
 
