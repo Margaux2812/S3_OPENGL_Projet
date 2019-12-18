@@ -1,4 +1,4 @@
-# Install script for directory: /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3
+# Install script for directory: /home/margaux/Documents/S3_OPENGL_test
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,6 +37,12 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for each subdirectory.
+  include("/home/margaux/Documents/S3_OPENGL_test/lib/glimac/cmake_install.cmake")
+
+endif()
+
 if(CMAKE_INSTALL_COMPONENT)
   set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
 else()
@@ -45,5 +51,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/margaux/Documents/S3_OPENGL_test/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

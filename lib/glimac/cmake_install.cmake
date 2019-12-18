@@ -1,4 +1,4 @@
-# Install script for directory: /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/GLImac-Template/glimac
+# Install script for directory: /home/margaux/Documents/S3_OPENGL_test/lib/glimac
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

@@ -1,79 +1,131 @@
-#include <SDL2/SDL.h>
-#include <glad/glad.h>
-#include <spdlog/spdlog.h>
-#include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
-#include <string>
+#include <GL/glew.h>
+#include <iostream>
+#include <cstddef>
+#include "../lib/glimac/include/Program.hpp"
+#include "../lib/glimac/include/FilePath.hpp"
+#include "../lib/glimac/include/glm.hpp"
+#include "../lib/glimac/include/FreeflyCamera.hpp"
+#include "../lib/glimac/include/SDLWindowManager.hpp"
+#include "../include/vertex.hpp"
+#include "../include/cube.hpp"
 
-#include "headers/app.hpp"
-#include "headers/cube.hpp"
+using namespace glimac;
 
-int main(int argc, char *argv[]) {
-    App app;
-    Cube myCube;
-    Cube myCube2;
-    // Selector mySelect();
+int main(int argc, char** argv) {
+    // Initialize SDL and open a window
+    SDLWindowManager windowManager(800, 600, "Test");
 
-    ////***MAP WORLD***////
-    // Créer un tableau fixe de cube invisibles
+    // Initialize glew for OpenGL3+ support
+    GLenum glewInitError = glewInit();
+    if(GLEW_OK != glewInitError) {
+        std::cerr << glewGetErrorString(glewInitError) << std::endl;
+        return EXIT_FAILURE;
+    }
 
-    // uint nbCubeLines = 10;
-    // Cube mapCube[nbCubeLines*nbCubesLines*nbCubesLines];
+    FilePath applicationPath(argv[0]);
+    Program program = loadProgram(applicationPath.dirPath() + "../shaders/3D.vs.glsl",
+                              applicationPath.dirPath() + "../shaders/normal.fs.glsl");
+    program.use();
 
-    ////**************////
+    //Les variables uniformes du Vertex Shader
+    GLint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
+    GLint uMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
+    GLint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
 
+    glEnable(GL_DEPTH_TEST);
 
+    std::cout << "OpenGL Version : " << glGetString(GL_VERSION) << std::endl;
+    std::cout << "GLEW Version : " << glewGetString(GLEW_VERSION) << std::endl;
 
-    glClearColor(1, 0, 1, 1);
-    while (app.isRunning()) {
+    /*********************************
+     * HERE SHOULD COME THE INITIALIZATION CODE
+     *********************************/
+
+    FreeflyCamera camera;
+
+    Cube cube;
+
+      glm::mat4 ProjMatrix = glm::perspective(
+        glm::radians(70.f),
+        800.f/600.f,
+        0.1f,
+        100.f);
+    glm::mat4 MVMatrix = glm::translate(
+        glm::mat4(),
+        glm::vec3(0, 0, -5)
+        );
+    glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+    // Application loop:
+    bool done = false;
+    while(!done) {
+        // Event loop:
         SDL_Event e;
-        while (SDL_PollEvent(&e)) {
-            switch (e.type) {
-            case SDL_QUIT: app.exit();
+        while(windowManager.pollEvent(e)) {
+            if(e.type == SDL_QUIT) {
+                done = true; // Leave the loop after this iteration
+            }
 
-            case SDL_KEYDOWN:
-                if (e.key.keysym.scancode == SDL_SCANCODE_LEFT) {
-                    myCube.m_position.x--;
-                } else if (e.key.keysym.scancode == SDL_SCANCODE_RIGHT) {
-                    myCube.m_position.x++;
-                } else if (e.key.keysym.scancode == SDL_SCANCODE_UP) {
-                    myCube.m_position.y++;
-                } else if (e.key.keysym.scancode == SDL_SCANCODE_DOWN) {
-                    myCube.m_position.y--;
-                } else if (e.key.keysym.scancode == SDL_SCANCODE_PAGEUP) {
-                    myCube.m_position.z++;
-                } else if (e.key.keysym.scancode == SDL_SCANCODE_PAGEDOWN) {
-                    myCube.m_position.z--;
+            if(e.type == SDL_KEYDOWN){
+                float speed = 0.1f;
+                switch(e.key.keysym.sym){
+                    /*Z key to move forward*/
+                    case SDLK_z: camera.moveFront(speed);
+                    break;
+                    /*S key to move backward*/
+                    case SDLK_s: camera.moveFront(-speed);
+                    break;
+                    /*Q key to move forward*/
+                    case SDLK_q: camera.moveLeft(speed);
+                    break;
+                    /*D key to move backward*/
+                    case SDLK_d: camera.moveLeft(-speed);
+                    break;
+
+                    default: break;
                 }
-
-            default: break;
-            };
+            }
+            
+            if(e.type== SDL_MOUSEMOTION){
+                float speed = 0.1f;
+                if ( e.motion.xrel != 0 ) {
+                  camera.rotateUp( float(-e.motion.xrel) * speed);
+                }
+                if ( e.motion.yrel != 0 ) {
+                  camera.rotateLeft( float(e.motion.yrel) * speed);
+                }
+                
+            }
         }
 
-        app.beginFrame();
+        /*********************************
+         * HERE SHOULD COME THE RENDERING CODE
+         *********************************/
 
-        myCube.draw();
-        myCube2.draw();
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+        MVMatrix = camera.getViewMatrix();
 
-        // // Edit cube position + Draw them
-        // uint countCube = 0;
-        // for (uint line=0; line<=nbCubeLines; line++){
-        //     for (uint row=0; row<=nbCubeLines; row++){
-        //         for (uint prof=0; prof<=nbCubeLine; prof++){
-        //             mapCube[countCube].drawCube();                            
-        //             mapCube[countCube].m_position.x=line;    // Initialise lignes (X)                      
-        //             mapCube[countCube].m_position.y=row;     // Initialise colonnes (Y)                       
-        //             mapCube[countCube].m_position.z=prof;    // Initialise profondeur (Z)                       
-        //             countCube++;
-        //         }
-        //     }
-        // }    
+        glUniformMatrix4fv(uMVPMatrix,
+            1,
+            GL_FALSE,
+            glm::value_ptr(ProjMatrix*MVMatrix)
+            );
+        glUniformMatrix4fv(uMVMatrix,
+            1,
+            GL_FALSE,
+            glm::value_ptr(MVMatrix)
+            );
+        glUniformMatrix4fv(uNormalMatrix,
+            1,
+            GL_FALSE,
+            glm::value_ptr(NormalMatrix)
+            );
+        
+        cube.draw();
 
-
-
-        app.endFrame();
+        // Update the display
+        windowManager.swapBuffers();
     }
-    
-    return 0;
+
+    return EXIT_SUCCESS;
 }

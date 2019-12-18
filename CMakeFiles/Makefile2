@@ -59,82 +59,100 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3"
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_test
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3"
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_test
 
 #=============================================================================
-# Target rules for target CMakeFiles/GLAD.dir
+# Target rules for target CMakeFiles/WorldIMaker.dir
 
 # All Build rule for target.
-CMakeFiles/GLAD.dir/all:
-	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/depend
-	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=1,2 "Built target GLAD"
-.PHONY : CMakeFiles/GLAD.dir/all
+CMakeFiles/WorldIMaker.dir/all: lib/glimac/CMakeFiles/glimac.dir/all
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/depend
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/margaux/Documents/S3_OPENGL_test/CMakeFiles --progress-num=1,2,3,4 "Built target WorldIMaker"
+.PHONY : CMakeFiles/WorldIMaker.dir/all
 
 # Include target in all.
-all: CMakeFiles/GLAD.dir/all
+all: CMakeFiles/WorldIMaker.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/GLAD.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/GLAD.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 0
-.PHONY : CMakeFiles/GLAD.dir/rule
+CMakeFiles/WorldIMaker.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_test/CMakeFiles 13
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WorldIMaker.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_test/CMakeFiles 0
+.PHONY : CMakeFiles/WorldIMaker.dir/rule
 
 # Convenience name for target.
-GLAD: CMakeFiles/GLAD.dir/rule
+WorldIMaker: CMakeFiles/WorldIMaker.dir/rule
 
-.PHONY : GLAD
-
-# clean rule for target.
-CMakeFiles/GLAD.dir/clean:
-	$(MAKE) -f CMakeFiles/GLAD.dir/build.make CMakeFiles/GLAD.dir/clean
-.PHONY : CMakeFiles/GLAD.dir/clean
+.PHONY : WorldIMaker
 
 # clean rule for target.
-clean: CMakeFiles/GLAD.dir/clean
+CMakeFiles/WorldIMaker.dir/clean:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/clean
+.PHONY : CMakeFiles/WorldIMaker.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/WorldIMaker.dir/clean
 
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/WORLDIMACKER.dir
+# Directory level rules for directory lib/glimac
+
+# Convenience name for "all" pass in the directory.
+lib/glimac/all: lib/glimac/CMakeFiles/glimac.dir/all
+
+.PHONY : lib/glimac/all
+
+# Convenience name for "clean" pass in the directory.
+lib/glimac/clean: lib/glimac/CMakeFiles/glimac.dir/clean
+
+.PHONY : lib/glimac/clean
+
+# Convenience name for "preinstall" pass in the directory.
+lib/glimac/preinstall:
+
+.PHONY : lib/glimac/preinstall
+
+#=============================================================================
+# Target rules for target lib/glimac/CMakeFiles/glimac.dir
 
 # All Build rule for target.
-CMakeFiles/WORLDIMACKER.dir/all: CMakeFiles/GLAD.dir/all
-	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/depend
-	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" --progress-num=3,4,5,6,7,8,9,10,11,12,13 "Built target WORLDIMACKER"
-.PHONY : CMakeFiles/WORLDIMACKER.dir/all
+lib/glimac/CMakeFiles/glimac.dir/all:
+	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/depend
+	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/margaux/Documents/S3_OPENGL_test/CMakeFiles --progress-num=5,6,7,8,9,10,11,12,13 "Built target glimac"
+.PHONY : lib/glimac/CMakeFiles/glimac.dir/all
 
 # Include target in all.
-all: CMakeFiles/WORLDIMACKER.dir/all
+all: lib/glimac/CMakeFiles/glimac.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/WORLDIMACKER.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 13
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WORLDIMACKER.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/OPENGL_Project_S3/CMakeFiles" 0
-.PHONY : CMakeFiles/WORLDIMACKER.dir/rule
+lib/glimac/CMakeFiles/glimac.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_test/CMakeFiles 9
+	$(MAKE) -f CMakeFiles/Makefile2 lib/glimac/CMakeFiles/glimac.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_test/CMakeFiles 0
+.PHONY : lib/glimac/CMakeFiles/glimac.dir/rule
 
 # Convenience name for target.
-WORLDIMACKER: CMakeFiles/WORLDIMACKER.dir/rule
+glimac: lib/glimac/CMakeFiles/glimac.dir/rule
 
-.PHONY : WORLDIMACKER
-
-# clean rule for target.
-CMakeFiles/WORLDIMACKER.dir/clean:
-	$(MAKE) -f CMakeFiles/WORLDIMACKER.dir/build.make CMakeFiles/WORLDIMACKER.dir/clean
-.PHONY : CMakeFiles/WORLDIMACKER.dir/clean
+.PHONY : glimac
 
 # clean rule for target.
-clean: CMakeFiles/WORLDIMACKER.dir/clean
+lib/glimac/CMakeFiles/glimac.dir/clean:
+	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/clean
+.PHONY : lib/glimac/CMakeFiles/glimac.dir/clean
+
+# clean rule for target.
+clean: lib/glimac/CMakeFiles/glimac.dir/clean
 
 .PHONY : clean
 

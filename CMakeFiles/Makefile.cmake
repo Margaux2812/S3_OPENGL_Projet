@@ -11,7 +11,7 @@ set(CMAKE_MAKEFILE_DEPENDS
   "CMakeFiles/3.13.4/CMakeCXXCompiler.cmake"
   "CMakeFiles/3.13.4/CMakeSystem.cmake"
   "CMakeLists.txt"
-  "/usr/lib/x86_64-linux-gnu/cmake/SDL2/sdl2-config.cmake"
+  "lib/glimac/CMakeLists.txt"
   "/usr/share/cmake-3.13/Modules/CMakeCInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCXXInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeCommonLanguageInclude.cmake"
@@ -20,18 +20,25 @@ set(CMAKE_MAKEFILE_DEPENDS
   "/usr/share/cmake-3.13/Modules/CMakeLanguageInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeSystemSpecificInformation.cmake"
   "/usr/share/cmake-3.13/Modules/CMakeSystemSpecificInitialize.cmake"
+  "/usr/share/cmake-3.13/Modules/CheckIncludeFile.cmake"
+  "/usr/share/cmake-3.13/Modules/CheckLibraryExists.cmake"
+  "/usr/share/cmake-3.13/Modules/CheckSymbolExists.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/CMakeCommonCompilerMacros.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU-C.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU-CXX.cmake"
   "/usr/share/cmake-3.13/Modules/Compiler/GNU.cmake"
+  "/usr/share/cmake-3.13/Modules/FindGLEW.cmake"
   "/usr/share/cmake-3.13/Modules/FindOpenGL.cmake"
   "/usr/share/cmake-3.13/Modules/FindPackageHandleStandardArgs.cmake"
   "/usr/share/cmake-3.13/Modules/FindPackageMessage.cmake"
+  "/usr/share/cmake-3.13/Modules/FindSDL.cmake"
+  "/usr/share/cmake-3.13/Modules/FindThreads.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux-GNU-C.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux-GNU-CXX.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux-GNU.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/Linux.cmake"
   "/usr/share/cmake-3.13/Modules/Platform/UnixPaths.cmake"
+  "/usr/share/cmake-3.13/Modules/SelectLibraryConfigurations.cmake"
   )
 
 # The corresponding makefile is:
@@ -43,10 +50,11 @@ set(CMAKE_MAKEFILE_OUTPUTS
 # Byproducts of CMake generate step:
 set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
+  "lib/glimac/CMakeFiles/CMakeDirectoryInformation.cmake"
   )
 
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
-  "CMakeFiles/GLAD.dir/DependInfo.cmake"
-  "CMakeFiles/WORLDIMACKER.dir/DependInfo.cmake"
+  "CMakeFiles/WorldIMaker.dir/DependInfo.cmake"
+  "lib/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   )
