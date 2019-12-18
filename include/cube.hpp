@@ -9,9 +9,9 @@ class Cube{
 		GLuint m_vbo;
 		GLuint m_ibo;
 
-		// glm::vec3 m_position;
+		glm::vec3 m_position;
 		// Shader m_shader;
-		// TYPECUBE m_typeCube;
+		TYPECUBE m_type;
 
 	public :
 		Cube();
@@ -24,9 +24,9 @@ class Cube{
 		GLuint getVao();
 		GLuint getVbo();
 		GLuint getIbo();
-		// glm::vec3 getPosition();
+		glm::vec3 getPosition();
 		// Shader getShader();
-		// TypeCube getType();
+		TYPECUBE getType();
 
 		///// SETTERS /////
 
