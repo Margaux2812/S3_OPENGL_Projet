@@ -1,6 +1,5 @@
 #include "../include/cube.hpp"
 #include "../include/vertex.hpp"
-#include <vector>
 
 Cube::Cube(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
@@ -53,14 +52,11 @@ Cube::Cube(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
-    std::vector<glm::vec3> m_positionsCubes;
-
     m_positionsCubes.push_back(glm::vec3(-2, -1, -3));
     m_positionsCubes.push_back(glm::vec3(0, -1, -3));
     m_positionsCubes.push_back(glm::vec3(2, -1, -3));
+    m_positionsCubes.push_back(glm::vec3(3, -1, -3));
 
-
-    GLuint vboAll;
     // on crée le buffer
     glGenBuffers(1, &vboAll); 
     // on le bind pour que la ligne suivante s'applique bien à ce buffer ci
@@ -122,14 +118,14 @@ void Cube::draw(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
     //Dernier truc est nb de cubes
-    glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, 3);
+    glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
 
     glBindVertexArray(0); //Debinder la VAO
 };
 
 
 int Cube::findFromPosition(glm::vec3 position){
-    for (int i=0; i<m_positionsCubes.size(); i++ ){
+    for (int i=0; i< int(m_positionsCubes.size()); i++ ){
         if(glm::length(position-m_positionsCubes[i]) < 0.1f){
             return i;
         }
@@ -144,14 +140,23 @@ void Cube::updateGPU(){
 }
 
 void Cube::addCube(glm::vec3 position){
+    int exists = findFromPosition(position);
+    if(exists == -1){
+        m_positionsCubes.push_back(position);
+        updateGPU();
+    }
+}
+
+void Cube::replace(glm::vec3 position){
+    deleteCube(position);
     m_positionsCubes.push_back(position);
     updateGPU();
 }
 
-void deleteCube(glm::vec3 position){
+void Cube::deleteCube(glm::vec3 position){
     int index = findFromPosition(position);
     if(index != -1){
-        int lastIndex = m_positionsCubes - 1;
+        int lastIndex = m_positionsCubes.size() - 1;
         std::swap(m_positionsCubes[index], m_positionsCubes[lastIndex]);
         m_positionsCubes.pop_back();
 

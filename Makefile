@@ -190,33 +190,6 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
-src/vertex.o: src/vertex.cpp.o
-
-.PHONY : src/vertex.o
-
-# target to build an object file
-src/vertex.cpp.o:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o
-.PHONY : src/vertex.cpp.o
-
-src/vertex.i: src/vertex.cpp.i
-
-.PHONY : src/vertex.i
-
-# target to preprocess a source file
-src/vertex.cpp.i:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/vertex.cpp.i
-.PHONY : src/vertex.cpp.i
-
-src/vertex.s: src/vertex.cpp.s
-
-.PHONY : src/vertex.s
-
-# target to generate assembly for a file
-src/vertex.cpp.s:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/vertex.cpp.s
-.PHONY : src/vertex.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -233,9 +206,6 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
-	@echo "... src/vertex.o"
-	@echo "... src/vertex.i"
-	@echo "... src/vertex.s"
 .PHONY : help
 
 

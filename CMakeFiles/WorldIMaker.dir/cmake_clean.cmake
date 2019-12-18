@@ -1,7 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
-  "CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
   "bin/WorldIMaker.pdb"
   "bin/WorldIMaker"
 )

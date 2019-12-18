@@ -46,7 +46,6 @@ int main(int argc, char** argv) {
     // Selector mySelector();
 
     ////MAP WORLD***////
-    uint nbCubeLines = 5; // Nombre de cube par tranche
 
       glm::mat4 ProjMatrix = glm::infinitePerspective(
         1.f,
@@ -87,7 +86,7 @@ int main(int argc, char** argv) {
                 }
             }
             
-            if(e.type== SDL_MOUSEMOTION && e.button.button == SDL_BUTTON_LEFT){
+            /*if(e.type== SDL_MOUSEMOTION){
                 float speed = 0.1f;
                 if ( e.motion.xrel != 0 ) {
                   camera.rotateUp( float(-e.motion.xrel) * speed);
@@ -96,7 +95,7 @@ int main(int argc, char** argv) {
                   camera.rotateLeft( float(e.motion.yrel) * speed);
                 }
                 
-            }
+            }*/
         }
 
         /*********************************
