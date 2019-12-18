@@ -42,14 +42,12 @@ int main(int argc, char** argv) {
      *********************************/
 
     FreeflyCamera camera;
-
     Cube cube;
 
-      glm::mat4 ProjMatrix = glm::perspective(
-        glm::radians(70.f),
+      glm::mat4 ProjMatrix = glm::infinitePerspective(
+        1.f,
         800.f/600.f,
-        0.1f,
-        100.f);
+        0.1f);
     glm::mat4 MVMatrix = glm::translate(
         glm::mat4(),
         glm::vec3(0, 0, -5)
@@ -85,12 +83,12 @@ int main(int argc, char** argv) {
                 }
             }
             
-            if(e.type== SDL_MOUSEMOTION){
+            if(e.type== SDL_MOUSEMOTION && e.button.button == SDL_BUTTON_LEFT){
                 float speed = 0.1f;
                 if ( e.motion.xrel != 0 ) {
                   camera.rotateUp( float(-e.motion.xrel) * speed);
                 }
-                if ( e.motion.yrel != 0 ) {
+                if ( e.motion.yrel != 0 ) {std::cout << float(-e.motion.yrel) * speed << std::endl;
                   camera.rotateLeft( float(e.motion.yrel) * speed);
                 }
                 

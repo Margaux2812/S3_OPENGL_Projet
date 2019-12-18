@@ -4,9 +4,9 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/margaux/Documents/S3_OPENGL_test/src/cube.cpp" "/home/margaux/Documents/S3_OPENGL_test/CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
-  "/home/margaux/Documents/S3_OPENGL_test/src/main.cpp" "/home/margaux/Documents/S3_OPENGL_test/CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
-  "/home/margaux/Documents/S3_OPENGL_test/src/vertex.cpp" "/home/margaux/Documents/S3_OPENGL_test/CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/vertex.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -19,7 +19,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/margaux/Documents/S3_OPENGL_test/lib/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
+  "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/CMakeFiles/glimac.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.
