@@ -8,8 +8,10 @@ class Cube{
 		GLuint m_vbo;
 		GLuint m_ibo;
 
-		// A ajouter : m_shader ? m_position ? (ou sur Object) ? 
-		// A ajouter : ENUM : type cube ? 	
+		// glm::vec3 m_position;
+		// Shader m_shader;
+		// TYPECUBE m_typeCube;
+
 	public :
 		Cube();
 		~Cube();
@@ -21,12 +23,18 @@ class Cube{
 		GLuint getVao();
 		GLuint getVbo();
 		GLuint getIbo();
+		// glm::vec3 getPosition();
+		// Shader getShader();
+		// TypeCube getType();
 
 		///// SETTERS /////
 
 		void setVao(GLuint newVao);
 		void setVbo(GLuint newVbo);
 		void setIbo(GLuint newIbo);
+		void setPosition(glm::vec3 newPos);
+		void setShader(std::string newVs, std::string newFs);
+		void setType(TYPECUBE newType);
 
 
 		///// MANAGER /////

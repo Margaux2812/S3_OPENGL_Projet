@@ -44,6 +44,10 @@ int main(int argc, char** argv) {
     FreeflyCamera camera;
 
     Cube cube;
+    // Selector mySelector();
+
+    ////MAP WORLD***////
+    uint nbCubeLines = 5; // Nombre de cube par tranche
 
       glm::mat4 ProjMatrix = glm::perspective(
         glm::radians(70.f),
