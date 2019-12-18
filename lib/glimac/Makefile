@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_test
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_test
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/margaux/Documents/S3_OPENGL_test && $(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_test/CMakeFiles /home/margaux/Documents/S3_OPENGL_test/lib/glimac/CMakeFiles/progress.marks
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_test/CMakeFiles 0
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/CMakeFiles/progress.marks
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/clean
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/preinstall
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/preinstall
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 lib/glimac/CMakeFiles/glimac.dir/rule:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/CMakeFiles/glimac.dir/rule
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 lib/glimac/CMakeFiles/glimac.dir/rule
 .PHONY : lib/glimac/CMakeFiles/glimac.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ glimac: lib/glimac/CMakeFiles/glimac.dir/rule
 
 # fast build rule for target.
 glimac/fast:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
 src/FreeflyCamera.o: src/FreeflyCamera.cpp.o
@@ -131,7 +131,7 @@ src/FreeflyCamera.o: src/FreeflyCamera.cpp.o
 
 # target to build an object file
 src/FreeflyCamera.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.o
 .PHONY : src/FreeflyCamera.cpp.o
 
 src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
@@ -140,7 +140,7 @@ src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
 
 # target to preprocess a source file
 src/FreeflyCamera.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.i
 .PHONY : src/FreeflyCamera.cpp.i
 
 src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
@@ -149,7 +149,7 @@ src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
 
 # target to generate assembly for a file
 src/FreeflyCamera.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.s
 .PHONY : src/FreeflyCamera.cpp.s
 
 src/Geometry.o: src/Geometry.cpp.o
@@ -158,7 +158,7 @@ src/Geometry.o: src/Geometry.cpp.o
 
 # target to build an object file
 src/Geometry.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o
 .PHONY : src/Geometry.cpp.o
 
 src/Geometry.i: src/Geometry.cpp.i
@@ -167,7 +167,7 @@ src/Geometry.i: src/Geometry.cpp.i
 
 # target to preprocess a source file
 src/Geometry.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.i
 .PHONY : src/Geometry.cpp.i
 
 src/Geometry.s: src/Geometry.cpp.s
@@ -176,7 +176,7 @@ src/Geometry.s: src/Geometry.cpp.s
 
 # target to generate assembly for a file
 src/Geometry.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.s
 .PHONY : src/Geometry.cpp.s
 
 src/Image.o: src/Image.cpp.o
@@ -185,7 +185,7 @@ src/Image.o: src/Image.cpp.o
 
 # target to build an object file
 src/Image.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.o
 .PHONY : src/Image.cpp.o
 
 src/Image.i: src/Image.cpp.i
@@ -194,7 +194,7 @@ src/Image.i: src/Image.cpp.i
 
 # target to preprocess a source file
 src/Image.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.i
 .PHONY : src/Image.cpp.i
 
 src/Image.s: src/Image.cpp.s
@@ -203,7 +203,7 @@ src/Image.s: src/Image.cpp.s
 
 # target to generate assembly for a file
 src/Image.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.s
 .PHONY : src/Image.cpp.s
 
 src/Program.o: src/Program.cpp.o
@@ -212,7 +212,7 @@ src/Program.o: src/Program.cpp.o
 
 # target to build an object file
 src/Program.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.o
 .PHONY : src/Program.cpp.o
 
 src/Program.i: src/Program.cpp.i
@@ -221,7 +221,7 @@ src/Program.i: src/Program.cpp.i
 
 # target to preprocess a source file
 src/Program.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.i
 .PHONY : src/Program.cpp.i
 
 src/Program.s: src/Program.cpp.s
@@ -230,7 +230,7 @@ src/Program.s: src/Program.cpp.s
 
 # target to generate assembly for a file
 src/Program.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.s
 .PHONY : src/Program.cpp.s
 
 src/SDLWindowManager.o: src/SDLWindowManager.cpp.o
@@ -239,7 +239,7 @@ src/SDLWindowManager.o: src/SDLWindowManager.cpp.o
 
 # target to build an object file
 src/SDLWindowManager.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.o
 .PHONY : src/SDLWindowManager.cpp.o
 
 src/SDLWindowManager.i: src/SDLWindowManager.cpp.i
@@ -248,7 +248,7 @@ src/SDLWindowManager.i: src/SDLWindowManager.cpp.i
 
 # target to preprocess a source file
 src/SDLWindowManager.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.i
 .PHONY : src/SDLWindowManager.cpp.i
 
 src/SDLWindowManager.s: src/SDLWindowManager.cpp.s
@@ -257,7 +257,7 @@ src/SDLWindowManager.s: src/SDLWindowManager.cpp.s
 
 # target to generate assembly for a file
 src/SDLWindowManager.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/SDLWindowManager.cpp.s
 .PHONY : src/SDLWindowManager.cpp.s
 
 src/Shader.o: src/Shader.cpp.o
@@ -266,7 +266,7 @@ src/Shader.o: src/Shader.cpp.o
 
 # target to build an object file
 src/Shader.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.o
 .PHONY : src/Shader.cpp.o
 
 src/Shader.i: src/Shader.cpp.i
@@ -275,7 +275,7 @@ src/Shader.i: src/Shader.cpp.i
 
 # target to preprocess a source file
 src/Shader.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.i
 .PHONY : src/Shader.cpp.i
 
 src/Shader.s: src/Shader.cpp.s
@@ -284,7 +284,7 @@ src/Shader.s: src/Shader.cpp.s
 
 # target to generate assembly for a file
 src/Shader.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/Shader.cpp.s
 .PHONY : src/Shader.cpp.s
 
 src/TrackballCamera.o: src/TrackballCamera.cpp.o
@@ -293,7 +293,7 @@ src/TrackballCamera.o: src/TrackballCamera.cpp.o
 
 # target to build an object file
 src/TrackballCamera.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.o
 .PHONY : src/TrackballCamera.cpp.o
 
 src/TrackballCamera.i: src/TrackballCamera.cpp.i
@@ -302,7 +302,7 @@ src/TrackballCamera.i: src/TrackballCamera.cpp.i
 
 # target to preprocess a source file
 src/TrackballCamera.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.i
 .PHONY : src/TrackballCamera.cpp.i
 
 src/TrackballCamera.s: src/TrackballCamera.cpp.s
@@ -311,7 +311,7 @@ src/TrackballCamera.s: src/TrackballCamera.cpp.s
 
 # target to generate assembly for a file
 src/TrackballCamera.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/TrackballCamera.cpp.s
 .PHONY : src/TrackballCamera.cpp.s
 
 src/tiny_obj_loader.o: src/tiny_obj_loader.cpp.o
@@ -320,7 +320,7 @@ src/tiny_obj_loader.o: src/tiny_obj_loader.cpp.o
 
 # target to build an object file
 src/tiny_obj_loader.cpp.o:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.o
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.o
 .PHONY : src/tiny_obj_loader.cpp.o
 
 src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
@@ -329,7 +329,7 @@ src/tiny_obj_loader.i: src/tiny_obj_loader.cpp.i
 
 # target to preprocess a source file
 src/tiny_obj_loader.cpp.i:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.i
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.i
 .PHONY : src/tiny_obj_loader.cpp.i
 
 src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
@@ -338,7 +338,7 @@ src/tiny_obj_loader.s: src/tiny_obj_loader.cpp.s
 
 # target to generate assembly for a file
 src/tiny_obj_loader.cpp.s:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.s
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/src/tiny_obj_loader.cpp.s
 .PHONY : src/tiny_obj_loader.cpp.s
 
 # Help Target
@@ -385,6 +385,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/margaux/Documents/S3_OPENGL_test && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 
