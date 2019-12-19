@@ -1,6 +1,6 @@
 #include "../include/cube.hpp"
 #include "../include/vertex.hpp"
-
+#include <iostream>
 Cube::Cube(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_COULEUR = 1;
@@ -167,12 +167,33 @@ void Cube::loadMonde(){
     m_positionsCubes.push_back(glm::vec3(3, -1, -3));
 }
 
-void Cube::extrudeCube(glm::vec3 position){
-
+int Cube::findLastCube(glm::vec3 position){
+    int yMax=0.;
+    for (int i=0; i< int(m_positionsCubes.size()); i++ ){
+        if((glm::length(position.x-m_positionsCubes[i].x) < 0.1f) && (glm::length(position.z-m_positionsCubes[i].z) < 0.1f)){
+            if(m_positionsCubes[i].y > yMax) 
+                yMax = m_positionsCubes[i].y;
+        }
+    }
+    
+    return yMax;
 }
 
-void Cube::digCube(glm::vec3 position){
+/*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est*/
+void Cube::extrudeCube(glm::vec3 position){
+    int yMax = findLastCube(position);
+    std::cout<<yMax<<std::endl;
+    position.y = yMax+1;
+    m_positionsCubes.push_back(position);
+    updateGPU();
+}
 
+/*On a le curseur à un endroit et on veut enlever le dernier cube en haut de l'endroit où on est*/
+void Cube::digCube(glm::vec3 position){
+    int yMax = findLastCube(position);
+    position.y = yMax;
+    deleteCube(position);
+    updateGPU();
 }
 
 

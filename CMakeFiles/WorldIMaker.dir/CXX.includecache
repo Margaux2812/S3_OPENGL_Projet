@@ -37,6 +37,8 @@ vector
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 ../include/vertex.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+iostream
+-
 
 lib/glm/common.hpp
 detail/func_common.hpp
