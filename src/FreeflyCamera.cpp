@@ -69,3 +69,12 @@ void FreeflyCamera::handleKeyboardEvents(const SDLKey e){
         default: break;
     }
 }
+
+void FreeflyCamera::handleMouseEvents(const SDL_Event e){
+    if ( e.motion.xrel != 0 ) {
+      rotateUp( float(-e.motion.xrel) * cameraSpeedRotation);
+    }
+    if ( e.motion.yrel != 0 ) {
+      rotateLeft( float(e.motion.yrel) * cameraSpeedRotation);
+    }
+}

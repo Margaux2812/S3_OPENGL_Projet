@@ -11,6 +11,7 @@ private :
 	glm::vec3 m_LeftVector;
 	glm::vec3 m_UpVector;
 	const float cameraSpeed = 1.f;
+	const float cameraSpeedRotation = 0.1f;
 
 public:
 	//Constructeur
@@ -25,4 +26,5 @@ public:
 	glm::mat4 getViewMatrix() const;
 
 	void handleKeyboardEvents(const SDLKey e);
+	void handleMouseEvents(const SDL_Event e);
 };

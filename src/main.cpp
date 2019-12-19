@@ -12,8 +12,6 @@
 
 using namespace glimac;
 
-const float cameraSpeedRotation = 0.1f;
-
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(800, 600, "Test");
@@ -75,13 +73,8 @@ int main(int argc, char** argv) {
                     camera.handleKeyboardEvents(e.key.keysym.sym);
                     break;
                 case SDL_MOUSEMOTION:
-                    if(e.button.button != 0.0){
-                        if ( e.motion.xrel != 0 ) {
-                          camera.rotateUp( float(-e.motion.xrel) * cameraSpeedRotation);
-                        }
-                        if ( e.motion.yrel != 0 ) {
-                          camera.rotateLeft( float(e.motion.yrel) * cameraSpeedRotation);
-                        }
+                    if(e.button.button == SDL_BUTTON_LEFT){
+                        camera.handleMouseEvents(e);
                     }
 
                 default: break;
