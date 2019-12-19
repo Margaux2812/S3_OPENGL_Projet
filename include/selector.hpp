@@ -20,6 +20,8 @@ class Selector{
 		glm::vec3 getPosition();
 
 		void draw();
+
+		void handleEvents(SDLKey e);
 		void updateGPU();
 		void updatePos(glm::vec3 position);
 		void move(Fleche direction);

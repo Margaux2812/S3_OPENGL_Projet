@@ -125,6 +125,26 @@ void Selector::draw(){
     glBindVertexArray(0); //Debinder la VAO
 }
 
+void Selector::handleEvents(SDLKey e){
+    switch(e){
+        case SDLK_LEFT: move(gauche);
+        break;
+        case SDLK_RIGHT:move(droite);
+        break;
+        case SDLK_UP:move(haut);
+        break;
+        case SDLK_DOWN: move(bas);
+        break;
+        case SDLK_o:move(arriere);
+        break;
+        case SDLK_l: move(avant);
+        break;
+        
+        default: break;
+    }
+}
+
+
 void Selector::updateGPU(){
     glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
     glBufferData(GL_ARRAY_BUFFER, m_positionCube.size()*sizeof(glm::vec3), m_positionCube.data(), GL_STATIC_DRAW);

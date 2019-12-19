@@ -84,6 +84,14 @@ FilePath.hpp
 ../../glm/gtc/random.hpp
 -
 
+/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp
+../include/cube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+iostream
+-
+
 /home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp
 GL/glew.h
 -
@@ -107,6 +115,12 @@ cstddef
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 ../include/selector.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
+../include/selector.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 
 lib/glm/common.hpp
 detail/func_common.hpp
