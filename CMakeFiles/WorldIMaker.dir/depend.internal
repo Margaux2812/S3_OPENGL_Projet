@@ -4,6 +4,7 @@
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp
  lib/glm/common.hpp
@@ -204,6 +205,7 @@ CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
  lib/glm/common.hpp

@@ -3,6 +3,7 @@
 
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: include/cube.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: include/vertex.hpp
+CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glimac/include/SDLWindowManager.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glimac/include/glm.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: src/cube.cpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glm/common.hpp
@@ -203,6 +204,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o: lib/glm/vector_relational.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/cube.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/selector.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/vertex.hpp
+CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: lib/glimac/include/SDLWindowManager.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: lib/glimac/include/glm.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: src/selector.cpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: lib/glm/common.hpp

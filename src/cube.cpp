@@ -121,6 +121,35 @@ void Cube::draw(){
 }
 
 
+
+
+
+
+
+
+
+void Cube::handleEvents(SDLKey e, glm::vec3 position){
+    switch(e){
+        /*************************************
+        ******Ajouter ou supprimer cubes******
+        *************************************/
+        case SDLK_DELETE: deleteCube(position);
+        break;
+        case SDLK_RETURN : addCube(position);
+        break;
+
+        /*************************************
+        *********Extrude ou Dig cubes*********
+        *************************************/
+        case SDLK_e: extrudeCube(position);
+        break;
+        case SDLK_c : digCube(position);
+        break;
+        
+        default: break;
+    }
+}
+
 int Cube::findFromPosition(glm::vec3 position){
     for (int i=0; i< int(m_positionsCubes.size()); i++ ){
         if(glm::length(position-m_positionsCubes[i]) < 0.1f){

@@ -71,6 +71,8 @@ int main(int argc, char** argv) {
                     break;
 
                 case SDL_KEYDOWN : 
+                    cubes.handleEvents(e.key.keysym.sym, selector.getPosition());
+                        
                     switch(e.key.keysym.sym){
                         /*Z key to move forward*/
                         case SDLK_z: camera.moveFront(cameraSpeed);
@@ -104,7 +106,7 @@ int main(int argc, char** argv) {
 
                         /*************************************
                         ******Ajouter ou supprimer cubes******
-                        *************************************/
+                        *************************************
                         case SDLK_DELETE: cubes.deleteCube(selector.getPosition());
                         break;
                         case SDLK_RETURN : cubes.addCube(selector.getPosition());
@@ -112,11 +114,11 @@ int main(int argc, char** argv) {
 
                         /*************************************
                         *********Extrude ou Dig cubes*********
-                        *************************************/
+                        *************************************
                         case SDLK_e: cubes.extrudeCube(selector.getPosition());
                         break;
                         case SDLK_c : cubes.digCube(selector.getPosition());
-                        break;
+                        break;*/
                         
                         default: break;
                     }

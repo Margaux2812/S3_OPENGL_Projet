@@ -4,6 +4,8 @@
 //#include "../include/TYPECUBE.hpp"
 #include "../lib/glimac/include/glm.hpp"
 #include <vector>
+//To have the SDL_Event
+#include "../lib/glimac/include/SDLWindowManager.hpp"
 
 class Cube{
 	private:
@@ -43,6 +45,7 @@ class Cube{
 
 		///// MANAGER /////
 
+		void handleEvents(SDLKey e, glm::vec3 position);
 		int findFromPosition(glm::vec3 position);
 		void updateGPU();
 		void addCube(glm::vec3 position);
