@@ -46,7 +46,7 @@ int main(int argc, char** argv) {
      *********************************/
 
     FreeflyCamera camera;
-    Cube cube;
+    Cube cubes;
     Selector selector;
 
     ////MAP WORLD***////
@@ -86,6 +86,10 @@ int main(int argc, char** argv) {
                         case SDLK_d: camera.moveLeft(-cameraSpeed);
                         break;
 
+                        /*************************************
+                        *********MOUVEMENT DU CURSEUR*********
+                        *************************************/
+                        
                         case SDLK_LEFT: selector.move(gauche);
                         break;
                         case SDLK_RIGHT:selector.move(droite);
@@ -94,8 +98,7 @@ int main(int argc, char** argv) {
                         break;
                         case SDLK_DOWN: selector.move(bas);
                         break;
-                        /*MOUVEMENT DU CURSEUR*/
-
+                        
                         default: break;
                     }
                     break;
@@ -138,7 +141,7 @@ int main(int argc, char** argv) {
             );
         
         selector.draw();
-        cube.draw();
+        cubes.draw();
 
         // Update the display
         windowManager.swapBuffers();

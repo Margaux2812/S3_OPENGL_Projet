@@ -48,6 +48,7 @@ class Cube{
 		void addCube(glm::vec3 position);
 		void replace(glm::vec3 position);
 		void deleteCube(glm::vec3 position);
+		void loadMonde();
 		void extrudeCube(Cube &mapCube);
 		void digCube(Cube &mapCube);
 

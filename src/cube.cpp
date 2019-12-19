@@ -52,9 +52,7 @@ Cube::Cube(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
-    m_positionsCubes.push_back(glm::vec3(-2, -1, -3));
-    m_positionsCubes.push_back(glm::vec3(2, -1, -3));
-    m_positionsCubes.push_back(glm::vec3(3, -1, -3));
+    loadMonde();
 
     // on crée le buffer
     glGenBuffers(1, &vboAll); 
@@ -161,6 +159,12 @@ void Cube::deleteCube(glm::vec3 position){
 
         updateGPU();
     }
+}
+
+void Cube::loadMonde(){
+    m_positionsCubes.push_back(glm::vec3(-2, -1, -3));
+    m_positionsCubes.push_back(glm::vec3(2, -1, -3));
+    m_positionsCubes.push_back(glm::vec3(3, -1, -3));
 }
 
 ///////////////////////////////////////////////////////////////
