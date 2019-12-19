@@ -168,8 +168,8 @@ void Cube::loadMonde(){
 }
 
 int Cube::findLastCube(glm::vec3 position){
-    int yMax=0.;
-    for (int i=0; i< int(m_positionsCubes.size()); i++ ){
+    int yMax=m_positionsCubes[0].y;
+    for (int i=1; i< int(m_positionsCubes.size()); i++ ){
         if((glm::length(position.x-m_positionsCubes[i].x) < 0.1f) && (glm::length(position.z-m_positionsCubes[i].z) < 0.1f)){
             if(m_positionsCubes[i].y > yMax) 
                 yMax = m_positionsCubes[i].y;
@@ -179,10 +179,10 @@ int Cube::findLastCube(glm::vec3 position){
     return yMax;
 }
 
-/*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est*/
+/*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est
+S'il n'y a pas de cube, ça en ajoute un à y=0*/
 void Cube::extrudeCube(glm::vec3 position){
     int yMax = findLastCube(position);
-    std::cout<<yMax<<std::endl;
     position.y = yMax+1;
     m_positionsCubes.push_back(position);
     updateGPU();
@@ -192,6 +192,7 @@ void Cube::extrudeCube(glm::vec3 position){
 void Cube::digCube(glm::vec3 position){
     int yMax = findLastCube(position);
     position.y = yMax;
+    std::cout<<position<<std::endl;
     deleteCube(position);
     updateGPU();
 }
