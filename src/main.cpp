@@ -8,6 +8,7 @@
 #include "../lib/glimac/include/SDLWindowManager.hpp"
 #include "../include/vertex.hpp"
 #include "../include/cube.hpp"
+#include "../include/selector.hpp"
 
 using namespace glimac;
 
@@ -46,7 +47,7 @@ int main(int argc, char** argv) {
 
     FreeflyCamera camera;
     Cube cube;
-    //Selector selector;
+    Selector selector;
 
     ////MAP WORLD***////
 
@@ -136,6 +137,7 @@ int main(int argc, char** argv) {
             glm::value_ptr(NormalMatrix)
             );
         
+        selector.draw();
         cube.draw();
 
         // Update the display

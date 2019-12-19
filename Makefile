@@ -190,6 +190,33 @@ src/main.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
+src/selector.o: src/selector.cpp.o
+
+.PHONY : src/selector.o
+
+# target to build an object file
+src/selector.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
+.PHONY : src/selector.cpp.o
+
+src/selector.i: src/selector.cpp.i
+
+.PHONY : src/selector.i
+
+# target to preprocess a source file
+src/selector.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/selector.cpp.i
+.PHONY : src/selector.cpp.i
+
+src/selector.s: src/selector.cpp.s
+
+.PHONY : src/selector.s
+
+# target to generate assembly for a file
+src/selector.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/selector.cpp.s
+.PHONY : src/selector.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -206,6 +233,9 @@ help:
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"
+	@echo "... src/selector.o"
+	@echo "... src/selector.i"
+	@echo "... src/selector.s"
 .PHONY : help
 
 

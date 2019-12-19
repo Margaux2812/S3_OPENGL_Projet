@@ -53,7 +53,6 @@ Cube::Cube(){
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
     m_positionsCubes.push_back(glm::vec3(-2, -1, -3));
-    m_positionsCubes.push_back(glm::vec3(0, -1, -3));
     m_positionsCubes.push_back(glm::vec3(2, -1, -3));
     m_positionsCubes.push_back(glm::vec3(3, -1, -3));
 
