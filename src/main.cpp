@@ -11,7 +11,8 @@
 
 using namespace glimac;
 
-const float cameraSpeed = 0.1f;
+const float cameraSpeed = 1.f;
+const float cameraSpeedRotation = 0.1f;
 
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
@@ -45,10 +46,7 @@ int main(int argc, char** argv) {
 
     FreeflyCamera camera;
     Cube cube;
-    /* Position de la souris + position précédente pour calculer la différence pour la rotation*/
-    glm::vec2 mousePos;
-    glm::vec2 mousePosPrec = mousePos;
-    // Selector mySelector();
+    //Selector selector;
 
     ////MAP WORLD***////
 
@@ -87,22 +85,32 @@ int main(int argc, char** argv) {
                         case SDLK_d: camera.moveLeft(-cameraSpeed);
                         break;
 
+                        /*case SDLK_LEFT: selector.moveLeft();
+                        break;
+                        case SDLK_RIGHT: selector.moveLeft();
+                        break;
+                        case SDLK_UP: selector.moveUp();
+                        break;
+                        case SDL_DOWN: selector.moveUp();
+                        break;*/
+                        /*MOUVEMENT DU CURSEUR*/
+
                         default: break;
                     }
                     break;
+                case SDL_MOUSEMOTION:
+                    if(e.button.button != 0.0){
+                        if ( e.motion.xrel != 0 ) {
+                          camera.rotateUp( float(-e.motion.xrel) * cameraSpeedRotation);
+                        }
+                        if ( e.motion.yrel != 0 ) {
+                          camera.rotateLeft( float(e.motion.yrel) * cameraSpeedRotation);
+                        }
+                    }
+
                 default: break;
             }
-
-            if(e.type == SDL_MOUSEMOTION){
-                mousePos = windowManager.getMousePosition();
-                if(e.button.button != 0.0){
-                    camera.rotateUp((mousePosPrec.y - mousePos.y)*0.1f);
-                    camera.rotateLeft((mousePosPrec.x - mousePos.x)*0.1f);
-                }
-            }
         }
-
-        mousePosPrec = mousePos;
 
         /*********************************
          * HERE SHOULD COME THE RENDERING CODE
