@@ -68,12 +68,12 @@ Selector::Selector(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
     uint32_t indices[] = {
-        0, 1, 2,   2, 3, 0,       // front
-        4, 5, 6,   6, 7, 4,       // right
-        8, 9, 10,  10,11,8,       // top
-        12,13,14,  14,15,12,      // left
-        16,17,18,  18,19,16,      // bottom
-        20,21,22,  22,23,20       // back
+        0, 1, 1, 2, 2, 3, 3, 0,       // front
+        4, 5, 5, 6, 6, 7, 7, 4,       // right
+        8, 9, 9,10,10,11,11,8,       // top
+        12,13,13,14,14,15,15,12,      // left
+        16,17,17,18,18,19,19,16,      // bottom
+        20,21,21,22,22,23,23,20       // back
     };
 
     //On a 36 points
@@ -110,7 +110,7 @@ void Selector::draw(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
     //Dernier truc est nb de cubes
-    glDrawElementsInstanced(GL_LINE_LOOP, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCube.size());
+    glDrawElementsInstanced(GL_LINES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCube.size());
 
     glBindVertexArray(0); //Debinder la VAO
 }
