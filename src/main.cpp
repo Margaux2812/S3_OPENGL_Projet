@@ -11,6 +11,8 @@
 
 using namespace glimac;
 
+const float cameraSpeed = 0.1f;
+
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(800, 600, "Test");
@@ -43,6 +45,9 @@ int main(int argc, char** argv) {
 
     FreeflyCamera camera;
     Cube cube;
+    /* Position de la souris + position précédente pour calculer la différence pour la rotation*/
+    glm::vec2 mousePos;
+    glm::vec2 mousePosPrec = mousePos;
     // Selector mySelector();
 
     ////MAP WORLD***////
@@ -62,41 +67,42 @@ int main(int argc, char** argv) {
         // Event loop:
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
-            if(e.type == SDL_QUIT) {
-                done = true; // Leave the loop after this iteration
-            }
-
-            if(e.type == SDL_KEYDOWN){
-                float speed = 0.1f;
-                switch(e.key.keysym.sym){
-                    /*Z key to move forward*/
-                    case SDLK_z: camera.moveFront(speed);
-                    break;
-                    /*S key to move backward*/
-                    case SDLK_s: camera.moveFront(-speed);
-                    break;
-                    /*Q key to move left*/
-                    case SDLK_q: camera.moveLeft(speed);
-                    break;
-                    /*D key to move right*/
-                    case SDLK_d: camera.moveLeft(-speed);
+            switch(e.type){
+                case SDL_QUIT :
+                    done = true; // Leave the loop after this iteration
                     break;
 
-                    default: break;
+                case SDL_KEYDOWN : 
+                    switch(e.key.keysym.sym){
+                        /*Z key to move forward*/
+                        case SDLK_z: camera.moveFront(cameraSpeed);
+                        break;
+                        /*S key to move backward*/
+                        case SDLK_s: camera.moveFront(-cameraSpeed);
+                        break;
+                        /*Q key to move left*/
+                        case SDLK_q: camera.moveLeft(cameraSpeed);
+                        break;
+                        /*D key to move right*/
+                        case SDLK_d: camera.moveLeft(-cameraSpeed);
+                        break;
+
+                        default: break;
+                    }
+                    break;
+                default: break;
+            }
+
+            if(e.type == SDL_MOUSEMOTION){
+                mousePos = windowManager.getMousePosition();
+                if(e.button.button != 0.0){
+                    camera.rotateUp((mousePosPrec.y - mousePos.y)*0.1f);
+                    camera.rotateLeft((mousePosPrec.x - mousePos.x)*0.1f);
                 }
             }
-            
-            /*if(e.type== SDL_MOUSEMOTION){
-                float speed = 0.1f;
-                if ( e.motion.xrel != 0 ) {
-                  camera.rotateUp( float(-e.motion.xrel) * speed);
-                }
-                if ( e.motion.yrel != 0 ) {std::cout << float(-e.motion.yrel) * speed << std::endl;
-                  camera.rotateLeft( float(e.motion.yrel) * speed);
-                }
-                
-            }*/
         }
+
+        mousePosPrec = mousePos;
 
         /*********************************
          * HERE SHOULD COME THE RENDERING CODE

@@ -121,7 +121,7 @@ void Cube::draw(){
     glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
 
     glBindVertexArray(0); //Debinder la VAO
-};
+}
 
 
 int Cube::findFromPosition(glm::vec3 position){
@@ -179,15 +179,12 @@ void Cube::deleteCube(glm::vec3 position){
             return m_ibo;
         }
 
-        glm::vec3 Cube::getPosition(){
-            return m_position;
-        }
 		// Shader Cube::getShader(){
         //     return m_shader;
         // }
-		TYPECUBE Cube::getType(){
+		/*TYPECUBE Cube::getType(){
             return m_type;
-        }
+        }*/
 
 
 ///////////////////////////////////////////////////////////////
@@ -203,18 +200,14 @@ void Cube::deleteCube(glm::vec3 position){
 		void Cube::setIbo(GLuint newIbo){
             m_ibo=newIbo;
         }
-
-        void Cube::setPosition(glm::vec3 newPos){
-            m_position=newPos;
-        }
 		// void Cube::setShader(std::string newVs, std::string newFs){
         //     m_shader.setVS(newVS);
         //     m_shader.setFS(newFS);
         // }
-		void Cube::setType(TYPECUBE newType){
+		/*void Cube::setType(TYPECUBE newType){
             m_type =newType;
         }
-
+*/
 
 
 ///////////////////////////////////////////////////////////////

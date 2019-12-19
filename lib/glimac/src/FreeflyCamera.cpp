@@ -5,8 +5,8 @@ namespace glimac {
 
 	FreeflyCamera::FreeflyCamera(){
 		m_Position = glm::vec3(0.f, 0.f, 0.f);
-		float m_fPhi = M_PI;
-		float m_fTheta = 0.f;
+		m_fPhi = M_PI;
+		m_fTheta = 0.f;
 		computeDirectionVectors(m_FrontVector, m_LeftVector, m_UpVector, m_fPhi, m_fTheta);
 	}
 
