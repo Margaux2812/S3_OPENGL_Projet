@@ -17,34 +17,34 @@ Selector::Selector(){
             Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)),
         // Right v0,v3,v4,v5
         
-        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)),
-        // Top v0,v5,v6,v0.5    
+        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)),
+        // Top v0,v5,v6,v1    
         
-        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
         // Left v0.5,v6,v7,v2   
         
-        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)),  
+        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)),  
         // Bottom v7,v4,v3,v2
         
-        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 0.f, 0.2f)), 
         // Back v4,v7,v6,v5 
         
-        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f))
+        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f)), 
+            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 0.f, 0.2f))
         };
 
     //On a 24 sommets
@@ -110,7 +110,7 @@ void Selector::draw(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
     //Dernier truc est nb de cubes
-    glDrawElementsInstanced(GL_LINES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCube.size());
+    glDrawElementsInstanced(GL_LINE_LOOP, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCube.size());
 
     glBindVertexArray(0); //Debinder la VAO
 }
