@@ -1,4 +1,5 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"

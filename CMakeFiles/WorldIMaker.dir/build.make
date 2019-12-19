@@ -57,9 +57,22 @@ include CMakeFiles/WorldIMaker.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/WorldIMaker.dir/flags.make
 
+CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
+CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o: src/FreeflyCamera.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp
+
+CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp > CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.i
+
+CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp -o CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.s
+
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: src/cube.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/cube.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp
 
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.i: cmake_force
@@ -72,7 +85,7 @@ CMakeFiles/WorldIMaker.dir/src/cube.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/main.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp
 
 CMakeFiles/WorldIMaker.dir/src/main.cpp.i: cmake_force
@@ -85,7 +98,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: src/selector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/selector.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
 
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.i: cmake_force
@@ -98,6 +111,7 @@ CMakeFiles/WorldIMaker.dir/src/selector.cpp.s: cmake_force
 
 # Object files for target WorldIMaker
 WorldIMaker_OBJECTS = \
+"CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/cube.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/main.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
@@ -105,6 +119,7 @@ WorldIMaker_OBJECTS = \
 # External object files for target WorldIMaker
 WorldIMaker_EXTERNAL_OBJECTS =
 
+bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/cube.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/main.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
@@ -116,7 +131,7 @@ bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGL.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGLU.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGLEW.so
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable bin/WorldIMaker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable bin/WorldIMaker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WorldIMaker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

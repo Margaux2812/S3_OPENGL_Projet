@@ -4,8 +4,8 @@
 #include "../lib/glimac/include/Program.hpp"
 #include "../lib/glimac/include/FilePath.hpp"
 #include "../lib/glimac/include/glm.hpp"
-#include "../lib/glimac/include/FreeflyCamera.hpp"
 #include "../lib/glimac/include/SDLWindowManager.hpp"
+#include "../include/FreeflyCamera.hpp"
 #include "../include/vertex.hpp"
 #include "../include/cube.hpp"
 #include "../include/selector.hpp"
@@ -88,28 +88,6 @@ int main(int argc, char** argv) {
                         case SDLK_d: camera.moveLeft(-cameraSpeed);
                         break;
 
-                        /*************************************
-                        *********MOUVEMENT DU CURSEUR*********
-                        *************************************/
-
-                        
-
-                        /*************************************
-                        ******Ajouter ou supprimer cubes******
-                        *************************************
-                        case SDLK_DELETE: cubes.deleteCube(selector.getPosition());
-                        break;
-                        case SDLK_RETURN : cubes.addCube(selector.getPosition());
-                        break;
-
-                        /*************************************
-                        *********Extrude ou Dig cubes*********
-                        *************************************
-                        case SDLK_e: cubes.extrudeCube(selector.getPosition());
-                        break;
-                        case SDLK_c : cubes.digCube(selector.getPosition());
-                        break;*/
-                        
                         default: break;
                     }
                     break;

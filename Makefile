@@ -136,6 +136,33 @@ glimac/fast:
 	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
 .PHONY : glimac/fast
 
+src/FreeflyCamera.o: src/FreeflyCamera.cpp.o
+
+.PHONY : src/FreeflyCamera.o
+
+# target to build an object file
+src/FreeflyCamera.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o
+.PHONY : src/FreeflyCamera.cpp.o
+
+src/FreeflyCamera.i: src/FreeflyCamera.cpp.i
+
+.PHONY : src/FreeflyCamera.i
+
+# target to preprocess a source file
+src/FreeflyCamera.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.i
+.PHONY : src/FreeflyCamera.cpp.i
+
+src/FreeflyCamera.s: src/FreeflyCamera.cpp.s
+
+.PHONY : src/FreeflyCamera.s
+
+# target to generate assembly for a file
+src/FreeflyCamera.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.s
+.PHONY : src/FreeflyCamera.cpp.s
+
 src/cube.o: src/cube.cpp.o
 
 .PHONY : src/cube.o
@@ -227,6 +254,9 @@ help:
 	@echo "... WorldIMaker"
 	@echo "... edit_cache"
 	@echo "... glimac"
+	@echo "... src/FreeflyCamera.o"
+	@echo "... src/FreeflyCamera.i"
+	@echo "... src/FreeflyCamera.s"
 	@echo "... src/cube.o"
 	@echo "... src/cube.i"
 	@echo "... src/cube.s"

@@ -4,6 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/cube.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"

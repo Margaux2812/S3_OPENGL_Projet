@@ -4,7 +4,6 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/FreeflyCamera.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/CMakeFiles/glimac.dir/src/FreeflyCamera.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/Geometry.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/CMakeFiles/glimac.dir/src/Geometry.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/Image.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/CMakeFiles/glimac.dir/src/Image.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/Program.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/CMakeFiles/glimac.dir/src/Program.cpp.o"
