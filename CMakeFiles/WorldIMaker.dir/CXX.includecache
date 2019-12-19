@@ -7,8 +7,8 @@
 #IncludeRegexTransform: 
 
 /home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
-./glm.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/./glm.hpp
+../lib/glimac/include/glm.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 GL/glew.h
@@ -99,20 +99,6 @@ cstddef
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 ../include/selector.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
-
-lib/glimac/include/./glm.hpp
-../../glm/glm.hpp
--
-../../glm/gtc/matrix_transform.hpp
--
-../../glm/gtc/type_ptr.hpp
--
-../../glm/gtc/constants.hpp
--
-../../glm/gtx/io.hpp
--
-../../glm/gtc/random.hpp
--
 
 lib/glm/common.hpp
 detail/func_common.hpp
