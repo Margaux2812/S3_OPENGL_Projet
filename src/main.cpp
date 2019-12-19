@@ -89,7 +89,7 @@ int main(int argc, char** argv) {
                         /*************************************
                         *********MOUVEMENT DU CURSEUR*********
                         *************************************/
-                        
+
                         case SDLK_LEFT: selector.move(gauche);
                         break;
                         case SDLK_RIGHT:selector.move(droite);
@@ -97,6 +97,26 @@ int main(int argc, char** argv) {
                         case SDLK_UP:selector.move(haut);
                         break;
                         case SDLK_DOWN: selector.move(bas);
+                        break;
+                        case SDLK_o:selector.move(arriere);
+                        break;
+                        case SDLK_l: selector.move(avant);
+                        break;
+
+                        /*************************************
+                        ******Ajouter ou supprimer cubes******
+                        *************************************/
+                        case SDLK_DELETE: cubes.deleteCube(selector.getPosition());
+                        break;
+                        case SDLK_RETURN : cubes.addCube(selector.getPosition());
+                        break;
+
+                        /*************************************
+                        *********Extrude ou Dig cubes*********
+                        *************************************/
+                        case SDLK_e: cubes.extrudeCube(selector.getPosition());
+                        break;
+                        case SDLK_c : cubes.digCube(selector.getPosition());
                         break;
                         
                         default: break;

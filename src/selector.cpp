@@ -101,6 +101,16 @@ Selector::Selector(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
+
+    m_position = m_positionCube[0];
+}
+
+Selector::~Selector(){
+    glDeleteBuffers(1, &m_vbo);
+    glDeleteVertexArrays(1, &m_vao);
+}
+glm::vec3 Selector::getPosition(){
+    return m_position;
 }
 
 void Selector::draw(){
@@ -124,6 +134,7 @@ void Selector::updateGPU(){
 void Selector::updatePos(glm::vec3 position){
     m_positionCube.pop_back();
     m_positionCube.push_back(position);
+    m_position = position;
     updateGPU();
 }
 
@@ -137,6 +148,10 @@ void Selector::move(Fleche f){
         case haut: movement = glm::vec3(0., 1., 0.);
         break;
         case bas: movement = glm::vec3(0., -1., 0.);
+        break;
+        case arriere: movement = glm::vec3(0., 0., -1.);
+        break;
+        case avant: movement = glm::vec3(0., 0., 1.);
         break;
         default: 
         break;
