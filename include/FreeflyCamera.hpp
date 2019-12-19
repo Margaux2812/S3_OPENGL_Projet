@@ -1,5 +1,6 @@
 #pragma once
 #include "../lib/glimac/include/glm.hpp"
+#include "../lib/glimac/include/SDLWindowManager.hpp"
 
 class FreeflyCamera{
 private :
@@ -9,6 +10,7 @@ private :
 	glm::vec3 m_FrontVector;
 	glm::vec3 m_LeftVector;
 	glm::vec3 m_UpVector;
+	const float cameraSpeed = 1.f;
 
 public:
 	//Constructeur
@@ -21,4 +23,6 @@ public:
 	void rotateLeft(const float degrees);
 	void rotateUp(const float degrees);
 	glm::mat4 getViewMatrix() const;
+
+	void handleKeyboardEvents(const SDLKey e);
 };

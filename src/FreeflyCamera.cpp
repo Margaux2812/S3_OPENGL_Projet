@@ -49,3 +49,23 @@ void FreeflyCamera::rotateLeft(const float degrees){
 glm::mat4 FreeflyCamera::getViewMatrix() const{
 	return glm::lookAt(m_Position, m_Position+m_FrontVector, m_UpVector);
 }
+
+
+void FreeflyCamera::handleKeyboardEvents(const SDLKey e){
+    switch(e){
+        /*Z key to move forward*/
+        case SDLK_z: moveFront(cameraSpeed);
+        break;
+        /*S key to move backward*/
+        case SDLK_s: moveFront(-cameraSpeed);
+        break;
+        /*Q key to move left*/
+        case SDLK_q: moveLeft(cameraSpeed);
+        break;
+        /*D key to move right*/
+        case SDLK_d: moveLeft(-cameraSpeed);
+        break;
+        
+        default: break;
+    }
+}

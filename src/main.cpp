@@ -12,7 +12,6 @@
 
 using namespace glimac;
 
-const float cameraSpeed = 1.f;
 const float cameraSpeedRotation = 0.1f;
 
 int main(int argc, char** argv) {
@@ -73,23 +72,7 @@ int main(int argc, char** argv) {
                 case SDL_KEYDOWN : 
                     cubes.handleEvents(e.key.keysym.sym, selector.getPosition());
                     selector.handleEvents(e.key.keysym.sym);
-                        
-                    switch(e.key.keysym.sym){
-                        /*Z key to move forward*/
-                        case SDLK_z: camera.moveFront(cameraSpeed);
-                        break;
-                        /*S key to move backward*/
-                        case SDLK_s: camera.moveFront(-cameraSpeed);
-                        break;
-                        /*Q key to move left*/
-                        case SDLK_q: camera.moveLeft(cameraSpeed);
-                        break;
-                        /*D key to move right*/
-                        case SDLK_d: camera.moveLeft(-cameraSpeed);
-                        break;
-
-                        default: break;
-                    }
+                    camera.handleKeyboardEvents(e.key.keysym.sym);
                     break;
                 case SDL_MOUSEMOTION:
                     if(e.button.button != 0.0){
