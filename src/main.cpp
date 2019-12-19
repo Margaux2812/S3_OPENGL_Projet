@@ -86,14 +86,14 @@ int main(int argc, char** argv) {
                         case SDLK_d: camera.moveLeft(-cameraSpeed);
                         break;
 
-                        /*case SDLK_LEFT: selector.moveLeft();
+                        case SDLK_LEFT: selector.move(gauche);
                         break;
-                        case SDLK_RIGHT: selector.moveLeft();
+                        case SDLK_RIGHT:selector.move(droite);
                         break;
-                        case SDLK_UP: selector.moveUp();
+                        case SDLK_UP:selector.move(haut);
                         break;
-                        case SDL_DOWN: selector.moveUp();
-                        break;*/
+                        case SDLK_DOWN: selector.move(bas);
+                        break;
                         /*MOUVEMENT DU CURSEUR*/
 
                         default: break;

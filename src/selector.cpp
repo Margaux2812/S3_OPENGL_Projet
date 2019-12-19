@@ -52,14 +52,14 @@ Selector::Selector(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
-    m_positionsCube.push_back(glm::vec3(0, -1, -3));
+    m_positionCube.push_back(glm::vec3(0, -1, -3));
 
     // on crée le buffer
     glGenBuffers(1, &vboAll); 
     // on le bind pour que la ligne suivante s'applique bien à ce buffer ci
     glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
     // on envoie toutes nos données au GPU
-    glBufferData(GL_ARRAY_BUFFER, m_positionsCube.size()*sizeof(glm::vec3), m_positionsCube.data(), GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, m_positionCube.size()*sizeof(glm::vec3), m_positionCube.data(), GL_STATIC_DRAW);
     // on unbind, ce n'est pas nécessaire mais c'est par sécurité, ça rend les choses plus faciles à débuguer
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -110,7 +110,38 @@ void Selector::draw(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
     //Dernier truc est nb de cubes
-    glDrawElementsInstanced(GL_LINES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCube.size());
+    glDrawElementsInstanced(GL_LINES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionCube.size());
 
     glBindVertexArray(0); //Debinder la VAO
+}
+
+void Selector::updateGPU(){
+    glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
+    glBufferData(GL_ARRAY_BUFFER, m_positionCube.size()*sizeof(glm::vec3), m_positionCube.data(), GL_STATIC_DRAW);
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
+
+void Selector::updatePos(glm::vec3 position){
+    m_positionCube.pop_back();
+    m_positionCube.push_back(position);
+    updateGPU();
+}
+
+void Selector::move(Fleche f){
+	glm::vec3 movement = glm::vec3(0., 0., 0.);
+	switch(f){
+		case gauche: movement = glm::vec3(-1., 0., 0.);
+		break;
+        case droite: movement = glm::vec3(1., 0., 0.);
+        break;
+        case haut: movement = glm::vec3(0., 1., 0.);
+        break;
+        case bas: movement = glm::vec3(0., -1., 0.);
+        break;
+        default: 
+        break;
+	}
+	glm::vec3 newPos = m_positionCube[0]+movement;
+	updatePos(newPos);
+	updateGPU();
 }
