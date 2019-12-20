@@ -35,23 +35,23 @@ class Cube{
 
 		///// SETTERS /////
 
-		void setVao(GLuint newVao);
-		void setVbo(GLuint newVbo);
-		void setIbo(GLuint newIbo);
+		void setVao(GLuint const newVao);
+		void setVbo(GLuint const newVbo);
+		void setIbo(GLuint const newIbo);
 		//void setShader(std::string newVs, std::string newFs);
 		//void setType(TYPECUBE newType);
 
 
 		///// MANAGER /////
 
-		void handleEvents(SDLKey e, glm::vec3 position);
-		int findFromPosition(glm::vec3 position);
+		void handleEvents(const SDLKey e, const glm::vec3 position);
+		int findFromPosition(const glm::vec3 position);
 		void updateGPU();
-		void addCube(glm::vec3 position);
-		void replace(glm::vec3 position);
-		void deleteCube(glm::vec3 position);
+		void addCube(const glm::vec3 position);
+		void replace(const glm::vec3 position);
+		void deleteCube(const glm::vec3 position);
 		void loadMonde();
-		int findLastCube(glm::vec3 position);
+		int findLastCube(const glm::vec3 position);
 		void extrudeCube(glm::vec3 position);
 		void digCube(glm::vec3 position);
 

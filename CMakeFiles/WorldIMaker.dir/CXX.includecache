@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
+../lib/glimac/include/glm.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+../lib/glimac/include/SDLWindowManager.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
+
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 GL/glew.h
 -
@@ -24,6 +30,18 @@ cube.hpp
 ../lib/glimac/include/glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
+string
+-
+
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Program.hpp
+GL/glew.h
+-
+Shader.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Shader.hpp
+FilePath.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
+
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
 cstdint
 -
@@ -31,6 +49,14 @@ SDL/SDL.h
 -
 glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Shader.hpp
+GL/glew.h
+-
+string
+-
+FilePath.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 ../../glm/glm.hpp
@@ -53,6 +79,30 @@ glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 iostream
 -
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp
+GL/glew.h
+-
+iostream
+-
+cstddef
+-
+../lib/glimac/include/Program.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Program.hpp
+../lib/glimac/include/FilePath.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
+../lib/glimac/include/glm.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+../lib/glimac/include/SDLWindowManager.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
+../include/FreeflyCamera.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+../include/cube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+../include/selector.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
 ../include/selector.hpp

@@ -178,7 +178,7 @@ void Cube::draw(){
 
 
 
-void Cube::handleEvents(SDLKey e, glm::vec3 position){
+void Cube::handleEvents(const SDLKey e, const glm::vec3 position){
     switch(e){
         case SDLK_DELETE: deleteCube(position);
         break;
@@ -193,7 +193,7 @@ void Cube::handleEvents(SDLKey e, glm::vec3 position){
     }
 }
 
-int Cube::findFromPosition(glm::vec3 position){
+int Cube::findFromPosition(const glm::vec3 position){
     for (int i=0; i< int(m_positionsCubes.size()); i++ ){
         if(glm::length(position-m_positionsCubes[i]) < 0.1f){
             return i;
@@ -208,7 +208,7 @@ void Cube::updateGPU(){
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
-void Cube::addCube(glm::vec3 position){
+void Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
     if(exists == -1){
         m_positionsCubes.push_back(position);
@@ -216,13 +216,13 @@ void Cube::addCube(glm::vec3 position){
     }
 }
 
-void Cube::replace(glm::vec3 position){
+void Cube::replace(const glm::vec3 position){
     deleteCube(position);
     m_positionsCubes.push_back(position);
     updateGPU();
 }
 
-void Cube::deleteCube(glm::vec3 position){
+void Cube::deleteCube(const glm::vec3 position){
     int index = findFromPosition(position);
     if(index != -1){
         int lastIndex = m_positionsCubes.size() - 1;
@@ -241,7 +241,7 @@ void Cube::loadMonde(){
     }
 }
 
-int Cube::findLastCube(glm::vec3 position){
+int Cube::findLastCube(const glm::vec3 position){
     int yMax=m_positionsCubes[0].y;
     for (int i=1; i< int(m_positionsCubes.size()); i++ ){
         if((glm::length(position.x-m_positionsCubes[i].x) < 0.1f) && (glm::length(position.z-m_positionsCubes[i].z) < 0.1f)){
@@ -299,13 +299,13 @@ void Cube::digCube(glm::vec3 position){
 /////////////////////////// SETTERS ///////////////////////////
 ///////////////////////////////////////////////////////////////
 
-		void Cube::setVao(GLuint newVao){
+		void Cube::setVao(GLuint const newVao){
             m_vao=newVao;
         }
-		void Cube::setVbo(GLuint newVbo){
+		void Cube::setVbo(GLuint const newVbo){
             m_vbo=newVbo;
         }
-		void Cube::setIbo(GLuint newIbo){
+		void Cube::setIbo(GLuint const newIbo){
             m_ibo=newIbo;
         }
 		// void Cube::setShader(std::string newVs, std::string newFs){
