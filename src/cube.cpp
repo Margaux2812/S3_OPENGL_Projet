@@ -1,6 +1,7 @@
 #include "../include/cube.hpp"
 #include "../include/vertex.hpp"
 #include <iostream>
+
 Cube::Cube(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_COULEUR = 1;

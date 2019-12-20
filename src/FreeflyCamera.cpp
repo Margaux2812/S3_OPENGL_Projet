@@ -50,20 +50,53 @@ glm::mat4 FreeflyCamera::getViewMatrix() const{
 	return glm::lookAt(m_Position, m_Position+m_FrontVector, m_UpVector);
 }
 
+void FreeflyCamera::updateCameraMovement(){
+        if(upPressed){
+        	moveFront(cameraSpeed);
+        }
+        else if(downPressed){
+        	moveFront(-cameraSpeed);
+        }
+        else if(leftPressed){
+        	moveLeft(cameraSpeed);
+        }
+        else if(rightPressed){
+        	moveLeft(-cameraSpeed);
+        }
+}
 
-void FreeflyCamera::handleKeyboardEvents(const SDLKey e){
+void FreeflyCamera::handleKeyboardEventsDown(const SDLKey e){
     switch(e){
         /*Z key to move forward*/
-        case SDLK_z: moveFront(cameraSpeed);
+        case SDLK_z: upPressed = true;
         break;
         /*S key to move backward*/
-        case SDLK_s: moveFront(-cameraSpeed);
+        case SDLK_s: downPressed = true;
         break;
         /*Q key to move left*/
-        case SDLK_q: moveLeft(cameraSpeed);
+        case SDLK_q: leftPressed = true;
         break;
         /*D key to move right*/
-        case SDLK_d: moveLeft(-cameraSpeed);
+        case SDLK_d: rightPressed = true;
+        break;
+        
+        default: break;
+    }
+}
+
+void FreeflyCamera::handleKeyboardEventsUp(const SDLKey e){
+    switch(e){
+        /*Z key to move forward*/
+        case SDLK_z: upPressed = false;
+        break;
+        /*S key to move backward*/
+        case SDLK_s: downPressed = false;
+        break;
+        /*Q key to move left*/
+        case SDLK_q: leftPressed = false;
+        break;
+        /*D key to move right*/
+        case SDLK_d: rightPressed = false;
         break;
         
         default: break;

@@ -10,8 +10,12 @@ private :
 	glm::vec3 m_FrontVector;
 	glm::vec3 m_LeftVector;
 	glm::vec3 m_UpVector;
-	const float cameraSpeed = 1.f;
+	const float cameraSpeed = 0.1f;
 	const float cameraSpeedRotation = 0.1f;
+	bool upPressed = false;
+	bool downPressed = false;
+	bool rightPressed = false;
+	bool leftPressed = false;
 
 public:
 	//Constructeur
@@ -25,6 +29,8 @@ public:
 	void rotateUp(const float degrees);
 	glm::mat4 getViewMatrix() const;
 
-	void handleKeyboardEvents(const SDLKey e);
+	void updateCameraMovement();
+	void handleKeyboardEventsDown(const SDLKey e);
+	void handleKeyboardEventsUp(const SDLKey e);
 	void handleMouseEvents(const SDL_Event e);
 };

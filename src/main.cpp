@@ -70,7 +70,10 @@ int main(int argc, char** argv) {
                 case SDL_KEYDOWN : 
                     cubes.handleEvents(e.key.keysym.sym, selector.getPosition());
                     selector.handleEvents(e.key.keysym.sym);
-                    camera.handleKeyboardEvents(e.key.keysym.sym);
+                    camera.handleKeyboardEventsDown(e.key.keysym.sym);
+                    break;
+                case SDL_KEYUP:
+                    camera.handleKeyboardEventsUp(e.key.keysym.sym);
                     break;
                 case SDL_MOUSEMOTION:
                     if(e.button.button == SDL_BUTTON_LEFT){
@@ -80,6 +83,8 @@ int main(int argc, char** argv) {
                 default: break;
             }
         }
+
+        camera.updateCameraMovement();
 
         /*********************************
          * HERE SHOULD COME THE RENDERING CODE
