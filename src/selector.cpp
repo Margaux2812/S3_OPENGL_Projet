@@ -89,7 +89,8 @@ const Vertex3DColor vertices[] = {
 
 Selector::Selector(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
-    const GLuint VERTEX_ATTR_COULEUR = 1;
+    const GLuint VERTEX_ATTR_NORMAL = 1;
+    const GLuint VERTEX_ATTR_COULEUR = 2;
     const GLuint VERTEX_ATTR_POSITION_ALL = 3;
 
 	glGenBuffers(1, &m_vbo);
@@ -133,11 +134,13 @@ Selector::Selector(){
     glBindVertexArray(m_vao); //Binder la VAO
 
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
+    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
     glEnableVertexAttribArray(VERTEX_ATTR_COULEUR);
 
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), 0);
-    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*)(3*sizeof(GLfloat)));
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, position));
+    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, normals));
+    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
 
     glBindBuffer(GL_ARRAY_BUFFER, vboAll);
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION_ALL); 

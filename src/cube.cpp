@@ -88,9 +88,19 @@ const Vertex3DColor vertices[] = {
                     glm::vec3(1.f, 1.f, 0.f))
     };
 
+const uint32_t indices[] = {
+        0, 1, 2,   2, 3, 0,       // front
+        4, 5, 6,   6, 7, 4,       // right
+        8, 9, 10,  10,11,8,       // top
+        12,13,14,  14,15,12,      // left
+        16,17,18,  18,19,16,      // bottom
+        20,21,22,  22,23,20       // back
+    };
+
 Cube::Cube(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
-    const GLuint VERTEX_ATTR_COULEUR = 1;
+    const GLuint VERTEX_ATTR_NORMAL = 1;
+    const GLuint VERTEX_ATTR_COULEUR = 2;
     const GLuint VERTEX_ATTR_POSITION_ALL = 3;
 
 	glGenBuffers(1, &m_vbo);
@@ -109,35 +119,26 @@ Cube::Cube(){
     glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
     // on envoie toutes nos données au GPU
     glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
-    // on unbind, ce n'est pas nécessaire mais c'est par sécurité, ça rend les choses plus faciles à débuguer
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+
     glGenBuffers(1, &m_ibo);
-
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
-
-    uint32_t indices[] = {
-        0, 1, 2,   2, 3, 0,       // front
-        4, 5, 6,   6, 7, 4,       // right
-        8, 9, 10,  10,11,8,       // top
-        12,13,14,  14,15,12,      // left
-        16,17,18,  18,19,16,      // bottom
-        20,21,22,  22,23,20       // back
-    };
-
     //On a 36 points
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, 36*sizeof(uint32_t), indices, GL_STATIC_DRAW);
-
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+
 
     glGenVertexArrays(1, &m_vao);
     glBindVertexArray(m_vao); //Binder la VAO
 
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
+    glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
     glEnableVertexAttribArray(VERTEX_ATTR_COULEUR);
 
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), 0);
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, position));
+    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, normals));
     glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
 
     glBindBuffer(GL_ARRAY_BUFFER, vboAll);
@@ -179,17 +180,10 @@ void Cube::draw(){
 
 void Cube::handleEvents(SDLKey e, glm::vec3 position){
     switch(e){
-        /*************************************
-        ******Ajouter ou supprimer cubes******
-        *************************************/
         case SDLK_DELETE: deleteCube(position);
         break;
         case SDLK_RETURN : addCube(position);
         break;
-
-        /*************************************
-        *********Extrude ou Dig cubes*********
-        *************************************/
         case SDLK_e: extrudeCube(position);
         break;
         case SDLK_c : digCube(position);

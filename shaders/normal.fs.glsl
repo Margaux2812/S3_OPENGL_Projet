@@ -2,10 +2,10 @@
 
 in vec3 vPosition;
 in vec3 vNormale;
-in vec2 vtexCoords;
+in vec3 vColor3D;
 
 out vec3 fFragColor;
 
 void main() {
-    fFragColor = normalize(vNormale);
+    fFragColor = normalize(vColor3D);
 }
