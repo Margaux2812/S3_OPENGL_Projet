@@ -266,7 +266,6 @@ void Cube::extrudeCube(glm::vec3 position){
 void Cube::digCube(glm::vec3 position){
     int yMax = findLastCube(position);
     position.y = yMax;
-    std::cout<<position<<std::endl;
     deleteCube(position);
     updateGPU();
 }

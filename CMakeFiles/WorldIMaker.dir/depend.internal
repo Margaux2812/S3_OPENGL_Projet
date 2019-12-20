@@ -194,9 +194,13 @@ CMakeFiles/WorldIMaker.dir/src/cube.cpp.o
  lib/glm/vec3.hpp
  lib/glm/vec4.hpp
  lib/glm/vector_relational.hpp
+CMakeFiles/WorldIMaker.dir/src/display.cpp.o
+ /home/margaux/Documents/S3_OPENGL_Projet/include/display.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/src/display.cpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/display.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp

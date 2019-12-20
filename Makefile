@@ -190,6 +190,33 @@ src/cube.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/cube.cpp.s
 .PHONY : src/cube.cpp.s
 
+src/display.o: src/display.cpp.o
+
+.PHONY : src/display.o
+
+# target to build an object file
+src/display.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/display.cpp.o
+.PHONY : src/display.cpp.o
+
+src/display.i: src/display.cpp.i
+
+.PHONY : src/display.i
+
+# target to preprocess a source file
+src/display.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/display.cpp.i
+.PHONY : src/display.cpp.i
+
+src/display.s: src/display.cpp.s
+
+.PHONY : src/display.s
+
+# target to generate assembly for a file
+src/display.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/display.cpp.s
+.PHONY : src/display.cpp.s
+
 src/main.o: src/main.cpp.o
 
 .PHONY : src/main.o
@@ -260,6 +287,9 @@ help:
 	@echo "... src/cube.o"
 	@echo "... src/cube.i"
 	@echo "... src/cube.s"
+	@echo "... src/display.o"
+	@echo "... src/display.i"
+	@echo "... src/display.s"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

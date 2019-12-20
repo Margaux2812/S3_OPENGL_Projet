@@ -194,8 +194,12 @@ CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glm/vec3.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glm/vec4.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glm/vector_relational.hpp
 
+CMakeFiles/WorldIMaker.dir/src/display.cpp.o: include/display.hpp
+CMakeFiles/WorldIMaker.dir/src/display.cpp.o: src/display.cpp
+
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/FreeflyCamera.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/cube.hpp
+CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/display.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/selector.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: lib/glimac/include/FilePath.hpp
