@@ -2,6 +2,92 @@
 #include "../include/vertex.hpp"
 #include <iostream>
 
+const Vertex3DColor vertices[] = {
+    // Front v0,v1,v2,v3
+    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), 
+                glm::vec3(0, 0, 1),                    
+                glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
+                    glm::vec3(0, 0, 1),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
+                    glm::vec3(0, 0, 1),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
+                    glm::vec3(0, 0, 1),
+                    glm::vec3(1.f, 1.f, 0.f)),
+    // Right v0,v3,v4,v5
+
+    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), 
+                glm::vec3(1, 0, 0),
+                glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
+                    glm::vec3(1, 0, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
+                    glm::vec3(1, 0, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
+                    glm::vec3(1, 0, 0),
+                    glm::vec3(1.f, 1.f, 0.f)),
+    // Top v0,v5,v6,v0.5    
+
+    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), 
+                glm::vec3(0, 1, 0),
+                glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
+                    glm::vec3(0, 1, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
+                    glm::vec3(0, 1, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
+                    glm::vec3(0, 1, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+    // Left v0.5,v6,v7,v2   
+
+    Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
+                glm::vec3(-1, 0, 0),
+                glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
+                    glm::vec3(-1, 0, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
+                    glm::vec3(-1, 0, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
+                    glm::vec3(-1, 0, 0),
+                    glm::vec3(1.f, 1.f, 0.f)),  
+    // Bottom v7,v4,v3,v2
+
+    Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
+                glm::vec3(0,-1, 0),
+                glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
+                    glm::vec3(0,-1, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
+                    glm::vec3(0,-1, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
+                    glm::vec3(0,-1, 0),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+    // Back v4,v7,v6,v5 
+
+    Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
+                glm::vec3(0, 0,-1),
+                glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
+                    glm::vec3(0, 0,-1),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
+                    glm::vec3(0, 0,-1),
+                    glm::vec3(1.f, 1.f, 0.f)), 
+        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
+                    glm::vec3(0, 0,-1),
+                    glm::vec3(1.f, 1.f, 0.f))
+    };
+
 Cube::Cube(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_COULEUR = 1;
@@ -9,44 +95,6 @@ Cube::Cube(){
 
 	glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
-
-    Vertex3DColor vertices[] = {
-        // Front v0,v1,v2,v3
-        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)),
-        // Right v0,v3,v4,v5
-        
-        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)),
-        // Top v0,v5,v6,v0.5    
-        
-        Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-        // Left v0.5,v6,v7,v2   
-        
-        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)),  
-        // Bottom v7,v4,v3,v2
-        
-        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), glm::vec3(1.f, 1.f, 0.f)), 
-        // Back v4,v7,v6,v5 
-        
-        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f)), 
-            Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), glm::vec3(1.f, 1.f, 0.f))
-        };
 
     //On a 24 sommets
     glBufferData(GL_ARRAY_BUFFER, 24 * sizeof(Vertex3DColor), vertices, GL_STATIC_DRAW);
