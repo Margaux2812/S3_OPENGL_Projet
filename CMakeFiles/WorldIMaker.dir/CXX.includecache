@@ -26,6 +26,8 @@ vector
 iostream
 -
 
+/home/margaux/Documents/S3_OPENGL_Projet/include/menu.hpp
+
 /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
 cube.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
@@ -101,6 +103,12 @@ cstddef
 /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
 ../include/display.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/display.hpp
+../include/menu.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/menu.hpp
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp
+../include/menu.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/menu.hpp
 
 lib/glm/common.hpp
 detail/func_common.hpp

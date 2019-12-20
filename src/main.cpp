@@ -10,6 +10,7 @@
 #include "../include/cube.hpp"
 #include "../include/selector.hpp"
 #include "../include/display.hpp"
+#include "../include/menu.hpp"
 
 using namespace glimac;
 
@@ -41,6 +42,7 @@ int main(int argc, char** argv) {
      * HERE SHOULD COME THE INITIALIZATION CODE
      *********************************/
 
+    Menu menu;
     FreeflyCamera camera;
     Cube cubes;
     Selector selector;
@@ -59,6 +61,9 @@ int main(int argc, char** argv) {
     // Application loop:
     bool done = false;
     while(!done) {
+
+        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
         // Event loop:
         SDL_Event e;
         while(windowManager.pollEvent(e)) {
@@ -86,33 +91,33 @@ int main(int argc, char** argv) {
 
         camera.updateCameraMovement();
 
-        /*********************************
-         * HERE SHOULD COME THE RENDERING CODE
-         *********************************/
+        if(menu.getMenuName() == inGame){
 
-        glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+            /*********************************
+             * HERE SHOULD COME THE RENDERING CODE
+             *********************************/
 
-        MVMatrix = camera.getViewMatrix();
+            MVMatrix = camera.getViewMatrix();
 
-        glUniformMatrix4fv(uMVPMatrix,
-            1,
-            GL_FALSE,
-            glm::value_ptr(ProjMatrix*MVMatrix)
-            );
-        glUniformMatrix4fv(uMVMatrix,
-            1,
-            GL_FALSE,
-            glm::value_ptr(MVMatrix)
-            );
-        glUniformMatrix4fv(uNormalMatrix,
-            1,
-            GL_FALSE,
-            glm::value_ptr(NormalMatrix)
-            );
-        
-        selector.draw();
-        cubes.draw();
-
+            glUniformMatrix4fv(uMVPMatrix,
+                1,
+                GL_FALSE,
+                glm::value_ptr(ProjMatrix*MVMatrix)
+                );
+            glUniformMatrix4fv(uMVMatrix,
+                1,
+                GL_FALSE,
+                glm::value_ptr(MVMatrix)
+                );
+            glUniformMatrix4fv(uNormalMatrix,
+                1,
+                GL_FALSE,
+                glm::value_ptr(NormalMatrix)
+                );
+            
+            selector.draw();
+            cubes.draw();
+        }
         // Update the display
         windowManager.swapBuffers();
     }
