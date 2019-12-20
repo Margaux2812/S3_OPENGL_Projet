@@ -138,7 +138,7 @@ Cube::Cube(){
 
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
     glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), 0);
-    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*)(3*sizeof(GLfloat)));
+    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
 
     glBindBuffer(GL_ARRAY_BUFFER, vboAll);
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION_ALL); 
@@ -240,9 +240,11 @@ void Cube::deleteCube(glm::vec3 position){
 }
 
 void Cube::loadMonde(){
-    m_positionsCubes.push_back(glm::vec3(-2, -1, -3));
-    m_positionsCubes.push_back(glm::vec3(2, -1, -3));
-    m_positionsCubes.push_back(glm::vec3(3, -1, -3));
+    for(int x=0; x<30; x++){
+        for(int z = 0; z<30; z++){
+            m_positionsCubes.push_back(glm::vec3(x, -1, z));
+        }
+    }
 }
 
 int Cube::findLastCube(glm::vec3 position){

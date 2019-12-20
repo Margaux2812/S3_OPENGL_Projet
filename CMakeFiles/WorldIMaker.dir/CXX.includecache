@@ -16,10 +16,6 @@ vector
 ../lib/glimac/include/SDLWindowManager.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
-cube.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
-
 /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 ../lib/glimac/include/glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
@@ -46,11 +42,13 @@ glm.hpp
 ../../glm/gtc/random.hpp
 -
 
-/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
-../include/selector.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp
+../include/cube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 ../include/vertex.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+iostream
+-
 
 lib/glm/common.hpp
 detail/func_common.hpp

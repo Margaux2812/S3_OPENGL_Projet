@@ -4,8 +4,8 @@
 
 struct Vertex3DColor{
     glm::vec3 position;
-    glm::vec3 color;
     glm::vec3 normals;
+    glm::vec3 color;
 
     Vertex3DColor(){
         this->position.x = 0;
