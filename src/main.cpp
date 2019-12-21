@@ -91,7 +91,9 @@ int main(int argc, char** argv) {
 
         camera.updateCameraMovement();
 
-        if(menu.getMenuName() == inGame){
+        if(menu.getMenuName() == principal){
+            //menu.draw(applicationPath);
+        }else if(menu.getMenuName() == inGame){
 
             /*********************************
              * HERE SHOULD COME THE RENDERING CODE

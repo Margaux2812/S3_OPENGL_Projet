@@ -16,7 +16,7 @@ class Cube{
 
 		std::vector<glm::vec3> m_positionsCubes;
 
-		// Shader m_shader;
+		//std::vector<unsigned int> m_shaders;
 		//TYPECUBE m_type;
 
 	public :

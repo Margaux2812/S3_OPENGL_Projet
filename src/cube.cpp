@@ -151,9 +151,15 @@ Cube::Cube(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
+
+    //ShaderProgramSource source = ParseShader("");
 };
 
 Cube::~Cube(){
+    //      TODO:
+    //Have to delete each one, faire une boucle
+    //glDeleteProgram(m_shaders);
+
 	glDeleteBuffers(1, &m_vbo);
     glDeleteVertexArrays(1, &m_vao);
 }
@@ -242,10 +248,12 @@ void Cube::loadMonde(){
 }
 
 int Cube::findLastCube(const glm::vec3 position){
-    int yMax=m_positionsCubes[0].y;
+    int yMax;
     for (int i=1; i< int(m_positionsCubes.size()); i++ ){
         if((glm::length(position.x-m_positionsCubes[i].x) < 0.1f) && (glm::length(position.z-m_positionsCubes[i].z) < 0.1f)){
-            if(m_positionsCubes[i].y > yMax) 
+            if(!yMax)
+                yMax = m_positionsCubes[i].y;
+            else if(std::abs(m_positionsCubes[i].y) > std::abs(yMax))
                 yMax = m_positionsCubes[i].y;
         }
     }

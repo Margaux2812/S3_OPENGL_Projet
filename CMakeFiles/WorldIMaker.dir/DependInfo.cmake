@@ -10,6 +10,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/menu.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/shader.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/shader.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

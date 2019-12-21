@@ -3,7 +3,7 @@
 layout(location = 0) in vec3 aVertexPosition;
 layout(location = 1) in vec3 aVertexNormal;
 layout(location = 2) in vec3 aColor3D;
-layout(location = 3) in vec3 aPositionCube;
+layout(location = 3) in vec3 aPositionCubes;
 
 out vec3 vPosition;
 out vec3 vNormale;
@@ -17,6 +17,6 @@ void main() {
 	vPosition = vec3(uMVMatrix*vec4(aVertexPosition, 1));
 	vNormale = vec3(uNormalMatrix*vec4(aVertexNormal, 0));
 	vColor3D = aColor3D;
-
-    gl_Position = uMVPMatrix * vec4(aVertexPosition + aPositionCube - vec3(0., 1., 3), 1);
+	
+    gl_Position = uMVPMatrix * vec4(aVertexPosition + aPositionCubes - vec3(0., 1., 3), 1);
 }

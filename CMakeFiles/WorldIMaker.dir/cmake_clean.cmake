@@ -5,6 +5,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/WorldIMaker.dir/src/main.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/menu.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+  "CMakeFiles/WorldIMaker.dir/src/shader.cpp.o"
   "bin/WorldIMaker.pdb"
   "bin/WorldIMaker"
 )
