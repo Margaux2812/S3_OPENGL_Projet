@@ -202,6 +202,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/display.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/menu.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
@@ -402,6 +403,9 @@ CMakeFiles/WorldIMaker.dir/src/menu.cpp.o
  lib/glm/vec3.hpp
  lib/glm/vec4.hpp
  lib/glm/vector_relational.hpp
+CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o
+ /home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/src/myshader.cpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
@@ -500,6 +504,3 @@ CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
  lib/glm/vec3.hpp
  lib/glm/vec4.hpp
  lib/glm/vector_relational.hpp
-CMakeFiles/WorldIMaker.dir/src/shader.cpp.o
- /home/margaux/Documents/S3_OPENGL_Projet/include/shader.hpp
- /home/margaux/Documents/S3_OPENGL_Projet/src/shader.cpp

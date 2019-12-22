@@ -271,6 +271,33 @@ src/menu.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/menu.cpp.s
 .PHONY : src/menu.cpp.s
 
+src/myshader.o: src/myshader.cpp.o
+
+.PHONY : src/myshader.o
+
+# target to build an object file
+src/myshader.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o
+.PHONY : src/myshader.cpp.o
+
+src/myshader.i: src/myshader.cpp.i
+
+.PHONY : src/myshader.i
+
+# target to preprocess a source file
+src/myshader.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/myshader.cpp.i
+.PHONY : src/myshader.cpp.i
+
+src/myshader.s: src/myshader.cpp.s
+
+.PHONY : src/myshader.s
+
+# target to generate assembly for a file
+src/myshader.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s
+.PHONY : src/myshader.cpp.s
+
 src/selector.o: src/selector.cpp.o
 
 .PHONY : src/selector.o
@@ -298,33 +325,6 @@ src/selector.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/selector.cpp.s
 .PHONY : src/selector.cpp.s
 
-src/shader.o: src/shader.cpp.o
-
-.PHONY : src/shader.o
-
-# target to build an object file
-src/shader.cpp.o:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/shader.cpp.o
-.PHONY : src/shader.cpp.o
-
-src/shader.i: src/shader.cpp.i
-
-.PHONY : src/shader.i
-
-# target to preprocess a source file
-src/shader.cpp.i:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/shader.cpp.i
-.PHONY : src/shader.cpp.i
-
-src/shader.s: src/shader.cpp.s
-
-.PHONY : src/shader.s
-
-# target to generate assembly for a file
-src/shader.cpp.s:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/shader.cpp.s
-.PHONY : src/shader.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -350,12 +350,12 @@ help:
 	@echo "... src/menu.o"
 	@echo "... src/menu.i"
 	@echo "... src/menu.s"
+	@echo "... src/myshader.o"
+	@echo "... src/myshader.i"
+	@echo "... src/myshader.s"
 	@echo "... src/selector.o"
 	@echo "... src/selector.i"
 	@echo "... src/selector.s"
-	@echo "... src/shader.o"
-	@echo "... src/shader.i"
-	@echo "... src/shader.s"
 .PHONY : help
 
 

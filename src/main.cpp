@@ -11,6 +11,7 @@
 #include "../include/selector.hpp"
 #include "../include/display.hpp"
 #include "../include/menu.hpp"
+#include "../include/myshader.hpp"
 
 using namespace glimac;
 
@@ -25,7 +26,7 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    FilePath applicationPath(argv[0]);
+    /*FilePath applicationPath(argv[0]);
     Program program = loadProgram(applicationPath.dirPath() + "../shaders/3D.vs.glsl",
                               applicationPath.dirPath() + "../shaders/normal.fs.glsl");
     program.use();
@@ -34,6 +35,9 @@ int main(int argc, char** argv) {
     GLint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
     GLint uMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
     GLint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
+    */
+
+    MyShader shader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
 
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
@@ -49,7 +53,7 @@ int main(int argc, char** argv) {
 
     ////MAP WORLD***////
 
-      glm::mat4 ProjMatrix = glm::infinitePerspective(
+    const glm::mat4 ProjMatrix = glm::infinitePerspective(
         1.f,
         800.f/600.f,
         0.1f);
@@ -57,7 +61,7 @@ int main(int argc, char** argv) {
         glm::mat4(),
         glm::vec3(0, 0, -5)
         );
-    glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+    const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
     // Application loop:
     bool done = false;
     while(!done) {
@@ -101,7 +105,12 @@ int main(int argc, char** argv) {
 
             MVMatrix = camera.getViewMatrix();
 
-            glUniformMatrix4fv(uMVPMatrix,
+            shader.bind();
+            shader.setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
+            shader.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
+            shader.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
+
+            /*glUniformMatrix4fv(uMVPMatrix,
                 1,
                 GL_FALSE,
                 glm::value_ptr(ProjMatrix*MVMatrix)
@@ -115,10 +124,12 @@ int main(int argc, char** argv) {
                 1,
                 GL_FALSE,
                 glm::value_ptr(NormalMatrix)
-                );
+                );*/
             
             selector.draw();
             cubes.draw();
+
+            shader.unbind();
         }
         // Update the display
         windowManager.swapBuffers();

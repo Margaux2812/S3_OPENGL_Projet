@@ -122,9 +122,22 @@ CMakeFiles/WorldIMaker.dir/src/menu.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/menu.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp -o CMakeFiles/WorldIMaker.dir/src/menu.cpp.s
 
+CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
+CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o: src/myshader.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/myshader.cpp
+
+CMakeFiles/WorldIMaker.dir/src/myshader.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/myshader.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/margaux/Documents/S3_OPENGL_Projet/src/myshader.cpp > CMakeFiles/WorldIMaker.dir/src/myshader.cpp.i
+
+CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/myshader.cpp -o CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s
+
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: src/selector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/selector.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
 
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.i: cmake_force
@@ -135,19 +148,6 @@ CMakeFiles/WorldIMaker.dir/src/selector.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/selector.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp -o CMakeFiles/WorldIMaker.dir/src/selector.cpp.s
 
-CMakeFiles/WorldIMaker.dir/src/shader.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
-CMakeFiles/WorldIMaker.dir/src/shader.cpp.o: src/shader.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WorldIMaker.dir/src/shader.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/shader.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/shader.cpp
-
-CMakeFiles/WorldIMaker.dir/src/shader.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/shader.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/margaux/Documents/S3_OPENGL_Projet/src/shader.cpp > CMakeFiles/WorldIMaker.dir/src/shader.cpp.i
-
-CMakeFiles/WorldIMaker.dir/src/shader.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/shader.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/shader.cpp -o CMakeFiles/WorldIMaker.dir/src/shader.cpp.s
-
 # Object files for target WorldIMaker
 WorldIMaker_OBJECTS = \
 "CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o" \
@@ -155,8 +155,8 @@ WorldIMaker_OBJECTS = \
 "CMakeFiles/WorldIMaker.dir/src/display.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/main.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/menu.cpp.o" \
-"CMakeFiles/WorldIMaker.dir/src/selector.cpp.o" \
-"CMakeFiles/WorldIMaker.dir/src/shader.cpp.o"
+"CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o" \
+"CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
 
 # External object files for target WorldIMaker
 WorldIMaker_EXTERNAL_OBJECTS =
@@ -166,8 +166,8 @@ bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/cube.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/display.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/main.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/menu.cpp.o
+bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
-bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/shader.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/build.make
 bin/WorldIMaker: lib/libglimac.a
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libSDLmain.a
