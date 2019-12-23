@@ -5,15 +5,7 @@
 #include "../lib/glimac/include/FilePath.hpp"
 #include "../lib/glimac/include/glm.hpp"
 #include "../lib/glimac/include/SDLWindowManager.hpp"
-#include "../include/FreeflyCamera.hpp"
-#include "../include/vertex.hpp"
-#include "../include/cube.hpp"
-#include "../include/selector.hpp"
-#include "../include/display.hpp"
-#include "../include/menu.hpp"
-#include "../include/myshader.hpp"
-#include "../include/texture.hpp"
-#include "../include/typeCube.hpp"
+#include "../include/all.hpp"
 
 using namespace glimac;
 
@@ -31,8 +23,10 @@ int main(int argc, char** argv) {
     }
 
     MyShader shader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
-    Texture texture("assets/textures/cubeTerre.jpg");
-    Texture textureSable("assets/textures/triforce.png");
+    Texture textureTerre("assets/textures/cubeTerre.jpg");
+    Texture textureSable("assets/textures/sand.jpg");
+    Texture textureEau("assets/textures/water.png");
+    Texture textureHerbe("assets/textures/grass.png");
 
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
@@ -42,9 +36,12 @@ int main(int argc, char** argv) {
      *********************************/
 
     Menu menu;
+    Pinceau pinceau;
     FreeflyCamera camera;
     Cube cubesDeTerre(EARTH);
     Cube cubesDeSable(SAND);
+    Cube cubesDEau(SAND);
+    Cube cubesDHerbe(SAND);
     Selector selector;
 
     ////MAP WORLD***////
@@ -74,8 +71,19 @@ const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
                     break;
 
                 case SDL_KEYDOWN : 
-                    //cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition());
-                    cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    pinceau.handleEvents(e.key.keysym.sym);
+                    if(pinceau == EARTH){
+                        cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    }
+                    if(pinceau == SAND){
+                        cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    }
+                    if(pinceau == WATER){
+                        cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    }
+                    if(pinceau == GRASS){
+                        cubesDHerbe.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    }
                     selector.handleEvents(e.key.keysym.sym);
                     camera.handleKeyboardEventsDown(e.key.keysym.sym);
                     break;
@@ -108,14 +116,24 @@ const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
             shader.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
             shader.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
             shader.setUniform1i("u_Texture", 0);
-            texture.bind();
+
+            textureTerre.bind();
             selector.draw();
             cubesDeTerre.draw();
-            texture.unbind();
+            textureTerre.unbind();
 
             textureSable.bind();
             cubesDeSable.draw();
             textureSable.unbind();
+
+            textureEau.bind();
+            cubesDEau.draw();
+            textureEau.unbind();
+
+            textureHerbe.bind();
+            cubesDHerbe.draw();
+            textureHerbe.unbind();
+
             shader.unbind();
         }
         // Update the display

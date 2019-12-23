@@ -298,6 +298,33 @@ src/myshader.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s
 .PHONY : src/myshader.cpp.s
 
+src/pinceau.o: src/pinceau.cpp.o
+
+.PHONY : src/pinceau.o
+
+# target to build an object file
+src/pinceau.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o
+.PHONY : src/pinceau.cpp.o
+
+src/pinceau.i: src/pinceau.cpp.i
+
+.PHONY : src/pinceau.i
+
+# target to preprocess a source file
+src/pinceau.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.i
+.PHONY : src/pinceau.cpp.i
+
+src/pinceau.s: src/pinceau.cpp.s
+
+.PHONY : src/pinceau.s
+
+# target to generate assembly for a file
+src/pinceau.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.s
+.PHONY : src/pinceau.cpp.s
+
 src/selector.o: src/selector.cpp.o
 
 .PHONY : src/selector.o
@@ -380,6 +407,9 @@ help:
 	@echo "... src/myshader.o"
 	@echo "... src/myshader.i"
 	@echo "... src/myshader.s"
+	@echo "... src/pinceau.o"
+	@echo "... src/pinceau.i"
+	@echo "... src/pinceau.s"
 	@echo "... src/selector.o"
 	@echo "... src/selector.i"
 	@echo "... src/selector.s"

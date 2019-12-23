@@ -135,9 +135,22 @@ CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/myshader.cpp -o CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s
 
+CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
+CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o: src/pinceau.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp
+
+CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp > CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.i
+
+CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp -o CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.s
+
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: src/selector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/selector.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
 
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/WorldIMaker.dir/src/selector.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/texture.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/texture.cpp
 
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.i: cmake_force
@@ -169,6 +182,7 @@ WorldIMaker_OBJECTS = \
 "CMakeFiles/WorldIMaker.dir/src/main.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/menu.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o" \
+"CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/selector.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
 
@@ -181,6 +195,7 @@ bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/display.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/main.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/menu.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o
+bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/texture.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/build.make
@@ -191,7 +206,7 @@ bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGL.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGLU.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGLEW.so
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable bin/WorldIMaker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable bin/WorldIMaker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WorldIMaker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
