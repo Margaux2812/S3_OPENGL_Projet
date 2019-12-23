@@ -4,12 +4,12 @@
 
 On compile d'abord avec la commande :
 
-```python
+```bash
 cmake ./ && make
 ```
 
 Puis on fait tout simplement :
 
-```python
+```bash
 ./bin/WorldIMaker
 ```
