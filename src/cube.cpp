@@ -103,7 +103,7 @@ Cube::Cube(typeCube type)
 
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
-    const GLuint VERTEX_ATTR_TEXCOORD = 4;
+    const GLuint VERTEX_ATTR_TEXCOORD = 2;
     const GLuint VERTEX_ATTR_POSITION_ALL = 3;
 
 	glGenBuffers(1, &m_vbo);
@@ -263,6 +263,8 @@ int Cube::findLastCube(const glm::vec3 position){
     
     return yMax;
 }
+
+//TODO DEBUGGER EXTRUDE & DIG
 
 /*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est
 S'il n'y a pas de cube, ça en ajoute un à y=0*/

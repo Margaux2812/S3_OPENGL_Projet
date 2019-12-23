@@ -13,7 +13,7 @@ using namespace glimac;
 
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
-    SDLWindowManager windowManager(800, 600, "Test");
+    SDLWindowManager windowManager(800, 600, "WorldIMaker");
 
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
@@ -22,7 +22,8 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    MyShader shader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
+    MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
+    MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
     Texture textureTerre("assets/textures/cubeTerre.jpg");
     Texture textureSable("assets/textures/sand.jpg");
     Texture textureEau("assets/textures/water.png");
@@ -50,11 +51,11 @@ int main(int argc, char** argv) {
         1.f,
         800.f/600.f,
         0.1f);
- glm::mat4 MVMatrix = glm::translate(
-    glm::mat4(),
-    glm::vec3(0, 0, -5)
+    glm::mat4 MVMatrix = glm::translate(
+        glm::mat4(),
+        glm::vec3(0, 0, -5)
     );
-const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+    const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
 
     // Application loop:
     bool done = false;
@@ -111,11 +112,11 @@ const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
 
             MVMatrix = camera.getViewMatrix();
 
-            shader.bind();
-            shader.setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
-            shader.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
-            shader.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
-            shader.setUniform1i("u_Texture", 0);
+            shaderTextures.bind();
+            shaderTextures.setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
+            shaderTextures.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
+            shaderTextures.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
+            shaderTextures.setUniform1i("u_Texture", 0);
 
             textureTerre.bind();
             selector.draw();
@@ -134,7 +135,7 @@ const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
             cubesDHerbe.draw();
             textureHerbe.unbind();
 
-            shader.unbind();
+            shaderTextures.unbind();
         }
         // Update the display
         windowManager.swapBuffers();
