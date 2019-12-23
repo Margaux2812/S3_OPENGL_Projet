@@ -7,6 +7,7 @@
 //To have the SDL_Event
 #include "../lib/glimac/include/SDLWindowManager.hpp"
 #include "myshader.hpp"
+#include "typeCube.hpp"
 
 class Cube{
 	private:
@@ -17,11 +18,11 @@ class Cube{
 
 		std::vector<glm::vec3> m_positionsCubes;
 
-		std::vector<MyShader> m_shaders;
-		//TYPECUBE m_type;
+		//std::vector<MyShader> m_shaders;
+		typeCube m_type;
 
 	public :
-		Cube();
+		Cube(typeCube type);
 		~Cube();
 		void draw();
 		void print();

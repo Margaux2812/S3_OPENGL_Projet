@@ -97,7 +97,10 @@ const uint32_t indices[] = {
         20,21,22,  22,23,20       // back
     };
 
-Cube::Cube(){
+Cube::Cube(typeCube type)
+: m_type(type)
+{
+
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
     const GLuint VERTEX_ATTR_TEXCOORD = 4;
@@ -111,7 +114,8 @@ Cube::Cube(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
-    loadMonde();
+    if(type == EARTH)
+        loadMonde();
 
     // on crée le buffer
     glGenBuffers(1, &vboAll); 
@@ -164,14 +168,14 @@ Cube::~Cube(){
 }
 
 void Cube::draw(){
-    //Il faudra bind le shader ici
-
+    
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
     //Dernier truc est nb de cubes
     glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
 
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0); //Debinder la VAO
 }
 

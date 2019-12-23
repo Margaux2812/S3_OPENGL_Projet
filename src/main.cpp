@@ -13,8 +13,11 @@
 #include "../include/menu.hpp"
 #include "../include/myshader.hpp"
 #include "../include/texture.hpp"
+#include "../include/typeCube.hpp"
 
 using namespace glimac;
+
+
 
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
@@ -29,6 +32,7 @@ int main(int argc, char** argv) {
 
     MyShader shader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     Texture texture("assets/textures/cubeTerre.jpg");
+    Texture textureSable("assets/textures/triforce.png");
 
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
@@ -39,7 +43,8 @@ int main(int argc, char** argv) {
 
     Menu menu;
     FreeflyCamera camera;
-    Cube cubes;
+    Cube cubesDeTerre(EARTH);
+    Cube cubesDeSable(SAND);
     Selector selector;
 
     ////MAP WORLD***////
@@ -48,11 +53,12 @@ int main(int argc, char** argv) {
         1.f,
         800.f/600.f,
         0.1f);
-    glm::mat4 MVMatrix = glm::translate(
-        glm::mat4(),
-        glm::vec3(0, 0, -5)
-        );
-    const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+ glm::mat4 MVMatrix = glm::translate(
+    glm::mat4(),
+    glm::vec3(0, 0, -5)
+    );
+const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+
     // Application loop:
     bool done = false;
     while(!done) {
@@ -68,7 +74,8 @@ int main(int argc, char** argv) {
                     break;
 
                 case SDL_KEYDOWN : 
-                    cubes.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    //cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition());
+                    cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition());
                     selector.handleEvents(e.key.keysym.sym);
                     camera.handleKeyboardEventsDown(e.key.keysym.sym);
                     break;
@@ -100,12 +107,15 @@ int main(int argc, char** argv) {
             shader.setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
             shader.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
             shader.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
-            texture.bind();
             shader.setUniform1i("u_Texture", 0);
-
+            texture.bind();
             selector.draw();
-            cubes.draw();
+            cubesDeTerre.draw();
+            texture.unbind();
 
+            textureSable.bind();
+            cubesDeSable.draw();
+            textureSable.unbind();
             shader.unbind();
         }
         // Update the display

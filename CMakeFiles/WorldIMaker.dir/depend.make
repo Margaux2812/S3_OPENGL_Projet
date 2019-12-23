@@ -99,6 +99,7 @@ CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o: lib/glm/vector_relational.hp
 
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: include/cube.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: include/myshader.hpp
+CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: include/typeCube.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glimac/include/SDLWindowManager.hpp
 CMakeFiles/WorldIMaker.dir/src/cube.cpp.o: lib/glimac/include/glm.hpp
@@ -205,6 +206,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/menu.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/myshader.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/selector.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/texture.hpp
+CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/typeCube.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: lib/glimac/include/Image.hpp
@@ -411,6 +413,7 @@ CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o: src/myshader.cpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/cube.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/myshader.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/selector.hpp
+CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/typeCube.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: lib/glimac/include/SDLWindowManager.hpp
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: lib/glimac/include/glm.hpp
