@@ -26,3 +26,27 @@ struct Vertex3DColor{
     {
     }
 };
+
+struct Vertex3D{
+    glm::vec3 position;
+    glm::vec3 normals;
+    glm::vec2 texCoords;
+
+    Vertex3D(){
+        this->position.x = 0;
+        this->position.y = 0;
+        this->position.z = 0;
+        this->normals.x = 0;
+        this->normals.y = 0;
+        this->normals.z = 0;
+        this->texCoords.x = 0;
+        this->texCoords.y = 0;
+    }
+
+    Vertex3D(glm::vec3 position, glm::vec3 normals, glm::vec2 texCoords)
+    : position(position), 
+        normals(normals),
+        texCoords(texCoords)
+    {
+    }
+};

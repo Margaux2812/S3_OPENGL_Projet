@@ -2,90 +2,90 @@
 #include "../include/vertex.hpp"
 #include <iostream>
 
-const Vertex3DColor vertices[] = {
+const Vertex3D vertices[] = {
     // Front v0,v1,v2,v3
-    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), 
-                glm::vec3(0, 0, 1),                    
-                glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
+    Vertex3D(glm::vec3(0.5, 0.5, 0.5), //Position
+                glm::vec3(0, 0, 1),         //Normals 
+                glm::vec2(0.f, 0.f)),       //Texture coordonnées
+        Vertex3D(glm::vec3(-0.5, 0.5, 0.5), 
                     glm::vec3(0, 0, 1),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
+                    glm::vec2(1.f, 0.f)), 
+        Vertex3D(glm::vec3(-0.5, -0.5, 0.5), 
                     glm::vec3(0, 0, 1),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
+                    glm::vec2(1.f, 1.f)), 
+        Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(0, 0, 1),
-                    glm::vec3(1.f, 1.f, 0.f)),
+                    glm::vec2(0.f, 1.f)),
     // Right v0,v3,v4,v5
 
-    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), 
+    Vertex3D(glm::vec3(0.5, 0.5, 0.5), 
                 glm::vec3(1, 0, 0),
-                glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
+                glm::vec2(0.f, 0.f)), 
+        Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
+                    glm::vec2(1.f, 0.f)), 
+        Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
+                    glm::vec2(1.f, 1.f)), 
+        Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec3(1.f, 1.f, 0.f)),
+                    glm::vec2(0.f, 1.f)),
     // Top v0,v5,v6,v0.5    
 
-    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5), 
+    Vertex3D(glm::vec3(0.5, 0.5, 0.5), 
                 glm::vec3(0, 1, 0),
-                glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
+                glm::vec2(0.f, 0.f)), 
+        Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(0, 1, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
+                    glm::vec2(1.f, 0.f)), 
+        Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(0, 1, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
+                    glm::vec2(1.f, 1.f)), 
+        Vertex3D(glm::vec3(-0.5, 0.5, 0.5), 
                     glm::vec3(0, 1, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
+                    glm::vec2(0.f, 1.f)), 
     // Left v0.5,v6,v7,v2   
 
-    Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
+    Vertex3D(glm::vec3(-0.5, 0.5, 0.5), 
                 glm::vec3(-1, 0, 0),
-                glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
+                glm::vec2(0.f, 0.f)), 
+        Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(-1, 0, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
+                    glm::vec2(1.f, 0.f)), 
+        Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                     glm::vec3(-1, 0, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
+                    glm::vec2(1.f, 1.f)), 
+        Vertex3D(glm::vec3(-0.5, -0.5, 0.5), 
                     glm::vec3(-1, 0, 0),
-                    glm::vec3(1.f, 1.f, 0.f)),  
+                    glm::vec2(0.f, 1.f)),  
     // Bottom v7,v4,v3,v2
 
-    Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
+    Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                 glm::vec3(0,-1, 0),
-                glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
+                glm::vec2(0.f, 0.f)), 
+        Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                     glm::vec3(0,-1, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
+                    glm::vec2(1.f, 0.f)), 
+        Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(0,-1, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
+                    glm::vec2(1.f, 1.f)), 
+        Vertex3D(glm::vec3(-0.5, -0.5, 0.5), 
                     glm::vec3(0,-1, 0),
-                    glm::vec3(1.f, 1.f, 0.f)), 
+                    glm::vec2(0.f, 1.f)), 
     // Back v4,v7,v6,v5 
 
-    Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
+    Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                 glm::vec3(0, 0,-1),
-                glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
+                glm::vec2(0.f, 0.f)), 
+        Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
+                    glm::vec2(1.f, 0.f)), 
+        Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec3(1.f, 1.f, 0.f)), 
-        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
+                    glm::vec2(1.f, 1.f)), 
+        Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec3(1.f, 1.f, 0.f))
+                    glm::vec2(0.f, 1.f))
     };
 
 const uint32_t indices[] = {
@@ -100,14 +100,14 @@ const uint32_t indices[] = {
 Cube::Cube(){
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
-    const GLuint VERTEX_ATTR_COULEUR = 2;
+    const GLuint VERTEX_ATTR_TEXCOORD = 4;
     const GLuint VERTEX_ATTR_POSITION_ALL = 3;
 
 	glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
 
     //On a 24 sommets
-    glBufferData(GL_ARRAY_BUFFER, 24 * sizeof(Vertex3DColor), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, 24 * sizeof(Vertex3D), vertices, GL_STATIC_DRAW);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
@@ -134,12 +134,12 @@ Cube::Cube(){
 
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
     glEnableVertexAttribArray(VERTEX_ATTR_NORMAL);
-    glEnableVertexAttribArray(VERTEX_ATTR_COULEUR);
+    glEnableVertexAttribArray(VERTEX_ATTR_TEXCOORD);
 
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, position));
-    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, normals));
-    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3D), (const GLvoid*) offsetof(Vertex3D, position));
+    glVertexAttribPointer(VERTEX_ATTR_NORMAL, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3D), (const GLvoid*) offsetof(Vertex3D, normals));
+    glVertexAttribPointer(VERTEX_ATTR_TEXCOORD, 2, GL_FLOAT, GL_FALSE, sizeof(Vertex3D), (const GLvoid*) offsetof(Vertex3D, texCoords));
 
     glBindBuffer(GL_ARRAY_BUFFER, vboAll);
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION_ALL); 
@@ -152,7 +152,6 @@ Cube::Cube(){
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
 
-    //ShaderProgramSource source = ParseShader("");
 };
 
 Cube::~Cube(){
@@ -277,30 +276,6 @@ void Cube::digCube(glm::vec3 position){
     deleteCube(position);
     updateGPU();
 }
-
-
-///////////////////////////////////////////////////////////////
-/////////////////////////// GETTERS ///////////////////////////
-///////////////////////////////////////////////////////////////
-
-
-		GLuint Cube::getVao(){
-            return m_vao;
-        }
-		GLuint Cube::getVbo(){
-            return m_vbo;
-        }
-		GLuint Cube::getIbo(){
-            return m_ibo;
-        }
-
-		// Shader Cube::getShader(){
-        //     return m_shader;
-        // }
-		/*TYPECUBE Cube::getType(){
-            return m_type;
-        }*/
-
 
 ///////////////////////////////////////////////////////////////
 /////////////////////////// SETTERS ///////////////////////////

@@ -6,6 +6,7 @@
 #include <vector>
 //To have the SDL_Event
 #include "../lib/glimac/include/SDLWindowManager.hpp"
+#include "myshader.hpp"
 
 class Cube{
 	private:
@@ -16,7 +17,7 @@ class Cube{
 
 		std::vector<glm::vec3> m_positionsCubes;
 
-		//std::vector<unsigned int> m_shaders;
+		std::vector<MyShader> m_shaders;
 		//TYPECUBE m_type;
 
 	public :
@@ -27,9 +28,9 @@ class Cube{
 
 		///// GETTERS /////
 
-		GLuint getVao();
-		GLuint getVbo();
-		GLuint getIbo();
+		inline GLuint getVao() { return m_vao;}
+		inline GLuint getVbo() { return m_vbo;}
+		inline GLuint getIbo() { return m_ibo;}
 		// Shader getShader();
 		//TYPECUBE getType();
 

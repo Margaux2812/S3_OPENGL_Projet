@@ -22,6 +22,8 @@ public:
 	void unbind() const;
 
 	//Set uniforms
+	void setUniform1i(const std::string& name, int value);
+	void setUniform1f(const std::string& name, float value);
 	void setUniformMatrix4fv(const std::string& name, const GLfloat*value);
 	
 private:

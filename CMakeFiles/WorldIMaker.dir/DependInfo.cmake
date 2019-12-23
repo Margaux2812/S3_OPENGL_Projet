@@ -11,6 +11,7 @@ set(CMAKE_DEPENDS_CHECK_CXX
   "/home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/menu.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/myshader.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o"
   "/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+  "/home/margaux/Documents/S3_OPENGL_Projet/src/texture.cpp" "/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 

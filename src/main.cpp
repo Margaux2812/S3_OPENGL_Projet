@@ -12,6 +12,7 @@
 #include "../include/display.hpp"
 #include "../include/menu.hpp"
 #include "../include/myshader.hpp"
+#include "../include/texture.hpp"
 
 using namespace glimac;
 
@@ -26,18 +27,8 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
-    /*FilePath applicationPath(argv[0]);
-    Program program = loadProgram(applicationPath.dirPath() + "../shaders/3D.vs.glsl",
-                              applicationPath.dirPath() + "../shaders/normal.fs.glsl");
-    program.use();
-
-    //Les variables uniformes du Vertex Shader
-    GLint uMVPMatrix = glGetUniformLocation(program.getGLId(), "uMVPMatrix");
-    GLint uMVMatrix = glGetUniformLocation(program.getGLId(), "uMVMatrix");
-    GLint uNormalMatrix = glGetUniformLocation(program.getGLId(), "uNormalMatrix");
-    */
-
     MyShader shader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
+    Texture texture("assets/textures/cubeTerre.jpg");
 
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
@@ -109,23 +100,9 @@ int main(int argc, char** argv) {
             shader.setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
             shader.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
             shader.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
+            texture.bind();
+            shader.setUniform1i("u_Texture", 0);
 
-            /*glUniformMatrix4fv(uMVPMatrix,
-                1,
-                GL_FALSE,
-                glm::value_ptr(ProjMatrix*MVMatrix)
-                );
-            glUniformMatrix4fv(uMVMatrix,
-                1,
-                GL_FALSE,
-                glm::value_ptr(MVMatrix)
-                );
-            glUniformMatrix4fv(uNormalMatrix,
-                1,
-                GL_FALSE,
-                glm::value_ptr(NormalMatrix)
-                );*/
-            
             selector.draw();
             cubes.draw();
 
