@@ -118,11 +118,6 @@ int main(int argc, char** argv) {
             shaderTextures.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
             shaderTextures.setUniform1i("u_Texture", 0);
 
-            textureTerre.bind();
-            selector.draw();
-            cubesDeTerre.draw();
-            textureTerre.unbind();
-
             textureSable.bind();
             cubesDeSable.draw();
             textureSable.unbind();
@@ -134,6 +129,11 @@ int main(int argc, char** argv) {
             textureHerbe.bind();
             cubesDHerbe.draw();
             textureHerbe.unbind();
+
+            textureTerre.bind();
+            cubesDeTerre.draw();
+            selector.draw();
+            textureTerre.unbind();
 
             shaderTextures.unbind();
         }

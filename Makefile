@@ -325,6 +325,33 @@ src/pinceau.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.s
 .PHONY : src/pinceau.cpp.s
 
+src/radialBasisFunctions.o: src/radialBasisFunctions.cpp.o
+
+.PHONY : src/radialBasisFunctions.o
+
+# target to build an object file
+src/radialBasisFunctions.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o
+.PHONY : src/radialBasisFunctions.cpp.o
+
+src/radialBasisFunctions.i: src/radialBasisFunctions.cpp.i
+
+.PHONY : src/radialBasisFunctions.i
+
+# target to preprocess a source file
+src/radialBasisFunctions.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.i
+.PHONY : src/radialBasisFunctions.cpp.i
+
+src/radialBasisFunctions.s: src/radialBasisFunctions.cpp.s
+
+.PHONY : src/radialBasisFunctions.s
+
+# target to generate assembly for a file
+src/radialBasisFunctions.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.s
+.PHONY : src/radialBasisFunctions.cpp.s
+
 src/selector.o: src/selector.cpp.o
 
 .PHONY : src/selector.o
@@ -410,6 +437,9 @@ help:
 	@echo "... src/pinceau.o"
 	@echo "... src/pinceau.i"
 	@echo "... src/pinceau.s"
+	@echo "... src/radialBasisFunctions.o"
+	@echo "... src/radialBasisFunctions.i"
+	@echo "... src/radialBasisFunctions.s"
 	@echo "... src/selector.o"
 	@echo "... src/selector.i"
 	@echo "... src/selector.s"

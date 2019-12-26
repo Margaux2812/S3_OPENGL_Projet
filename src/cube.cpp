@@ -1,5 +1,6 @@
 #include "../include/cube.hpp"
 #include "../include/vertex.hpp"
+#include "../include/radialBasisFunctions.hpp"
 #include <iostream>
 
 const Vertex3D vertices[] = {
@@ -243,28 +244,36 @@ void Cube::deleteCube(const glm::vec3 position){
 }
 
 void Cube::loadMonde(){
-    for(int x=0; x<30; x++){
-        for(int z = 0; z<30; z++){
-            m_positionsCubes.push_back(glm::vec3(x, -1, z));
+    Eigen::MatrixXd map(WORLD_WIDTH_HEIGHT, WORLD_WIDTH_HEIGHT);
+
+    const int nbPoints = 2;
+
+    Eigen::MatrixXf ptsDeControle(nbPoints, 2);
+    ptsDeControle << 10, 10,
+    2, 3;
+    Eigen::VectorXf uk(nbPoints);
+    uk << 10, -2;
+
+    map = getValues(ptsDeControle, uk);
+    for(int x=0; x<WORLD_WIDTH_HEIGHT; x++){
+        for(int z = 0; z<WORLD_WIDTH_HEIGHT; z++){
+            for(int y= WORLD_DEPTH; y <= map(x, z); y++){
+                m_positionsCubes.push_back(glm::vec3(x, y, z));
+            }
         }
     }
 }
 
 int Cube::findLastCube(const glm::vec3 position){
-    int yMax;
+    int yMax = WORLD_DEPTH;
     for (int i=1; i< int(m_positionsCubes.size()); i++ ){
         if((glm::length(position.x-m_positionsCubes[i].x) < 0.1f) && (glm::length(position.z-m_positionsCubes[i].z) < 0.1f)){
-            if(!yMax)
-                yMax = m_positionsCubes[i].y;
-            else if(std::abs(m_positionsCubes[i].y) > std::abs(yMax))
+            if(m_positionsCubes[i].y > yMax)
                 yMax = m_positionsCubes[i].y;
         }
     }
-    
     return yMax;
 }
-
-//TODO DEBUGGER EXTRUDE & DIG
 
 /*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est
 S'il n'y a pas de cube, ça en ajoute un à y=0*/
