@@ -184,6 +184,9 @@ void Cube::draw(){
 
 
 
+///////////////////////////////////////////////////////////////
+///////////////////////// EVENT MANAGER ///////////////////////
+///////////////////////////////////////////////////////////////
 
 
 
@@ -219,6 +222,12 @@ void Cube::updateGPU(){
     glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////// CUBE MANAGER ////////////////////////
+///////////////////////////////////////////////////////////////
+
 
 void Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
@@ -308,55 +317,4 @@ void Cube::digCube(glm::vec3 position){
 		void Cube::setIbo(GLuint const newIbo){
             m_ibo=newIbo;
         }
-		// void Cube::setShader(std::string newVs, std::string newFs){
-        //     m_shader.setVS(newVS);
-        //     m_shader.setFS(newFS);
-        // }
-		/*void Cube::setType(TYPECUBE newType){
-            m_type =newType;
-        }
-*/
 
-
-///////////////////////////////////////////////////////////////
-///////////////////////// CUBE MANAGER ////////////////////////
-///////////////////////////////////////////////////////////////
-
-
-    // void Cube::addCube(std::string vs, std::string fs){ // Affiche image du cube // Passer en paramètre les shaders voulus adaptés au typeCube // Créer un enum des types de cubes
-        
-    //     /////// A DEPLACER AU MOMENT OU ON SELECTINNE LE TYPE DE CUBE ///////
-
-    //     // if (type == SAND){
-    //     //     vs="shaders.sand.vs.glsl";
-    //     //     fs="shaders.sand.fs.glsl";
-    //     // }
-
-    //     /////////////////////////////////////////////////////////////////////
-
-    //     // m_shader.setPath(vs, fs);
-    // }
-
-
-    // void Cube::deleteCube(){ // Delete image du cube
-    //     // std::string vs="shaders/transparent.vs.glsl";
-    //     // std::string fs="shaders/transparent.fs.glsl";
-
-    //     // m_shader.setPath(vs, fs);
-    // }
-
-    // void Cube::extrudeCube(Cube &mapCube){ // Faire un while pour selectionner le premier cube vide
-    //     float newZ = m_position.z++;
-    //     glm::vec3 posNewCube = glm::vec3(m_position.x,m_position.y,newZ); 
-    //     Cube extrCube = findFromPosition(mapCube, posNewCube);
-    //     // Dans le main de selection : Recherche cube where position = this.position.z++ && .x && .y
-    //     extrCube.addCube(m_shader.getVS, m_shader.getFS);
-    // }
-
-    //     void Cube::digCube(Cube &mapCube){ // Faire un while pour selectionner le premier cube non vide
-    //     float newZ = m_position.z--;
-    //     glm::vec3 posNewCube = glm::vec3(m_position.x,m_position.y,newZ); 
-    //     Cube digCube = findFromPosition(mapCube, posNewCube);
-    //     // Dans le main de selection : Recherche cube where position = this.position.z++ && .x && .y
-    //     digCube.deleteCube();
-    // }
