@@ -41,8 +41,8 @@ int main(int argc, char** argv) {
     FreeflyCamera camera;
     Cube cubesDeTerre(EARTH);
     Cube cubesDeSable(SAND);
-    Cube cubesDEau(SAND);
-    Cube cubesDHerbe(SAND);
+    Cube cubesDEau(WATER);
+    Cube cubesDHerbe(GRASS);
     Selector selector;
 
     ////MAP WORLD***////
@@ -73,18 +73,12 @@ int main(int argc, char** argv) {
 
                 case SDL_KEYDOWN : 
                     pinceau.handleEvents(e.key.keysym.sym);
-                    if(pinceau == EARTH){
-                        cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition());
-                    }
-                    if(pinceau == SAND){
-                        cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition());
-                    }
-                    if(pinceau == WATER){
-                        cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition());
-                    }
-                    if(pinceau == GRASS){
-                        cubesDHerbe.handleEvents(e.key.keysym.sym, selector.getPosition());
-                    }
+
+                    cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                    cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                    cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                    cubesDHerbe.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+
                     selector.handleEvents(e.key.keysym.sym);
                     camera.handleKeyboardEventsDown(e.key.keysym.sym);
                     break;
