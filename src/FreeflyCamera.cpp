@@ -1,6 +1,12 @@
 #include "../include/FreeflyCamera.hpp"
 #include <math.h>
 
+/*******************************************/
+/***************SUGGESTIONS****************/
+/*****************************************/
+
+
+
 FreeflyCamera::FreeflyCamera(){
 	m_Position = glm::vec3(0.f, 0.f, 0.f);
 	m_fPhi = M_PI;
