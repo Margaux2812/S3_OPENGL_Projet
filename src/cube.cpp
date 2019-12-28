@@ -184,6 +184,9 @@ void Cube::draw(){
 
 
 
+///////////////////////////////////////////////////////////////
+///////////////////////// EVENT MANAGER ///////////////////////
+///////////////////////////////////////////////////////////////
 
 
 
@@ -217,6 +220,12 @@ void Cube::updateGPU(){
     glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
+
+
+///////////////////////////////////////////////////////////////
+///////////////////////// CUBE MANAGER ////////////////////////
+///////////////////////////////////////////////////////////////
+
 
 void Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
@@ -305,16 +314,4 @@ void Cube::digCube(glm::vec3 position){
 		void Cube::setIbo(GLuint const newIbo){
             m_ibo=newIbo;
         }
-		// void Cube::setShader(std::string newVs, std::string newFs){
-        //     m_shader.setVS(newVS);
-        //     m_shader.setFS(newFS);
-        // }
-		/*void Cube::setType(TYPECUBE newType){
-            m_type =newType;
-        }
-*/
 
-
-///////////////////////////////////////////////////////////////
-///////////////////////// CUBE MANAGER ////////////////////////
-///////////////////////////////////////////////////////////////
