@@ -10,10 +10,9 @@
 using namespace glimac;
 
 
-
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
-    SDLWindowManager windowManager(800, 600, "WorldIMaker");
+    SDLWindowManager windowManager(1000, 800, "WorldIMaker");
 
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
@@ -21,6 +20,8 @@ int main(int argc, char** argv) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
+
+    
 
     MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
@@ -56,6 +57,7 @@ int main(int argc, char** argv) {
         glm::vec3(0, 0, -5)
     );
     const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+
 
     // Application loop:
     bool done = false;
