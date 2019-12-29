@@ -168,19 +168,7 @@ Cube::~Cube(){
     glDeleteVertexArrays(1, &m_vao);
 }
 
-std::string Cube::getTexture(){
-    switch(m_type){
-        case GRASS: return ("assets/textures/grass.png");
-        break;
-        case WATER : return ("assets/textures/water.png");
-        break;
-        case SAND : return ("assets/textures/sand.jpg");
-        break;
-        case EARTH :
-        default: return ("assets/textures/cubeTerre.jpg");
-        break;
-    }
-}
+
 void Cube::draw(){
     //std::cout << m_texture.name() << std::endl;
     m_texture.bind();
@@ -195,6 +183,44 @@ void Cube::draw(){
     m_texture.unbind();
 }
 
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// GETTERS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+std::string Cube::getTexture(){
+    switch(m_type){
+        case GRASS: return ("assets/textures/grass.png");
+        break;
+        case WATER : return ("assets/textures/water.png");
+        break;
+        case SAND : return ("assets/textures/sand.jpg");
+        break;
+        case EARTH :
+        default: return ("assets/textures/cubeTerre.jpg");
+        break;
+    }
+}
+        
+std::vector<glm::vec3> Cube::getPositions(){
+    return m_positionsCubes;
+}
+
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// SETTERS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+		void Cube::setVao(GLuint const newVao){
+            m_vao=newVao;
+        }
+		void Cube::setVbo(GLuint const newVbo){
+            m_vbo=newVbo;
+        }
+		void Cube::setIbo(GLuint const newIbo){
+            m_ibo=newIbo;
+        }
 
 
 
@@ -318,18 +344,3 @@ void Cube::digCube(glm::vec3 position){
     deleteCube(position);
     updateGPU();
 }
-
-///////////////////////////////////////////////////////////////
-/////////////////////////// SETTERS ///////////////////////////
-///////////////////////////////////////////////////////////////
-
-		void Cube::setVao(GLuint const newVao){
-            m_vao=newVao;
-        }
-		void Cube::setVbo(GLuint const newVbo){
-            m_vbo=newVbo;
-        }
-		void Cube::setIbo(GLuint const newIbo){
-            m_ibo=newIbo;
-        }
-

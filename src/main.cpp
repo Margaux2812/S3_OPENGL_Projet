@@ -9,6 +9,16 @@
 
 using namespace glimac;
 
+// void clearWorld(Cube myCube){
+// //Pour chaque position cube de typeCube, je lui fais handleEvent de delete
+//     std::vector<glm::vec3>  tab_pos = myCube.getPositions;
+//     for (int i=0; i< int(tab_pos.size()); i++){
+//        typeCube.handleEvents(SDLK_DELETE, tab_pos[i], typeCube.getType());
+//     }
+// }
+
+
+
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(SCREEN_WIDTH, SCREEN_HEIGHT, "WorldIMaker");
