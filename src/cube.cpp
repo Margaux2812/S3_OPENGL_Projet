@@ -190,19 +190,21 @@ void Cube::draw(){
 
 
 
-
-void Cube::handleEvents(const SDLKey e, const glm::vec3 position){
-    switch(e){
-        case SDLK_DELETE: deleteCube(position);
-        break;
-        case SDLK_RETURN : addCube(position);
-        break;
-        case SDLK_e: extrudeCube(position);
-        break;
-        case SDLK_c : digCube(position);
-        break;
-        
-        default: break;
+/*Peu importe le type de pinceau, on doit pouvoir supprimer un cube*/
+void Cube::handleEvents(const SDLKey e, const glm::vec3 position, typeCube type){
+    if(e == SDLK_DELETE)
+        deleteCube(position);
+    if(type == m_type){
+        switch(e){
+            case SDLK_RETURN : addCube(position);
+            break;
+            case SDLK_e: extrudeCube(position);
+            break;
+            case SDLK_c : digCube(position);
+            break;
+            
+            default: break;
+        }
     }
 }
 
@@ -255,13 +257,14 @@ void Cube::deleteCube(const glm::vec3 position){
 void Cube::loadMonde(){
     Eigen::MatrixXd map(WORLD_WIDTH_HEIGHT, WORLD_WIDTH_HEIGHT);
 
-    const int nbPoints = 2;
+    const int nbPoints = 3;
 
     Eigen::MatrixXf ptsDeControle(nbPoints, 2);
     ptsDeControle << 10, 10,
-    2, 3;
+    2, 3,
+    30, 40;
     Eigen::VectorXf uk(nbPoints);
-    uk << 10, -2;
+    uk << 10, -2, -20;
 
     map = getValues(ptsDeControle, uk);
     for(int x=0; x<WORLD_WIDTH_HEIGHT; x++){

@@ -46,7 +46,7 @@ class Cube{
 
 		///// MANAGER /////
 
-		void handleEvents(const SDLKey e, const glm::vec3 position);
+		void handleEvents(const SDLKey e, const glm::vec3 position, typeCube type);
 		int findFromPosition(const glm::vec3 position);
 		void updateGPU();
 		void addCube(const glm::vec3 position);
