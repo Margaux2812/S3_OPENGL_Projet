@@ -8,6 +8,7 @@
 #include "../lib/glimac/include/SDLWindowManager.hpp"
 #include "myshader.hpp"
 #include "typeCube.hpp"
+#include "texture.hpp"
 
 class Cube{
 	private:
@@ -20,10 +21,12 @@ class Cube{
 
 		//std::vector<MyShader> m_shaders;
 		typeCube m_type;
+		Texture m_texture;
 
 	public :
 		Cube(typeCube type);
 		~Cube();
+		std::string getTexture();
 		void draw();
 		void print();
 

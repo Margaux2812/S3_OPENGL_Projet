@@ -7,6 +7,7 @@
 #include "../lib/glimac/include/glm.hpp"
 #include "../lib/glimac/include/SDLWindowManager.hpp"
 #include "../lib/glimac/include/Image.hpp"
+#include "vertex.hpp"
 
 enum MenuName {
 	inGame,
@@ -17,6 +18,9 @@ enum MenuName {
 class Menu{
 	private:
 		MenuName m_name;
+		GLuint m_ibo;
+		GLuint m_vbo;
+    	GLuint m_vao;
 
 	public :
 		Menu();
@@ -24,5 +28,7 @@ class Menu{
 		
 		bool operator==(MenuName name);
 		void setMenuName(MenuName name);
-		void draw(glimac::FilePath applicationPath);
+		void draw(MenuName name);
+		void drawPausedGame();
+		void drawMainMenu();
 };

@@ -99,10 +99,10 @@ const uint32_t indices[] = {
     };
 
 Cube::Cube(typeCube type)
-: m_type(type)
+: m_type(type),
+m_texture(getTexture())
 {
-
-	const GLuint VERTEX_ATTR_POSITION = 0;
+    const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
     const GLuint VERTEX_ATTR_TEXCOORD = 2;
     const GLuint VERTEX_ATTR_POSITION_ALL = 3;
@@ -168,8 +168,22 @@ Cube::~Cube(){
     glDeleteVertexArrays(1, &m_vao);
 }
 
+std::string Cube::getTexture(){
+    switch(m_type){
+        case GRASS: return ("assets/textures/grass.png");
+        break;
+        case WATER : return ("assets/textures/water.png");
+        break;
+        case SAND : return ("assets/textures/sand.jpg");
+        break;
+        case EARTH :
+        default: return ("assets/textures/cubeTerre.jpg");
+        break;
+    }
+}
 void Cube::draw(){
-    
+    //std::cout << m_texture.name() << std::endl;
+    m_texture.bind();
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
@@ -178,6 +192,7 @@ void Cube::draw(){
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0); //Debinder la VAO
+    m_texture.unbind();
 }
 
 

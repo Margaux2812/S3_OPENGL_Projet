@@ -25,10 +25,7 @@ int main(int argc, char** argv) {
 
     MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
-    Texture textureTerre("assets/textures/cubeTerre.jpg");
-    Texture textureSable("assets/textures/sand.jpg");
-    Texture textureEau("assets/textures/water.png");
-    Texture textureHerbe("assets/textures/grass.png");
+    Texture tex("assets/textures/grass.png");
 
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
@@ -76,10 +73,10 @@ int main(int argc, char** argv) {
                 case SDL_KEYDOWN : 
 
                     if(e.key.keysym.sym == SDLK_TAB){
-                        /*Plutôt mettre sur pause le jeu*/
+                        /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
                         done = true;
-                    }else if(e.key.keysym.sym == SDLK_ESCAPE){
-                        menu.setMenuName(inPause);
+                    //}else if(e.key.keysym.sym == SDLK_ESCAPE){
+                       // menu.setMenuName(inPause);
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
 
@@ -106,9 +103,10 @@ int main(int argc, char** argv) {
         }
 
         if(menu == inPause){
-            //menu.draw(applicationPath);
-            std::cout << "pause" << std::endl;
-        }else if(menu == inGame){
+            menu.draw(inPause);
+        }
+
+        if(menu == inGame || menu == inPause){
 
             /*********************************
              * HERE SHOULD COME THE RENDERING CODE
@@ -123,22 +121,14 @@ int main(int argc, char** argv) {
             shaderTextures.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
             shaderTextures.setUniform1i("u_Texture", 0);
 
-            textureSable.bind();
             cubesDeSable.draw();
-            textureSable.unbind();
-
-            textureEau.bind();
             cubesDEau.draw();
-            textureEau.unbind();
-
-            textureHerbe.bind();
             cubesDHerbe.draw();
-            textureHerbe.unbind();
-
-            textureTerre.bind();
             cubesDeTerre.draw();
+            
+            tex.bind();
             selector.draw();
-            textureTerre.unbind();
+            tex.unbind();
 
             shaderTextures.unbind();
         }

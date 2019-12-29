@@ -50,3 +50,22 @@ struct Vertex3D{
     {
     }
 };
+
+struct VertexTex{
+    glm::vec3 position;
+    glm::vec2 texCoords;
+
+    VertexTex(){
+        this->position.x = 0;
+        this->position.y = 0;
+        this->position.z = 0;
+        this->texCoords.x = 0;
+        this->texCoords.y = 0;
+    }
+
+    VertexTex(glm::vec3 position, glm::vec2 texCoords)
+    : position(position),
+        texCoords(texCoords)
+    {
+    }
+};

@@ -51,3 +51,7 @@ void Texture::unbind() const{
 	glBindTexture(GL_TEXTURE_2D, 0);
 }
 
+std::string Texture::name(){
+	return m_filepath;
+}
+
