@@ -10,6 +10,7 @@
 
 enum MenuName {
 	inGame,
+	inPause,
 	principal
 };
 
@@ -21,6 +22,7 @@ class Menu{
 		Menu();
 		~Menu();
 		
-		MenuName getMenuName();
+		bool operator==(MenuName name);
+		void setMenuName(MenuName name);
 		void draw(glimac::FilePath applicationPath);
 };

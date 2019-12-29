@@ -9,11 +9,10 @@
 
 using namespace glimac;
 
-
-
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
-    SDLWindowManager windowManager(800, 600, "WorldIMaker");
+    SDLWindowManager windowManager(SCREEN_WIDTH, SCREEN_HEIGHT, "WorldIMaker");
+    SDL_ShowCursor(SDL_DISABLE);
 
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
@@ -49,7 +48,7 @@ int main(int argc, char** argv) {
 
     const glm::mat4 ProjMatrix = glm::infinitePerspective(
         1.f,
-        800.f/600.f,
+        SCREEN_WIDTH/SCREEN_HEIGHT,
         0.1f);
     glm::mat4 MVMatrix = glm::translate(
         glm::mat4(),
@@ -72,37 +71,46 @@ int main(int argc, char** argv) {
                     break;
 
                 case SDL_KEYDOWN : 
-                    pinceau.handleEvents(e.key.keysym.sym);
 
-                    cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
-                    cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
-                    cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
-                    cubesDHerbe.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                    if(e.key.keysym.sym == SDLK_TAB){
+                        /*Plutôt mettre sur pause le jeu*/
+                        done = true;
+                    }else if(e.key.keysym.sym == SDLK_ESCAPE){
+                        menu.setMenuName(inPause);
+                    }else if(menu == inGame){
+                        pinceau.handleEvents(e.key.keysym.sym);
 
-                    selector.handleEvents(e.key.keysym.sym);
-                    camera.handleKeyboardEventsDown(e.key.keysym.sym);
-                    break;
+                        cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                        cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                        cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                        cubesDHerbe.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+
+                        selector.handleEvents(e.key.keysym.sym);
+                        camera.handleKeyboardEventsDown(e.key.keysym.sym);
+                    }
+
+                break;
                 case SDL_KEYUP:
-                    camera.handleKeyboardEventsUp(e.key.keysym.sym);
+                    if(menu == inGame)
+                        camera.handleKeyboardEventsUp(e.key.keysym.sym);
                     break;
                 case SDL_MOUSEMOTION:
-                    if(e.button.button == SDL_BUTTON_LEFT){
+                    if(menu == inGame)
                         camera.handleMouseEvents(e);
-                    }
 
                 default: break;
             }
         }
 
-        camera.updateCameraMovement();
-
-        if(menu.getMenuName() == principal){
+        if(menu == inPause){
             //menu.draw(applicationPath);
-        }else if(menu.getMenuName() == inGame){
+            std::cout << "pause" << std::endl;
+        }else if(menu == inGame){
 
             /*********************************
              * HERE SHOULD COME THE RENDERING CODE
              *********************************/
+            camera.updateCameraMovement();
 
             MVMatrix = camera.getViewMatrix();
 

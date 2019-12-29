@@ -14,8 +14,11 @@ private :
 	const float cameraSpeedRotation = 0.1f;
 	bool upPressed = false;
 	bool downPressed = false;
+	bool forwardPressed = false;
+	bool backwardPressed = false;
 	bool rightPressed = false;
 	bool leftPressed = false;
+	bool mouseEnteredScreen = false;
 
 public:
 	//Constructeur
@@ -23,6 +26,7 @@ public:
 
 	//Méthodes
 	void computeDirectionVectors(glm::vec3 &m_FrontVector, glm::vec3 &m_LeftVector, glm::vec3 &m_UpVector, const float m_fPhi, const float m_fTheta);
+	void moveUp(const float t);
 	void moveLeft(const float t);
 	void moveFront(const float t);
 	void rotateLeft(const float degrees);

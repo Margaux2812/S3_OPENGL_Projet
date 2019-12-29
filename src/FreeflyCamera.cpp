@@ -1,6 +1,6 @@
 #include "../include/FreeflyCamera.hpp"
 #include <math.h>
-
+#include <iostream>
 /*******************************************/
 /***************SUGGESTIONS****************/
 /*****************************************/
@@ -25,6 +25,9 @@ void FreeflyCamera::computeDirectionVectors(glm::vec3 &m_FrontVector, glm::vec3 
 		0.f, 
 		std::cos(m_fPhi+M_PI/2.f));
 	m_UpVector = glm::cross(m_FrontVector, m_LeftVector);
+}
+void FreeflyCamera::moveUp(const float t){
+    m_Position += t*m_UpVector;
 }
 void FreeflyCamera::moveLeft(const float t){
 	m_Position += t*m_LeftVector;
@@ -57,10 +60,10 @@ glm::mat4 FreeflyCamera::getViewMatrix() const{
 }
 
 void FreeflyCamera::updateCameraMovement(){
-        if(upPressed){
+        if(forwardPressed){
         	moveFront(cameraSpeed);
         }
-        else if(downPressed){
+        else if(backwardPressed){
         	moveFront(-cameraSpeed);
         }
         else if(leftPressed){
@@ -69,21 +72,37 @@ void FreeflyCamera::updateCameraMovement(){
         else if(rightPressed){
         	moveLeft(-cameraSpeed);
         }
+        else if(upPressed){
+            moveUp(cameraSpeed);
+        }
+        else if(downPressed){
+            moveUp(-cameraSpeed);
+        }
+
+    SDL_EventState(SDL_MOUSEMOTION, SDL_IGNORE);
+    SDL_WarpMouse(400, 300);
+    SDL_EventState(SDL_MOUSEMOTION, SDL_ENABLE); 
 }
 
 void FreeflyCamera::handleKeyboardEventsDown(const SDLKey e){
     switch(e){
         /*Z key to move forward*/
-        case SDLK_z: upPressed = true;
+        case SDLK_z: forwardPressed = true;
         break;
         /*S key to move backward*/
-        case SDLK_s: downPressed = true;
+        case SDLK_s: backwardPressed = true;
         break;
         /*Q key to move left*/
         case SDLK_q: leftPressed = true;
         break;
         /*D key to move right*/
         case SDLK_d: rightPressed = true;
+        break;
+        /*A key to move up*/
+        case SDLK_a: upPressed = true;
+        break;
+        /*D key to move down*/
+        case SDLK_w: downPressed = true;
         break;
         
         default: break;
@@ -93,10 +112,10 @@ void FreeflyCamera::handleKeyboardEventsDown(const SDLKey e){
 void FreeflyCamera::handleKeyboardEventsUp(const SDLKey e){
     switch(e){
         /*Z key to move forward*/
-        case SDLK_z: upPressed = false;
+        case SDLK_z: forwardPressed = false;
         break;
         /*S key to move backward*/
-        case SDLK_s: downPressed = false;
+        case SDLK_s: backwardPressed = false;
         break;
         /*Q key to move left*/
         case SDLK_q: leftPressed = false;
@@ -104,16 +123,28 @@ void FreeflyCamera::handleKeyboardEventsUp(const SDLKey e){
         /*D key to move right*/
         case SDLK_d: rightPressed = false;
         break;
+        /*A key to move up*/
+        case SDLK_a: upPressed = false;
+        break;
+        /*D key to move down*/
+        case SDLK_w: downPressed = false;
+        break;
         
         default: break;
     }
 }
 
 void FreeflyCamera::handleMouseEvents(const SDL_Event e){
+    if(!mouseEnteredScreen){
+        SDL_WarpMouse(400, 300);
+        SDL_WM_GrabInput(SDL_GRAB_ON);
+        mouseEnteredScreen = true;
+    }
     if ( e.motion.xrel != 0 ) {
       rotateUp( float(-e.motion.xrel) * cameraSpeedRotation);
     }
     if ( e.motion.yrel != 0 ) {
-      rotateLeft( float(e.motion.yrel) * cameraSpeedRotation);
+      rotateLeft( float(-e.motion.yrel) * cameraSpeedRotation);
     }
+    //SDL_WarpMouse(400, 300);
 }

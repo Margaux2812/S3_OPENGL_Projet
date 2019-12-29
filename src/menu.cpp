@@ -10,8 +10,12 @@ Menu::~Menu(){
 }
 
 		
-MenuName Menu::getMenuName(){
-	return m_name;
+bool Menu::operator==(MenuName name){
+	return m_name == name;
+}
+
+void Menu::setMenuName(MenuName name){
+	m_name = name;
 }
 
 //Ce qu'il y a en commentaire à ajouter quand on a une image de menu

@@ -8,3 +8,6 @@
 #include "../include/texture.hpp"
 #include "../include/typeCube.hpp"
 #include "../include/pinceau.hpp"
+
+const float SCREEN_WIDTH = 800.f;
+const float SCREEN_HEIGHT = 600.f;
