@@ -6,6 +6,7 @@
 
 #IncludeRegexTransform: 
 
+<<<<<<< HEAD
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/BBox.hpp
 glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
@@ -49,6 +50,9 @@ FilePath.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
+=======
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
+>>>>>>> master
 cstdint
 -
 SDL/SDL.h
@@ -56,6 +60,7 @@ SDL/SDL.h
 glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
+<<<<<<< HEAD
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Shader.hpp
 GL/glew.h
 -
@@ -69,6 +74,9 @@ math.h
 -
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+=======
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+>>>>>>> master
 ../../glm/glm.hpp
 -
 ../../glm/gtc/matrix_transform.hpp
@@ -82,6 +90,7 @@ math.h
 ../../glm/gtc/random.hpp
 -
 
+<<<<<<< HEAD
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/Geometry.cpp
 ../include/Geometry.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Geometry.hpp
@@ -107,11 +116,15 @@ stdexcept
 -
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/SDLWindowManager.cpp
+=======
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/src/SDLWindowManager.cpp
+>>>>>>> master
 ../include/SDLWindowManager.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
 iostream
 -
 
+<<<<<<< HEAD
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/src/Shader.cpp
 ../include/Shader.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Shader.hpp
@@ -196,6 +209,8 @@ lib/glimac/include/glm.hpp
 ../../glm/gtc/random.hpp
 -
 
+=======
+>>>>>>> master
 lib/glm/common.hpp
 detail/func_common.hpp
 lib/glm/detail/func_common.hpp

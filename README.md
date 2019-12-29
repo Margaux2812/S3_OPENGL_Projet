@@ -21,11 +21,8 @@ CAMERA :
 - Monter 
 - Descendre
 
-FENETRE : 
-- Resize
-
 CUBE : 
-- Delete ne fonctionne que sur le dernier
+- Delete ne fonctionne que sur un cube de même texture que selectionné
 
 USER INTERFACE : 
 - Menu
@@ -33,9 +30,15 @@ USER INTERFACE :
 
 SCENE : 
 - Clear All
+- Ajouter un background (en hdri possible ??)
 
 PROGRAMME : 
 - Vérifier fuites mémoires
 - Vérifier soucis dans "myShader"
+
+************************* DONE ******************************
+
+FENETRE : 
+- Resize
 
 

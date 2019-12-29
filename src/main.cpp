@@ -21,6 +21,8 @@ int main(int argc, char** argv) {
         return EXIT_FAILURE;
     }
 
+    
+
     MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
     Texture textureTerre("assets/textures/cubeTerre.jpg");
@@ -55,6 +57,7 @@ int main(int argc, char** argv) {
         glm::vec3(0, 0, -5)
     );
     const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
+
 
     // Application loop:
     bool done = false;
