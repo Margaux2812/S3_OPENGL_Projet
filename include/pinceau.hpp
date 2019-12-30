@@ -12,6 +12,7 @@ public:
 	Pinceau();
 	~Pinceau();
 
+	inline typeCube getType(){ return m_typeSelected; };
 	void handleEvents(const SDLKey e);
 	bool operator==(const typeCube type);
 };

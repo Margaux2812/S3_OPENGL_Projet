@@ -186,6 +186,12 @@ cstddef
 ../include/all.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/all.hpp
 
+/home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp
+../include/pinceau.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
+iostream
+-
+
 lib/glm/common.hpp
 detail/func_common.hpp
 lib/glm/detail/func_common.hpp
