@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet"
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet"
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -406,6 +406,33 @@ src/texture.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/texture.cpp.s
 .PHONY : src/texture.cpp.s
 
+src/vertex.o: src/vertex.cpp.o
+
+.PHONY : src/vertex.o
+
+# target to build an object file
+src/vertex.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o
+.PHONY : src/vertex.cpp.o
+
+src/vertex.i: src/vertex.cpp.i
+
+.PHONY : src/vertex.i
+
+# target to preprocess a source file
+src/vertex.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/vertex.cpp.i
+.PHONY : src/vertex.cpp.i
+
+src/vertex.s: src/vertex.cpp.s
+
+.PHONY : src/vertex.s
+
+# target to generate assembly for a file
+src/vertex.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/vertex.cpp.s
+.PHONY : src/vertex.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -446,6 +473,9 @@ help:
 	@echo "... src/texture.o"
 	@echo "... src/texture.i"
 	@echo "... src/texture.s"
+	@echo "... src/vertex.o"
+	@echo "... src/vertex.i"
+	@echo "... src/vertex.s"
 .PHONY : help
 
 

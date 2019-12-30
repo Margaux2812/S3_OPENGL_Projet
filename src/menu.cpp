@@ -18,7 +18,8 @@ const uint32_t indices[] = {
 };
 
 Menu::Menu()
-:m_name(principal),
+:m_precMenu(principal),
+m_name(principal),
 m_texture(new Texture("assets/textures/MenuPrincipal.png"))
 {
 	const GLuint VERTEX_ATTR_POSITION = 0;
@@ -91,6 +92,84 @@ void Menu::lancerJeu(){
 }
 
 void Menu::handleClicks(const float x, const float y){
+    switch(m_name){
+        case principal:handleInPrincipal(x, y);
+        break;
+        case inPause:handleInPause(x, y);
+        break;
+        case controle:handleInControle1(x, y);
+        break;
+        case controle2:handleInControle2(x, y);
+        break;
+        default: break;
+    }
+}
+
+void Menu::handleInPrincipal(const float x, const float y){
+    //Bouton démarrer
+    if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 343, 428)){
+        lancerJeu();
+    //Bouton "Controles"
+    }else if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 445, 527)){
+        m_precMenu = principal;
+        changeTo(controle);
+    }
+}
+
+void Menu::handleInPause(const float x, const float y){
+    //Bouton "Retour au jeu"
+    if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 154, 237)){
+        lancerJeu();
+    //Bouton "Controles"
+    }else if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 254, 336)){
+        m_precMenu = inPause;
+        changeTo(controle);
+    //Bouton "Principal"
+    }else if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 355, 436)){
+        changeTo(principal);
+    }
+}
+
+void Menu::handleInControle1(const float x, const float y){
+    //Bouton Ferme
+    if(floatIsBetween(x, 704, 749) && floatIsBetween(y, 41, 82)){
+        changeTo(m_precMenu);
+    //Fleche suivant
+    }else if(floatIsBetween(x, 373, 417) && floatIsBetween(y, 505, 547)){
+        changeTo(controle2);
+    }
+}
+
+void Menu::handleInControle2(const float x, const float y){
+    //Bouton Ferme
+    if(floatIsBetween(x, 704, 749) && floatIsBetween(y, 41, 82)){
+        changeTo(m_precMenu);
+    //Fleche suivant
+    }else if(floatIsBetween(x, 373, 417) && floatIsBetween(y, 505, 547)){
+        changeTo(controle);
+    }
+}
+
+void Menu::changeTo(MenuName name){
+    switch(name){
+        case principal:
+        m_name = principal;
+        m_texture = new Texture("assets/textures/MenuPrincipal.png");
+        break;
+        case inPause:
+        m_name = inPause;
+        m_texture = new Texture("assets/textures/pauseMenu.png");
+        break;
+        case controle:
+        m_name = controle;
+        m_texture = new Texture("assets/textures/controles1.png");
+        break;
+        case controle2:
+        m_name = controle2;
+        m_texture = new Texture("assets/textures/controles2.png");
+        break;
+        default: break;
+    }
 }
 
 

@@ -63,3 +63,5 @@ struct VertexTex{
     {
     }
 };
+
+bool floatIsBetween(const float value, const int min, const int max);

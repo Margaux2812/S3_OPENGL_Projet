@@ -97,13 +97,11 @@ int main(int argc, char** argv) {
                 case SDL_MOUSEMOTION:
                     if(menu == inGame)
                         camera.handleMouseEvents(e);
-                    break;
-                    
+                break;    
                 case SDL_MOUSEBUTTONDOWN :
-
+                    menu.handleClicks(e.button.x, e.button.y);
                     std::cout<< " X = " << e.button.x << " & Y = " << e.button.y <<std::endl;
-                    break;
-
+                break;
                 default: break;
             }
         }

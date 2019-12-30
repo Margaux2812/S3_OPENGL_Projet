@@ -11,9 +11,11 @@
 #include "texture.hpp"
 
 enum MenuName {
+	principal,
 	inGame,
 	inPause,
-	principal
+	controle,
+	controle2
 };
 
 class Menu{
@@ -23,6 +25,7 @@ class Menu{
 		GLuint m_vbo;
     	GLuint m_vao;
     	Texture* m_texture;
+    	MenuName m_precMenu;
 
 	public :
 		Menu();
@@ -34,6 +37,11 @@ class Menu{
 		void lancerJeu();
 		void draw();
 		void handleClicks(const float x, const float y);
+		void handleInPrincipal(const float x, const float y);
+		void handleInPause(const float x, const float y);
+		void handleInControle1(const float x, const float y);
+		void handleInControle2(const float x, const float y);
+		void changeTo(MenuName name);
 
 		//TODO to remove after debugging
 		std::string name();
