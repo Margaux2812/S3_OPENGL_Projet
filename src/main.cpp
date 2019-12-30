@@ -9,16 +9,6 @@
 
 using namespace glimac;
 
-// void clearWorld(Cube myCube){
-// //Pour chaque position cube de typeCube, je lui fais handleEvent de delete
-//     std::vector<glm::vec3>  tab_pos = myCube.getPositions;
-//     for (int i=0; i< int(tab_pos.size()); i++){
-//        typeCube.handleEvents(SDLK_DELETE, tab_pos[i], typeCube.getType());
-//     }
-// }
-
-
-
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(SCREEN_WIDTH, SCREEN_HEIGHT, "WorldIMaker");
@@ -29,8 +19,7 @@ int main(int argc, char** argv) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
-
-    
+ 
 
     MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
@@ -79,11 +68,11 @@ int main(int argc, char** argv) {
                     done = true; // Leave the loop after this iteration
                 break;
                 case SDL_KEYDOWN : 
-                    if(e.key.keysym.sym == SDLK_TAB){
+                    if(e.key.keysym.sym == SDLK_ESCAPE){
                         /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
                         done = true;
-                    /*Si on appuie sur échap, on met le jeu en pause ou à nouveau en mode play*/
-                    }else if(e.key.keysym.sym == SDLK_ESCAPE && menu != principal){
+                    /*Si on appuie sur pause, on met le jeu en pause ou à nouveau en mode play*/
+                    }else if(e.key.keysym.sym == SDLK_SPACE && menu != principal){
                         menu.changeState();
                     /*Si on appuie sur entrée, le jeu commence*/
                     }else if(e.key.keysym.sym == SDLK_RETURN && menu != inGame){
@@ -108,7 +97,12 @@ int main(int argc, char** argv) {
                 case SDL_MOUSEMOTION:
                     if(menu == inGame)
                         camera.handleMouseEvents(e);
-                break;
+                    break;
+                    
+                case SDL_MOUSEBUTTONDOWN :
+
+                    std::cout<< " X = " << e.button.x << " & Y = " << e.button.y <<std::endl;
+                    break;
 
                 default: break;
             }
@@ -134,6 +128,7 @@ int main(int argc, char** argv) {
             cubesDEau.draw();
             cubesDHerbe.draw();
             cubesDeTerre.draw();
+
 
             /*TODO voir le shader pour le selecteur puis abstraire la texture*/
             tex.bind();
