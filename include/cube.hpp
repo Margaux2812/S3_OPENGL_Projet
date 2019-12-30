@@ -26,7 +26,6 @@ class Cube{
 		Cube(typeCube type);
 		~Cube();
 		void draw();
-		void print();
 
 		///// GETTERS /////
 		std::string getTexture();

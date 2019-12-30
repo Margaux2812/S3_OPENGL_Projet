@@ -21,7 +21,4 @@ public:
 
 	inline int getWidth() const { return m_width; }
 	inline int getHeight() const { return m_height; }
-
-	//TODO remove after debugging
-	std::string name();
 };

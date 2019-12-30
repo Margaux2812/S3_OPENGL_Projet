@@ -31,21 +31,22 @@ class Menu{
 	public :
 		Menu();
 		~Menu();
-		
+
+		void draw();
+
 		bool operator==(MenuName name);
 		bool operator!=(MenuName name);
+
 		void changeState();
-		void draw();
+		void changeTo(MenuName name);
+
 		void handleClicks(const float x, const float y);
 		void handleInPrincipal(const float x, const float y);
 		void handleInPause(const float x, const float y);
 		void handleInControle1(const float x, const float y);
 		void handleInControle2(const float x, const float y);
 		bool handleInQuit(const float x, const float y);
-		void changeTo(MenuName name);
+		
 		void enableCursor();
 		void disableCursor();
-
-		//TODO to remove after debugging
-		std::string name();
 };

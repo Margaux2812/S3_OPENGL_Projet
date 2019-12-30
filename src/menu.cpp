@@ -58,6 +58,18 @@ Menu::~Menu(){
 
 }
 
+void Menu::draw(){
+    m_texture->bind();
+    glBindVertexArray(m_vao); //Binder la VAO
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
+
+    glDrawElementsInstanced(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*) 0, 1);
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindVertexArray(0); //Debinder la VAO
+    m_texture->unbind();
+}
+
 		
 bool Menu::operator==(MenuName name){
 	return m_name == name;
@@ -76,6 +88,44 @@ void Menu::changeState(){
 		default: 
 		break;
 	}
+}
+
+void Menu::changeTo(MenuName name){
+    //Si c'est controle le précédent on ne veut pas le savoir
+    if(m_name != controle && m_name != controle2)
+        m_precMenu = m_name;
+    switch(name){
+        case principal:
+        enableCursor();
+        m_name = principal;
+        m_texture = new Texture("assets/textures/MenuPrincipal.png");
+        break;
+        case inPause:
+        enableCursor();
+        m_name = inPause;
+        m_texture = new Texture("assets/textures/pauseMenu.png");
+        break;
+        case controle:
+        enableCursor();
+        m_name = controle;
+        m_texture = new Texture("assets/textures/controles1.png");
+        break;
+        case controle2:
+        enableCursor();
+        m_name = controle2;
+        m_texture = new Texture("assets/textures/controles2.png");
+        break;
+        case quit:
+        enableCursor();
+        m_name = quit;
+        m_texture = new Texture("assets/textures/quitGame.png");
+        break;
+        case inGame:
+        disableCursor();
+        m_name = inGame;
+        break;
+        default: break;
+    }
 }
 
 void Menu::handleClicks(const float x, const float y){
@@ -174,75 +224,4 @@ void Menu::enableCursor(){
 void Menu::disableCursor(){
     SDL_ShowCursor(SDL_DISABLE);
     SDL_WM_GrabInput(SDL_GRAB_ON);
-}
-
-void Menu::changeTo(MenuName name){
-    std::cout << "Were " << this->name() << std::endl;
-    //Si c'est controle le précédent on ne veut pas le savoir
-    if(m_name != controle && m_name != controle2)
-        m_precMenu = m_name;
-    switch(name){
-        case principal:
-        enableCursor();
-        m_name = principal;
-        m_texture = new Texture("assets/textures/MenuPrincipal.png");
-        break;
-        case inPause:
-        std::cout<<"ici"<<std::endl;
-        enableCursor();
-        m_name = inPause;
-        m_texture = new Texture("assets/textures/pauseMenu.png");
-        break;
-        case controle:
-        enableCursor();
-        m_name = controle;
-        m_texture = new Texture("assets/textures/controles1.png");
-        break;
-        case controle2:
-        enableCursor();
-        m_name = controle2;
-        m_texture = new Texture("assets/textures/controles2.png");
-        break;
-        case quit:
-        enableCursor();
-        m_name = quit;
-        m_texture = new Texture("assets/textures/quitGame.png");
-        break;
-        case inGame:
-        disableCursor();
-        m_name = inGame;
-        break;
-        default: break;
-    }
-}
-
-
-void Menu::draw(){
-	m_texture->bind();
-    glBindVertexArray(m_vao); //Binder la VAO
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
-
-    glDrawElementsInstanced(GL_TRIANGLES, 6, GL_UNSIGNED_INT, (void*) 0, 1);
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    glBindVertexArray(0); //Debinder la VAO
-    m_texture->unbind();
-}
-
-std::string Menu::name(){
-    switch(m_name){
-        case inGame : return "inGame";
-        break;
-        case inPause : return "inPause";
-        break;
-        case principal : return "principal";
-        break;
-        case controle : return "controle";
-        break;
-        case controle2 : return "controle2";
-        break;
-        case quit : return "quit";
-        break;
-        default: break;
-    }
 }

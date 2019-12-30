@@ -17,17 +17,6 @@ Eigen::MatrixXf getMapCoord(){
 	return mapCoord;
 }
 
-void test(){
-	Eigen::MatrixXf ptsDeControle(1, 2);
-	ptsDeControle << 0, 0;
-	Eigen::VectorXf uk(1);
-	uk << 1;
-
-	std::cout << getValues(ptsDeControle, uk).rows() <<std::endl;
-
-}
-
-
 float phi(const float a){
 	return exp(-0.2*a*a);
 }

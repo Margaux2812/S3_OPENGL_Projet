@@ -5,7 +5,6 @@
 const int WORLD_WIDTH_HEIGHT = 50;
 const int WORLD_DEPTH = -50;
 
-void test();
 Eigen::MatrixXf getMapCoord();
 float distance2D(Eigen::Vector2f pt1, Eigen::Vector2f pt2);
 float phi(float a);
