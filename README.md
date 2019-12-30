@@ -22,8 +22,7 @@ CUBE :
 --> J'ai l'impression que le shader "sable" est par dessus tous les autres à chaque fois (Test à faire)
 
 USER INTERFACE : 
-- Menu
-- Boutons (imgui)
+- Palette
 
 SCENE : 
 - Ajouter un background (en hdri possible ??) // Skybox
@@ -31,11 +30,6 @@ SCENE :
 PROGRAMME : 
 - Vérifier fuites mémoires (textures ? )
 
-************************* DONE ******************************
-
-CAMERA : 
-- Monter 
-- Descendre
-
-
-
+CUBES :
+- Faire les propriétés différentes
+- Lecture du fichier pour les fonctions
