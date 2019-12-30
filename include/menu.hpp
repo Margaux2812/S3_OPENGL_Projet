@@ -22,13 +22,19 @@ class Menu{
 		GLuint m_ibo;
 		GLuint m_vbo;
     	GLuint m_vao;
-    	Texture m_texture;
+    	Texture* m_texture;
 
 	public :
 		Menu();
 		~Menu();
 		
 		bool operator==(MenuName name);
-		void setMenuName(MenuName name);
+		bool operator!=(MenuName name);
+		void changeState();
+		void lancerJeu();
 		void draw();
+		void handleClicks(const float x, const float y);
+
+		//TODO to remove after debugging
+		std::string name();
 };
