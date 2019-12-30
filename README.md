@@ -17,12 +17,10 @@ Puis on fait tout simplement :
 
 ************************* TO DO ******************************
 
-CAMERA : 
-- Monter 
-- Descendre
 
 CUBE : 
-- Delete ne fonctionne que sur un cube de même texture que selectionné
+- Replace ne remplace pas vraiment mais affiche par dessus !! 
+--> J'ai l'impression que le shader "sable" est par dessus tous les autres à chaque fois
 
 USER INTERFACE : 
 - Menu
@@ -33,12 +31,16 @@ SCENE :
 - Ajouter un background (en hdri possible ??)
 
 PROGRAMME : 
-- Vérifier fuites mémoires
-- Vérifier soucis dans "myShader"
+- Vérifier fuites mémoires (avec le clear all surement ok ?)
+- Vérifier soucis dans "myShader" // Laurelenn
 
 ************************* DONE ******************************
 
 FENETRE : 
 - Resize
+
+CAMERA : 
+- Monter 
+- Descendre
 
 

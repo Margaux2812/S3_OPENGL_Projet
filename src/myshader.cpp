@@ -102,9 +102,11 @@ void MyShader::setUniformMatrix4fv(const std::string& name, const GLfloat*value)
 int MyShader::getUniformLocation(const std::string& name)
 {
 	int location = glGetUniformLocation(m_shaderID, name.c_str());
-	/*if(location == -1)
-		std::cout << "Problème variable uniforme '" << name <<"' n'existe pas" << std::endl;
-	Ca affiche tout le temps le code d'erreur jsp pourquoi
-	*/
+	// std::cout << "Location =  '" << location << std::endl;
+	// if(location == -1){
+	// 	std::cout << "Problème variable uniforme '" << name <<"' n'existe pas" << std::endl;
+	// }
+	
+
 	return location;
 }
