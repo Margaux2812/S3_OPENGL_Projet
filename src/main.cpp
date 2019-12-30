@@ -81,14 +81,14 @@ int main(int argc, char** argv) {
 
                 case SDL_KEYDOWN : 
 
+                    if(e.key.keysym.sym == SDLK_y){
+                        std::cout << "Menu name is " << menu.name() << std::endl;
+                    }
                     if(e.key.keysym.sym == SDLK_TAB){
                         /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
                         done = true;
                     }else if(e.key.keysym.sym == SDLK_ESCAPE){
-                        if(menu == inPause)
-                            menu.setMenuName(inGame);
-                        if(menu == inGame)
-                            menu.setMenuName(inPause);
+                        menu.changeState();
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
 

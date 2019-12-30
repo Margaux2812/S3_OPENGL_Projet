@@ -37,7 +37,7 @@ if(path != ""){
 		GL_FLOAT,
 		m_BPP
 		);
-}else{
+}else{ //TODO remove this after debugging
 	std::cout << "No texture to load" << std::endl;
 }
 }

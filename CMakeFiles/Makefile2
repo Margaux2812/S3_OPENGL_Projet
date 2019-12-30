@@ -59,10 +59,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet"
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet"
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 #=============================================================================
 # Target rules for target CMakeFiles/WorldIMaker.dir
@@ -71,7 +71,7 @@ CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OP
 CMakeFiles/WorldIMaker.dir/all: lib/glimac/CMakeFiles/glimac.dir/all
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/depend
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target WorldIMaker"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11 "Built target WorldIMaker"
 .PHONY : CMakeFiles/WorldIMaker.dir/all
 
 # Include target in all.
@@ -81,9 +81,9 @@ all: CMakeFiles/WorldIMaker.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/WorldIMaker.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 19
 	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/WorldIMaker.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
 .PHONY : CMakeFiles/WorldIMaker.dir/rule
 
 # Convenience name for target.
@@ -126,7 +126,7 @@ lib/glimac/preinstall:
 lib/glimac/CMakeFiles/glimac.dir/all:
 	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/depend
 	$(MAKE) -f lib/glimac/CMakeFiles/glimac.dir/build.make lib/glimac/CMakeFiles/glimac.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=12,13,14,15,16,17,18,19 "Built target glimac"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=12,13,14,15,16,17,18,19 "Built target glimac"
 .PHONY : lib/glimac/CMakeFiles/glimac.dir/all
 
 # Include target in all.
@@ -136,9 +136,9 @@ all: lib/glimac/CMakeFiles/glimac.dir/all
 
 # Build rule for subdir invocation for target.
 lib/glimac/CMakeFiles/glimac.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" 8
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 8
 	$(MAKE) -f CMakeFiles/Makefile2 lib/glimac/CMakeFiles/glimac.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
 .PHONY : lib/glimac/CMakeFiles/glimac.dir/rule
 
 # Convenience name for target.

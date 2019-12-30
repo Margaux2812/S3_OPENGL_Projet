@@ -18,9 +18,11 @@ const uint32_t indices[] = {
 };
 
 Menu::Menu()
-:m_name(inGame),
-m_texture("assets/textures/MenuPrincipal.png")
+:m_name(principal),
+m_texture(new Texture("assets/textures/MenuPrincipal.png"))
 {
+    //TODO a supprimer quand on a un menu principal
+    m_name = inGame;
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_TEXCOORD = 1;
 
@@ -62,23 +64,26 @@ bool Menu::operator==(MenuName name){
 	return m_name == name;
 }
 
-void Menu::setMenuName(MenuName name){
-	m_name = name;
+void Menu::changeState(){
 	switch(m_name){
-		case principal:
+		case inPause: //On le passe en mode jeu à nouveau
+        SDL_ShowCursor(SDL_DISABLE);
+        SDL_WM_GrabInput(SDL_GRAB_ON);
+        m_name = inGame;
 		break;
-		case inPause: 
+		case inGame: //On le remet en pause
+        m_texture = new Texture("assets/textures/pauseMenu.png");
         SDL_ShowCursor(SDL_ENABLE);
         SDL_WM_GrabInput(SDL_GRAB_OFF);
-		break;
-		case inGame:
+        m_name = inPause;
+        break;
 		default: 
 		break;
 	}
 }
 
 void Menu::draw(){
-	m_texture.bind();
+	m_texture->bind();
     glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
@@ -86,5 +91,17 @@ void Menu::draw(){
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0); //Debinder la VAO
-    m_texture.unbind();
+    m_texture->unbind();
+}
+
+std::string Menu::name(){
+    switch(m_name){
+        case inGame : return "inGame";
+        break;
+        case inPause : return "inPause";
+        break;
+        case principal : return "principal";
+        break;
+        default: break;
+    }
 }
