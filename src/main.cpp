@@ -69,11 +69,11 @@ int main(int argc, char** argv) {
                     break;
 
                 case SDL_KEYDOWN : 
-                    if(e.key.keysym.sym == SDLK_TAB){
+                    if(e.key.keysym.sym == SDLK_ESCAPE){
                         /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
                         done = true;
-                    /*Si on appuie sur échap, on met le jeu en pause ou à nouveau en mode play*/
-                    }else if(e.key.keysym.sym == SDLK_ESCAPE && menu != principal){
+                    /*Si on appuie sur pause, on met le jeu en pause ou à nouveau en mode play*/
+                    }else if(e.key.keysym.sym == SDLK_SPACE && menu != principal){
                         menu.changeState();
                     /*Si on appuie sur entrée, le jeu commence*/
                     }else if(e.key.keysym.sym == SDLK_RETURN && menu != inGame){

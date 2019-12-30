@@ -17,30 +17,25 @@ Puis on fait tout simplement :
 
 ************************* TO DO ******************************
 
-
 CUBE : 
-- Replace ne remplace pas vraiment mais affiche par dessus !! 
---> J'ai l'impression que le shader "sable" est par dessus tous les autres à chaque fois
+- Replace ne remplace pas vraiment mais affiche par dessus ??
+--> J'ai l'impression que le shader "sable" est par dessus tous les autres à chaque fois (Test à faire)
 
 USER INTERFACE : 
 - Menu
 - Boutons (imgui)
 
 SCENE : 
-- Clear All
-- Ajouter un background (en hdri possible ??)
+- Ajouter un background (en hdri possible ??) // Skybox
 
 PROGRAMME : 
-- Vérifier fuites mémoires (avec le clear all surement ok ?)
-- Vérifier soucis dans "myShader" // Laurelenn
+- Vérifier fuites mémoires (textures ? )
 
 ************************* DONE ******************************
-
-FENETRE : 
-- Resize
 
 CAMERA : 
 - Monter 
 - Descendre
+
 
 

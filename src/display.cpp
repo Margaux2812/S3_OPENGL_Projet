@@ -4,9 +4,9 @@ void displayCommandes(){
 	std::cout << "***********************************************" << std::endl;
     std::cout << "*****************LES COMMANDES*****************" << std::endl;
     std::cout << "***********************************************" << std::endl;
-    std::cout << "Pour quitter le jeu : TAB" << std::endl;
+    std::cout << "Pour quitter le jeu : ECHAP" << std::endl;
     std::cout << "***********************************************" << std::endl;
-    std::cout << "Pour mettre le jeu en pause: ECHAP" << std::endl;
+    std::cout << "Pour mettre le jeu en pause: SPACE" << std::endl;
     std::cout << "***********************************************" << std::endl;
     std::cout << "Pour commencer le jeu depuis le menu principal: ENTREE" << std::endl;
     std::cout << "***********************************************" << std::endl;
