@@ -12,7 +12,6 @@ using namespace glimac;
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(SCREEN_WIDTH, SCREEN_HEIGHT, "WorldIMaker");
-    SDL_ShowCursor(SDL_DISABLE);
 
     // Initialize glew for OpenGL3+ support
     GLenum glewInitError = glewInit();
@@ -26,7 +25,7 @@ int main(int argc, char** argv) {
     MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
     Texture tex("assets/textures/grass.png");
-
+    
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
 
@@ -75,8 +74,11 @@ int main(int argc, char** argv) {
                     if(e.key.keysym.sym == SDLK_TAB){
                         /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
                         done = true;
-                    //}else if(e.key.keysym.sym == SDLK_ESCAPE){
-                       // menu.setMenuName(inPause);
+                    }else if(e.key.keysym.sym == SDLK_ESCAPE){
+                        if(menu == inPause)
+                            menu.setMenuName(inGame);
+                        if(menu == inGame)
+                            menu.setMenuName(inPause);
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
 
@@ -103,10 +105,13 @@ int main(int argc, char** argv) {
         }
 
         if(menu == inPause){
-            menu.draw(inPause);
+            shaderCouleur.bind();
+            shaderTextures.setUniform1i("u_Texture", 0);
+            menu.draw();
+            shaderCouleur.unbind();
         }
 
-        if(menu == inGame || menu == inPause){
+        if(menu == inGame){
 
             /*********************************
              * HERE SHOULD COME THE RENDERING CODE
@@ -125,7 +130,8 @@ int main(int argc, char** argv) {
             cubesDEau.draw();
             cubesDHerbe.draw();
             cubesDeTerre.draw();
-            
+
+            /*TODO voir le shader pour le selecteur puis abstraire la texture*/
             tex.bind();
             selector.draw();
             tex.unbind();

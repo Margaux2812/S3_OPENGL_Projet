@@ -8,6 +8,8 @@ m_width(0),
 m_height(0),
 m_BPP(nullptr)
 {
+
+if(path != ""){
 	std::unique_ptr<glimac::Image> textureImg = glimac::loadImage(path);
 
 	if(textureImg == NULL)
@@ -35,6 +37,9 @@ m_BPP(nullptr)
 		GL_FLOAT,
 		m_BPP
 		);
+}else{
+	std::cout << "No texture to load" << std::endl;
+}
 }
 
 Texture::~Texture(){

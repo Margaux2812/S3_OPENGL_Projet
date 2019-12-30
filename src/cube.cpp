@@ -182,7 +182,6 @@ std::string Cube::getTexture(){
     }
 }
 void Cube::draw(){
-    //std::cout << m_texture.name() << std::endl;
     m_texture.bind();
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);

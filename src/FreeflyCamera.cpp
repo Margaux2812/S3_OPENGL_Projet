@@ -136,6 +136,7 @@ void FreeflyCamera::handleKeyboardEventsUp(const SDLKey e){
 
 void FreeflyCamera::handleMouseEvents(const SDL_Event e){
     if(!mouseEnteredScreen){
+        SDL_ShowCursor(SDL_DISABLE);
         SDL_WarpMouse(400, 300);
         SDL_WM_GrabInput(SDL_GRAB_ON);
         mouseEnteredScreen = true;
