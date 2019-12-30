@@ -77,8 +77,7 @@ int main(int argc, char** argv) {
             switch(e.type){
                 case SDL_QUIT :
                     done = true; // Leave the loop after this iteration
-                    break;
-
+                break;
                 case SDL_KEYDOWN : 
                     if(e.key.keysym.sym == SDLK_TAB){
                         /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
@@ -105,10 +104,11 @@ int main(int argc, char** argv) {
                 case SDL_KEYUP:
                     if(menu == inGame)
                         camera.handleKeyboardEventsUp(e.key.keysym.sym);
-                    break;
+                break;
                 case SDL_MOUSEMOTION:
                     if(menu == inGame)
                         camera.handleMouseEvents(e);
+                break;
 
                 default: break;
             }
