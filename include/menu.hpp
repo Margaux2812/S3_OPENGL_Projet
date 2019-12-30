@@ -29,8 +29,11 @@ class Menu{
 		~Menu();
 		
 		bool operator==(MenuName name);
+		bool operator!=(MenuName name);
 		void changeState();
+		void lancerJeu();
 		void draw();
+		void handleClicks(const float x, const float y);
 
 		//TODO to remove after debugging
 		std::string name();

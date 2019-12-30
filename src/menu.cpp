@@ -21,8 +21,6 @@ Menu::Menu()
 :m_name(principal),
 m_texture(new Texture("assets/textures/MenuPrincipal.png"))
 {
-    //TODO a supprimer quand on a un menu principal
-    m_name = inGame;
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_TEXCOORD = 1;
 
@@ -64,6 +62,10 @@ bool Menu::operator==(MenuName name){
 	return m_name == name;
 }
 
+bool Menu::operator!=(MenuName name){
+    return m_name != name;
+}
+
 void Menu::changeState(){
 	switch(m_name){
 		case inPause: //On le passe en mode jeu à nouveau
@@ -81,6 +83,16 @@ void Menu::changeState(){
 		break;
 	}
 }
+
+void Menu::lancerJeu(){
+    SDL_ShowCursor(SDL_DISABLE);
+    SDL_WM_GrabInput(SDL_GRAB_ON);
+    m_name = inGame;
+}
+
+void Menu::handleClicks(const float x, const float y){
+}
+
 
 void Menu::draw(){
 	m_texture->bind();

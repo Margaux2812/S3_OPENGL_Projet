@@ -80,15 +80,15 @@ int main(int argc, char** argv) {
                     break;
 
                 case SDL_KEYDOWN : 
-
-                    if(e.key.keysym.sym == SDLK_y){
-                        std::cout << "Menu name is " << menu.name() << std::endl;
-                    }
                     if(e.key.keysym.sym == SDLK_TAB){
                         /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
                         done = true;
-                    }else if(e.key.keysym.sym == SDLK_ESCAPE){
+                    /*Si on appuie sur échap, on met le jeu en pause ou à nouveau en mode play*/
+                    }else if(e.key.keysym.sym == SDLK_ESCAPE && menu != principal){
                         menu.changeState();
+                    /*Si on appuie sur entrée, le jeu commence*/
+                    }else if(e.key.keysym.sym == SDLK_RETURN && menu != inGame){
+                        menu.lancerJeu();
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
 
@@ -114,13 +114,7 @@ int main(int argc, char** argv) {
             }
         }
 
-        if(menu == inPause){
-            shaderCouleur.bind();
-            shaderTextures.setUniform1i("u_Texture", 0);
-            menu.draw();
-            shaderCouleur.unbind();
-        }
-
+        /*Affichage de la scène selon si on est en jeu ou non*/
         if(menu == inGame){
 
             /*********************************
@@ -147,6 +141,11 @@ int main(int argc, char** argv) {
             tex.unbind();
 
             shaderTextures.unbind();
+        }else{
+            shaderCouleur.bind();
+            shaderTextures.setUniform1i("u_Texture", 0);
+            menu.draw();
+            shaderCouleur.unbind();
         }
         // Update the display
         windowManager.swapBuffers();
