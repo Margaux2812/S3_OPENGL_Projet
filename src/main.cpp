@@ -9,16 +9,6 @@
 
 using namespace glimac;
 
-// void clearWorld(Cube myCube){
-// //Pour chaque position cube de typeCube, je lui fais handleEvent de delete
-//     std::vector<glm::vec3>  tab_pos = myCube.getPositions;
-//     for (int i=0; i< int(tab_pos.size()); i++){
-//        typeCube.handleEvents(SDLK_DELETE, tab_pos[i], typeCube.getType());
-//     }
-// }
-
-
-
 int main(int argc, char** argv) {
     // Initialize SDL and open a window
     SDLWindowManager windowManager(SCREEN_WIDTH, SCREEN_HEIGHT, "WorldIMaker");
@@ -29,8 +19,7 @@ int main(int argc, char** argv) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
-
-    
+ 
 
     MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
     MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
@@ -140,6 +129,7 @@ int main(int argc, char** argv) {
             cubesDEau.draw();
             cubesDHerbe.draw();
             cubesDeTerre.draw();
+
 
             /*TODO voir le shader pour le selecteur puis abstraire la texture*/
             tex.bind();

@@ -186,12 +186,6 @@ cstddef
 ../include/all.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/all.hpp
 
-/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/menu.cpp
-../include/menu.hpp
-/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/menu.hpp
-iostream
--
-
 lib/glm/common.hpp
 detail/func_common.hpp
 lib/glm/detail/func_common.hpp
