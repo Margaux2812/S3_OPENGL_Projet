@@ -168,6 +168,26 @@ Cube::~Cube(){
     glDeleteVertexArrays(1, &m_vao);
 }
 
+
+void Cube::draw(){
+    //std::cout << m_texture.name() << std::endl;
+    m_texture.bind();
+	glBindVertexArray(m_vao); //Binder la VAO
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
+
+    //Dernier truc est nb de cubes
+    glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
+
+    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
+    glBindVertexArray(0); //Debinder la VAO
+    m_texture.unbind();
+}
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// GETTERS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
 std::string Cube::getTexture(){
     switch(m_type){
         case GRASS: return ("assets/textures/grass.png");
@@ -181,19 +201,26 @@ std::string Cube::getTexture(){
         break;
     }
 }
-void Cube::draw(){
-    m_texture.bind();
-	glBindVertexArray(m_vao); //Binder la VAO
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
-
-    //Dernier truc est nb de cubes
-    glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
-
-    glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
-    glBindVertexArray(0); //Debinder la VAO
-    m_texture.unbind();
+        
+std::vector<glm::vec3> Cube::getPositions(){
+    return m_positionsCubes;
 }
 
+
+
+///////////////////////////////////////////////////////////////
+/////////////////////////// SETTERS ///////////////////////////
+///////////////////////////////////////////////////////////////
+
+		void Cube::setVao(GLuint const newVao){
+            m_vao=newVao;
+        }
+		void Cube::setVbo(GLuint const newVbo){
+            m_vbo=newVbo;
+        }
+		void Cube::setIbo(GLuint const newIbo){
+            m_ibo=newIbo;
+        }
 
 
 
@@ -317,18 +344,3 @@ void Cube::digCube(glm::vec3 position){
     deleteCube(position);
     updateGPU();
 }
-
-///////////////////////////////////////////////////////////////
-/////////////////////////// SETTERS ///////////////////////////
-///////////////////////////////////////////////////////////////
-
-		void Cube::setVao(GLuint const newVao){
-            m_vao=newVao;
-        }
-		void Cube::setVbo(GLuint const newVbo){
-            m_vbo=newVbo;
-        }
-		void Cube::setIbo(GLuint const newIbo){
-            m_ibo=newIbo;
-        }
-

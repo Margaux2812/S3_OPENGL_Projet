@@ -19,39 +19,38 @@ class Cube{
 
 		std::vector<glm::vec3> m_positionsCubes;
 
-		//std::vector<MyShader> m_shaders;
 		typeCube m_type;
 		Texture m_texture;
 
 	public :
 		Cube(typeCube type);
 		~Cube();
-		std::string getTexture();
 		void draw();
 		void print();
 
 		///// GETTERS /////
-
+		std::string getTexture();
+		std::vector<glm::vec3> getPositions();
 		inline GLuint getVao() { return m_vao;}
 		inline GLuint getVbo() { return m_vbo;}
 		inline GLuint getIbo() { return m_ibo;}
-		// Shader getShader();
-		//TYPECUBE getType();
+		inline typeCube getType() {return m_type;}
 
 		///// SETTERS /////
 
 		void setVao(GLuint const newVao);
 		void setVbo(GLuint const newVbo);
 		void setIbo(GLuint const newIbo);
-		//void setShader(std::string newVs, std::string newFs);
-		//void setType(TYPECUBE newType);
 
 
-		///// MANAGER /////
+		///// EVENT MANAGER /////
 
 		void handleEvents(const SDLKey e, const glm::vec3 position, typeCube type);
 		int findFromPosition(const glm::vec3 position);
 		void updateGPU();
+
+		///// CUBE MANAGER /////
+
 		void addCube(const glm::vec3 position);
 		void replace(const glm::vec3 position);
 		void deleteCube(const glm::vec3 position);
