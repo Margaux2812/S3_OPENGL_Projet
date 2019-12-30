@@ -18,9 +18,9 @@ const uint32_t indices[] = {
 };
 
 Menu::Menu()
-:m_precMenu(principal),
-m_name(principal),
-m_texture(new Texture("assets/textures/MenuPrincipal.png"))
+:m_name(principal),
+m_texture(new Texture("assets/textures/MenuPrincipal.png")),
+m_precMenu(principal)
 {
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_TEXCOORD = 1;
@@ -69,26 +69,13 @@ bool Menu::operator!=(MenuName name){
 
 void Menu::changeState(){
 	switch(m_name){
-		case inPause: //On le passe en mode jeu à nouveau
-        SDL_ShowCursor(SDL_DISABLE);
-        SDL_WM_GrabInput(SDL_GRAB_ON);
-        m_name = inGame;
+		case inPause: changeTo(inGame);
 		break;
-		case inGame: //On le remet en pause
-        m_texture = new Texture("assets/textures/pauseMenu.png");
-        SDL_ShowCursor(SDL_ENABLE);
-        SDL_WM_GrabInput(SDL_GRAB_OFF);
-        m_name = inPause;
+		case inGame: changeTo(inPause);
         break;
 		default: 
 		break;
 	}
-}
-
-void Menu::lancerJeu(){
-    SDL_ShowCursor(SDL_DISABLE);
-    SDL_WM_GrabInput(SDL_GRAB_ON);
-    m_name = inGame;
 }
 
 void Menu::handleClicks(const float x, const float y){
@@ -101,6 +88,9 @@ void Menu::handleClicks(const float x, const float y){
         break;
         case controle2:handleInControle2(x, y);
         break;
+        case quit:
+        handleInQuit(x, y);
+        break;
         default: break;
     }
 }
@@ -108,10 +98,9 @@ void Menu::handleClicks(const float x, const float y){
 void Menu::handleInPrincipal(const float x, const float y){
     //Bouton démarrer
     if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 343, 428)){
-        lancerJeu();
+        changeTo(inGame);
     //Bouton "Controles"
     }else if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 445, 527)){
-        m_precMenu = principal;
         changeTo(controle);
     }
 }
@@ -119,10 +108,9 @@ void Menu::handleInPrincipal(const float x, const float y){
 void Menu::handleInPause(const float x, const float y){
     //Bouton "Retour au jeu"
     if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 154, 237)){
-        lancerJeu();
+        changeTo(inGame);
     //Bouton "Controles"
     }else if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 254, 336)){
-        m_precMenu = inPause;
         changeTo(controle);
     //Bouton "Principal"
     }else if(floatIsBetween(x, 234, 565) && floatIsBetween(y, 355, 436)){
@@ -133,7 +121,16 @@ void Menu::handleInPause(const float x, const float y){
 void Menu::handleInControle1(const float x, const float y){
     //Bouton Ferme
     if(floatIsBetween(x, 704, 749) && floatIsBetween(y, 41, 82)){
-        changeTo(m_precMenu);
+        //Si c'est ingame, inpause on retourne la bas, sinon par default on revient à principal
+        switch(m_precMenu){
+            case inGame: changeTo(inGame);
+            break;
+            case inPause: changeTo(inPause);
+            break;
+            case principal:
+            default: changeTo(principal);
+            break;
+        }
     //Fleche suivant
     }else if(floatIsBetween(x, 373, 417) && floatIsBetween(y, 505, 547)){
         changeTo(controle2);
@@ -143,30 +140,77 @@ void Menu::handleInControle1(const float x, const float y){
 void Menu::handleInControle2(const float x, const float y){
     //Bouton Ferme
     if(floatIsBetween(x, 704, 749) && floatIsBetween(y, 41, 82)){
-        changeTo(m_precMenu);
+        switch(m_precMenu){
+            case inGame: changeTo(inGame);
+            break;
+            case inPause: changeTo(inPause);
+            break;
+            case principal:
+            default: changeTo(principal);
+            break;
+        }
     //Fleche suivant
     }else if(floatIsBetween(x, 373, 417) && floatIsBetween(y, 505, 547)){
         changeTo(controle);
     }
 }
 
+bool Menu::handleInQuit(const float x, const float y){
+    //Bouton Oui
+    if(floatIsBetween(x, 47, 379) && floatIsBetween(y, 356, 440)){
+        return true;
+    //Bouton Non
+    }else if(floatIsBetween(x, 424, 756) && floatIsBetween(y, 355, 439)){
+        changeTo(m_precMenu);
+    }
+    return false;
+}
+
+void Menu::enableCursor(){
+    SDL_ShowCursor(SDL_ENABLE);
+    SDL_WM_GrabInput(SDL_GRAB_OFF);
+}
+
+void Menu::disableCursor(){
+    SDL_ShowCursor(SDL_DISABLE);
+    SDL_WM_GrabInput(SDL_GRAB_ON);
+}
+
 void Menu::changeTo(MenuName name){
+    std::cout << "Were " << this->name() << std::endl;
+    //Si c'est controle le précédent on ne veut pas le savoir
+    if(m_name != controle && m_name != controle2)
+        m_precMenu = m_name;
     switch(name){
         case principal:
+        enableCursor();
         m_name = principal;
         m_texture = new Texture("assets/textures/MenuPrincipal.png");
         break;
         case inPause:
+        std::cout<<"ici"<<std::endl;
+        enableCursor();
         m_name = inPause;
         m_texture = new Texture("assets/textures/pauseMenu.png");
         break;
         case controle:
+        enableCursor();
         m_name = controle;
         m_texture = new Texture("assets/textures/controles1.png");
         break;
         case controle2:
+        enableCursor();
         m_name = controle2;
         m_texture = new Texture("assets/textures/controles2.png");
+        break;
+        case quit:
+        enableCursor();
+        m_name = quit;
+        m_texture = new Texture("assets/textures/quitGame.png");
+        break;
+        case inGame:
+        disableCursor();
+        m_name = inGame;
         break;
         default: break;
     }
@@ -192,6 +236,12 @@ std::string Menu::name(){
         case inPause : return "inPause";
         break;
         case principal : return "principal";
+        break;
+        case controle : return "controle";
+        break;
+        case controle2 : return "controle2";
+        break;
+        case quit : return "quit";
         break;
         default: break;
     }

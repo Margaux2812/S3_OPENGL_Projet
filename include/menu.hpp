@@ -15,7 +15,8 @@ enum MenuName {
 	inGame,
 	inPause,
 	controle,
-	controle2
+	controle2,
+	quit
 };
 
 class Menu{
@@ -34,14 +35,16 @@ class Menu{
 		bool operator==(MenuName name);
 		bool operator!=(MenuName name);
 		void changeState();
-		void lancerJeu();
 		void draw();
 		void handleClicks(const float x, const float y);
 		void handleInPrincipal(const float x, const float y);
 		void handleInPause(const float x, const float y);
 		void handleInControle1(const float x, const float y);
 		void handleInControle2(const float x, const float y);
+		bool handleInQuit(const float x, const float y);
 		void changeTo(MenuName name);
+		void enableCursor();
+		void disableCursor();
 
 		//TODO to remove after debugging
 		std::string name();

@@ -65,18 +65,17 @@ int main(int argc, char** argv) {
         while(windowManager.pollEvent(e)) {
             switch(e.type){
                 case SDL_QUIT :
-                    done = true; // Leave the loop after this iteration
+                    menu.changeTo(quit);
                 break;
                 case SDL_KEYDOWN : 
                     if(e.key.keysym.sym == SDLK_ESCAPE){
-                        /*TODO : Menu "Etes-vous sure de vouloir quitter le jeu ?"*/
-                        done = true;
+                        menu.changeTo(quit);
                     /*Si on appuie sur pause, on met le jeu en pause ou à nouveau en mode play*/
                     }else if(e.key.keysym.sym == SDLK_SPACE && menu != principal){
                         menu.changeState();
                     /*Si on appuie sur entrée, le jeu commence*/
                     }else if(e.key.keysym.sym == SDLK_RETURN && menu != inGame){
-                        menu.lancerJeu();
+                        menu.changeTo(inGame);
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
 
@@ -100,7 +99,8 @@ int main(int argc, char** argv) {
                 break;    
                 case SDL_MOUSEBUTTONDOWN :
                     menu.handleClicks(e.button.x, e.button.y);
-                    std::cout<< " X = " << e.button.x << " & Y = " << e.button.y <<std::endl;
+                    if(menu == quit)
+                        done = menu.handleInQuit(e.button.x, e.button.y);
                 break;
                 default: break;
             }
