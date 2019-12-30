@@ -314,10 +314,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o: lib/glm/vec4.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: lib/glm/vector_relational.hpp
 
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/menu.hpp
-<<<<<<< HEAD
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/texture.hpp
-=======
->>>>>>> master
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Image.hpp
