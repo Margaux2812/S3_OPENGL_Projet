@@ -36,8 +36,6 @@ PROGRAMME :
 
 SELECTEUR :
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Avec la souris`
-- abstraction du shader`
-- abstraction texture`
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `le voir à tout moment`
 FONCTIONS RADIALES
 - Lecture fichier
