@@ -28,9 +28,9 @@ int findValue(const int i, const int j, const Eigen::MatrixXf ptsDeControle, con
 
 	float value = 0;
 	Eigen::VectorXf coordPt(2);
-
+	coordPt << i, j;
+	
 	for(int index=0; index < ptsDeControle.rows(); index ++){
-		coordPt << i, j;
 		value += wk(index) * phi((coordPt.transpose() - ptsDeControle.row(index)).norm());
 	}
 
