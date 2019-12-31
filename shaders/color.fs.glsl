@@ -1,12 +1,9 @@
 #version 330
 
-in vec2 vTexCoord;
+in vec3 vColor;
 
-out vec4 fFragColor;
-
-uniform sampler2D u_Texture;
+out vec3 fFragColor;
 
 void main() {
-	vec4 texColor = texture(u_Texture, vTexCoord);
-    fFragColor = texColor;
+    fFragColor = normalize(vColor);
 }

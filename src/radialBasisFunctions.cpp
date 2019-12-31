@@ -40,6 +40,8 @@ int findValue(const int i, const int j, const Eigen::MatrixXf ptsDeControle, con
 Eigen::MatrixXd getValues(const Eigen::MatrixXf ptsDeControle, const Eigen::VectorXf uk){
 	if(ptsDeControle.cols() != 2){
 		throw "Les points de contrôles devraient avoir 2 coordonnées";
+	}else if(ptsDeControle.rows() != uk.rows()){
+		throw "Il faut autant de valeurs que de points de controle";
 	}else{
 		Eigen::VectorXf wk = findOmega(ptsDeControle, uk);
 		Eigen::MatrixXd values = Eigen::MatrixXd::Zero(WORLD_WIDTH_HEIGHT, WORLD_WIDTH_HEIGHT);

@@ -100,7 +100,8 @@ const uint32_t indices[] = {
 
 Cube::Cube(typeCube type)
 : m_type(type),
-m_texture(getTexture())
+m_texture(getTexture()),
+m_shader(new MyShader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl"))
 {
     const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
@@ -118,11 +119,8 @@ m_texture(getTexture())
     if(type == EARTH)
         loadMonde();
 
-    // on crée le buffer
     glGenBuffers(1, &vboAll); 
-    // on le bind pour que la ligne suivante s'applique bien à ce buffer ci
     glBindBuffer(GL_ARRAY_BUFFER, vboAll); 
-    // on envoie toutes nos données au GPU
     glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 
@@ -150,8 +148,6 @@ m_texture(getTexture())
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION_ALL); 
 
     glVertexAttribPointer(VERTEX_ATTR_POSITION_ALL, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), 0);
-    // Avec une petite nouveauté :
-    // C'est pour dire à OpenGL qu'il ne doit pas avancer dans le buffer à chaque vertex, mais seulement à chaque nouveau cube qu'il commence à dessiner
     glVertexAttribDivisor(VERTEX_ATTR_POSITION_ALL, 1);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
@@ -168,18 +164,25 @@ Cube::~Cube(){
     glDeleteVertexArrays(1, &m_vao);
 }
 
+void Cube::draw(glm::mat4 MVMatrix){
+    m_shader->bind();
 
-void Cube::draw(){
-    m_texture.bind();
+    m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
+    m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
+    m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
+    m_shader->setUniform1i("u_Texture", 0);
+
+    m_texture->bind();
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
-    //Dernier truc est nb de cubes
+    //Dernier paramètre est nb de cubes
     glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
 
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0); //Debinder la VAO
-    m_texture.unbind();
+    m_texture->unbind();
+    m_shader->unbind();
 }
 
 
@@ -187,16 +190,16 @@ void Cube::draw(){
 /////////////////////////// GETTERS ///////////////////////////
 ///////////////////////////////////////////////////////////////
 
-std::string Cube::getTexture(){
+Texture* Cube::getTexture(){
     switch(m_type){
-        case GRASS: return ("assets/textures/grass.png");
+        case GRASS: return new Texture("assets/textures/grass.png");
         break;
-        case WATER : return ("assets/textures/water.png");
+        case WATER : return new Texture("assets/textures/water.png");
         break;
-        case SAND : return ("assets/textures/sand.jpg");
+        case SAND : return new Texture("assets/textures/sand.jpg");
         break;
         case EARTH :
-        default: return ("assets/textures/cubeTerre.jpg");
+        default: return new Texture("assets/textures/cubeTerre.jpg");
         break;
     }
 }

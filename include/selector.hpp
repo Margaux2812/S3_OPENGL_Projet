@@ -1,6 +1,7 @@
 #pragma once
 
 #include "cube.hpp"
+#include "myshader.hpp"
 
 enum Fleche {haut, bas, gauche, droite, avant, arriere};
 
@@ -11,15 +12,15 @@ class Selector{
 		GLuint m_ibo;
 		GLuint vboAll;
 
-		glm::vec3 m_position;
 		std::vector<glm::vec3> m_positionCube;
+		MyShader* m_shader;
 	public :
 		Selector();
 		~Selector();
 
 		glm::vec3 getPosition();
 
-		void draw();
+		void draw(glm::mat4 MVMatrix);
 
 		void handleEvents(SDLKey e);
 		void updateGPU();

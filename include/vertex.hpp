@@ -65,3 +65,15 @@ struct VertexTex{
 };
 
 bool floatIsBetween(const float value, const int min, const int max);
+
+const float SCREEN_WIDTH = 800.f;
+const float SCREEN_HEIGHT = 600.f;
+const glm::mat4 ProjMatrix = glm::infinitePerspective(
+    1.f,
+    SCREEN_WIDTH/SCREEN_HEIGHT,
+    0.1f);
+const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(
+    glm::translate(
+        glm::mat4(),
+        glm::vec3(0, 0, -5)
+    )));

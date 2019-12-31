@@ -20,15 +20,16 @@ class Cube{
 		std::vector<glm::vec3> m_positionsCubes;
 
 		typeCube m_type;
-		Texture m_texture;
+		Texture* m_texture;
+		MyShader* m_shader;
 
 	public :
 		Cube(typeCube type);
 		~Cube();
-		void draw();
+		void draw(glm::mat4 MVMatrix);
 
 		///// GETTERS /////
-		std::string getTexture();
+		Texture* getTexture();
 		std::vector<glm::vec3> getPositions();
 		inline GLuint getVao() { return m_vao;}
 		inline GLuint getVbo() { return m_vbo;}

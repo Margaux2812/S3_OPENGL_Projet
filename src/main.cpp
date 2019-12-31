@@ -21,8 +21,8 @@ int main(int argc, char** argv) {
     }
  
 
-    MyShader shaderTextures("shaders/3D.vs.glsl", "shaders/normal.fs.glsl");
-    MyShader shaderCouleur("shaders/color.vs.glsl", "shaders/color.fs.glsl");
+    MyShader shaderTextures("shaders/color.vs.glsl", "shaders/color.fs.glsl");
+    MyShader shaderCouleur("shaders/texture2D.vs.glsl", "shaders/texture2D.fs.glsl");
     Texture tex("assets/textures/grass.png");
     
     glEnable(GL_DEPTH_TEST);
@@ -116,27 +116,15 @@ int main(int argc, char** argv) {
 
             MVMatrix = camera.getViewMatrix();
 
-            shaderTextures.bind();
-            shaderTextures.setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
-            shaderTextures.setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
-            shaderTextures.setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
-            shaderTextures.setUniform1i("u_Texture", 0);
+            cubesDeSable.draw(MVMatrix);
+            cubesDEau.draw(MVMatrix);
+            cubesDHerbe.draw(MVMatrix);
+            cubesDeTerre.draw(MVMatrix);
 
-            cubesDeSable.draw();
-            cubesDEau.draw();
-            cubesDHerbe.draw();
-            cubesDeTerre.draw();
-
-
-            /*TODO voir le shader pour le selecteur puis abstraire la texture*/
-            tex.bind();
-            selector.draw();
-            tex.unbind();
-
-            shaderTextures.unbind();
+            selector.draw(MVMatrix);
         }else{
             shaderCouleur.bind();
-            shaderTextures.setUniform1i("u_Texture", 0);
+            shaderCouleur.setUniform1i("u_Texture", 0);
             menu.draw();
             shaderCouleur.unbind();
         }

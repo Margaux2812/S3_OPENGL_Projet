@@ -63,10 +63,12 @@ const Vertex3DColor vertices[] = {
                     glm::vec3(1.f, 0.4f, 0.7f))
     };
 
-Selector::Selector(){
+Selector::Selector()
+:m_shader(new MyShader("shaders/color.vs.glsl", "shaders/color.fs.glsl"))
+{
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_COULEUR = 1;
-    const GLuint VERTEX_ATTR_POSITION_ALL = 3;
+    const GLuint VERTEX_ATTR_POSITION_ALL = 2;
 
 	glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
@@ -125,8 +127,6 @@ Selector::Selector(){
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
-
-    m_position = m_positionCube[0];
 }
 
 Selector::~Selector(){
@@ -134,12 +134,15 @@ Selector::~Selector(){
     glDeleteVertexArrays(1, &m_vao);
 }
 glm::vec3 Selector::getPosition(){
-    return m_position;
+    return m_positionCube[0];;
 }
 
-void Selector::draw(){
-	//Il faudra bind le shader ici
-
+void Selector::draw(glm::mat4 MVMatrix){
+    m_shader->bind();
+    m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
+    m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
+    m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
+    
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
 
@@ -147,6 +150,7 @@ void Selector::draw(){
     glDrawElementsInstanced(GL_LINES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionCube.size());
 
     glBindVertexArray(0); //Debinder la VAO
+    m_shader->unbind();
 }
 
 void Selector::handleEvents(SDLKey e){
@@ -178,7 +182,6 @@ void Selector::updateGPU(){
 void Selector::updatePos(glm::vec3 position){
     m_positionCube.pop_back();
     m_positionCube.push_back(position);
-    m_position = position;
     updateGPU();
 }
 
