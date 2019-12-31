@@ -20,7 +20,8 @@ const uint32_t indices[] = {
 Menu::Menu()
 :m_name(principal),
 m_texture(new Texture("assets/textures/MenuPrincipal.png")),
-m_precMenu(principal)
+m_precMenu(principal),
+m_shader(new MyShader("shaders/texture2D.vs.glsl", "shaders/texture2D.fs.glsl"))
 {
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_TEXCOORD = 1;
@@ -59,6 +60,9 @@ Menu::~Menu(){
 }
 
 void Menu::draw(){
+    m_shader->bind();
+    m_shader->setUniform1i("u_Texture", 0);
+
     m_texture->bind();
     glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
@@ -68,6 +72,7 @@ void Menu::draw(){
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
     glBindVertexArray(0); //Debinder la VAO
     m_texture->unbind();
+    m_shader->unbind();
 }
 
 		

@@ -9,6 +9,7 @@
 #include "../lib/glimac/include/Image.hpp"
 #include "vertex.hpp"
 #include "texture.hpp"
+#include "myshader.hpp"
 
 enum MenuName {
 	principal,
@@ -27,6 +28,7 @@ class Menu{
     	GLuint m_vao;
     	Texture* m_texture;
     	MenuName m_precMenu;
+    	MyShader* m_shader;
 
 	public :
 		Menu();

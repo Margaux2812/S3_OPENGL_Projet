@@ -19,12 +19,7 @@ int main(int argc, char** argv) {
         std::cerr << glewGetErrorString(glewInitError) << std::endl;
         return EXIT_FAILURE;
     }
- 
 
-    MyShader shaderTextures("shaders/color.vs.glsl", "shaders/color.fs.glsl");
-    MyShader shaderCouleur("shaders/texture2D.vs.glsl", "shaders/texture2D.fs.glsl");
-    Texture tex("assets/textures/grass.png");
-    
     glEnable(GL_DEPTH_TEST);
     displayCommandes();
 
@@ -43,16 +38,10 @@ int main(int argc, char** argv) {
 
     ////MAP WORLD***////
 
-    const glm::mat4 ProjMatrix = glm::infinitePerspective(
-        1.f,
-        SCREEN_WIDTH/SCREEN_HEIGHT,
-        0.1f);
     glm::mat4 MVMatrix = glm::translate(
         glm::mat4(),
         glm::vec3(0, 0, -5)
     );
-    const glm::mat4 NormalMatrix = glm::transpose(glm::inverse(MVMatrix));
-
 
     // Application loop:
     bool done = false;
@@ -108,10 +97,6 @@ int main(int argc, char** argv) {
 
         /*Affichage de la scène selon si on est en jeu ou non*/
         if(menu == inGame){
-
-            /*********************************
-             * HERE SHOULD COME THE RENDERING CODE
-             *********************************/
             camera.updateCameraMovement();
 
             MVMatrix = camera.getViewMatrix();
@@ -123,10 +108,7 @@ int main(int argc, char** argv) {
 
             selector.draw(MVMatrix);
         }else{
-            shaderCouleur.bind();
-            shaderCouleur.setUniform1i("u_Texture", 0);
             menu.draw();
-            shaderCouleur.unbind();
         }
         // Update the display
         windowManager.swapBuffers();

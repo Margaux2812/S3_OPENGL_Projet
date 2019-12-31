@@ -75,6 +75,8 @@ vertex.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 texture.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
+myshader.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
 string
@@ -187,6 +189,12 @@ cstddef
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
 ../include/all.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/all.hpp
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp
+../include/menu.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/menu.hpp
+iostream
+-
 
 lib/glm/common.hpp
 detail/func_common.hpp
