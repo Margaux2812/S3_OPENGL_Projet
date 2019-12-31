@@ -80,15 +80,20 @@ void MyShader::unbind() const{
 	glUseProgram(0);
 }
 
-void MyShader::setUniform1i(const std::string& name, int value){
+void MyShader::setUniform3f(const std::string& name, const glm::vec3 value){
+	glUniform3f(getUniformLocation(name),
+  	value[0],
+  	value[1],
+  	value[2]);
+}
+
+void MyShader::setUniform1i(const std::string& name, const int value){
 	glUniform1i(getUniformLocation(name), value);
 }
 
-void MyShader::setUniform1f(const std::string& name, float value){
+void MyShader::setUniform1f(const std::string& name, const float value){
 	glUniform1f(getUniformLocation(name), value);
 }
-
-
 
 void MyShader::setUniformMatrix4fv(const std::string& name, const GLfloat*value)
 {

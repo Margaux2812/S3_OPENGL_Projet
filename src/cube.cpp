@@ -172,6 +172,9 @@ void Cube::draw(glm::mat4 MVMatrix){
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
     m_shader->setUniform1i("u_Texture", 0);
+    m_shader->setUniform3f("uLightDir", glm::vec3(10.f, 3.f, 5.f));
+    m_shader->setUniform3f("uLightPonct", glm::vec3(0.f, 0.f, 0.f));
+    m_shader->setUniform1f("uAmbiantLight", 0.f);
 
     m_texture->bind();
 	glBindVertexArray(m_vao); //Binder la VAO

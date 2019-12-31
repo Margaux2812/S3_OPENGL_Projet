@@ -8,6 +8,7 @@ layout(location = 3) in vec3 aPositionCubes;
 out vec3 vPosition;
 out vec3 vNormale;
 out vec2 vTexCoord;
+out vec3 vRelPosition;
 
 uniform mat4 uMVPMatrix;
 uniform mat4 uMVMatrix;
@@ -17,6 +18,7 @@ void main() {
 	vPosition = vec3(uMVMatrix*vec4(aVertexPosition, 1));
 	vNormale = vec3(uNormalMatrix*vec4(aVertexNormal, 0));
 	vTexCoord = aTexCoord;
+	vRelPosition = aVertexPosition + aPositionCubes;
 	
-    gl_Position = uMVPMatrix * vec4(aVertexPosition + aPositionCubes - vec3(0., 1., 3), 1);
+    gl_Position = uMVPMatrix * vec4(vRelPosition - vec3(0., 1., 3), 1);
 }

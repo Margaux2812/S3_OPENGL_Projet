@@ -5,6 +5,7 @@
 #include <iostream>
 #include <sstream>
 #include <fstream>
+#include "../lib/glimac/include/glm.hpp"
 
 struct ShaderProgramSources{
 	std::string VertexSource;
@@ -22,8 +23,9 @@ public:
 	void unbind() const;
 
 	//Set uniforms
-	void setUniform1i(const std::string& name, int value);
-	void setUniform1f(const std::string& name, float value);
+	void setUniform3f(const std::string& name, const glm::vec3 value);
+	void setUniform1i(const std::string& name, const int value);
+	void setUniform1f(const std::string& name, const float value);
 	void setUniformMatrix4fv(const std::string& name, const GLfloat*value);
 	
 private:
