@@ -21,8 +21,6 @@ CUBE :
 - Replace ne remplace pas vraiment mais affiche par dessus ??
 --> J'ai l'impression que le shader "sable" est par dessus tous les autres à chaque fois (Test à faire)
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Faire les propriétés différentes`
-- Lecture du fichier pour les fonctions
-- Textures mieux mises (top et bottom)
 
 USER INTERFACE : 
 - Palette
@@ -37,9 +35,6 @@ PROGRAMME :
 SELECTEUR :
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Avec la souris`
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `le voir à tout moment`
-
-FONCTIONS RADIALES
-- Lecture fichier
 
 CAMERA :
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Commencer au milieu du monde`

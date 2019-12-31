@@ -52,7 +52,7 @@ class Cube{
 
 		///// CUBE MANAGER /////
 
-		void addCube(const glm::vec3 position);
+		bool addCube(const glm::vec3 position);
 		void replace(const glm::vec3 position);
 		void deleteCube(const glm::vec3 position);
 		int initControles(Eigen::MatrixXf* ptsDeControle, Eigen::VectorXf* uk);

@@ -21,6 +21,7 @@ int main(int argc, char** argv) {
     }
 
     glEnable(GL_DEPTH_TEST);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); //Pour la transparence
     displayCommandes();
 
     /*********************************
@@ -30,10 +31,11 @@ int main(int argc, char** argv) {
     Menu menu;
     Pinceau pinceau;
     FreeflyCamera camera;
-    Cube cubesDeTerre(EARTH);
+    Cube cubesDeTerre(GROUND);
     Cube cubesDeSable(SAND);
     Cube cubesDEau(WATER);
     Cube cubesDHerbe(GRASS);
+    Cube cubesFeuilles(LEAF);
     Selector selector;
 
     ////MAP WORLD***////
@@ -72,6 +74,7 @@ int main(int argc, char** argv) {
                         cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
                         cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
                         cubesDHerbe.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                        cubesFeuilles.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
 
                         selector.handleEvents(e.key.keysym.sym);
                         camera.handleKeyboardEventsDown(e.key.keysym.sym);
@@ -100,10 +103,13 @@ int main(int argc, char** argv) {
 
             MVMatrix = camera.getViewMatrix();
 
+            glEnable(GL_BLEND); //Pour la transparence
             cubesDeSable.draw(MVMatrix);
             cubesDEau.draw(MVMatrix);
             cubesDHerbe.draw(MVMatrix);
             cubesDeTerre.draw(MVMatrix);
+            cubesFeuilles.draw(MVMatrix);
+            glDisable(GL_BLEND);
 
             selector.draw(MVMatrix);
         }else{

@@ -8,86 +8,86 @@ const Vertex3D vertices[] = {
     // Front v0,v1,v2,v3
     Vertex3D(glm::vec3(0.5, 0.5, 0.5), //Position
                 glm::vec3(0, 0, 1),         //Normals 
-                glm::vec2(0.f, 0.f)),       //Texture coordonnées
+                glm::vec2(1.f, 1.f/3.f)),      //Texture coordonnées
         Vertex3D(glm::vec3(-0.5, 0.5, 0.5), 
                     glm::vec3(0, 0, 1),
-                    glm::vec2(1.f, 0.f)), 
+                    glm::vec2(0.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(-0.5, -0.5, 0.5), 
                     glm::vec3(0, 0, 1),
-                    glm::vec2(1.f, 1.f)), 
+                    glm::vec2(0.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(0, 0, 1),
-                    glm::vec2(0.f, 1.f)),
+                    glm::vec2(1.f, 2.f/3.f)), 
     // Right v0,v3,v4,v5
 
     Vertex3D(glm::vec3(0.5, 0.5, 0.5), 
                 glm::vec3(1, 0, 0),
-                glm::vec2(0.f, 0.f)), 
+                glm::vec2(1.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec2(1.f, 0.f)), 
+                    glm::vec2(0.f, 1.f/3.f)),  
         Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec2(1.f, 1.f)), 
+                    glm::vec2(0.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec2(0.f, 1.f)),
+                    glm::vec2(1.f, 2.f/3.f)),
     // Top v0,v5,v6,v0.5    
 
     Vertex3D(glm::vec3(0.5, 0.5, 0.5), 
                 glm::vec3(0, 1, 0),
-                glm::vec2(0.f, 0.f)), 
+                glm::vec2(1.f, 0.f)), 
         Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(0, 1, 0),
-                    glm::vec2(1.f, 0.f)), 
+                    glm::vec2(0.f, 0.f)),  
         Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(0, 1, 0),
-                    glm::vec2(1.f, 1.f)), 
+                    glm::vec2(0.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(-0.5, 0.5, 0.5), 
                     glm::vec3(0, 1, 0),
-                    glm::vec2(0.f, 1.f)), 
+                    glm::vec2(1.f, 1.f/3.f)), 
     // Left v0.5,v6,v7,v2   
 
     Vertex3D(glm::vec3(-0.5, 0.5, 0.5), 
                 glm::vec3(-1, 0, 0),
-                glm::vec2(0.f, 0.f)), 
+                glm::vec2(1.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(-1, 0, 0),
-                    glm::vec2(1.f, 0.f)), 
+                    glm::vec2(0.f, 1.f/3.f)),  
         Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                     glm::vec3(-1, 0, 0),
-                    glm::vec2(1.f, 1.f)), 
+                    glm::vec2(0.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(-0.5, -0.5, 0.5), 
                     glm::vec3(-1, 0, 0),
-                    glm::vec2(0.f, 1.f)),  
+                    glm::vec2(1.f, 2.f/3.f)),  
     // Bottom v7,v4,v3,v2
 
     Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                 glm::vec3(0,-1, 0),
-                glm::vec2(0.f, 0.f)), 
+                glm::vec2(1.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                     glm::vec3(0,-1, 0),
-                    glm::vec2(1.f, 0.f)), 
+                    glm::vec2(0.f, 2.f/3.f)),  
         Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(0,-1, 0),
-                    glm::vec2(1.f, 1.f)), 
+                    glm::vec2(0.f, 1.f)), 
         Vertex3D(glm::vec3(-0.5, -0.5, 0.5), 
                     glm::vec3(0,-1, 0),
-                    glm::vec2(0.f, 1.f)), 
+                    glm::vec2(1.f, 1.f)), 
     // Back v4,v7,v6,v5 
 
     Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                 glm::vec3(0, 0,-1),
-                glm::vec2(0.f, 0.f)), 
+                glm::vec2(1.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec2(1.f, 0.f)), 
+                    glm::vec2(0.f, 1.f/3.f)),  
         Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec2(1.f, 1.f)), 
+                    glm::vec2(0.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec2(0.f, 1.f))
+                    glm::vec2(1.f, 2.f/3.f))
     };
 
 const uint32_t indices[] = {
@@ -117,7 +117,7 @@ m_shader(new MyShader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl"))
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
-    if(type == EARTH)
+    if(type == GROUND)
         loadMonde();
 
     glGenBuffers(1, &vboAll); 
@@ -199,7 +199,9 @@ Texture* Cube::getTexture(){
         break;
         case SAND : return new Texture("assets/textures/sand.jpg");
         break;
-        case EARTH :
+        case LEAF : return new Texture("assets/textures/leaf.png");
+        break;
+        case GROUND :
         default: return new Texture("assets/textures/cubeTerre.jpg");
         break;
     }
@@ -266,12 +268,14 @@ void Cube::updateGPU(){
 ///////////////////////////////////////////////////////////////
 
 
-void Cube::addCube(const glm::vec3 position){
+bool Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
     if(exists == -1){
         m_positionsCubes.push_back(position);
         updateGPU();
+        return 1;
     }
+    return 0;
 }
 
 void Cube::replace(const glm::vec3 position){

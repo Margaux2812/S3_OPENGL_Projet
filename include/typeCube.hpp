@@ -1,8 +1,9 @@
 #pragma once
 
 enum typeCube{
-	EARTH,
+	GROUND,
     SAND,
     WATER,
-    GRASS
+    GRASS,
+    LEAF
 };
