@@ -1,7 +1,8 @@
 #include "../include/cube.hpp"
 #include "../include/vertex.hpp"
-#include "../include/radialBasisFunctions.hpp"
 #include <iostream>
+#include <fstream>
+#include <string>
 
 const Vertex3D vertices[] = {
     // Front v0,v1,v2,v3
@@ -208,30 +209,23 @@ std::vector<glm::vec3> Cube::getPositions(){
     return m_positionsCubes;
 }
 
-
-
 ///////////////////////////////////////////////////////////////
 /////////////////////////// SETTERS ///////////////////////////
 ///////////////////////////////////////////////////////////////
 
-		void Cube::setVao(GLuint const newVao){
-            m_vao=newVao;
-        }
-		void Cube::setVbo(GLuint const newVbo){
-            m_vbo=newVbo;
-        }
-		void Cube::setIbo(GLuint const newIbo){
-            m_ibo=newIbo;
-        }
-
-
-
+void Cube::setVao(GLuint const newVao){
+    m_vao=newVao;
+}
+void Cube::setVbo(GLuint const newVbo){
+    m_vbo=newVbo;
+}
+void Cube::setIbo(GLuint const newIbo){
+    m_ibo=newIbo;
+}
 
 ///////////////////////////////////////////////////////////////
 ///////////////////////// EVENT MANAGER ///////////////////////
 ///////////////////////////////////////////////////////////////
-
-
 
 /*Peu importe le type de pinceau, on doit pouvoir supprimer un cube*/
 void Cube::handleEvents(const SDLKey e, const glm::vec3 position, typeCube type){
@@ -297,17 +291,70 @@ void Cube::deleteCube(const glm::vec3 position){
     }
 }
 
+int Cube::initControles(Eigen::MatrixXf* ptsDeControle, Eigen::VectorXf* uk){
+    bool initPoints = true, initY=false;
+    int point = 0;
+    std::string number="";
+    std::string x="", y="", value="";
+
+    std::string line;
+    std::ifstream myfile ("doc/controles.txt");
+    
+    if (myfile.is_open()){
+        while ( getline (myfile,line) ){
+            if(line.find("POINTS") != std::string::npos){
+                initPoints = true;
+            }else if(line.find("VALEURS") != std::string::npos){
+                initPoints = false;
+                point=0;
+            //On lit des points
+            }else{
+                if(initPoints){
+                    /*Si on est entrain de regarder les points, on doit prendre les 2 premiers*/
+                    for(uint i=0; i < line.size(); i++){
+                        if(isspace(line[i])){
+                            initY=true;
+                        }
+
+                        if(!initY){
+                            x+= line[i];
+                        }else{
+                            y+= line[i];
+                        }
+                    }
+                    ptsDeControle->row(point) << std::stoi(x), std::stoi(y);
+                    point++;
+                    x="";
+                    y="";
+                    initY=false;
+                    ptsDeControle->conservativeResize(point+1, 2);
+                }else{
+                    for(uint i=0; i < line.size(); i++){
+                        value+= line[i];
+                    }
+                    uk->row(point) << std::stoi(value);
+                    point++;
+                    value="";
+                    uk->conservativeResize(point+1);
+                }
+            }
+        }
+        ptsDeControle->conservativeResize(point, 2);
+        uk->conservativeResize(point);
+        myfile.close();
+        return 1;
+    }else
+        std::cout << "Unable to open file"; 
+    return 0;
+}
+
 void Cube::loadMonde(){
     Eigen::MatrixXd map(WORLD_WIDTH_HEIGHT, WORLD_WIDTH_HEIGHT);
 
-    const int nbPoints = 3;
+    Eigen::MatrixXf ptsDeControle(1, 2);
+    Eigen::VectorXf uk(1);
 
-    Eigen::MatrixXf ptsDeControle(nbPoints, 2);
-    ptsDeControle << 10, 10,
-    2, 3,
-    30, 40;
-    Eigen::VectorXf uk(nbPoints);
-    uk << 10, -2, -20;
+    initControles(&ptsDeControle, &uk);
 
     map = getValues(ptsDeControle, uk);
     for(int x=0; x<WORLD_WIDTH_HEIGHT; x++){

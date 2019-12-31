@@ -76,7 +76,6 @@ int main(int argc, char** argv) {
                         selector.handleEvents(e.key.keysym.sym);
                         camera.handleKeyboardEventsDown(e.key.keysym.sym);
                     }
-
                 break;
                 case SDL_KEYUP:
                     if(menu == inGame)

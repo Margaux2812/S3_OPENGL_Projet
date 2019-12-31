@@ -1,14 +1,15 @@
 #pragma once
 
 #include <GL/glew.h>
-//#include "../include/TYPECUBE.hpp"
 #include "../lib/glimac/include/glm.hpp"
 #include <vector>
 //To have the SDL_Event
 #include "../lib/glimac/include/SDLWindowManager.hpp"
+
 #include "myshader.hpp"
 #include "typeCube.hpp"
 #include "texture.hpp"
+#include "radialBasisFunctions.hpp"
 
 class Cube{
 	private:
@@ -54,6 +55,7 @@ class Cube{
 		void addCube(const glm::vec3 position);
 		void replace(const glm::vec3 position);
 		void deleteCube(const glm::vec3 position);
+		int initControles(Eigen::MatrixXf* ptsDeControle, Eigen::VectorXf* uk);
 		void loadMonde();
 		int findLastCube(const glm::vec3 position);
 		void extrudeCube(glm::vec3 position);

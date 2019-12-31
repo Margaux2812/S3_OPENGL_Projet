@@ -55,3 +55,5 @@ Eigen::MatrixXd getValues(const Eigen::MatrixXf ptsDeControle, const Eigen::Vect
 		return values;
 	}
 }
+
+
