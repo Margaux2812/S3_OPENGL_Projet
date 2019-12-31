@@ -2,21 +2,6 @@
 #include <math.h>
 #include <iostream>
 
-Eigen::MatrixXf getMapCoord(){
-
-	/*Une matrice ne peut pas contenir des coordonnées, donc on va avoir une matrice deux fois plus large*/
-	Eigen::MatrixXf mapCoord(WORLD_WIDTH_HEIGHT, 2*WORLD_WIDTH_HEIGHT);
-	for(int i=0; i<mapCoord.rows(); i++){
-		for(int j=0; j<mapCoord.cols(); j += 2){
-			/*La deuxieme coordonnée est divisée par 2 comme on lui ajoute 2 à chaque fois*/
-			mapCoord(i, j) = i;
-			mapCoord(i, j+1) = j/2;
-		}
-	}
-
-	return mapCoord;
-}
-
 float phi(const float a){
 	return exp(-0.2*a*a);
 }
