@@ -73,8 +73,8 @@ Skybox::Skybox()
 	const GLuint VERTEX_ATTR_POSITION = 0;
 
     glGenVertexArrays(1, &m_vao);
-    glGenBuffers(1, &m_vbo);
     glBindVertexArray(m_vao);
+    glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 
     glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
@@ -93,6 +93,7 @@ Skybox::~Skybox(){
 }
 
 void Skybox::draw(glm::mat4 MVMatrix){
+
 	m_shader->bind();
     m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*glm::mat4(glm::mat3(MVMatrix))));
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(glm::mat4(glm::mat3(MVMatrix))));
