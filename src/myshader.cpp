@@ -104,6 +104,15 @@ void MyShader::setUniformMatrix4fv(const std::string& name, const GLfloat*value)
                 );
 }
 
+void MyShader::setUniformMatrix4x3fv(const std::string& name, const GLfloat*value)
+{
+	glUniformMatrix4x3fv(getUniformLocation(name),
+                1,
+                GL_FALSE,
+                value
+                );
+}
+
 int MyShader::getUniformLocation(const std::string& name)
 {
 	int location = glGetUniformLocation(m_shaderID, name.c_str());

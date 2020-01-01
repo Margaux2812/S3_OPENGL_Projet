@@ -31,6 +31,7 @@ int main(int argc, char** argv) {
     Menu menu;
     Pinceau pinceau;
     FreeflyCamera camera;
+    Cube lumiere(LIGHT);
     Cube cubesDeTerre(GROUND);
     Cube cubesDeSable(SAND);
     Cube cubesDEau(WATER);
@@ -70,6 +71,7 @@ int main(int argc, char** argv) {
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
 
+                        lumiere.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
                         cubesDeTerre.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
                         cubesDeSable.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
                         cubesDEau.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
@@ -104,11 +106,12 @@ int main(int argc, char** argv) {
             MVMatrix = camera.getViewMatrix();
 
             glEnable(GL_BLEND); //Pour la transparence
-            cubesDeSable.draw(MVMatrix);
-            cubesDEau.draw(MVMatrix);
-            cubesDHerbe.draw(MVMatrix);
-            cubesDeTerre.draw(MVMatrix);
-            cubesFeuilles.draw(MVMatrix);
+            lumiere.draw(MVMatrix, lumiere);
+            cubesDeSable.draw(MVMatrix, lumiere);
+            cubesDEau.draw(MVMatrix, lumiere);
+            cubesDHerbe.draw(MVMatrix, lumiere);
+            cubesDeTerre.draw(MVMatrix, lumiere);
+            cubesFeuilles.draw(MVMatrix, lumiere);
             glDisable(GL_BLEND);
 
             selector.draw(MVMatrix);

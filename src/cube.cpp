@@ -166,15 +166,16 @@ Cube::~Cube(){
     glDeleteVertexArrays(1, &m_vao);
 }
 
-void Cube::draw(glm::mat4 MVMatrix){
+void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
     m_shader->bind();
 
     m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
     m_shader->setUniform1i("u_Texture", 0);
-    //m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.f, 0.f, 0.f)));
-    //m_shader->setUniform3f("uLightPonct", glm::normalize(glm::vec3(0.f, 0.f, 0.f)));
+    m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.3f, -0.7f, 0.3f)));
+    
+    //drawLights(lumieres);
 
     if(nightMode){
         m_shader->setUniform1f("uAmbiantLight", 0.2f);
@@ -195,6 +196,17 @@ void Cube::draw(glm::mat4 MVMatrix){
     m_shader->unbind();
 }
 
+void Cube::drawLights(Cube lumieres){
+    glm::mat4x3 lights;
+    for(GLuint i=0; i<lumieres.size(); i++){
+        lights[i] = glm::normalize(lumieres.getData()[i]);
+    }
+    for(GLuint i=lumieres.size(); i<4; i++){
+        lights[i] = glm::normalize(glm::vec3(0.f, 0.f, 0.f));
+    }
+
+    m_shader->setUniformMatrix4x3fv("uLightPonct",  glm::value_ptr(lights));
+}
 
 ///////////////////////////////////////////////////////////////
 /////////////////////////// GETTERS ///////////////////////////
@@ -202,6 +214,8 @@ void Cube::draw(glm::mat4 MVMatrix){
 
 Texture* Cube::getTexture(){
     switch(m_type){
+        case LIGHT: return new Texture("assets/textures/light.jpg");
+        break;
         case GRASS: return new Texture("assets/textures/grass.png");
         break;
         case WATER : return new Texture("assets/textures/water.png");
@@ -281,7 +295,15 @@ void Cube::updateGPU(){
 
 bool Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
-    if(exists == -1){
+    bool canAdd = true;
+    if(m_type == LIGHT && m_positionsCubes.size() >= 4){
+        canAdd = false;
+        std::cout << m_positionsCubes[0] << std::endl;
+        std::cout << m_positionsCubes[1] << std::endl;
+        std::cout << m_positionsCubes[2] << std::endl;
+        std::cout << m_positionsCubes[3] << std::endl;
+    }
+    if(exists == -1 && canAdd){
         m_positionsCubes.push_back(position);
         updateGPU();
         return 1;

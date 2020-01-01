@@ -29,7 +29,8 @@ class Cube{
 	public :
 		Cube(typeCube type);
 		~Cube();
-		void draw(glm::mat4 MVMatrix);
+		void draw(glm::mat4 MVMatrix, Cube lumieres);
+		void drawLights(Cube lumieres);
 
 		///// GETTERS /////
 		Texture* getTexture();
@@ -37,6 +38,8 @@ class Cube{
 		inline GLuint getVao() { return m_vao;}
 		inline GLuint getVbo() { return m_vbo;}
 		inline GLuint getIbo() { return m_ibo;}
+		inline GLuint size() { return m_positionsCubes.size();}
+		inline std::vector<glm::vec3> getData() { return m_positionsCubes;}
 		inline typeCube getType() {return m_type;}
 
 		///// SETTERS /////

@@ -25,10 +25,14 @@ void Pinceau::handleEvents(const SDLKey e){
         case SDLK_LEFTPAREN : //5
         case SDLK_KP5: m_typeSelected = LEAF;
         break;
+
+        case SDLK_KP9: m_typeSelected = LIGHT;
+        break;
         
         default:
         break;
     }
+    std::cout << m_typeSelected << std::endl;
 }
 
 bool Pinceau::operator==(const typeCube type){
