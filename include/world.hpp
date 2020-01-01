@@ -11,14 +11,13 @@
 class World{
 	private:
 		std::vector<Cube*> m_allCubes;
-    	Cube* cubesDeTerre;
-    	Cube* lumiere;
    	public:
 		World();
 		~World();
 
 		void draw(glm::mat4 MVMatrix);
-		void handleEvents(const SDLKey e, const glm::vec3 position, typeCube typePinceau);
+		void handleEvents(const SDLKey e, const glm::vec3 position, const typeCube typePinceau);
 
-		bool addCube(const glm::vec3 position);
+		void addCube(const glm::vec3 position, const typeCube typePinceau);
+		void changeNightMode();
 };

@@ -253,15 +253,9 @@ void Cube::setIbo(GLuint const newIbo){
 ///////////////////////////////////////////////////////////////
 
 /*Peu importe le type de pinceau, on doit pouvoir supprimer un cube*/
-void Cube::handleEvents(const SDLKey e, const glm::vec3 position, typeCube type){
-    if(e == SDLK_DELETE)
-        deleteCube(position);
-    if(e == SDLK_n)
-        nightMode = !nightMode;
+void Cube::handleEvents(const SDLKey e, const glm::vec3 position, const typeCube type){
     if(type == m_type){
         switch(e){
-            case SDLK_RETURN : addCube(position);
-            break;
             case SDLK_e: extrudeCube(position);
             break;
             case SDLK_c : digCube(position);
@@ -270,6 +264,10 @@ void Cube::handleEvents(const SDLKey e, const glm::vec3 position, typeCube type)
             default: break;
         }
     }
+}
+
+void Cube::changeNightMode(){
+    nightMode = !nightMode;
 }
 
 int Cube::findFromPosition(const glm::vec3 position){

@@ -1,37 +1,20 @@
 Determining if the pthread_create exist failed with the following output:
 Change Dir: /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_91a63/fast"
-/usr/bin/make -f CMakeFiles/cmTC_91a63.dir/build.make CMakeFiles/cmTC_91a63.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_24197/fast"
+/usr/bin/make -f CMakeFiles/cmTC_24197.dir/build.make CMakeFiles/cmTC_24197.dir/build
 make[1] : on entre dans le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_91a63.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_91a63.dir/CheckSymbolExists.c.o   -c /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_91a63
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_91a63.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_91a63.dir/CheckSymbolExists.c.o  -o cmTC_91a63 
-/usr/bin/ld : CMakeFiles/cmTC_91a63.dir/CheckSymbolExists.c.o : dans la fonction « main » :
+Building C object CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o   -c /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_24197
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24197.dir/link.txt --verbose=1
+/usr/bin/cc      -rdynamic CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o  -o cmTC_24197 
+/usr/bin/ld : CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o : dans la fonction « main » :
 CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_91a63.dir/build.make:87: cmTC_91a63] Error 1
+make[1]: *** [CMakeFiles/cmTC_24197.dir/build.make:87: cmTC_24197] Error 1
 make[1] : on quitte le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_91a63/fast] Error 2
-=======
-Run Build Command:"/usr/bin/make" "cmTC_a3ce3/fast"
-/usr/bin/make -f CMakeFiles/cmTC_a3ce3.dir/build.make CMakeFiles/cmTC_a3ce3.dir/build
-make[1] : on entre dans le répertoire « /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_a3ce3.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_a3ce3.dir/CheckSymbolExists.c.o   -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c"
-Linking C executable cmTC_a3ce3
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_a3ce3.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_a3ce3.dir/CheckSymbolExists.c.o  -o cmTC_a3ce3 
-/usr/bin/ld : CMakeFiles/cmTC_a3ce3.dir/CheckSymbolExists.c.o : dans la fonction « main » :
-CheckSymbolExists.c:(.text+0x1f) : référence indéfinie vers « pthread_create »
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_a3ce3.dir/build.make:87: cmTC_a3ce3] Error 1
-make[1] : on quitte le répertoire « /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_a3ce3/fast] Error 2
->>>>>>> master
+make: *** [Makefile:121: cmTC_24197/fast] Error 2
 
 File /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
@@ -51,34 +34,18 @@ int main(int argc, char** argv)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp
 
-<<<<<<< HEAD
-Run Build Command:"/usr/bin/make" "cmTC_e5d96/fast"
-/usr/bin/make -f CMakeFiles/cmTC_e5d96.dir/build.make CMakeFiles/cmTC_e5d96.dir/build
+Run Build Command:"/usr/bin/make" "cmTC_2280c/fast"
+/usr/bin/make -f CMakeFiles/cmTC_2280c.dir/build.make CMakeFiles/cmTC_2280c.dir/build
 make[1] : on entre dans le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_e5d96.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_e5d96.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_e5d96
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e5d96.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_e5d96.dir/CheckFunctionExists.c.o  -o cmTC_e5d96 -lpthreads 
+Building C object CMakeFiles/cmTC_2280c.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2280c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
+Linking C executable cmTC_2280c
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2280c.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2280c.dir/CheckFunctionExists.c.o  -o cmTC_2280c -lpthreads 
 /usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_e5d96.dir/build.make:87: cmTC_e5d96] Error 1
+make[1]: *** [CMakeFiles/cmTC_2280c.dir/build.make:87: cmTC_2280c] Error 1
 make[1] : on quitte le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_e5d96/fast] Error 2
-=======
-Run Build Command:"/usr/bin/make" "cmTC_42078/fast"
-/usr/bin/make -f CMakeFiles/cmTC_42078.dir/build.make CMakeFiles/cmTC_42078.dir/build
-make[1] : on entre dans le répertoire « /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_42078.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_42078.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_42078
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_42078.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_42078.dir/CheckFunctionExists.c.o  -o cmTC_42078 -lpthreads 
-/usr/bin/ld : ne peut trouver -lpthreads
-collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_42078.dir/build.make:87: cmTC_42078] Error 1
-make[1] : on quitte le répertoire « /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_42078/fast] Error 2
->>>>>>> master
+make: *** [Makefile:121: cmTC_2280c/fast] Error 2
 
 
