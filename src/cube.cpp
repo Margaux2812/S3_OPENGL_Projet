@@ -102,7 +102,8 @@ const uint32_t indices[] = {
 Cube::Cube(typeCube type)
 : m_type(type),
 m_texture(getTexture()),
-m_shader(new MyShader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl"))
+m_shader(new MyShader("shaders/3D.vs.glsl", "shaders/normal.fs.glsl")),
+nightMode(false)
 {
     const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_NORMAL = 1;
@@ -172,9 +173,14 @@ void Cube::draw(glm::mat4 MVMatrix){
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
     m_shader->setUniform1i("u_Texture", 0);
-    m_shader->setUniform3f("uLightDir", glm::vec3(10.f, 3.f, 5.f));
-    m_shader->setUniform3f("uLightPonct", glm::vec3(0.f, 0.f, 0.f));
-    m_shader->setUniform1f("uAmbiantLight", 0.f);
+    //m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.f, 0.f, 0.f)));
+    //m_shader->setUniform3f("uLightPonct", glm::normalize(glm::vec3(0.f, 0.f, 0.f)));
+
+    if(nightMode){
+        m_shader->setUniform1f("uAmbiantLight", 0.2f);
+    }else{
+        m_shader->setUniform1f("uAmbiantLight", 0.8f);
+    }
 
     m_texture->bind();
 	glBindVertexArray(m_vao); //Binder la VAO
@@ -236,6 +242,8 @@ void Cube::setIbo(GLuint const newIbo){
 void Cube::handleEvents(const SDLKey e, const glm::vec3 position, typeCube type){
     if(e == SDLK_DELETE)
         deleteCube(position);
+    if(e == SDLK_n)
+        nightMode = !nightMode;
     if(type == m_type){
         switch(e){
             case SDLK_RETURN : addCube(position);

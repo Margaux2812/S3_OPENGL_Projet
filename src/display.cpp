@@ -10,6 +10,8 @@ void displayCommandes(){
     std::cout << "***********************************************" << std::endl;
     std::cout << "Pour commencer le jeu depuis le menu principal: ENTREE" << std::endl;
     std::cout << "***********************************************" << std::endl;
+    std::cout << "Pour mettre en mode nuit : N" << std::endl;
+    std::cout << "***********************************************" << std::endl;
     std::cout << "Pour choisir les cubes : - Terre : 1" << std::endl;
     std::cout << "                         - Sable : 2" << std::endl;
     std::cout << "                         - Eau   : 3" << std::endl;

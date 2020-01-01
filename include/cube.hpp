@@ -24,6 +24,8 @@ class Cube{
 		Texture* m_texture;
 		MyShader* m_shader;
 
+		bool nightMode;
+
 	public :
 		Cube(typeCube type);
 		~Cube();
