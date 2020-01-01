@@ -47,6 +47,13 @@ void FreeflyCamera::moveFront(const float t){
 }
 void FreeflyCamera::rotateUp(const float degrees){
 	m_fPhi += glm::radians(degrees);
+
+    /*On veut faire modulo 2PI*/
+    if(m_fPhi < -(float)M_PI){
+        m_fPhi += 2.f*M_PI;
+    }else if(m_fPhi > (float)M_PI){
+        m_fPhi -= 2.f*M_PI;
+    }
 	m_FrontVector = glm::vec3(std::cos(m_fTheta)*std::sin(m_fPhi), 
 							  std::sin(m_fTheta), 
 							  std::cos(m_fTheta)*std::cos(m_fPhi));
