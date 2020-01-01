@@ -56,7 +56,6 @@ void FreeflyCamera::rotateUp(const float degrees){
 }
 void FreeflyCamera::rotateLeft(const float degrees){
 	m_fTheta += glm::radians(degrees);
-    std::cout << m_fTheta << std::endl;
 
     /*On peut faire une rotation que jusqu'à regarder le sol, ou regarder le ciel*/
     if(m_fTheta < -1.41f){

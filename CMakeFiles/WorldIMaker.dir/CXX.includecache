@@ -48,12 +48,6 @@ fstream
 eigen3/Eigen/Dense
 -
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
-cube.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
-myshader.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
-
 /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
 string
 -
@@ -65,10 +59,6 @@ GL/glew.h
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
-
-/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
-../lib/glimac/include/glm.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 string
@@ -117,12 +107,6 @@ math.h
 -
 iostream
 -
-
-/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
-../include/selector.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
-../include/vertex.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 
 lib/glm/common.hpp
 detail/func_common.hpp

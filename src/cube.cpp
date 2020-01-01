@@ -22,16 +22,16 @@ const Vertex3D vertices[] = {
 
     Vertex3D(glm::vec3(0.5, 0.5, 0.5), 
                 glm::vec3(1, 0, 0),
-                glm::vec2(1.f, 1.f/3.f)), 
+                glm::vec2(0.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(0.5, -0.5, 0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec2(0.f, 1.f/3.f)),  
+                    glm::vec2(0.f, 2.f/3.f)),  
         Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec2(0.f, 2.f/3.f)), 
+                    glm::vec2(1.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(1, 0, 0),
-                    glm::vec2(1.f, 2.f/3.f)),
+                    glm::vec2(1.f, 1.f/3.f)),
     // Top v0,v5,v6,v0.5    
 
     Vertex3D(glm::vec3(0.5, 0.5, 0.5), 
@@ -78,16 +78,16 @@ const Vertex3D vertices[] = {
 
     Vertex3D(glm::vec3(0.5, -0.5, -0.5), 
                 glm::vec3(0, 0,-1),
-                glm::vec2(1.f, 1.f/3.f)), 
+                glm::vec2(0.f, 2.f/3.f)), 
         Vertex3D(glm::vec3(-0.5, -0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec2(0.f, 1.f/3.f)),  
+                    glm::vec2(1.f, 2.f/3.f)),  
         Vertex3D(glm::vec3(-0.5, 0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec2(0.f, 2.f/3.f)), 
+                    glm::vec2(1.f, 1.f/3.f)), 
         Vertex3D(glm::vec3(0.5, 0.5, -0.5), 
                     glm::vec3(0, 0,-1),
-                    glm::vec2(1.f, 2.f/3.f))
+                    glm::vec2(0.f, 1.f/3.f))
     };
 
 const uint32_t indices[] = {
