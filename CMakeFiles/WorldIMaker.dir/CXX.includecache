@@ -6,9 +6,6 @@
 
 #IncludeRegexTransform: 
 
-<<<<<<< HEAD
-/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
-=======
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/FreeflyCamera.hpp
 ../lib/glimac/include/glm.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
@@ -36,6 +33,8 @@
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/typeCube.hpp
 ../include/pinceau.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/pinceau.hpp
+../include/skybox.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/skybox.hpp
 
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/cube.hpp
 GL/glew.h
@@ -84,7 +83,6 @@ myshader.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/myshader.hpp
 
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/myshader.hpp
->>>>>>> master
 string
 -
 GL/glew.h
@@ -98,11 +96,6 @@ fstream
 ../lib/glimac/include/glm.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
-<<<<<<< HEAD
-/home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
-GL/glew.h
--
-=======
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/pinceau.hpp
 ../lib/glimac/include/SDLWindowManager.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
@@ -119,20 +112,22 @@ cube.hpp
 myshader.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/myshader.hpp
 
-/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/texture.hpp
->>>>>>> master
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/skybox.hpp
+GL/glew.h
+-
 string
 -
 ../lib/glimac/include/glm.hpp
-<<<<<<< HEAD
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 myshader.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/myshader.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/texture.hpp
+string
+-
+GL/glew.h
+-
 ../lib/glimac/include/glm.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
-=======
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 ../lib/glimac/include/Image.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
@@ -142,7 +137,6 @@ myshader.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/vertex.hpp
 ../lib/glimac/include/glm.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
->>>>>>> master
 
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 string
@@ -168,9 +162,6 @@ Shader.hpp
 FilePath.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 
-<<<<<<< HEAD
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
-=======
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
 cstdint
 -
@@ -188,7 +179,6 @@ FilePath.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
->>>>>>> master
 ../../glm/glm.hpp
 -
 ../../glm/gtc/matrix_transform.hpp
@@ -202,14 +192,6 @@ FilePath.hpp
 ../../glm/gtc/random.hpp
 -
 
-<<<<<<< HEAD
-/home/margaux/Documents/S3_OPENGL_Projet/src/skybox.cpp
-../include/skybox.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
-../include/vertex.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
-vector
-=======
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/FreeflyCamera.cpp
 ../include/FreeflyCamera.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/FreeflyCamera.hpp
@@ -218,10 +200,7 @@ vector
 math.h
 -
 iostream
->>>>>>> master
 -
-../lib/glimac/include/Image.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
 
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/cube.cpp
 ../include/cube.hpp
@@ -288,6 +267,16 @@ iostream
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/selector.hpp
 ../include/vertex.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/vertex.hpp
+
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/skybox.cpp
+../include/skybox.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/skybox.hpp
+../include/vertex.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/vertex.hpp
+vector
+-
+../lib/glimac/include/Image.hpp
+/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
 
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/texture.cpp
 ../include/texture.hpp
