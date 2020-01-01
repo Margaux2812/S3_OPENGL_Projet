@@ -32,7 +32,6 @@ void Pinceau::handleEvents(const SDLKey e){
         default:
         break;
     }
-    std::cout << m_typeSelected << std::endl;
 }
 
 bool Pinceau::operator==(const typeCube type){

@@ -51,6 +51,15 @@ void FreeflyCamera::rotateUp(const float degrees){
 }
 void FreeflyCamera::rotateLeft(const float degrees){
 	m_fTheta += glm::radians(degrees);
+    std::cout << m_fTheta << std::endl;
+
+    /*On peut faire une rotation que jusqu'à regarder le sol, ou regarder le ciel*/
+    if(m_fTheta < -1.41f){
+        m_fTheta = -1.41f;
+    }else if(m_fTheta > 1.57){
+        m_fTheta=1.57;
+    }
+
 	m_FrontVector = glm::vec3(std::cos(m_fTheta)*std::sin(m_fPhi), 
 							  std::sin(m_fTheta),
 							  std::cos(m_fTheta)*std::cos(m_fPhi));

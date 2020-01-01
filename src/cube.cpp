@@ -298,10 +298,7 @@ bool Cube::addCube(const glm::vec3 position){
     bool canAdd = true;
     if(m_type == LIGHT && m_positionsCubes.size() >= 4){
         canAdd = false;
-        std::cout << m_positionsCubes[0] << std::endl;
-        std::cout << m_positionsCubes[1] << std::endl;
-        std::cout << m_positionsCubes[2] << std::endl;
-        std::cout << m_positionsCubes[3] << std::endl;
+        //On ne peut avoir que 4 lumieres positionnelles
     }
     if(exists == -1 && canAdd){
         m_positionsCubes.push_back(position);

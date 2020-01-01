@@ -38,6 +38,12 @@ fstream
 ../lib/glimac/include/glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
+/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
+../lib/glimac/include/SDLWindowManager.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
+typeCube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
+
 /home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
 eigen3/Eigen/Dense
 -
@@ -106,6 +112,12 @@ iostream
 fstream
 -
 string
+-
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp
+../include/pinceau.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
+iostream
 -
 
 lib/glm/common.hpp
