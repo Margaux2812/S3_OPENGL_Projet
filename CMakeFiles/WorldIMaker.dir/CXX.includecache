@@ -225,6 +225,7 @@ FilePath.hpp
 -
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/skybox.cpp
 ../include/skybox.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/include/skybox.hpp
@@ -235,6 +236,30 @@ vector
 ../lib/glimac/include/Image.hpp
 /home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
 =======
+=======
+/home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp
+../include/FreeflyCamera.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
+../include/cube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+math.h
+-
+iostream
+-
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp
+../include/cube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+iostream
+-
+fstream
+-
+string
+-
+
+>>>>>>> master
 /home/margaux/Documents/S3_OPENGL_Projet/src/main.cpp
 GL/glew.h
 -
@@ -252,6 +277,18 @@ cstddef
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
 ../include/all.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/all.hpp
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp
+../include/pinceau.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
+iostream
+-
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
+../include/selector.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/src/world.cpp
 ../include/world.hpp

@@ -2,7 +2,7 @@
 
 World::World()
 {
-    for(int i=0; i!=LEAF; ++i){
+    for(int i=0; i!=REACHEND; ++i){
 	    m_allCubes.push_back(new Cube((typeCube)i));
     }
 }
@@ -53,7 +53,7 @@ void World::addCube(const glm::vec3 position, const typeCube typePinceau){
 }
 
 void World::changeNightMode(){
-	for(int i=0; i!=LEAF; ++i){
+	for(int i=0; i!=REACHEND; ++i){
 	    m_allCubes[i]->changeNightMode();
     }
 }

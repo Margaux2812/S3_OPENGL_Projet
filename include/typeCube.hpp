@@ -6,5 +6,6 @@ enum typeCube{
     SAND,
     WATER,
     GRASS,
-    LEAF
+    LEAF,
+    REACHEND
 };
