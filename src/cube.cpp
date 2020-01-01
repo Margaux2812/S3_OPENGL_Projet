@@ -187,7 +187,6 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
     m_texture->bind();
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
-
     //Dernier paramètre est nb de cubes
     glDrawElementsInstanced(GL_TRIANGLES, 36, GL_UNSIGNED_INT, (void*) 0, m_positionsCubes.size());
 
@@ -215,18 +214,18 @@ void Cube::drawLights(Cube lumieres){
 
 Texture* Cube::getTexture(){
     switch(m_type){
-        case LIGHT: return new Texture("assets/textures/light.jpg");
+        case LIGHT:  return new Texture("assets/textures/light.jpg");
         break;
-        case GRASS: return new Texture("assets/textures/grass.png");
+        case GRASS:  return new Texture("assets/textures/grass.png");
         break;
-        case WATER : return new Texture("assets/textures/water.png");
+        case WATER :  return new Texture("assets/textures/water.png");
         break;
         case SAND : return new Texture("assets/textures/sand.jpg");
         break;
         case LEAF : return new Texture("assets/textures/leaf.png");
         break;
         case GROUND :
-        default: return new Texture("assets/textures/cubeTerre.jpg");
+        default:   return new Texture("assets/textures/cubeTerre.jpg");
         break;
     }
 }

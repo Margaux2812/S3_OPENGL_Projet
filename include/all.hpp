@@ -9,3 +9,4 @@
 #include "../include/typeCube.hpp"
 #include "../include/pinceau.hpp"
 #include "../include/skybox.hpp"
+#include "../include/world.hpp"
