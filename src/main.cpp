@@ -40,7 +40,7 @@ int main(int argc, char** argv) {
     Cube cubesFeuilles(LEAF);
     Selector selector;
 
-    ////MAP WORLD***////
+    ///////MAP WORLD///////
 
     glm::mat4 MVMatrix = glm::translate(
         glm::mat4(),
