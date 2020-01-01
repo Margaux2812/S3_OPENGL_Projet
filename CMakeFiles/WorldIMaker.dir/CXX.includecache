@@ -6,30 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
-../lib/glimac/include/glm.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
-../lib/glimac/include/SDLWindowManager.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
-
-/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
-GL/glew.h
--
-../lib/glimac/include/glm.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
-vector
--
-../lib/glimac/include/SDLWindowManager.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
-myshader.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
-typeCube.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
-texture.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
-radialBasisFunctions.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
-
 /home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
 string
 -
@@ -44,21 +20,19 @@ fstream
 ../lib/glimac/include/glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
-eigen3/Eigen/Dense
--
-
-/home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
-string
--
+/home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
 GL/glew.h
+-
+string
 -
 ../lib/glimac/include/glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
-../lib/glimac/include/Image.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
+myshader.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+../lib/glimac/include/glm.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 string
@@ -76,14 +50,6 @@ glm.hpp
 FilePath.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
-cstdint
--
-SDL/SDL.h
--
-glm.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
-
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 ../../glm/glm.hpp
 -
@@ -98,15 +64,15 @@ glm.hpp
 ../../glm/gtc/random.hpp
 -
 
-/home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp
-../include/FreeflyCamera.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
-../include/cube.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
-math.h
+/home/margaux/Documents/S3_OPENGL_Projet/src/skybox.cpp
+../include/skybox.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+vector
 -
-iostream
--
+../lib/glimac/include/Image.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
 
 lib/glm/common.hpp
 detail/func_common.hpp

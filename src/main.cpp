@@ -28,6 +28,7 @@ int main(int argc, char** argv) {
      * HERE SHOULD COME THE INITIALIZATION CODE
      *********************************/
 
+    Skybox skybox;
     Menu menu;
     Pinceau pinceau;
     FreeflyCamera camera;
@@ -115,6 +116,9 @@ int main(int argc, char** argv) {
             glDisable(GL_BLEND);
 
             selector.draw(MVMatrix);
+
+            skybox.draw(MVMatrix);
+
         }else{
             menu.draw();
         }

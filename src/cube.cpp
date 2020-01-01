@@ -163,6 +163,7 @@ Cube::~Cube(){
     //glDeleteProgram(m_shaders);
 
 	glDeleteBuffers(1, &m_vbo);
+    glDeleteBuffers(1, &vboAll);
     glDeleteVertexArrays(1, &m_vao);
 }
 

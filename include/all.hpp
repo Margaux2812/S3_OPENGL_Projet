@@ -8,3 +8,4 @@
 #include "../include/texture.hpp"
 #include "../include/typeCube.hpp"
 #include "../include/pinceau.hpp"
+#include "../include/skybox.hpp"

@@ -379,6 +379,33 @@ src/selector.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/selector.cpp.s
 .PHONY : src/selector.cpp.s
 
+src/skybox.o: src/skybox.cpp.o
+
+.PHONY : src/skybox.o
+
+# target to build an object file
+src/skybox.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o
+.PHONY : src/skybox.cpp.o
+
+src/skybox.i: src/skybox.cpp.i
+
+.PHONY : src/skybox.i
+
+# target to preprocess a source file
+src/skybox.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/skybox.cpp.i
+.PHONY : src/skybox.cpp.i
+
+src/skybox.s: src/skybox.cpp.s
+
+.PHONY : src/skybox.s
+
+# target to generate assembly for a file
+src/skybox.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/skybox.cpp.s
+.PHONY : src/skybox.cpp.s
+
 src/texture.o: src/texture.cpp.o
 
 .PHONY : src/texture.o
@@ -470,6 +497,9 @@ help:
 	@echo "... src/selector.o"
 	@echo "... src/selector.i"
 	@echo "... src/selector.s"
+	@echo "... src/skybox.o"
+	@echo "... src/skybox.i"
+	@echo "... src/skybox.s"
 	@echo "... src/texture.o"
 	@echo "... src/texture.i"
 	@echo "... src/texture.s"
