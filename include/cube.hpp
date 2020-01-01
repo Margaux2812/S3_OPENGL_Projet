@@ -51,7 +51,8 @@ class Cube{
 
 		///// EVENT MANAGER /////
 
-		void handleEvents(const SDLKey e, const glm::vec3 position, typeCube type);
+		void handleEvents(const SDLKey e, const glm::vec3 position, const typeCube type);
+		void changeNightMode();
 		int findFromPosition(const glm::vec3 position);
 		void updateGPU();
 
