@@ -94,10 +94,9 @@ int main(int argc, char** argv) {
 
             MVMatrix = camera.getViewMatrix();
 
+            skybox.draw(MVMatrix);
             world.draw(MVMatrix);
             selector.draw(MVMatrix);
-
-            skybox.draw(MVMatrix);
 
         }else{
             menu.draw();
