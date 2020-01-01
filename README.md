@@ -18,8 +18,7 @@ Puis on fait tout simplement :
 ************************* TO DO ******************************
 
 CUBE : 
-- Replace ne remplace pas vraiment mais affiche par dessus ??
---> J'ai l'impression que le shader "sable" est par dessus tous les autres à chaque fois (Test à faire)
+- REPLACE : pas ouf, ne remplace pas à chaque fois (on le voit en faisant dig). Terre < Herbe < Eau < Sable
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Faire les propriétés différentes`
 
 USER INTERFACE : 
