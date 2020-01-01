@@ -3,6 +3,13 @@
 
 CMakeFiles/WorldIMaker.dir/src/FreeflyCamera.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp

@@ -78,7 +78,7 @@ Selector::Selector()
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
-    m_positionCube.push_back(glm::vec3(0, -1, -3));
+    m_positionCube.push_back(glm::vec3(25.f, 1.f, 25.f));
 
     // on crée le buffer
     glGenBuffers(1, &vboAll); 

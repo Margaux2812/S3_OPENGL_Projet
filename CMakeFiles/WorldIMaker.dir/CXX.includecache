@@ -6,6 +6,12 @@
 
 #IncludeRegexTransform: 
 
+/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
+../lib/glimac/include/glm.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
+../lib/glimac/include/SDLWindowManager.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
+
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
 GL/glew.h
 -
@@ -38,15 +44,15 @@ fstream
 ../lib/glimac/include/glm.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
-../lib/glimac/include/SDLWindowManager.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
-typeCube.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
-
 /home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
 eigen3/Eigen/Dense
 -
+
+/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+cube.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
+myshader.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
 string
@@ -102,23 +108,21 @@ glm.hpp
 ../../glm/gtc/random.hpp
 -
 
-/home/margaux/Documents/S3_OPENGL_Projet/src/cube.cpp
+/home/margaux/Documents/S3_OPENGL_Projet/src/FreeflyCamera.cpp
+../include/FreeflyCamera.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
 ../include/cube.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
-../include/vertex.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
+math.h
+-
 iostream
--
-fstream
--
-string
 -
 
-/home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp
-../include/pinceau.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
-iostream
--
+/home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
+../include/selector.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+../include/vertex.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
 
 lib/glm/common.hpp
 detail/func_common.hpp

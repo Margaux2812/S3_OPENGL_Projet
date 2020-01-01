@@ -37,9 +37,6 @@ SELECTEUR :
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Avec la souris`
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `le voir à tout moment`
 
-CAMERA :
-- ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Commencer au milieu du monde`
-
 LUMIERES :
 - lumiere ponctuelle
 

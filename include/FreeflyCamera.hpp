@@ -25,6 +25,7 @@ public:
 	FreeflyCamera();
 
 	//Méthodes
+	glm::vec3 initialPos();
 	void computeDirectionVectors(glm::vec3 &m_FrontVector, glm::vec3 &m_LeftVector, glm::vec3 &m_UpVector, const float m_fPhi, const float m_fTheta);
 	void moveUp(const float t);
 	void moveLeft(const float t);

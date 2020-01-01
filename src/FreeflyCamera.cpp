@@ -1,4 +1,5 @@
 #include "../include/FreeflyCamera.hpp"
+#include "../include/cube.hpp"
 #include <math.h>
 #include <iostream>
 /*******************************************/
@@ -11,13 +12,17 @@ et un mode createur où on peut tout faire
 
 
 FreeflyCamera::FreeflyCamera(){
-	m_Position = glm::vec3(0.f, 0.f, 0.f);
+	m_Position = initialPos();
 	m_fPhi = M_PI;
 	m_fTheta = 0.f;
 	computeDirectionVectors(m_FrontVector, m_LeftVector, m_UpVector, m_fPhi, m_fTheta);
 }
 
 //Méthodes
+glm::vec3 FreeflyCamera::initialPos(){
+    return glm::vec3(25.f, 1.f, 25.f);
+}
+
 void FreeflyCamera::computeDirectionVectors(glm::vec3 &m_FrontVector, glm::vec3 &m_LeftVector, glm::vec3 &m_UpVector, const float m_fPhi, const float m_fTheta){
 	m_FrontVector = glm::vec3(
 		std::cos(m_fTheta)*std::sin(m_fPhi), 
