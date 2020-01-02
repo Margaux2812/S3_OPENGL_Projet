@@ -13077,15 +13077,15 @@ div#notebook {
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Radial-Basis-Functions">Radial Basis Functions<a class="anchor-link" href="#Radial-Basis-Functions">&#182;</a></h1><h2 id="Ce-qu'on-doit-retenir-du-cours">Ce qu'on doit retenir du cours<a class="anchor-link" href="#Ce-qu'on-doit-retenir-du-cours">&#182;</a></h2><p><em>(en gros les seuls trucs important)</em></p>
+<h1 id="Radial-Basis-Functions">Radial Basis Functions<a class="anchor-link" href="#Radial-Basis-Functions">&#182;</a></h1><h2 id="Ce-qu'on-doit-retenir-du-cours">Ce qu'on doit retenir du cours<a class="anchor-link" href="#Ce-qu'on-doit-retenir-du-cours">&#182;</a></h2><p><em>(les points les plus importants)</em></p>
 <p>En gros un fonction radial ça va servir à quoi ? On va dire par exemple, <strong>"Tiens, au point (1, 1) je veux qu'il y ait une montagne ! Et qu'elle soit haute de 10 !"</strong><br>
 Et la fonction radiale va permettre à ce que les cubes autour forment une montagne, et qu'il n'y ait pas juste un pic quoi.</p>
-<h3 id="Mais-du-coup-comment-on-fait-&#231;a-?-Parce-que-le-cours...MDR">Mais du coup comment on fait &#231;a ? Parce que le cours...MDR<a class="anchor-link" href="#Mais-du-coup-comment-on-fait-&#231;a-?-Parce-que-le-cours...MDR">&#182;</a></h3><p>Alors, easy easy, on va tout décrypter ! 
-Chaque point de la map va être calculé à partir des points appelés <strong>de contrôle</strong> pour que tout soit harmonieux et joli ! Pour cela, on a une fonction dans le cours qui est appelée $g(x)$ et qui se note :<br>
+<h3 id="Mais-du-coup-comment-on-fait-&#231;a-?-Parce-que-le-cours...MDR">Mais du coup comment on fait &#231;a ?<a class="anchor-link" href="#Mais-du-coup-comment-on-fait-&#231;a-?-Parce-que-le-cours...MDR">&#182;</a></h3><p>Alors, on va tout décrypter ! 
+Chaque point de la map va être calculé à partir des points appelés <strong>de contrôle</strong> pour que tout soit harmonieux et esthétique ! Pour cela, on a une fonction dans le cours qui est appelée $g(x)$ et qui se note :<br>
 $$
 g(x) = \sum_{i=1}^{k} \omega_i * \Phi\left(|x - x_i|\right)
 $$
-Ouhlala ça parait compliqué... Alors il faut comprendre que cette formule, c'est le cours, on va aps essayer de comprendre pourquoi la somme, pourquoi les omega et tout x) On va juste retenir qu'ici on a des $\omega$, qu'on ne semble pas connaitre, une fonction qui s'appelle $\Phi$ et qui prend en paramètre le x qu'on cherche et les points de contrôle (les $x_i$).<br>
+Ouhlala ça parait compliqué... Alors il faut comprendre que cette formule, c'est le cours, on va pas essayer de démontrer pourquoi g(x) est égal à tout ça. On va juste retenir qu'ici on a des $\omega$, qu'on ne semble pas connaitre, une fonction qui s'appelle $\Phi$ et qui prend en paramètre le x qu'on cherche et les points de contrôle (les $x_i$).<br>
 Nous ce qui nous intéresse c'est <strong>Comment coder tout ça ?</strong><br>
 En gros il faut retenir qu'on va avoir :</p>
 <ol>
@@ -13095,7 +13095,7 @@ En gros il faut retenir qu'on va avoir :</p>
     <li>Des $\Phi$</li>
 </ol><h3 id="Comment-on-code-tout-&#231;a-?">Comment on code tout &#231;a ?<a class="anchor-link" href="#Comment-on-code-tout-&#231;a-?">&#182;</a></h3><p>Avec Eigen ! Eigen, pour rappel, ça prend des Matrices et des vecteurs, donc on va essayer de voir ici en quoi c'est pertinent.<br>
 Déjà, si tu lis ça j'espère que tu as le cours du prof ouvert à côté sinon : <a href="http://www-igm.univ-mlv.fr/~vnozick/divers/rbf.pdf" >Voilà</a><br>
-En vrai on l'utilise pas tout de suite, mais après c'est utile. Déjà on va commencer doucement.</p>
+On ne l'utilise pas tout de suite, mais après c'est utile. Commençons doucement.</p>
 
 </div>
 </div>
@@ -13123,8 +13123,8 @@ $$
 \end{pmatrix}
 $$
 On a donc notre premier point qui a comme valeur de contrôle $u_1$, etc...<br>
-OK ! Ca faisait beaucoup alors résumé !</p>
-<p><em>Mais avant mini rappel pour Eigen, pour déclarer une matrice, on écrit Eigen::MatrixXd maMatrice(hauteur, largeur) et Eigen::VectorXd monVecteur(taille).</em></p>
+OK ! Résumons tout ça !</p>
+<p><em>Mais avant, voici un petit rappel sur Eigen : pPour déclarer une matrice, on écrit Eigen::MatrixXd maMatrice(hauteur, largeur) et Eigen::VectorXd monVecteur(taille).</em></p>
 <p>DONC<br>
 On a au début 3 variables :</p>
 <p><ul>
@@ -13159,8 +13159,8 @@ On a au début 3 variables :</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Maintenant qu'est-ce qu'on doit faire ? Alors on regarde le cours déjà. On regarde que le <strong>4.</strong>, le reste vraiment, osef. Il est écrit que pour trouver la hauteur d'un point donc, on doit utiliser des $\omega$ et des $\Phi$ de bidule. On y va un par un donc :</p>
-<h5 id="a.-Trouver-les-$\omega$">a. Trouver les $\omega$<a class="anchor-link" href="#a.-Trouver-les-$\omega$">&#182;</a></h5><p>Page 3, on explique un truc très simple en fait. Ces $\omega$, c'est des valeurs qui vont être trouvées grâce à nos contraintes ! On remarque d'ailleurs qu'ils sont sous la forme d'un <code>Eigen::VectorXf</code>. Il est écrit qu'une matrice composée de $\Phi(|x_i - x_j|)$ multiplié par les $\omega$ est égal à nos valeurs $u_i$.<br>
+<p>Maintenant qu'est-ce qu'on doit faire ? Alors on regarde le cours numéro <strong>4.</strong> en premier lieu. Il est écrit que pour trouver la hauteur d'un point donc, on doit utiliser des $\omega$ et des $\Phi$. On y va un par un donc :</p>
+<h5 id="a.-Trouver-les-$\omega$">a. Trouver les $\omega$<a class="anchor-link" href="#a.-Trouver-les-$\omega$">&#182;</a></h5><p>Page 3, on explique un truc très simple en fait. Ces $\omega$ sont des valeurs qui vont être trouvées grâce à nos contraintes ! On remarque d'ailleurs qu'ils sont sous la forme d'un <code>Eigen::VectorXf</code>. Il est écrit qu'une matrice composée de $\Phi(|x_i - x_j|)$ multiplié par les $\omega$ est égal à nos valeurs $u_i$.<br>
 On va donc créer une fonction que j'ai personnellement appelé <code>findOmega</code> qui va donc nous renvoyer les omegas, c'est-à-dire un <code>Eigen::VectorXf</code> et qui prend en paramètre nos points de contrôle, et nos valeurs. On a donc :</p>
 
 </div>
@@ -13216,7 +13216,7 @@ On va donc déclarer A comme ceci :</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>On veut ensuite la remplir avec les $\Phi(|x_i - x_j|)$, où i et j nous permettent en fait de parcourir les index des colonnes et lignes de la matrice ! (voir page 3 du cours toujours)
+<p>On veut ensuite la remplir avec les $\Phi(|x_i - x_j|)$, où i et j nous permettent en fait de parcourir les index des colonnes et lignes de la matrice ! (Voir page 3 du cours toujours).
 On va donc simplement faire deux boucles <strong>for</strong> et remplir la case avec $\Phi(|x_i - x_j|)$ (pour l'instant on l'écrit juste comme ça, on verra après comment calculer).  Ce qui nous donne :</p>
 
 </div>
@@ -13242,9 +13242,9 @@ On va donc simplement faire deux boucles <strong>for</strong> et remplir la case
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mais en fait c'est quoi <code>xi</code> et <code>xj</code> ? Bah c'est dans nos points de contrôle ! Donc c'est notre points de contrôle à l'index i et celui à l'index j. Comme on l'a vu, ça veut donc dire à la <strong>ligne</strong> i, et la <strong>ligne</strong> j. On le notera donc <code>ptsDeControle.row(i)</code> et <code>ptsDeControle.row(j)</code>. Ensuite qu'est-ce que la valeur absolue de la différence entre deux points ? Bah en fait c'est tout bêtement la norme, et ça Eigen sait le faire ! (On va appeler cette technique <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/24/triangle-icon.png" />)<br>
+<p>Mais en fait c'est quoi <code>xi</code> et <code>xj</code> ? Bah c'est dans nos points de contrôle ! C'est notre point de contrôle à l'index i et celui à l'index j. Comme on l'a vu, ça veut donc dire à la <strong>ligne</strong> i, et la <strong>ligne</strong> j. On le notera donc <code>ptsDeControle.row(i)</code> et <code>ptsDeControle.row(j)</code>. Ensuite qu'est-ce que la valeur absolue de la différence entre deux points ? Bah en fait c'est tout bêtement la norme, et ça Eigen sait le faire ! (On va appeler cette technique <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/24/triangle-icon.png" />)<br>
 Enfin on renvoie donc notre matrice inversée multipliée par nos valeurs.<br>
-Donc ouhla c'était compliqué mais on obtient enfin notre première fonction complète qui nous permet d'obtenir les $\omega$ !</p>
+Donc c'était compliqué mais on obtient enfin notre première fonction complète qui nous permet d'obtenir les $\omega$ !</p>
 
 </div>
 </div>
@@ -13277,8 +13277,8 @@ Donc ouhla c'était compliqué mais on obtient enfin notre première fonction co
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Mais attendez... Il y a toujours cette fonction $\Phi$ là ? O.o<br>
-Bah c'est notre fonction radiale ! Alors moi j'ai pris pareil qu'Enguerrand pour l'instant, une gaussienne, qui se note $\Phi(a) = e^{-0.2a^2}$.<br>
+<p>Mais attendez... Il y a toujours cette fonction $\Phi$ !<br>
+C'est notre fonction radiale ! Alors moi j'ai pris pour l'instant, j'ai pris une gaussienne, qui se note $\Phi(a) = e^{-0.2a^2}$.<br>
 Donc petite fonction facile à coder, qui prend en paramètre un float et qui renvoie un float.</p>
 
 </div>
@@ -13432,7 +13432,7 @@ On commence donc par écrire :</p>
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Enfin, qu'est-ce qu'on va faire dans notre boucle ? Eh bien on somme nos $\omega$ avec nos $\Phi$. Vous vous rappelez de la méthode <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/24/triangle-icon.png" /> ? Bah on la réutilise ici ! Sauf que cette fois c'est notre point par rapport à nos points de contrôle.<br>
+<p>Enfin, qu'est-ce qu'on va faire dans notre boucle ? Eh bien on somme nos $\omega$ avec nos $\Phi$. Vous vous rappelez de la méthode <img src="http://icons.iconarchive.com/icons/custom-icon-design/pretty-office-9/24/triangle-icon.png" /> ? On la réutilise ici ! Sauf que cette fois c'est notre point par rapport à nos points de contrôle.<br>
 ATTENTION ! Eigen met les vecteurs sous la forme
 $$
 \begin{pmatrix}
@@ -13479,7 +13479,7 @@ donc on doit penser à transposer avant de soustraire ! On obtient donc notre fo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p>Vous remarquerez qu'à la fin je renvoie <code>round(value)</code> et pas juste value parce que je veux que mes cubes restent à des hauteurs entières.</p>
+<p>Vous remarquerez qu'à la fin je renvoies <code>round(value)</code> et pas juste value parce que je veux que mes cubes restent à des hauteurs entières.</p>
 
 </div>
 </div>
@@ -13487,7 +13487,7 @@ donc on doit penser à transposer avant de soustraire ! On obtient donc notre fo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h5 id="d.-Du-coup-c'est-quoi-notre-fonction-g&#233;n&#233;rale-?">d. Du coup c'est quoi notre fonction g&#233;n&#233;rale ?<a class="anchor-link" href="#d.-Du-coup-c'est-quoi-notre-fonction-g&#233;n&#233;rale-?">&#182;</a></h5><p>Bah du coup là vous devriez tout comprendre :</p>
+<h5 id="d.-Du-coup-c'est-quoi-notre-fonction-g&#233;n&#233;rale-?">d. Du coup c'est quoi notre fonction g&#233;n&#233;rale ?<a class="anchor-link" href="#d.-Du-coup-c'est-quoi-notre-fonction-g&#233;n&#233;rale-?">&#182;</a></h5><p>Là vous devriez tout comprendre :</p>
 
 </div>
 </div>
@@ -13519,7 +13519,7 @@ donc on doit penser à transposer avant de soustraire ! On obtient donc notre fo
 <div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h4 id="3.-Mdr-je-mets-&#231;a-o&#249;-dans-mon-code-g&#233;n&#233;ral-?">3. Mdr je mets &#231;a o&#249; dans mon code g&#233;n&#233;ral ?<a class="anchor-link" href="#3.-Mdr-je-mets-&#231;a-o&#249;-dans-mon-code-g&#233;n&#233;ral-?">&#182;</a></h4><p>Du coup moi j'ai appelé ce code dans une fonction <code>loadMonde()</code> dans ma classe Cube.
+<h4 id="3.-Mdr-je-mets-&#231;a-o&#249;-dans-mon-code-g&#233;n&#233;ral-?">3. Je mets &#231;a o&#249; dans mon code g&#233;n&#233;ral ?<a class="anchor-link" href="#3.-Mdr-je-mets-&#231;a-o&#249;-dans-mon-code-g&#233;n&#233;ral-?">&#182;</a></h4><p>Du coup moi j'ai appelé ce code dans une fonction <code>loadMonde()</code> dans ma classe Cube.
 Je déclare une map, des points de contrôle des valeurs.</p>
 
 </div>
@@ -13554,7 +13554,7 @@ Je déclare une map, des points de contrôle des valeurs.</p>
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Puis je remplis mon tableau de cube avec un glm::vec3 grâce à une triple boucle <strong>for</strong> où x et z sont incrémentés bêtement.<br>
-Pour y, je le fait commencer du "fond" de mon monde, pour remplir jusqu'à la hauteur souhaitée, c'est-à-dire <code>map(x, z)</code>. J'obtiens donc :</p>
+Pour y, je le fais commencer du "fond" de mon monde, pour remplir jusqu'à la hauteur souhaitée, c'est-à-dire <code>map(x, z)</code>. J'obtiens donc :</p>
 
 </div>
 </div>
