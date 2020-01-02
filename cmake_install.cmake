@@ -1,4 +1,4 @@
-# Install script for directory: /home/margaux/Documents/S3_OPENGL_Projet
+# Install script for directory: /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -32,14 +32,9 @@ if(NOT DEFINED CMAKE_INSTALL_SO_NO_EXE)
   set(CMAKE_INSTALL_SO_NO_EXE "1")
 endif()
 
-# Is this installation the result of a crosscompile?
-if(NOT DEFINED CMAKE_CROSSCOMPILING)
-  set(CMAKE_CROSSCOMPILING "FALSE")
-endif()
-
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/cmake_install.cmake")
+  include("/home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/lib/glimac/cmake_install.cmake")
 
 endif()
 
@@ -51,5 +46,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/margaux/Documents/S3_OPENGL_Projet/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

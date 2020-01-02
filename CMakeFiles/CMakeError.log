@@ -1,22 +1,25 @@
 Determining if the pthread_create exist failed with the following output:
-Change Dir: /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp
+Change Dir: /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_24197/fast"
-/usr/bin/make -f CMakeFiles/cmTC_24197.dir/build.make CMakeFiles/cmTC_24197.dir/build
-make[1] : on entre dans le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o
-/usr/bin/cc    -o CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o   -c /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c
-Linking C executable cmTC_24197
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_24197.dir/link.txt --verbose=1
-/usr/bin/cc      -rdynamic CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o  -o cmTC_24197 
-/usr/bin/ld : CMakeFiles/cmTC_24197.dir/CheckSymbolExists.c.o : dans la fonction « main » :
+Run Build Command:"/usr/bin/make" "cmTryCompileExec826574251/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec826574251.dir/build.make CMakeFiles/cmTryCompileExec826574251.dir/build
+make[1] : on entre dans le répertoire « /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
+/usr/local/bin/cmake -E cmake_progress_report /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec826574251.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTryCompileExec826574251.dir/CheckSymbolExists.c.o   -c /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTryCompileExec826574251
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec826574251.dir/link.txt --verbose=1
+/usr/bin/cc       CMakeFiles/cmTryCompileExec826574251.dir/CheckSymbolExists.c.o  -o cmTryCompileExec826574251 -rdynamic 
+CMakeFiles/cmTryCompileExec826574251.dir/CheckSymbolExists.c.o : Dans la fonction « main » :
 CheckSymbolExists.c:(.text+0x1b) : référence indéfinie vers « pthread_create »
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_24197.dir/build.make:87: cmTC_24197] Error 1
-make[1] : on quitte le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_24197/fast] Error 2
+CMakeFiles/cmTryCompileExec826574251.dir/build.make:88 : la recette pour la cible « cmTryCompileExec826574251 » a échouée
+make[1]: *** [cmTryCompileExec826574251] Erreur 1
+make[1] : on quitte le répertoire « /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
+Makefile:117 : la recette pour la cible « cmTryCompileExec826574251/fast » a échouée
+make: *** [cmTryCompileExec826574251/fast] Erreur 2
 
-File /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+File /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
 /* */
 #include <pthread.h>
 
@@ -32,20 +35,23 @@ int main(int argc, char** argv)
 }
 
 Determining if the function pthread_create exists in the pthreads failed with the following output:
-Change Dir: /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp
+Change Dir: /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp
 
-Run Build Command:"/usr/bin/make" "cmTC_2280c/fast"
-/usr/bin/make -f CMakeFiles/cmTC_2280c.dir/build.make CMakeFiles/cmTC_2280c.dir/build
-make[1] : on entre dans le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-Building C object CMakeFiles/cmTC_2280c.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_2280c.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.13/Modules/CheckFunctionExists.c
-Linking C executable cmTC_2280c
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_2280c.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_2280c.dir/CheckFunctionExists.c.o  -o cmTC_2280c -lpthreads 
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1008360634/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1008360634.dir/build.make CMakeFiles/cmTryCompileExec1008360634.dir/build
+make[1] : on entre dans le répertoire « /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
+/usr/local/bin/cmake -E cmake_progress_report /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1008360634.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTryCompileExec1008360634.dir/CheckFunctionExists.c.o   -c /usr/local/share/cmake-3.2/Modules/CheckFunctionExists.c
+Linking C executable cmTryCompileExec1008360634
+/usr/local/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec1008360634.dir/link.txt --verbose=1
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTryCompileExec1008360634.dir/CheckFunctionExists.c.o  -o cmTryCompileExec1008360634 -rdynamic -lpthreads 
 /usr/bin/ld : ne peut trouver -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_2280c.dir/build.make:87: cmTC_2280c] Error 1
-make[1] : on quitte le répertoire « /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
-make: *** [Makefile:121: cmTC_2280c/fast] Error 2
+CMakeFiles/cmTryCompileExec1008360634.dir/build.make:88 : la recette pour la cible « cmTryCompileExec1008360634 » a échouée
+make[1]: *** [cmTryCompileExec1008360634] Erreur 1
+make[1] : on quitte le répertoire « /home/myriam/Documents/Margaux_OpenGL/S3_OPENGL_Projet/CMakeFiles/CMakeTmp »
+Makefile:117 : la recette pour la cible « cmTryCompileExec1008360634/fast » a échouée
+make: *** [cmTryCompileExec1008360634/fast] Erreur 2
 
 
