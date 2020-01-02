@@ -19,13 +19,17 @@ void World::draw(glm::mat4 MVMatrix){
 	}
     glDisable(GL_BLEND);
 }
-void World::handleEvents(const SDLKey e, const glm::vec3 position, const typeCube typePinceau){
+void World::handleEvents(const SDLKey e, const glm::vec3 position, const typeCube typePinceau, const bool ctrlIsPressed){
 	if(e == SDLK_DELETE){
         for(uint i=0; i<m_allCubes.size(); i++){
         	m_allCubes[i]->deleteCube(position);
         }
 	}else if(e == SDLK_RETURN){
-		addCube(position, typePinceau);
+		if(ctrlIsPressed){
+			replace(position, typePinceau);
+		}else{
+			addCube(position, typePinceau);
+		}
     }else if(e == SDLK_n){
         changeNightMode();
     }
@@ -33,6 +37,13 @@ void World::handleEvents(const SDLKey e, const glm::vec3 position, const typeCub
 	for(uint i=0; i<m_allCubes.size(); i++){
 		m_allCubes[i]->handleEvents(e, position, typePinceau);
 	}
+}
+
+void World::replace(const glm::vec3 position, const typeCube typePinceau){
+	for(uint i=0; i<m_allCubes.size(); i++){
+		m_allCubes[i]->deleteCube(position);
+	}
+	m_allCubes[typePinceau]->addCube(position);
 }
 
 void World::addCube(const glm::vec3 position, const typeCube typePinceau){

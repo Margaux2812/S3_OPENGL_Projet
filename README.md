@@ -18,7 +18,6 @@ Puis on fait tout simplement :
 ************************* TO DO ******************************
 
 CUBE : 
-- REPLACE : pas ouf, ne remplace pas à chaque fois (on le voit en faisant dig). Terre < Herbe < Eau < Sable
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Faire les propriétés différentes`
 
 USER INTERFACE : 

@@ -33,6 +33,7 @@ void displayCommandes(){
     std::cout << "                           - Arrière : L" << std::endl;
     std::cout << "***********************************************" << std::endl;
     std::cout << "Pour manipuler les cubes : - Ajouter   : Entrée" << std::endl;
+    std::cout << "                           - Remplacer : Ctrl+Entrée" << std::endl;
     std::cout << "                           - Supprimer : Del" << std::endl;
     std::cout << "                           - Extrude   : E" << std::endl;
     std::cout << "                           - Dig       : C" << std::endl;

@@ -16,8 +16,9 @@ class World{
 		~World();
 
 		void draw(glm::mat4 MVMatrix);
-		void handleEvents(const SDLKey e, const glm::vec3 position, const typeCube typePinceau);
+		void handleEvents(const SDLKey e, const glm::vec3 position, const typeCube typePinceau, const bool ctrlIsPressed);
 
 		void addCube(const glm::vec3 position, const typeCube typePinceau);
+		void replace(const glm::vec3 position, const typeCube typePinceau);
 		void changeNightMode();
 };
