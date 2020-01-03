@@ -308,12 +308,6 @@ bool Cube::addCube(const glm::vec3 position){
     return 0;
 }
 
-void Cube::replace(const glm::vec3 position){
-    deleteCube(position);
-    m_positionsCubes.push_back(position);
-    updateGPU();
-}
-
 void Cube::deleteCube(const glm::vec3 position){
     int index = findFromPosition(position);
     if(index != -1){

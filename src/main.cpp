@@ -43,6 +43,7 @@ int main(int argc, char** argv) {
 
     // Application loop:
     bool done = false;
+    bool ctrlIsPressed = false;
     while(!done) {
 
         glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
@@ -55,7 +56,9 @@ int main(int argc, char** argv) {
                     menu.changeTo(quit);
                 break;
                 case SDL_KEYDOWN : 
-                    if(e.key.keysym.sym == SDLK_ESCAPE){
+                    if(e.key.keysym.sym == SDLK_LCTRL){
+                        ctrlIsPressed = true;
+                    }else if(e.key.keysym.sym == SDLK_ESCAPE){
                         menu.changeTo(quit);
                     /*Si on appuie sur pause, on met le jeu en pause ou à nouveau en mode play*/
                     }else if(e.key.keysym.sym == SDLK_SPACE && menu != principal){
@@ -65,12 +68,15 @@ int main(int argc, char** argv) {
                         menu.changeTo(inGame);
                     }else if(menu == inGame){
                         pinceau.handleEvents(e.key.keysym.sym);
-                        world.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType());
+                        world.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType(), ctrlIsPressed);
                         selector.handleEvents(e.key.keysym.sym);
                         camera.handleKeyboardEventsDown(e.key.keysym.sym);
                     }
                 break;
                 case SDL_KEYUP:
+                    if(e.key.keysym.sym == SDLK_LCTRL){
+                        ctrlIsPressed = false;
+                    }
                     if(menu == inGame)
                         camera.handleKeyboardEventsUp(e.key.keysym.sym);
                 break;
