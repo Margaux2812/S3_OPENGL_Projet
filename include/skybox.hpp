@@ -16,7 +16,7 @@ private:
 
 	GLuint m_vao;
 	GLuint m_vbo;
-	GLuint m_textureID[1]; //Jour et nuit
+	GLuint m_textureID; //Jour et nuit
 	MyShader* m_shader;
 public:
 	Skybox();
@@ -24,4 +24,5 @@ public:
 
 	void draw(glm::mat4 MVMatrix);
 	void loadTexture();
+	void loadTextureFace(const GLenum side_target, const std::string path);
 };

@@ -287,6 +287,16 @@ void Cube::updateGPU(){
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
+/* TODO : Cube qui tombe ?
+bool Cube::fallingTo(const int index, const glm::vec3 position){
+    if(m_positionsCubes[index].y > position.y){
+        m_positionsCubes[index].y -= 0.1f;
+        return 1;
+    }else{
+        return 0;
+    }
+}*/
+
 
 ///////////////////////////////////////////////////////////////
 ///////////////////////// CUBE MANAGER ////////////////////////
