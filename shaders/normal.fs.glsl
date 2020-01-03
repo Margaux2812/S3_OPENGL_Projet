@@ -42,5 +42,5 @@ void main() {
 
     
 	vec4 globalLuminosity = ambiantLight+DirectionnalLight;
-    fFragColor = texColor*globalLuminosity;
+    fFragColor = texColor*vec4(globalLuminosity.xyz, 1.f);
 }

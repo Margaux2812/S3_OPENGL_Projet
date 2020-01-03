@@ -224,6 +224,8 @@ Texture* Cube::getTexture(){
         break;
         case LEAF : return new Texture("assets/textures/leaf.png");
         break;
+        case BARBARA : return new Texture("assets/textures/Barbara.png");
+        break;
         case GROUND :
         default:   return new Texture("assets/textures/cubeTerre.jpg");
         break;

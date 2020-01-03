@@ -13,6 +13,8 @@ World::~World(){
 
 void World::draw(glm::mat4 MVMatrix){
 	glEnable(GL_BLEND); //Pour la transparence
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); //Pour la transparence
+    
 	//A l'index 0 c'est la lumiere, on dessine que le reste
 	for(uint i=1; i<m_allCubes.size(); i++){
 		m_allCubes[i]->draw(MVMatrix, *m_allCubes[0]);
