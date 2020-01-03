@@ -103,6 +103,8 @@ int main(int argc, char** argv) {
             world.draw(MVMatrix);
             selector.draw(MVMatrix);
 
+            pinceau.draw();
+
         }else{
             menu.draw();
         }

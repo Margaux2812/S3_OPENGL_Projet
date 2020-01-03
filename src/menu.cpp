@@ -62,7 +62,7 @@ Menu::~Menu(){
 void Menu::draw(){
     m_shader->bind();
     m_shader->setUniform1i("u_Texture", 0);
-
+    
     m_texture->bind();
     glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);

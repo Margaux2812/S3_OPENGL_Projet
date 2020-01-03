@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet"
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet"
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles/progress.marks"
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -297,6 +297,33 @@ src/myshader.s: src/myshader.cpp.s
 src/myshader.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s
 .PHONY : src/myshader.cpp.s
+
+src/palette.o: src/palette.cpp.o
+
+.PHONY : src/palette.o
+
+# target to build an object file
+src/palette.cpp.o:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/palette.cpp.o
+.PHONY : src/palette.cpp.o
+
+src/palette.i: src/palette.cpp.i
+
+.PHONY : src/palette.i
+
+# target to preprocess a source file
+src/palette.cpp.i:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/palette.cpp.i
+.PHONY : src/palette.cpp.i
+
+src/palette.s: src/palette.cpp.s
+
+.PHONY : src/palette.s
+
+# target to generate assembly for a file
+src/palette.cpp.s:
+	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/palette.cpp.s
+.PHONY : src/palette.cpp.s
 
 src/pinceau.o: src/pinceau.cpp.o
 
@@ -515,6 +542,9 @@ help:
 	@echo "... src/myshader.o"
 	@echo "... src/myshader.i"
 	@echo "... src/myshader.s"
+	@echo "... src/palette.o"
+	@echo "... src/palette.i"
+	@echo "... src/palette.s"
 	@echo "... src/pinceau.o"
 	@echo "... src/pinceau.i"
 	@echo "... src/pinceau.s"

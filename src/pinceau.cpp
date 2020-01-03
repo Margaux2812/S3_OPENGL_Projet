@@ -1,11 +1,14 @@
 #include "../include/pinceau.hpp"
 #include <iostream>
-Pinceau::Pinceau(){
-	m_typeSelected = GROUND;
+
+Pinceau::Pinceau()
+:m_typeSelected(GROUND),
+m_palette(new Palette())
+{
 }
 
 Pinceau::~Pinceau(){
-
+        
 }
 
 void Pinceau::handleEvents(const SDLKey e){
@@ -35,8 +38,13 @@ void Pinceau::handleEvents(const SDLKey e){
         default: //m_typeSelected = GROUND;
         break;
     }
+    m_palette->update(m_typeSelected);
 }
 
 bool Pinceau::operator==(const typeCube type){
 	return type == m_typeSelected;
+}
+
+void Pinceau::draw(){
+    m_palette->draw();
 }
