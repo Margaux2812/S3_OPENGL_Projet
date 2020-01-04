@@ -16,12 +16,15 @@ private:
 
 	GLuint m_vao;
 	GLuint m_vbo;
-	GLuint m_textureID[1]; //Jour et nuit
+	GLuint m_textureID; //Jour et nuit
 	MyShader* m_shader;
+	bool isDay;
+
 public:
 	Skybox();
 	~Skybox();
 
+	void updateSky();
 	void draw(glm::mat4 MVMatrix);
 	void loadTexture();
 };

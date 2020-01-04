@@ -8,7 +8,7 @@ m_palette(new Palette())
 }
 
 Pinceau::~Pinceau(){
-        
+    delete m_palette;
 }
 
 void Pinceau::handleEvents(const SDLKey e){

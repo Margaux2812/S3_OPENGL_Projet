@@ -221,6 +221,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/pinceau.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/radialBasisFunctions.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/selector.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/skybox.hpp
+CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/sound.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/typeCube.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/vertex.hpp
@@ -330,9 +331,6 @@ CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Image.hpp
-CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Program.hpp
-CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/SDLWindowManager.hpp
-CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Shader.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/glm.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: src/menu.cpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glm/common.hpp
@@ -932,6 +930,9 @@ CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec3.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec4.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vector_relational.hpp
 
+CMakeFiles/WorldIMaker.dir/src/sound.cpp.o: include/sound.hpp
+CMakeFiles/WorldIMaker.dir/src/sound.cpp.o: src/sound.cpp
+
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: lib/glimac/include/Image.hpp
@@ -1126,9 +1127,14 @@ CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o: lib/glm/vector_relational.hpp
 
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/cube.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/myshader.hpp
+CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/palette.hpp
+CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/pinceau.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/radialBasisFunctions.hpp
+CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/selector.hpp
+CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/skybox.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/typeCube.hpp
+CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/world.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: lib/glimac/include/Image.hpp

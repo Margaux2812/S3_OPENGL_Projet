@@ -4,8 +4,8 @@ in vec3 texCoord;
 
 uniform samplerCube uSkybox;
 
-out vec3 fFragColor;
+out vec4 fFragColor;
 
 void main(){
-	fFragColor = normalize(texCoord);
+	fFragColor = vec4(texCoord, 1.f); //texture(uSkybox, texCoord);
 }

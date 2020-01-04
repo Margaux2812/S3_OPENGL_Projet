@@ -154,15 +154,12 @@ nightMode(false)
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
-
+m_shader->setUniform1i("u_Texture", 0);
 };
 
 Cube::~Cube(){
-    //      TODO:
-    //Have to delete each one, faire une boucle
-    //glDeleteProgram(m_shaders);
-
-	glDeleteBuffers(1, &m_vbo);
+	glDeleteBuffers(1, &m_ibo);
+    glDeleteBuffers(1, &m_vbo);
     glDeleteBuffers(1, &vboAll);
     glDeleteVertexArrays(1, &m_vao);
 }
@@ -173,7 +170,6 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
     m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
-    m_shader->setUniform1i("u_Texture", 0);
     m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.3f, -0.7f, 0.3f)));
     
     //drawLights(lumieres);
@@ -212,28 +208,24 @@ void Cube::drawLights(Cube lumieres){
 /////////////////////////// GETTERS ///////////////////////////
 ///////////////////////////////////////////////////////////////
 
-Texture* Cube::getTexture(){
+Texture* Cube::getTexture() const{
     switch(m_type){
-        case LIGHT:  return new Texture("assets/textures/light.jpg");
+        case LIGHT:  return new Texture("assets/textures/cubes_textures/light.jpg");
         break;
-        case GRASS:  return new Texture("assets/textures/grass.png");
+        case GRASS:  return new Texture("assets/textures/cubes_textures/grass.png");
         break;
-        case WATER :  return new Texture("assets/textures/water.png");
+        case WATER :  return new Texture("assets/textures/cubes_textures/water.png");
         break;
-        case SAND : return new Texture("assets/textures/sand.jpg");
+        case SAND : return new Texture("assets/textures/cubes_textures/sand.jpg");
         break;
-        case LEAF : return new Texture("assets/textures/leaf.png");
+        case LEAF : return new Texture("assets/textures/cubes_textures/leaf.png");
         break;
-        case BARBARA : return new Texture("assets/textures/Barbara.png");
+        case BARBARA : return new Texture("assets/textures/cubes_textures/Barbara.png");
         break;
         case GROUND :
-        default:   return new Texture("assets/textures/cubeTerre.jpg");
+        default:   return new Texture("assets/textures/cubes_textures/cubeTerre.jpg");
         break;
     }
-}
-        
-std::vector<glm::vec3> Cube::getPositions(){
-    return m_positionsCubes;
 }
 
 ///////////////////////////////////////////////////////////////
@@ -286,7 +278,6 @@ void Cube::updateGPU(){
     glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
-
 
 ///////////////////////////////////////////////////////////////
 ///////////////////////// CUBE MANAGER ////////////////////////

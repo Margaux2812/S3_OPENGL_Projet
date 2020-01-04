@@ -3,15 +3,7 @@
 #include <vector>
 #include "../lib/glimac/include/Image.hpp"
 
-#define GL_TEXTURE_CUBE_MAP_ARB             0x8513
-#define GL_TEXTURE_CUBE_MAP_POSITIVE_X_ARB  0x8515
-#define GL_TEXTURE_CUBE_MAP_NEGATIVE_X_ARB  0x8516
-#define GL_TEXTURE_CUBE_MAP_POSITIVE_Y_ARB  0x8517
-#define GL_TEXTURE_CUBE_MAP_NEGATIVE_Y_ARB  0x8518
-#define GL_TEXTURE_CUBE_MAP_POSITIVE_Z_ARB  0x8519
-#define GL_TEXTURE_CUBE_MAP_NEGATIVE_Z_ARB  0x851A
-
-const std::vector<std::string> textures_faces = 
+const std::vector<std::string> faces = 
 {
     "assets/textures/skybox/Box_Right.png",
     "assets/textures/skybox/Box_Left.bmp",
@@ -21,71 +13,120 @@ const std::vector<std::string> textures_faces =
     "assets/textures/skybox/Box_Back.bmp"
 };
 
-const Vertex3DColor skyboxVertices[] = {
+const Vertex3DColor skyboxVerticesDay[] = {
         // positions          
-        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor( glm::vec3( 1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor( glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor( glm::vec3( 1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
+        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor( glm::vec3( 1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor( glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor( glm::vec3( 1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
 
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f),  glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f),  glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
 
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f),  glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f),  glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
 
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
 
-        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)), 
-        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)), 
-        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)), 
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)), 
+        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)), 
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)), 
 
-        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.53f, 0.8f, 0.92f))
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f))
+    };
+
+const Vertex3DColor skyboxVerticesNight[] = {
+        // positions          
+        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3( 1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3( 1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f),  glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f),  glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
+        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
+
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f))
     };
 
 Skybox::Skybox()
-:m_shader(new MyShader("shaders/skybox.vs.glsl", "shaders/skybox.fs.glsl"))
+:m_textureID(0),
+m_shader(new MyShader("shaders/skybox.vs.glsl", "shaders/skybox.fs.glsl")),
+isDay(true)
 {
-    loadTexture();
+    //loadTexture();
 	const GLuint VERTEX_ATTR_POSITION = 0;
-    const GLuint VERTEX_ATTR_COULEUR = 1;
+    const GLuint VERTEX_ATTR_COLOR = 1;
 
     glGenVertexArrays(1, &m_vao);
     glBindVertexArray(m_vao);
     glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 
-    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVerticesDay), &skyboxVerticesDay, GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
-    glEnableVertexAttribArray(VERTEX_ATTR_COULEUR);
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3D, position));
-    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
+    glEnableVertexAttribArray(VERTEX_ATTR_COLOR);
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, position));
+    glVertexAttribPointer(VERTEX_ATTR_COLOR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
+
+    m_shader->setUniform1i("uSkybox", 0);
 
 }
 
@@ -94,57 +135,62 @@ Skybox::~Skybox(){
     glDeleteBuffers(1, &m_vbo);
 }
 
-void Skybox::draw(glm::mat4 MVMatrix){
+void Skybox::updateSky(){
+    isDay = !isDay;
+    glBindBuffer(GL_ARRAY_BUFFER, m_vbo); 
+    if(isDay){
+        glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVerticesDay), &skyboxVerticesDay, GL_STATIC_DRAW);
+    }else{
+        glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVerticesNight), &skyboxVerticesNight, GL_STATIC_DRAW);
+    }
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
+}
 
+void Skybox::draw(glm::mat4 MVMatrix){
+    MVMatrix = glm::mat4(glm::mat3(MVMatrix));
+    glDepthFunc( GL_LEQUAL ); 
 	m_shader->bind();
-    m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*glm::mat4(glm::mat3(MVMatrix))));
-    m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(glm::mat4(glm::mat3(MVMatrix))));
+    m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
+    m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
+
+    //glActiveTexture(GL_TEXTURE0);
+    //glBindTexture(GL_TEXTURE_CUBE_MAP, m_textureID);
 
     glBindVertexArray(m_vao);
-
-    glActiveTexture(GL_TEXTURE0);
-    glBindTexture(GL_TEXTURE_CUBE_MAP, m_textureID[0]);
-
-    m_shader->setUniform1i("uSkybox", 0);
-
-    glDepthFunc(GL_LEQUAL);
     glDrawArrays(GL_TRIANGLES, 0, 36);
-    glDepthFunc(GL_LESS);
+    glDepthFunc( GL_LESS );
 
     glBindVertexArray(0); //Debinder la VAO
     m_shader->unbind();
 }
 
-void Skybox::loadTexture(){
-
+/*void Skybox::loadTexture(){
     glActiveTexture(GL_TEXTURE0);
-
-    glGenTextures(1, m_textureID);
-    //Texture jour
-    glBindTexture(GL_TEXTURE_CUBE_MAP, m_textureID[0]);
+    glGenTextures(1, &m_textureID);
+    glBindTexture(GL_TEXTURE_CUBE_MAP, m_textureID);
    
-    for(unsigned int i = 0; i < textures_faces.size(); i++){
+    for (GLuint i = 0; i < faces.size(); i++){
+        std::unique_ptr<glimac::Image> textureImg = glimac::loadImage(faces[i]);
+
+        if(textureImg == NULL){
+            std::cout << "Image located in "<< faces[i] << " not loaded !" <<std::endl;
+        }
+
+        glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
+            0, 
+            GL_RGB,
+            textureImg->getWidth(),
+            textureImg->getHeight(),
+            0,
+            GL_RGBA,
+            GL_UNSIGNED_BYTE,
+            textureImg->getPixels());
+
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_S, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE);
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE); 
-
-        std::unique_ptr<glimac::Image> textureImg = glimac::loadImage(textures_faces[i]);
-
-        if(textureImg == NULL)
-            std::cout << "Image located in "<< textures_faces[i] << " not loaded !" <<std::endl;
-        
-        glTexImage2D(m_skyboxTarget[i],
-            0,
-            GL_RGB,
-            textureImg->getWidth(),
-            textureImg->getHeight(),
-            0,
-            GL_RGB,
-            GL_UNSIGNED_BYTE,
-            textureImg->getPixels()
-            );
+        glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
     }
-    glBindTexture(GL_TEXTURE_2D, 0);
-}
+}*/

@@ -222,6 +222,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/sound.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
@@ -331,9 +332,6 @@ CMakeFiles/WorldIMaker.dir/src/menu.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp
- /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Program.hpp
- /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/SDLWindowManager.hpp
- /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Shader.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/glm.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp
  lib/glm/common.hpp
@@ -932,6 +930,9 @@ CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o
  lib/glm/vec3.hpp
  lib/glm/vec4.hpp
  lib/glm/vector_relational.hpp
+CMakeFiles/WorldIMaker.dir/src/sound.cpp.o
+ /home/margaux/Documents/S3_OPENGL_Projet/include/sound.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/src/sound.cpp
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
@@ -1127,9 +1128,14 @@ CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o
  /home/margaux/Documents/S3_OPENGL_Projet/include/cube.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/myshader.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/palette.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
+ /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/include/world.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
  /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/Image.hpp

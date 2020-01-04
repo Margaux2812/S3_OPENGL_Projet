@@ -19,7 +19,7 @@ const uint32_t indices[] = {
 
 Menu::Menu()
 :m_name(principal),
-m_texture(new Texture("assets/textures/MenuPrincipal.png")),
+m_texture(new Texture("assets/textures/menus/MenuPrincipal.png")),
 m_precMenu(principal),
 m_shader(new MyShader("shaders/texture2D.vs.glsl", "shaders/texture2D.fs.glsl"))
 {
@@ -56,7 +56,11 @@ m_shader(new MyShader("shaders/texture2D.vs.glsl", "shaders/texture2D.fs.glsl"))
 }
 
 Menu::~Menu(){
-
+    delete m_texture;
+    delete m_shader;
+    glDeleteBuffers(1, &m_ibo);
+    glDeleteBuffers(1, &m_vbo);
+    glDeleteVertexArrays(1, &m_vao);
 }
 
 void Menu::draw(){
@@ -103,27 +107,27 @@ void Menu::changeTo(MenuName name){
         case principal:
         enableCursor();
         m_name = principal;
-        m_texture = new Texture("assets/textures/MenuPrincipal.png");
+        m_texture = new Texture("assets/textures/menus/MenuPrincipal.png");
         break;
         case inPause:
         enableCursor();
         m_name = inPause;
-        m_texture = new Texture("assets/textures/pauseMenu.png");
+        m_texture = new Texture("assets/textures/menus/pauseMenu.png");
         break;
         case controle:
         enableCursor();
         m_name = controle;
-        m_texture = new Texture("assets/textures/controles1.png");
+        m_texture = new Texture("assets/textures/menus/controles1.png");
         break;
         case controle2:
         enableCursor();
         m_name = controle2;
-        m_texture = new Texture("assets/textures/controles2.png");
+        m_texture = new Texture("assets/textures/menus/controles2.png");
         break;
         case quit:
         enableCursor();
         m_name = quit;
-        m_texture = new Texture("assets/textures/quitGame.png");
+        m_texture = new Texture("assets/textures/menus/quitGame.png");
         break;
         case inGame:
         disableCursor();

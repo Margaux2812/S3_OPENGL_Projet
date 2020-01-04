@@ -33,8 +33,7 @@ class Cube{
 		void drawLights(Cube lumieres);
 
 		///// GETTERS /////
-		Texture* getTexture();
-		std::vector<glm::vec3> getPositions();
+		Texture* getTexture() const;
 		inline GLuint getVao() { return m_vao;}
 		inline GLuint getVbo() { return m_vbo;}
 		inline GLuint getIbo() { return m_ibo;}

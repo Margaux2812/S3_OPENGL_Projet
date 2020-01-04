@@ -21,7 +21,6 @@ CUBE :
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Faire les propriétés différentes`
 
 USER INTERFACE : 
-- Palette
 - ![#f03c15](https://placehold.it/15/f03c15/000000?text=+) `Choix de commencement (monde plat, de terre, de sable)`
 
 SCENE : 
