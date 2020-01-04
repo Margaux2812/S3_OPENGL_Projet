@@ -210,20 +210,20 @@ void Cube::drawLights(Cube lumieres){
 
 Texture* Cube::getTexture() const{
     switch(m_type){
-        case LIGHT:  return new Texture("assets/textures/light.jpg");
+        case LIGHT:  return new Texture("assets/textures/cubes_textures/light.jpg");
         break;
-        case GRASS:  return new Texture("assets/textures/grass.png");
+        case GRASS:  return new Texture("assets/textures/cubes_textures/grass.png");
         break;
-        case WATER :  return new Texture("assets/textures/water.png");
+        case WATER :  return new Texture("assets/textures/cubes_textures/water.png");
         break;
-        case SAND : return new Texture("assets/textures/sand.jpg");
+        case SAND : return new Texture("assets/textures/cubes_textures/sand.jpg");
         break;
-        case LEAF : return new Texture("assets/textures/leaf.png");
+        case LEAF : return new Texture("assets/textures/cubes_textures/leaf.png");
         break;
-        case BARBARA : return new Texture("assets/textures/Barbara.png");
+        case BARBARA : return new Texture("assets/textures/cubes_textures/Barbara.png");
         break;
         case GROUND :
-        default:   return new Texture("assets/textures/cubeTerre.jpg");
+        default:   return new Texture("assets/textures/cubes_textures/cubeTerre.jpg");
         break;
     }
 }

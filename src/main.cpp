@@ -38,6 +38,7 @@ int main(int argc, char** argv) {
         glm::vec3(0, 0, -5)
     );
 
+    playMusic();
     // Application loop:
     bool done = false;
     bool ctrlIsPressed = false;

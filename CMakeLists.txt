@@ -21,6 +21,7 @@ set(LIBRARY_OUTPUT_PATH ${PROJECT_BINARY_DIR}/lib)
 find_package(SDL REQUIRED)
 find_package(OpenGL REQUIRED)
 find_package(GLEW REQUIRED)
+find_package(SDL_mixer REQUIRED)
 
 # //////////////////////////////////////////////////////////////////////////////////////
 # //////////////////////////////////////  INCLUDES  ////////////////////////////////////
@@ -41,10 +42,11 @@ include_directories(
 		${SDL_INCLUDE_DIR}
 		${OPENGL_INCLUDE_DIR}
 		${GLEW_INCLUDE_DIR} 
+		${SDL_MIXER_INCLUDE_DIRS}
 		lib/glimac/include
 		lib/third-party/include
 		)
-set(ALL_LIBRARIES glimac ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY})
+set(ALL_LIBRARIES glimac ${SDL_LIBRARY} ${OPENGL_LIBRARIES} ${GLEW_LIBRARY} ${SDL_MIXER_LIBRARIES})
 add_subdirectory(lib/glimac)
 
 # //////////////////////////////////////////////////////////////////////////////////////

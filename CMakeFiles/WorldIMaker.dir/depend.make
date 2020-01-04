@@ -221,6 +221,7 @@ CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/pinceau.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/radialBasisFunctions.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/selector.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/skybox.hpp
+CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/sound.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/typeCube.hpp
 CMakeFiles/WorldIMaker.dir/src/main.cpp.o: include/vertex.hpp
@@ -928,6 +929,9 @@ CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec2.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec3.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec4.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vector_relational.hpp
+
+CMakeFiles/WorldIMaker.dir/src/sound.cpp.o: include/sound.hpp
+CMakeFiles/WorldIMaker.dir/src/sound.cpp.o: src/sound.cpp
 
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: lib/glimac/include/FilePath.hpp
