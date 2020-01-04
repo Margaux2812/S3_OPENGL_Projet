@@ -158,8 +158,6 @@ m_shader->setUniform1i("u_Texture", 0);
 };
 
 Cube::~Cube(){
-    delete m_texture;
-    delete m_shader;
 	glDeleteBuffers(1, &m_ibo);
     glDeleteBuffers(1, &m_vbo);
     glDeleteBuffers(1, &vboAll);

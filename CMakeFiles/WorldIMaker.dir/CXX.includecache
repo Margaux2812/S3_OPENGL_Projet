@@ -17,8 +17,6 @@
 /home/margaux/Documents/S3_OPENGL_Projet/include/FreeflyCamera.hpp
 ../include/vertex.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/vertex.hpp
-../include/selector.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
 ../include/display.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/display.hpp
 ../include/menu.hpp
@@ -29,8 +27,6 @@
 /home/margaux/Documents/S3_OPENGL_Projet/include/texture.hpp
 ../include/typeCube.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
-../include/pinceau.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
 ../include/world.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/world.hpp
 
@@ -157,6 +153,10 @@ typeCube.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/typeCube.hpp
 skybox.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/skybox.hpp
+pinceau.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
+selector.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
 
 /home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include/FilePath.hpp
 string
@@ -230,11 +230,9 @@ cstddef
 ../include/all.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/all.hpp
 
-/home/margaux/Documents/S3_OPENGL_Projet/src/menu.cpp
-../include/menu.hpp
-/home/margaux/Documents/S3_OPENGL_Projet/include/menu.hpp
-iostream
--
+/home/margaux/Documents/S3_OPENGL_Projet/src/world.cpp
+../include/world.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/world.hpp
 
 lib/glm/common.hpp
 detail/func_common.hpp

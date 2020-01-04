@@ -1,7 +1,9 @@
 #include "../include/world.hpp"
 
 World::World()
-:m_skybox(new Skybox)
+:m_skybox(new Skybox),
+m_selector(new Selector),
+m_pinceau(new Pinceau)
 {
     for(int i=0; i!=REACHEND; ++i){
 	    m_allCubes.push_back(new Cube((typeCube)i));
@@ -26,25 +28,31 @@ void World::draw(glm::mat4 MVMatrix){
 		m_allCubes[i]->draw(MVMatrix, *m_allCubes[0]);
 	}
     glDisable(GL_BLEND);
+
+    m_selector->draw(MVMatrix);
+    m_pinceau->draw();
 }
-void World::handleEvents(const SDLKey e, const glm::vec3 position, const typeCube typePinceau, const bool ctrlIsPressed){
+void World::handleEvents(const SDLKey e, const bool ctrlIsPressed){
+	m_pinceau->handleEvents(e);
 	if(e == SDLK_DELETE){
         for(uint i=0; i<m_allCubes.size(); i++){
-        	m_allCubes[i]->deleteCube(position);
+        	m_allCubes[i]->deleteCube(m_selector->getPosition());
         }
 	}else if(e == SDLK_RETURN){
 		if(ctrlIsPressed){
-			replace(position, typePinceau);
+			replace(m_selector->getPosition(), m_pinceau->getType());
 		}else{
-			addCube(position, typePinceau);
+			addCube(m_selector->getPosition(), m_pinceau->getType());
 		}
     }else if(e == SDLK_n){
         changeNightMode();
     }
 
 	for(uint i=0; i<m_allCubes.size(); i++){
-		m_allCubes[i]->handleEvents(e, position, typePinceau);
+		m_allCubes[i]->handleEvents(e, m_selector->getPosition(), m_pinceau->getType());
 	}
+
+	m_selector->handleEvents(e);
 }
 
 void World::replace(const glm::vec3 position, const typeCube typePinceau){

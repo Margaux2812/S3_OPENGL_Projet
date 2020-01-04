@@ -29,9 +29,7 @@ int main(int argc, char** argv) {
 
     Menu menu;
     World world;
-    Pinceau pinceau;
     FreeflyCamera camera;
-    Selector selector;
 
     ///////MAP WORLD///////
 
@@ -66,9 +64,7 @@ int main(int argc, char** argv) {
                     }else if(e.key.keysym.sym == SDLK_RETURN && menu != inGame){
                         menu.changeTo(inGame);
                     }else if(menu == inGame){
-                        pinceau.handleEvents(e.key.keysym.sym);
-                        world.handleEvents(e.key.keysym.sym, selector.getPosition(), pinceau.getType(), ctrlIsPressed);
-                        selector.handleEvents(e.key.keysym.sym);
+                        world.handleEvents(e.key.keysym.sym, ctrlIsPressed);
                         camera.handleKeyboardEventsDown(e.key.keysym.sym);
                     }
                 break;
@@ -99,9 +95,6 @@ int main(int argc, char** argv) {
             MVMatrix = camera.getViewMatrix();
 
             world.draw(MVMatrix);
-            selector.draw(MVMatrix);
-
-            pinceau.draw();
 
         }else{
             menu.draw();
