@@ -37,7 +37,11 @@ m_texture(new Texture("assets/textures/palette/palette_1.png"))
 }
 
 Palette::~Palette(){
-
+    delete m_texture;
+    delete m_shader;
+    glDeleteBuffers(1, &m_ibo);
+    glDeleteBuffers(1, &m_vbo);
+    glDeleteVertexArrays(1, &m_vao);
 }
 
 void Palette::draw(){

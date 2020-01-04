@@ -9,7 +9,10 @@ World::World()
 }
 
 World::~World(){
-
+	for(uint i=1; i<m_allCubes.size(); i++){
+		delete m_allCubes[i];
+	}
+	delete m_skybox;
 }
 
 void World::draw(glm::mat4 MVMatrix){

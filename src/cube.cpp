@@ -158,11 +158,10 @@ m_shader->setUniform1i("u_Texture", 0);
 };
 
 Cube::~Cube(){
-    //      TODO:
-    //Have to delete each one, faire une boucle
-    //glDeleteProgram(m_shaders);
-
-	glDeleteBuffers(1, &m_vbo);
+    delete m_texture;
+    delete m_shader;
+	glDeleteBuffers(1, &m_ibo);
+    glDeleteBuffers(1, &m_vbo);
     glDeleteBuffers(1, &vboAll);
     glDeleteVertexArrays(1, &m_vao);
 }
@@ -211,7 +210,7 @@ void Cube::drawLights(Cube lumieres){
 /////////////////////////// GETTERS ///////////////////////////
 ///////////////////////////////////////////////////////////////
 
-Texture* Cube::getTexture(){
+Texture* Cube::getTexture() const{
     switch(m_type){
         case LIGHT:  return new Texture("assets/textures/light.jpg");
         break;
@@ -229,10 +228,6 @@ Texture* Cube::getTexture(){
         default:   return new Texture("assets/textures/cubeTerre.jpg");
         break;
     }
-}
-        
-std::vector<glm::vec3> Cube::getPositions(){
-    return m_positionsCubes;
 }
 
 ///////////////////////////////////////////////////////////////

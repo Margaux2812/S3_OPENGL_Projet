@@ -133,6 +133,7 @@ isDay(true)
 Skybox::~Skybox(){
 	glDeleteVertexArrays(1, &m_vao);
     glDeleteBuffers(1, &m_vbo);
+    delete m_shader;
 }
 
 void Skybox::updateSky(){

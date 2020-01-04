@@ -31,7 +31,7 @@ ShaderProgramSources MyShader::ParseShaders(const std::string& vertexShaderFilep
 	return { ss[0].str(), ss[1].str()};
 }
 
-unsigned int MyShader::CompileShaders(unsigned int type, const std::string& source){
+unsigned int MyShader::CompileShaders(const unsigned int type, const std::string& source){
 
 	unsigned int shaderId= glCreateShader(type);
 	const char* src = source.c_str();

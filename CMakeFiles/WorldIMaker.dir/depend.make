@@ -330,9 +330,6 @@ CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: include/vertex.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Image.hpp
-CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Program.hpp
-CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/SDLWindowManager.hpp
-CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/Shader.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glimac/include/glm.hpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: src/menu.cpp
 CMakeFiles/WorldIMaker.dir/src/menu.cpp.o: lib/glm/common.hpp
