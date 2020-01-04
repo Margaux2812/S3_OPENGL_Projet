@@ -1127,6 +1127,7 @@ CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o: lib/glm/vector_relational.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/cube.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/myshader.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/radialBasisFunctions.hpp
+CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/skybox.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/typeCube.hpp
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: include/world.hpp

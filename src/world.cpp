@@ -1,6 +1,7 @@
 #include "../include/world.hpp"
 
 World::World()
+:m_skybox(new Skybox)
 {
     for(int i=0; i!=REACHEND; ++i){
 	    m_allCubes.push_back(new Cube((typeCube)i));
@@ -12,6 +13,8 @@ World::~World(){
 }
 
 void World::draw(glm::mat4 MVMatrix){
+	m_skybox->draw(MVMatrix);
+
 	glEnable(GL_BLEND); //Pour la transparence
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); //Pour la transparence
     
@@ -66,6 +69,7 @@ void World::addCube(const glm::vec3 position, const typeCube typePinceau){
 }
 
 void World::changeNightMode(){
+	m_skybox->updateSky();
 	for(int i=0; i!=REACHEND; ++i){
 	    m_allCubes[i]->changeNightMode();
     }

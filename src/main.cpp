@@ -27,7 +27,6 @@ int main(int argc, char** argv) {
      * HERE SHOULD COME THE INITIALIZATION CODE
      *********************************/
 
-    Skybox skybox;
     Menu menu;
     World world;
     Pinceau pinceau;
@@ -99,7 +98,6 @@ int main(int argc, char** argv) {
 
             MVMatrix = camera.getViewMatrix();
 
-            skybox.draw(MVMatrix);
             world.draw(MVMatrix);
             selector.draw(MVMatrix);
 

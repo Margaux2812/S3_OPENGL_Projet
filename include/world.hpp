@@ -7,10 +7,12 @@
 #include "../lib/glimac/include/SDLWindowManager.hpp"
 #include "cube.hpp"
 #include "typeCube.hpp"
+#include "skybox.hpp"
 
 class World{
 	private:
 		std::vector<Cube*> m_allCubes;
+		Skybox* m_skybox;
    	public:
 		World();
 		~World();

@@ -13,7 +13,7 @@ const std::vector<std::string> faces =
     "assets/textures/skybox/Box_Back.bmp"
 };
 
-const Vertex3DColor skyboxVertices[] = {
+const Vertex3DColor skyboxVerticesDay[] = {
         // positions          
         Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.22f, 0.427f, 0.616f)),
         Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
@@ -57,13 +57,58 @@ const Vertex3DColor skyboxVertices[] = {
         Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f)),
         Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.55f, 0.7f, 0.886f))
     };
-    /*0.55f, 0.7f, 0.886f*/
+
+const Vertex3DColor skyboxVerticesNight[] = {
+        // positions          
+        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3( 1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3( 1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f),  glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f),  glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
+        Vertex3DColor(glm::vec3(1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
+        Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
+
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f))
+    };
 
 Skybox::Skybox()
 :m_textureID(0),
-m_shader(new MyShader("shaders/skybox.vs.glsl", "shaders/skybox.fs.glsl"))
+m_shader(new MyShader("shaders/skybox.vs.glsl", "shaders/skybox.fs.glsl")),
+isDay(true)
 {
-    loadTexture();
+    //loadTexture();
 	const GLuint VERTEX_ATTR_POSITION = 0;
     const GLuint VERTEX_ATTR_COLOR = 1;
 
@@ -72,7 +117,7 @@ m_shader(new MyShader("shaders/skybox.vs.glsl", "shaders/skybox.fs.glsl"))
     glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo);
 
-    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVertices), &skyboxVertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVerticesDay), &skyboxVerticesDay, GL_STATIC_DRAW);
 
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
     glEnableVertexAttribArray(VERTEX_ATTR_COLOR);
@@ -88,6 +133,17 @@ m_shader(new MyShader("shaders/skybox.vs.glsl", "shaders/skybox.fs.glsl"))
 Skybox::~Skybox(){
 	glDeleteVertexArrays(1, &m_vao);
     glDeleteBuffers(1, &m_vbo);
+}
+
+void Skybox::updateSky(){
+    isDay = !isDay;
+    glBindBuffer(GL_ARRAY_BUFFER, m_vbo); 
+    if(isDay){
+        glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVerticesDay), &skyboxVerticesDay, GL_STATIC_DRAW);
+    }else{
+        glBufferData(GL_ARRAY_BUFFER, sizeof(skyboxVerticesNight), &skyboxVerticesNight, GL_STATIC_DRAW);
+    }
+    glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
 
 void Skybox::draw(glm::mat4 MVMatrix){
@@ -108,7 +164,7 @@ void Skybox::draw(glm::mat4 MVMatrix){
     m_shader->unbind();
 }
 
-void Skybox::loadTexture(){
+/*void Skybox::loadTexture(){
     glActiveTexture(GL_TEXTURE0);
     glGenTextures(1, &m_textureID);
     glBindTexture(GL_TEXTURE_CUBE_MAP, m_textureID);
@@ -137,4 +193,4 @@ void Skybox::loadTexture(){
         glTexParameteri(GL_TEXTURE_CUBE_MAP, GL_TEXTURE_WRAP_R, GL_CLAMP_TO_EDGE); 
         glBindTexture(GL_TEXTURE_CUBE_MAP, 0);
     }
-}
+}*/

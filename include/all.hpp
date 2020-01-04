@@ -1,6 +1,5 @@
 #include "../include/FreeflyCamera.hpp"
 #include "../include/vertex.hpp"
-#include "../include/cube.hpp"
 #include "../include/selector.hpp"
 #include "../include/display.hpp"
 #include "../include/menu.hpp"
@@ -8,5 +7,4 @@
 #include "../include/texture.hpp"
 #include "../include/typeCube.hpp"
 #include "../include/pinceau.hpp"
-#include "../include/skybox.hpp"
 #include "../include/world.hpp"
