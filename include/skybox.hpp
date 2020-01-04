@@ -24,5 +24,4 @@ public:
 
 	void draw(glm::mat4 MVMatrix);
 	void loadTexture();
-	void loadTextureFace(const GLenum side_target, const std::string path);
 };

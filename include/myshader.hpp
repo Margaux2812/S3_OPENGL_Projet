@@ -28,9 +28,9 @@ public:
 	void setUniform1f(const std::string& name, const float value);
 	void setUniformMatrix4fv(const std::string& name, const GLfloat*value);
 	void setUniformMatrix4x3fv(const std::string& name, const GLfloat*value);
-	
+		GLint getUniformLocation(const std::string& name);
 private:
-	GLint getUniformLocation(const std::string& name);
+	
 	ShaderProgramSources ParseShaders(const std::string& filepath, const std::string& filepath2);
 	unsigned int CompileShaders(unsigned int type, const std::string& source);
 	int CreateShaders(const std::string& vertexShader, const std::string& fragmentShader);

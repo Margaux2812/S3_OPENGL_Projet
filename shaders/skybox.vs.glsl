@@ -9,6 +9,6 @@ uniform mat4 uMVMatrix;
 void main()
 {
     texCoord = aPos;
-    vec4 pos = uMVPMatrix * uMVMatrix * vec4(aPos, 1.0);
+    vec4 pos = uMVMatrix * vec4(aPos, 1.0);
     gl_Position = pos.xyww;
 }  

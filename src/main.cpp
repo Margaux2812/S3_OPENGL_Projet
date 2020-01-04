@@ -29,9 +29,9 @@ int main(int argc, char** argv) {
 
     Skybox skybox;
     Menu menu;
+    World world;
     Pinceau pinceau;
     FreeflyCamera camera;
-    World world;
     Selector selector;
 
     ///////MAP WORLD///////

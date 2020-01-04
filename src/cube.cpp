@@ -154,7 +154,7 @@ nightMode(false)
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
     glBindVertexArray(0); //Debinder la VAO
-
+m_shader->setUniform1i("u_Texture", 0);
 };
 
 Cube::~Cube(){
@@ -173,7 +173,6 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
     m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
-    m_shader->setUniform1i("u_Texture", 0);
     m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.3f, -0.7f, 0.3f)));
     
     //drawLights(lumieres);
@@ -286,17 +285,6 @@ void Cube::updateGPU(){
     glBufferData(GL_ARRAY_BUFFER, m_positionsCubes.size()*sizeof(glm::vec3), m_positionsCubes.data(), GL_STATIC_DRAW);
     glBindBuffer(GL_ARRAY_BUFFER, 0);
 }
-
-/* TODO : Cube qui tombe ?
-bool Cube::fallingTo(const int index, const glm::vec3 position){
-    if(m_positionsCubes[index].y > position.y){
-        m_positionsCubes[index].y -= 0.1f;
-        return 1;
-    }else{
-        return 0;
-    }
-}*/
-
 
 ///////////////////////////////////////////////////////////////
 ///////////////////////// CUBE MANAGER ////////////////////////

@@ -70,4 +70,3 @@ void World::changeNightMode(){
 	    m_allCubes[i]->changeNightMode();
     }
 }
-
