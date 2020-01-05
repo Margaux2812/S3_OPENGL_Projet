@@ -21,7 +21,13 @@ void World::draw(glm::mat4 MVMatrix){
 	m_skybox->draw(MVMatrix);
 
 	glDepthRange(0, 0.01); //Pour que le curseur soit visible à tout moment
-	m_selector->draw(MVMatrix);
+	glm::vec3 color;
+	if(existsSmth(m_selector->getPosition())){
+		color = glm::vec3(1.f, 0.f, 0.f);
+	}else{
+		color = glm::vec3(0.33f, 0.65f, 1.f);
+	}
+	m_selector->draw(MVMatrix, color);
 	glDepthRange(0.01, 1.0); //Pour que le curseur soit visible à tout moment
 
 	glEnable(GL_BLEND); //Pour la transparence
@@ -66,19 +72,23 @@ void World::replace(const glm::vec3 position, const typeCube typePinceau){
 	m_allCubes[typePinceau]->addCube(position);
 }
 
-void World::addCube(const glm::vec3 position, const typeCube typePinceau){
-	bool nothingHere = true;
+bool World::existsSmth(glm::vec3 position){
 	int exists;
 	for(uint i=0; i<m_allCubes.size(); i++){
 		exists = m_allCubes[i]->findFromPosition(position);
 		//Il existe
 		if(exists != -1){
-			nothingHere = false;
+			return true;
 			break;
 		}
 	}
+	return false;
+}
 
-	if(nothingHere){
+void World::addCube(const glm::vec3 position, const typeCube typePinceau){
+	bool existsCubeHere = existsSmth(position);
+	
+	if(!existsCubeHere){
 		m_allCubes[typePinceau]->addCube(position);
 	}	
 }

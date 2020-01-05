@@ -20,7 +20,7 @@ class Selector{
 
 		glm::vec3 getPosition();
 
-		void draw(glm::mat4 MVMatrix);
+		void draw(glm::mat4 MVMatrix, glm::vec3 color);
 
 		void handleEvents(SDLKey e);
 		void updateGPU();

@@ -27,4 +27,5 @@ class World{
 		void addCube(const glm::vec3 position, const typeCube typePinceau);
 		void replace(const glm::vec3 position, const typeCube typePinceau);
 		void changeNightMode();
+		bool existsSmth(glm::vec3 position);
 };
