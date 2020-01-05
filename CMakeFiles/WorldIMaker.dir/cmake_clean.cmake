@@ -10,7 +10,6 @@ file(REMOVE_RECURSE
   "CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o"
-  "CMakeFiles/WorldIMaker.dir/src/sound.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
   "CMakeFiles/WorldIMaker.dir/src/world.cpp.o"

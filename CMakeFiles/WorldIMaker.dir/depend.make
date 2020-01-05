@@ -930,9 +930,6 @@ CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec3.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vec4.hpp
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: lib/glm/vector_relational.hpp
 
-CMakeFiles/WorldIMaker.dir/src/sound.cpp.o: include/sound.hpp
-CMakeFiles/WorldIMaker.dir/src/sound.cpp.o: src/sound.cpp
-
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: include/texture.hpp
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: lib/glimac/include/FilePath.hpp
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: lib/glimac/include/Image.hpp

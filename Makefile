@@ -433,33 +433,6 @@ src/skybox.cpp.s:
 	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/skybox.cpp.s
 .PHONY : src/skybox.cpp.s
 
-src/sound.o: src/sound.cpp.o
-
-.PHONY : src/sound.o
-
-# target to build an object file
-src/sound.cpp.o:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/sound.cpp.o
-.PHONY : src/sound.cpp.o
-
-src/sound.i: src/sound.cpp.i
-
-.PHONY : src/sound.i
-
-# target to preprocess a source file
-src/sound.cpp.i:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/sound.cpp.i
-.PHONY : src/sound.cpp.i
-
-src/sound.s: src/sound.cpp.s
-
-.PHONY : src/sound.s
-
-# target to generate assembly for a file
-src/sound.cpp.s:
-	$(MAKE) -f CMakeFiles/WorldIMaker.dir/build.make CMakeFiles/WorldIMaker.dir/src/sound.cpp.s
-.PHONY : src/sound.cpp.s
-
 src/texture.o: src/texture.cpp.o
 
 .PHONY : src/texture.o
@@ -584,9 +557,6 @@ help:
 	@echo "... src/skybox.o"
 	@echo "... src/skybox.i"
 	@echo "... src/skybox.s"
-	@echo "... src/sound.o"
-	@echo "... src/sound.i"
-	@echo "... src/sound.s"
 	@echo "... src/texture.o"
 	@echo "... src/texture.i"
 	@echo "... src/texture.s"

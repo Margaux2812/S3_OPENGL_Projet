@@ -20,6 +20,10 @@ World::~World(){
 void World::draw(glm::mat4 MVMatrix){
 	m_skybox->draw(MVMatrix);
 
+	glDepthRange(0, 0.01); //Pour que le curseur soit visible à tout moment
+	m_selector->draw(MVMatrix);
+	glDepthRange(0.01, 1.0); //Pour que le curseur soit visible à tout moment
+
 	glEnable(GL_BLEND); //Pour la transparence
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); //Pour la transparence
     
@@ -28,8 +32,8 @@ void World::draw(glm::mat4 MVMatrix){
 		m_allCubes[i]->draw(MVMatrix, *m_allCubes[0]);
 	}
     glDisable(GL_BLEND);
-
-    m_selector->draw(MVMatrix);
+    glDepthRange(0, 1.0); //Pour que le curseur soit visible à tout moment
+    
     m_pinceau->draw();
 }
 void World::handleEvents(const SDLKey e, const bool ctrlIsPressed){
