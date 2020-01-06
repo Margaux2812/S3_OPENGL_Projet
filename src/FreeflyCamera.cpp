@@ -2,14 +2,6 @@
 #include "../include/cube.hpp"
 #include <math.h>
 #include <iostream>
-/*******************************************/
-/***************SUGGESTIONS****************/
-/*****************************************/
-/*TODO
-En gros avoir un mode personnage qui fait que tu te heurtes aux cubes et que tu dois sauter etc...
-et un mode createur où on peut tout faire
-*/
-
 
 FreeflyCamera::FreeflyCamera(){
 	m_Position = initialPos();
