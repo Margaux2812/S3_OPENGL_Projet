@@ -167,17 +167,14 @@ Cube::~Cube(){
 }
 
 void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
-    m_shader->bind();
 
+    m_shader->bind();
     m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
     m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.3f, -0.7f, 0.3f)));
-    
-    /*On ne dessine les lumières qu'une fois*/
-    if(m_type == GROUND){
-        drawLights(lumieres);
-    }
+
+    drawLights(lumieres);
 
     if(nightMode){
         m_shader->setUniform1f("uAmbiantLight", 0.2f);
@@ -215,8 +212,6 @@ void Cube::drawLights(Cube lumieres){
 
 Texture* Cube::getTexture() const{
     switch(m_type){
-        case LIGHT:  return new Texture("assets/textures/cubes_textures/light.jpg");
-        break;
         case GRASS:  return new Texture("assets/textures/cubes_textures/grass.png");
         break;
         case WATER :  return new Texture("assets/textures/cubes_textures/water.png");
