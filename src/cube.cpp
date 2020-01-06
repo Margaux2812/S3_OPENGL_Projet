@@ -172,7 +172,10 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
     m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.3f, -0.7f, 0.3f)));
     
-    //drawLights(lumieres);
+    /*On ne dessine les lumières qu'une fois*/
+    if(m_type == GROUND){
+        //drawLights(lumieres);
+    }
 
     if(nightMode){
         m_shader->setUniform1f("uAmbiantLight", 0.2f);
@@ -195,10 +198,10 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
 void Cube::drawLights(Cube lumieres){
     glm::mat4x3 lights;
     for(GLuint i=0; i<lumieres.size(); i++){
-        lights[i] = glm::normalize(lumieres.getData()[i]);
+        lights[i] = (lumieres.getData()[i]);
     }
     for(GLuint i=lumieres.size(); i<4; i++){
-        lights[i] = glm::normalize(glm::vec3(0.f, 0.f, 0.f));
+        lights[i] = (glm::vec3(0.f, 0.f, 0.f));
     }
 
     m_shader->setUniformMatrix4x3fv("uLightPonct",  glm::value_ptr(lights));
