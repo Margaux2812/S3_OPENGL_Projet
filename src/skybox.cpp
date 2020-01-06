@@ -61,32 +61,32 @@ const Vertex3DColor skyboxVerticesDay[] = {
 const Vertex3DColor skyboxVerticesNight[] = {
         // positions          
         Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
-        Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor( glm::vec3( 1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor( glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor( glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor( glm::vec3( 1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor( glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
         Vertex3DColor( glm::vec3( 1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor( glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
 
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
         Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f),  glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
 
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
         Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(1.f,  1.f, -1.f),  glm::vec3(0.01f, 0.01f, 0.01f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
 
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
         Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
 
         Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
         Vertex3DColor(glm::vec3(1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
@@ -95,12 +95,12 @@ const Vertex3DColor skyboxVerticesNight[] = {
         Vertex3DColor(glm::vec3(-1.f,  1.f,  1.f), glm::vec3(0.01f, 0.01f, 0.01f)),
         Vertex3DColor(glm::vec3(-1.f,  1.f, -1.f), glm::vec3(0.01f, 0.01f, 0.01f)), 
 
-        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f)),
-        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.5f, 0.13f, 0.2f))
+        Vertex3DColor(glm::vec3(-1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f, -1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(-1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f)),
+        Vertex3DColor(glm::vec3(1.f, -1.f,  1.f), glm::vec3(0.f, 0.2f, 0.6f))
     };
 
 Skybox::Skybox()

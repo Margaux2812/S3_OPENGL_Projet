@@ -9,7 +9,7 @@ uniform mat4 uMVMatrix;
 
 void main()
 {
-    texCoord = normalize(aColor);
+    texCoord = (aColor);
     vec4 pos = uMVPMatrix * uMVMatrix *vec4(aPos, 1.0);
     gl_Position = pos.xyww;
 }  
