@@ -21,10 +21,11 @@ class World{
 		World();
 		~World();
 
-		void draw(glm::mat4 MVMatrix);
+		void draw(const glm::mat4 MVMatrix, const bool ctrlIsPressed);
 		void handleEvents(const SDLKey e, const bool ctrlIsPressed);
 
 		void addCube(const glm::vec3 position, const typeCube typePinceau);
 		void replace(const glm::vec3 position, const typeCube typePinceau);
 		void changeNightMode();
+		bool existsSmth(const glm::vec3 position);
 };

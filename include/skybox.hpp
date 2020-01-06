@@ -27,4 +27,5 @@ public:
 	void updateSky();
 	void draw(glm::mat4 MVMatrix);
 	void loadTexture();
+	void drawing();
 };

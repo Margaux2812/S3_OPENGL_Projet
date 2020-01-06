@@ -99,6 +99,8 @@ const uint32_t indices[] = {
         20,21,22,  22,23,20       // back
     };
 
+const int nbMaxLumieres = 6;
+
 Cube::Cube(typeCube type)
 : m_type(type),
 m_texture(getTexture()),
@@ -172,7 +174,10 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
     m_shader->setUniform3f("uLightDir", glm::normalize(glm::vec3(0.3f, -0.7f, 0.3f)));
     
-    //drawLights(lumieres);
+    /*On ne dessine les lumières qu'une fois*/
+    if(m_type == GROUND){
+        drawLights(lumieres);
+    }
 
     if(nightMode){
         m_shader->setUniform1f("uAmbiantLight", 0.2f);
@@ -193,15 +198,15 @@ void Cube::draw(glm::mat4 MVMatrix, Cube lumieres){
 }
 
 void Cube::drawLights(Cube lumieres){
-    glm::mat4x3 lights;
+    glm::vec3 lights[nbMaxLumieres];
     for(GLuint i=0; i<lumieres.size(); i++){
-        lights[i] = glm::normalize(lumieres.getData()[i]);
+        lights[i] = (lumieres.getData()[i]);
     }
-    for(GLuint i=lumieres.size(); i<4; i++){
-        lights[i] = glm::normalize(glm::vec3(0.f, 0.f, 0.f));
+    for(GLuint i=lumieres.size(); i<nbMaxLumieres; i++){
+        lights[i] = (glm::vec3(0.f, 0.f, 0.f));
     }
 
-    m_shader->setUniformMatrix4x3fv("uLightPonct",  glm::value_ptr(lights));
+    m_shader->setUniformVec3("uLightPonct",  lights);
 }
 
 ///////////////////////////////////////////////////////////////
@@ -287,10 +292,10 @@ void Cube::updateGPU(){
 bool Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
     bool canAdd = true;
-    if(m_type == LIGHT && m_positionsCubes.size() >= 4){
+    if(m_type == LIGHT && m_positionsCubes.size() >= nbMaxLumieres){
         canAdd = false;
-        //On ne peut avoir que 4 lumieres positionnelles
     }
+
     if(exists == -1 && canAdd){
         m_positionsCubes.push_back(position);
         updateGPU();

@@ -1,5 +1,10 @@
 #pragma once
 
+/*!
+ * \file cube.hpp
+ * \brief Classe Cube créant un tableau de cube du même type
+ */
+
 #include <GL/glew.h>
 #include "../lib/glimac/include/glm.hpp"
 #include <vector>

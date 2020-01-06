@@ -1,80 +1,55 @@
 #include "../include/selector.hpp"
 #include "../include/vertex.hpp"
 
-const Vertex3DColor vertices[] = {
+const glm::vec3 vertices[] = {
     // Front v0,v1,v2,v3
-    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5),                    
-                glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)),
+    glm::vec3(0.5, 0.5, 0.5),            
+        glm::vec3(-0.5, 0.5, 0.5), 
+        glm::vec3(-0.5, -0.5, 0.5), 
+        glm::vec3(0.5, -0.5, 0.5),
     // Right v0,v3,v4,v5
 
-    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5),
-                glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)),
+    glm::vec3(0.5, 0.5, 0.5), 
+        glm::vec3(0.5, -0.5, 0.5), 
+        glm::vec3(0.5, -0.5, -0.5), 
+        glm::vec3(0.5, 0.5, -0.5), 
     // Top v0,v5,v6,v0.5    
 
-    Vertex3DColor(glm::vec3(0.5, 0.5, 0.5),
-                glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
+    glm::vec3(0.5, 0.5, 0.5), 
+        glm::vec3(0.5, 0.5, -0.5), 
+        glm::vec3(-0.5, 0.5, -0.5), 
+        glm::vec3(-0.5, 0.5, 0.5), 
     // Left v0.5,v6,v7,v2   
 
-    Vertex3DColor(glm::vec3(-0.5, 0.5, 0.5),
-                glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)),  
+    glm::vec3(-0.5, 0.5, 0.5), 
+        glm::vec3(-0.5, 0.5, -0.5), 
+        glm::vec3(-0.5, -0.5, -0.5), 
+        glm::vec3(-0.5, -0.5, 0.5),  
     // Bottom v7,v4,v3,v2
 
-    Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
-                glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, -0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, 0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
+    glm::vec3(-0.5, -0.5, -0.5),
+        glm::vec3(0.5, -0.5, -0.5), 
+        glm::vec3(0.5, -0.5, 0.5), 
+        glm::vec3(-0.5, -0.5, 0.5), 
     // Back v4,v7,v6,v5 
 
-    Vertex3DColor(glm::vec3(0.5, -0.5, -0.5),
-                glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, -0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(-0.5, 0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f)), 
-        Vertex3DColor(glm::vec3(0.5, 0.5, -0.5), 
-                    glm::vec3(1.f, 0.4f, 0.7f))
+    glm::vec3(0.5, -0.5, -0.5), 
+        glm::vec3(-0.5, -0.5, -0.5), 
+        glm::vec3(-0.5, 0.5, -0.5), 
+        glm::vec3(0.5, 0.5, -0.5)
     };
 
 Selector::Selector()
 :m_shader(new MyShader("shaders/color.vs.glsl", "shaders/color.fs.glsl"))
 {
 	const GLuint VERTEX_ATTR_POSITION = 0;
-    const GLuint VERTEX_ATTR_COULEUR = 1;
     const GLuint VERTEX_ATTR_POSITION_ALL = 2;
 
 	glGenBuffers(1, &m_vbo);
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
 
     //On a 24 sommets
-    glBufferData(GL_ARRAY_BUFFER, 24 * sizeof(Vertex3DColor), vertices, GL_STATIC_DRAW);
+    glBufferData(GL_ARRAY_BUFFER, 24 * sizeof(glm::vec3), vertices, GL_STATIC_DRAW);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
 
@@ -111,18 +86,14 @@ Selector::Selector()
     glBindVertexArray(m_vao); //Binder la VAO
 
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION);
-    glEnableVertexAttribArray(VERTEX_ATTR_COULEUR);
 
     glBindBuffer(GL_ARRAY_BUFFER, m_vbo); //Binder la VBO
-    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, position));
-    glVertexAttribPointer(VERTEX_ATTR_COULEUR, 3, GL_FLOAT, GL_FALSE, sizeof(Vertex3DColor), (const GLvoid*) offsetof(Vertex3DColor, color));
+    glVertexAttribPointer(VERTEX_ATTR_POSITION, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), (const GLvoid*) 0);
 
     glBindBuffer(GL_ARRAY_BUFFER, vboAll);
     glEnableVertexAttribArray(VERTEX_ATTR_POSITION_ALL); 
 
     glVertexAttribPointer(VERTEX_ATTR_POSITION_ALL, 3, GL_FLOAT, GL_FALSE, sizeof(glm::vec3), 0);
-    // Avec une petite nouveauté :
-    // C'est pour dire à OpenGL qu'il ne doit pas avancer dans le buffer à chaque vertex, mais seulement à chaque nouveau cube qu'il commence à dessiner
     glVertexAttribDivisor(VERTEX_ATTR_POSITION_ALL, 1);
 
     glBindBuffer(GL_ARRAY_BUFFER, 0); // debinder la VBO
@@ -136,15 +107,17 @@ Selector::~Selector(){
     glDeleteBuffers(1, &m_vbo);
     glDeleteVertexArrays(1, &m_vao);
 }
+
 glm::vec3 Selector::getPosition(){
     return m_positionCube[0];;
 }
 
-void Selector::draw(glm::mat4 MVMatrix){
+void Selector::draw(glm::mat4 MVMatrix, glm::vec3 color){
     m_shader->bind();
     m_shader->setUniformMatrix4fv("uMVPMatrix", glm::value_ptr(ProjMatrix*MVMatrix));
     m_shader->setUniformMatrix4fv("uMVMatrix", glm::value_ptr(MVMatrix));
     m_shader->setUniformMatrix4fv("uNormalMatrix", glm::value_ptr(NormalMatrix));
+    m_shader->setUniform3f("uColor", color);
     
 	glBindVertexArray(m_vao); //Binder la VAO
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);

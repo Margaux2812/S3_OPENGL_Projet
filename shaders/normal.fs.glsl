@@ -9,38 +9,37 @@ out vec4 fFragColor;
 
 uniform sampler2D u_Texture;
 uniform vec3 uLightDir;
-//uniform mat4x3 uLightPonct;
+uniform vec3 uLightPonct[6];
 
 /*L'ambiance de jour on va mettre 0.8 et l'ambiance de nuit 0.2*/
 uniform float uAmbiantLight;
 
+float getPonctLuminosity(vec3 lights){
+	vec3 dirLightPixel = normalize(vRelPosition-lights);
+	float ponctLuminosity = max(-dot(vNormale, dirLightPixel ), 0.);
+	return ponctLuminosity;
+}
+
 void main() {
 	vec4 texColor = texture(u_Texture, vTexCoord);
 
-	/*vec3 tmp = vRelPosition-uLightPonct;
-	vec3 dirLightPixel = normalize(tmp);
+	/*Luminosité ponctuelle*/
 
-	float luminositeDir = max(-dot(vNormale, uLightDir), 0.f);
-	float luminositePonct = max(-dot(vNormale, dirLightPixel), 0.f)/(length(tmp)*length(tmp));
-
-	float globalLuminosity = min(luminositeDir + luminositePonct + ambiantLight, 1.f);
-*/
+	float luminositePonct = 0;
+	for(int i=0; i < 6; i++){
+        if(uLightPonct[i] != vec3(0,0,0)){
+            luminositePonct += getPonctLuminosity(uLightPonct[i]);
+        }
+    }
+    vec4 PonctualLight = vec4(luminositePonct, luminositePonct, luminositePonct, 1.f);
+	
+	/*Luminosité directionnelle*/
 	float luminositeDir = max(dot(normalize(vNormale), -uLightDir), 0.f);
 	vec4 DirectionnalLight = vec4(luminositeDir, luminositeDir, luminositeDir, 1.f);
 	
 	vec4 ambiantLight = vec4(uAmbiantLight, uAmbiantLight, uAmbiantLight, 1.f);
 
-	/*vec4 ponctuelleLight = vec4(0.f, 0.f, 0.f, 1.f);
-
-	for(int i=0; i<4; i++){
-		vec3 tmp = vPosition-uLightPonct[i];
-		vec3 dirLightPixel = normalize(tmp);
-		float luminositePonct = max(dot(normalize(vNormale), -dirLightPixel), 0.f)/(length(tmp)*length(tmp));
-		ponctuelleLight += vec4(luminositePonct, luminositePonct, luminositePonct, 0.f);
-	}*/
-
-
-    
-	vec4 globalLuminosity = ambiantLight+DirectionnalLight;
+	
+	vec4 globalLuminosity = min(ambiantLight+DirectionnalLight+PonctualLight, 1);
     fFragColor = texColor*vec4(globalLuminosity.xyz, 1.f);
 }
