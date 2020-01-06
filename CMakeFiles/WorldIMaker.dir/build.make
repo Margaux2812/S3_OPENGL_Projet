@@ -135,9 +135,22 @@ CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/myshader.cpp" -o CMakeFiles/WorldIMaker.dir/src/myshader.cpp.s
 
+CMakeFiles/WorldIMaker.dir/src/palette.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
+CMakeFiles/WorldIMaker.dir/src/palette.cpp.o: src/palette.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WorldIMaker.dir/src/palette.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/palette.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/palette.cpp"
+
+CMakeFiles/WorldIMaker.dir/src/palette.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/palette.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/palette.cpp" > CMakeFiles/WorldIMaker.dir/src/palette.cpp.i
+
+CMakeFiles/WorldIMaker.dir/src/palette.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/palette.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/palette.cpp" -o CMakeFiles/WorldIMaker.dir/src/palette.cpp.s
+
 CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o: src/pinceau.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/pinceau.cpp"
 
 CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.i: cmake_force
@@ -150,7 +163,7 @@ CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o: src/radialBasisFunctions.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/radialBasisFunctions.cpp"
 
 CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.i: cmake_force
@@ -163,7 +176,7 @@ CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.o: src/selector.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/WorldIMaker.dir/src/selector.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/selector.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/selector.cpp"
 
 CMakeFiles/WorldIMaker.dir/src/selector.cpp.i: cmake_force
@@ -176,7 +189,7 @@ CMakeFiles/WorldIMaker.dir/src/selector.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o: src/skybox.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/skybox.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/skybox.cpp"
 
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.i: cmake_force
@@ -185,21 +198,12 @@ CMakeFiles/WorldIMaker.dir/src/skybox.cpp.i: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/skybox.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/WorldIMaker.dir/src/skybox.cpp.s"
-<<<<<<< Updated upstream
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/margaux/Documents/S3_OPENGL_Projet/src/skybox.cpp -o CMakeFiles/WorldIMaker.dir/src/skybox.cpp.s
-
-CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
-CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/texture.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/texture.cpp
-=======
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/skybox.cpp" -o CMakeFiles/WorldIMaker.dir/src/skybox.cpp.s
 
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.o: src/texture.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/WorldIMaker.dir/src/texture.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/texture.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/texture.cpp"
->>>>>>> Stashed changes
 
 CMakeFiles/WorldIMaker.dir/src/texture.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/texture.cpp.i"
@@ -211,13 +215,8 @@ CMakeFiles/WorldIMaker.dir/src/texture.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o: src/vertex.cpp
-<<<<<<< Updated upstream
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/vertex.cpp
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_12) "Building CXX object CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/vertex.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/vertex.cpp"
->>>>>>> Stashed changes
 
 CMakeFiles/WorldIMaker.dir/src/vertex.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/vertex.cpp.i"
@@ -229,13 +228,8 @@ CMakeFiles/WorldIMaker.dir/src/vertex.cpp.s: cmake_force
 
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: CMakeFiles/WorldIMaker.dir/flags.make
 CMakeFiles/WorldIMaker.dir/src/world.cpp.o: src/world.cpp
-<<<<<<< Updated upstream
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/WorldIMaker.dir/src/world.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/world.cpp.o -c /home/margaux/Documents/S3_OPENGL_Projet/src/world.cpp
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/WorldIMaker.dir/src/world.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Building CXX object CMakeFiles/WorldIMaker.dir/src/world.cpp.o"
 	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/WorldIMaker.dir/src/world.cpp.o -c "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/src/world.cpp"
->>>>>>> Stashed changes
 
 CMakeFiles/WorldIMaker.dir/src/world.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/WorldIMaker.dir/src/world.cpp.i"
@@ -253,6 +247,7 @@ WorldIMaker_OBJECTS = \
 "CMakeFiles/WorldIMaker.dir/src/main.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/menu.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o" \
+"CMakeFiles/WorldIMaker.dir/src/palette.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o" \
 "CMakeFiles/WorldIMaker.dir/src/selector.cpp.o" \
@@ -270,6 +265,7 @@ bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/display.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/main.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/menu.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/myshader.cpp.o
+bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/palette.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/pinceau.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/radialBasisFunctions.cpp.o
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/src/selector.cpp.o
@@ -284,12 +280,9 @@ bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libSDL.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGL.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGLU.so
 bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libGLEW.so
+bin/WorldIMaker: /usr/lib/x86_64-linux-gnu/libSDL_mixer.so
 bin/WorldIMaker: CMakeFiles/WorldIMaker.dir/link.txt
-<<<<<<< Updated upstream
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable bin/WorldIMaker"
-=======
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable bin/WorldIMaker"
->>>>>>> Stashed changes
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/laurelenn/Dropbox/Importants/IMAC/A2/S3 - OpenGL/S3_OPENGL_Projet/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_15) "Linking CXX executable bin/WorldIMaker"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/WorldIMaker.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

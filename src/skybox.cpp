@@ -2,6 +2,7 @@
 #include "../include/vertex.hpp"
 #include <vector>
 #include "../lib/glimac/include/Image.hpp"
+#include <cassert>
 
 const std::vector<std::string> faces = 
 {
@@ -172,9 +173,7 @@ void Skybox::draw(glm::mat4 MVMatrix){
     for (GLuint i = 0; i < faces.size(); i++){
         std::unique_ptr<glimac::Image> textureImg = glimac::loadImage(faces[i]);
 
-        if(textureImg == NULL){
-            std::cout << "Image located in "<< faces[i] << " not loaded !" <<std::endl;
-        }
+	assert(("Image located in "+faces[i]+" not loaded !", textureImg != NULL));
 
         glTexImage2D(GL_TEXTURE_CUBE_MAP_POSITIVE_X + i,
             0, 

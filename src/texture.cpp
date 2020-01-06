@@ -1,6 +1,8 @@
 #include "../include/texture.hpp"
 #include <iostream>
 
+
+
 Texture::Texture(const std::string& path)
 : m_textureID(0),
 m_filepath(path),
@@ -12,8 +14,7 @@ m_BPP(nullptr)
 if(path != ""){
 	std::unique_ptr<glimac::Image> textureImg = glimac::loadImage(path);
 
-	if(textureImg == NULL)
-		std::cout << "Image located in "<< path << " not loaded !" <<std::endl;
+	assert(("Image located in "+path+" not loaded !", textureImg != NULL));
 
 	m_width = textureImg->getWidth();
 	m_height = textureImg->getHeight();
