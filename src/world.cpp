@@ -17,16 +17,20 @@ World::~World(){
 	delete m_skybox;
 }
 
-void World::draw(glm::mat4 MVMatrix){
+void World::draw(const glm::mat4 MVMatrix, const bool ctrlIsPressed){
 	m_skybox->draw(MVMatrix);
 
 	glDepthRange(0, 0.01); //Pour que le curseur soit visible à tout moment
 	glm::vec3 color;
-	if(existsSmth(m_selector->getPosition())){
+	
+	if(ctrlIsPressed){
+		color = glm::vec3(1.f, 1.f, 0.f);
+	}else if(existsSmth(m_selector->getPosition())){
 		color = glm::vec3(1.f, 0.f, 0.f);
 	}else{
 		color = glm::vec3(0.33f, 0.65f, 1.f);
 	}
+
 	m_selector->draw(MVMatrix, color);
 	glDepthRange(0.01, 1.0); //Pour que le curseur soit visible à tout moment
 
@@ -72,7 +76,7 @@ void World::replace(const glm::vec3 position, const typeCube typePinceau){
 	m_allCubes[typePinceau]->addCube(position);
 }
 
-bool World::existsSmth(glm::vec3 position){
+bool World::existsSmth(const glm::vec3 position){
 	int exists;
 	for(uint i=0; i<m_allCubes.size(); i++){
 		exists = m_allCubes[i]->findFromPosition(position);

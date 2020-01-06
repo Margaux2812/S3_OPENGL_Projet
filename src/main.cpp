@@ -95,7 +95,7 @@ int main(int argc, char** argv) {
 
             MVMatrix = camera.getViewMatrix();
 
-            world.draw(MVMatrix);
+            world.draw(MVMatrix, ctrlIsPressed);
 
         }else{
             menu.draw();
