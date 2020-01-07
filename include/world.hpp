@@ -17,11 +17,13 @@ class World{
 		Skybox* m_skybox;
 		Selector* m_selector;
 		Pinceau* m_pinceau;
+		glm::vec3 m_lights[6];
    	public:
 		World();
 		~World();
 
 		void draw(const glm::mat4 MVMatrix, const bool ctrlIsPressed);
+		void drawLights();
 		void handleEvents(const SDLKey e, const bool ctrlIsPressed);
 
 		void addCube(const glm::vec3 position, const typeCube typePinceau);

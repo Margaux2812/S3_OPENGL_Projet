@@ -34,8 +34,7 @@ class Cube{
 	public :
 		Cube(typeCube type);
 		~Cube();
-		void draw(glm::mat4 MVMatrix, Cube lumieres);
-		void drawLights(Cube lumieres);
+		void draw(const glm::mat4 MVMatrix, const glm::vec3* lumieres);
 
 		///// GETTERS /////
 		Texture* getTexture() const;

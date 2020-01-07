@@ -17,6 +17,15 @@ World::~World(){
 	delete m_skybox;
 }
 
+void World::drawLights(){
+    for(GLuint i=0; i<m_allCubes[LIGHT]->size(); i++){
+        m_lights[i] = (m_allCubes[LIGHT]->getData()[i]);
+    }
+    for(GLuint i=m_allCubes[LIGHT]->size(); i<6; i++){
+        m_lights[i] = (glm::vec3(0.f, 0.f, 0.f));
+    }
+}
+
 void World::draw(const glm::mat4 MVMatrix, const bool ctrlIsPressed){
 	m_skybox->draw(MVMatrix);
 
@@ -37,9 +46,10 @@ void World::draw(const glm::mat4 MVMatrix, const bool ctrlIsPressed){
 	glEnable(GL_BLEND); //Pour la transparence
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA); //Pour la transparence
     
+    drawLights();
     /*On ne dessine pas les lumières*/
 	for(uint i=1; i<REACHEND; i++){
-		m_allCubes[i]->draw(MVMatrix, *m_allCubes[LIGHT]);
+		m_allCubes[i]->draw(MVMatrix, m_lights);
 	}
 
     glDisable(GL_BLEND);
