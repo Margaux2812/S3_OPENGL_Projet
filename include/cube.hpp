@@ -41,21 +41,18 @@ class Cube{
 		 * @brief Destroy the Cube object
 		 */
 		~Cube();
-<<<<<<< HEAD
-		void draw(const glm::mat4 MVMatrix, const glm::vec3* lumieres);
-=======
+
 		/**
 		 * @brief Draw the OpenGL Object
 		 * @param MVMatrix 
 		 * @param lumieres 
 		 */
-		void draw(glm::mat4 MVMatrix, Cube lumieres);
+		void draw(const glm::mat4 MVMatrix, const glm::vec3* lumieres);
 		/**
 		 * @brief Draw lights and apply on the cubes
 		 * @param lumieres 
 		 */
 		void drawLights(Cube lumieres);
->>>>>>> master
 
 		///// GETTERS /////
 		/**
