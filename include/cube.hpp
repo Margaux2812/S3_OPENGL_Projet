@@ -32,23 +32,85 @@ class Cube{
 		bool nightMode;
 
 	public :
+		/**
+		 * @brief Construct a new Cube object
+		 * @param type 
+		 */
 		Cube(typeCube type);
+		/**
+		 * @brief Destroy the Cube object
+		 */
 		~Cube();
+<<<<<<< HEAD
 		void draw(const glm::mat4 MVMatrix, const glm::vec3* lumieres);
+=======
+		/**
+		 * @brief Draw the OpenGL Object
+		 * @param MVMatrix 
+		 * @param lumieres 
+		 */
+		void draw(glm::mat4 MVMatrix, Cube lumieres);
+		/**
+		 * @brief Draw lights and apply on the cubes
+		 * @param lumieres 
+		 */
+		void drawLights(Cube lumieres);
+>>>>>>> master
 
 		///// GETTERS /////
+		/**
+		 * @brief getTexture of cube (return pointer on texture)
+		 */
 		Texture* getTexture() const;
+		/**
+		 * @brief Get the Vao attribute 
+		 * @return GLuint 
+		 */
 		inline GLuint getVao() { return m_vao;}
+		/**
+		 * @brief Get the Vbo attribute
+		 * @return GLuint 
+		 */
 		inline GLuint getVbo() { return m_vbo;}
+		/**
+		 * @brief Get the Ibo attribute
+		 * @return GLuint 
+		 */
 		inline GLuint getIbo() { return m_ibo;}
+		/**
+		 * @brief get the size of the vectorPositions (<=> number of cubes of this type)
+		 * @return GLuint 
+		 */
 		inline GLuint size() { return m_positionsCubes.size();}
+		/**
+		 * @brief Get the Data attribute of positionCubes (all position) 
+		 * @return std::vector<glm::vec3> 
+		 */
 		inline std::vector<glm::vec3> getData() { return m_positionsCubes;}
+		/**
+		 * @brief Get the Type of cube vector
+		 * @return typeCube 
+		 */
 		inline typeCube getType() {return m_type;}
 
 		///// SETTERS /////
 
+		/**
+		 * @brief Set the Vao attribute of cube
+		 * @param newVao 
+		 */
 		void setVao(GLuint const newVao);
+
+		/**
+		 * @brief Set the Vbo attribute of cube
+		 * @param newVbo 
+		 */
 		void setVbo(GLuint const newVbo);
+		
+		/**
+		 * @brief Set the Ibo attribute of cube
+		 * @param newIbo 
+		 */
 		void setIbo(GLuint const newIbo);
 
 
