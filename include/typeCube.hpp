@@ -8,5 +8,7 @@ enum typeCube{
     GRASS,
     LEAF,
     BARBARA,
+    JULES,
+    IMAC,
     REACHEND
 };

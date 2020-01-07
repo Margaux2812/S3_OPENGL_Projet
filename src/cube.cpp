@@ -205,7 +205,11 @@ Texture* Cube::getTexture() const{
         break;
         case LEAF : return new Texture("assets/textures/cubes_textures/leaf.png");
         break;
-        case BARBARA : return new Texture("assets/textures/cubes_textures/Barbara.png");
+        case BARBARA : return new Texture("assets/textures/cubes_textures/barbara.png");
+        break;
+        case JULES : return new Texture("assets/textures/cubes_textures/jules.png");
+        break;
+        case IMAC : return new Texture("assets/textures/cubes_textures/imac.png");
         break;
         case GROUND :
         default:   return new Texture("assets/textures/cubes_textures/cubeTerre.jpg");

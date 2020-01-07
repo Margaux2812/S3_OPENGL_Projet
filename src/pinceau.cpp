@@ -32,9 +32,10 @@ void Pinceau::handleEvents(const SDLKey e){
         case SDLK_KP6: m_typeSelected = BARBARA;
         break;
         case SDLK_WORLD_72 : //7
-        case SDLK_KP7: 
+        case SDLK_KP7: m_typeSelected = JULES;
+        break;
         case SDLK_UNDERSCORE : //8
-        case SDLK_KP8: std::cerr<< "USER : This cube doesn't exist, please check controls" << std::endl;
+        case SDLK_KP8: m_typeSelected = IMAC;
         break;
         case SDLK_WORLD_71 ://9
         case SDLK_KP9: m_typeSelected = LIGHT;

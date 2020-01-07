@@ -256,6 +256,16 @@ cstddef
 ../include/all.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/all.hpp
 
+/home/margaux/Documents/S3_OPENGL_Projet/src/palette.cpp
+../include/palette.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/palette.hpp
+
+/home/margaux/Documents/S3_OPENGL_Projet/src/pinceau.cpp
+../include/pinceau.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/pinceau.hpp
+iostream
+-
+
 /home/margaux/Documents/S3_OPENGL_Projet/src/selector.cpp
 ../include/selector.hpp
 /home/margaux/Documents/S3_OPENGL_Projet/include/selector.hpp
