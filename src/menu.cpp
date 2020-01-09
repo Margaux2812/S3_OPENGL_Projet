@@ -35,7 +35,6 @@ m_shader(new MyShader("shaders/texture2D.vs.glsl", "shaders/texture2D.fs.glsl"))
 
     glGenBuffers(1, &m_ibo);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, m_ibo);
-    //On a 36 points
     glBufferData(GL_ELEMENT_ARRAY_BUFFER, 36*sizeof(uint32_t), indices, GL_STATIC_DRAW);
     glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, 0);
 

@@ -17,6 +17,10 @@ void displayCommandes(){
     std::cout << "                         - Eau      : 3" << std::endl;
     std::cout << "                         - Herbe    : 4" << std::endl;
     std::cout << "                         - Feuilles : 5" << std::endl;
+    std::cout << "                         - Rose     : 6" << std::endl;
+    std::cout << "                         - Jules    : 7" << std::endl;
+    std::cout << "                         - IMAC     : 8" << std::endl;
+    std::cout << "                         - Lumiere  : 9" << std::endl;
     std::cout << "***********************************************" << std::endl;
     std::cout << "Pour déplacer la caméra : - Avant   : Z" << std::endl;
     std::cout << "                          - Arrière : S" << std::endl;
