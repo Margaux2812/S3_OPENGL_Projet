@@ -276,7 +276,7 @@ void Cube::updateGPU(){
 bool Cube::addCube(const glm::vec3 position){
     int exists = findFromPosition(position);
     bool canAdd = true;
-    if(m_type == LIGHT && m_positionsCubes.size() >= 6){
+    if(m_type == LIGHT && m_positionsCubes.size() >= 10){
         canAdd = false;
     }
 
