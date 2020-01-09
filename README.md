@@ -2,14 +2,19 @@
 
 ## Usage
 
-On compile d'abord avec la commande :
+Compilation :
 
 ```bash
 cmake ./ && make
 ```
 
-Puis on fait tout simplement :
+Executable :
 
 ```bash
 ./bin/WorldIMaker
 ```
+
+Generate Doxygen Documentation : 
+make html
+
+Find html Documentation : 

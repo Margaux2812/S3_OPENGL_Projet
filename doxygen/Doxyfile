@@ -1,0 +1,4 @@
+PROJECT_NAME         = "WorldIMaker"
+OUTPUT_directory     = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen/doxygen/
+INPUT                = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen/../src/
+RECURSIVE            = YES

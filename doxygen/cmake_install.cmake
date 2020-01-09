@@ -1,4 +1,4 @@
-# Install script for directory: /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet
+# Install script for directory: /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -37,20 +37,3 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if(NOT CMAKE_INSTALL_LOCAL_ONLY)
-  # Include the install script for each subdirectory.
-  include("/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/lib/glimac/cmake_install.cmake")
-  include("/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen/cmake_install.cmake")
-
-endif()
-
-if(CMAKE_INSTALL_COMPONENT)
-  set(CMAKE_INSTALL_MANIFEST "install_manifest_${CMAKE_INSTALL_COMPONENT}.txt")
-else()
-  set(CMAKE_INSTALL_MANIFEST "install_manifest.txt")
-endif()
-
-string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
-       "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/${CMAKE_INSTALL_MANIFEST}"
-     "${CMAKE_INSTALL_MANIFEST_CONTENT}")
