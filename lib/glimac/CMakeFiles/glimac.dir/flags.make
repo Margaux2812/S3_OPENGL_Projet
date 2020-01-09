@@ -6,5 +6,5 @@ CXX_FLAGS =  -Wall -O2 -std=c++11
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/include/SDL -I/home/margaux/Documents/S3_OPENGL_Projet/lib/glimac/include -I/home/margaux/Documents/S3_OPENGL_Projet/lib/third-party/include 
+CXX_INCLUDES = -I/usr/include/SDL -I/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/lib/glimac/include -I/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/lib/third-party/include 
 

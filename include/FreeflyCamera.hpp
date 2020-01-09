@@ -22,6 +22,10 @@ private :
 
 public:
 	//Constructeur
+	/**
+	 * @brief Construct a new Freefly Camera object
+	 * 
+	 */
 	FreeflyCamera();
 
 	//Méthodes

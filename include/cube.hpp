@@ -2,7 +2,7 @@
 
 /*!
  * \file cube.hpp
- * \brief Classe Cube créant un tableau de cube du même type
+ * \brief Create same type cubes vector
  */
 
 #include <GL/glew.h>
@@ -113,19 +113,83 @@ class Cube{
 
 		///// EVENT MANAGER /////
 
+		/**
+		 * @brief Cube Event Manager
+		 * @param e 
+		 * @param position 
+		 * @param type 
+		 */
 		void handleEvents(const SDLKey e, const glm::vec3 position, const typeCube type);
+
+		/**
+		 * @brief Change night mode to day mode and vice versa
+		 * 
+		 */
 		void changeNightMode();
+
+		/**
+		 * @brief find a cube from the position
+		 * @param position 
+		 * @return int 
+		 */
 		int findFromPosition(const glm::vec3 position);
+
+		/**
+		 * @brief Update GPU (Buffer functions)
+		 * 
+		 */
 		void updateGPU();
 
 		///// CUBE MANAGER /////
 
+		/**
+		 * @brief Add a cube in world 
+		 * @param position 
+		 * @return true if created
+		 * @return false if error
+		 */
 		bool addCube(const glm::vec3 position);
+
+		/**
+		 * @brief Delete a cube from world
+		 * @param position 
+		 */
 		void deleteCube(const glm::vec3 position);
+
+		/**
+		 * @brief Read ptsDeControle file and fill Matrix world
+		 * @param ptsDeControle 
+		 * @param uk 
+		 * @return int 
+		 */
 		int initControles(Eigen::MatrixXf* ptsDeControle, Eigen::VectorXf* uk);
+
+		/**
+		 * @brief Load cube for base world from with ptsDeControle function
+		 * 
+		 */
 		void loadMonde();
+
+		/**
+		 * @brief find last cube of a column
+		 * 
+		 * @param position 
+		 * @return int 
+		 */
 		int findLastCube(const glm::vec3 position);
+
+		/**
+		 * @brief extrude current cube (with same type)
+		 * 
+		 * @param position 
+		 */
 		void extrudeCube(glm::vec3 position);
+		
+		/**
+		 * @brief dig the same type cube from the top of the column
+		 * 
+		 * @param position 
+		 */
 		void digCube(glm::vec3 position);
 
 };
