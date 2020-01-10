@@ -104,6 +104,12 @@ public:
 	void updateCameraMovement();
 
 	/**
+	 * \brief stop movement of camera when inPause
+	 * 
+	 */
+	void stopMovement();
+
+	/**
 	 * \brief Camera key down event manager
 	 * 
 	 * \param e event

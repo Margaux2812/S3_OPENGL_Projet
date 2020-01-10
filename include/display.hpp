@@ -1,5 +1,10 @@
 #pragma once
 
+/*!
+ * \file display.hpp
+ * \brief Display commands in terminal
+ */
+
 #include <iostream>
 
 /**
