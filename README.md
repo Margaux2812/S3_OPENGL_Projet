@@ -14,7 +14,5 @@ Executable :
 ./bin/WorldIMaker
 ```
 
-Generate Doxygen Documentation : 
-make html
-
 Find html Documentation : 
+./doxygen/html/index.html
