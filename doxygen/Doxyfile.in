@@ -1,4 +1,4 @@
-PROJECT_NAME         = "@CMAKE_PROJECT_NAME@"
-OUTPUT_directory     = @CMAKE_CURRENT_BINARY_DIR@/doxygen/
-INPUT                = @CMAKE_CURRENT_SOURCE_DIR@/../src/
+PROJECT_NAME         = @CMAKE_PROJECT_NAME@
+OUTPUT_directory     = @CMAKE_CURRENT_BINARY_DIR@/doc
+INPUT                = @CMAKE_CURRENT_SOURCE_DIR@/../include/
 RECURSIVE            = YES
