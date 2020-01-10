@@ -1,4 +1,4 @@
-# Install script for directory: /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen
+# Install script for directory: /home/margaux/Documents/S3_OPENGL_Projet/doxygen
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)

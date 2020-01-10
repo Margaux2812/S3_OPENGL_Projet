@@ -87,9 +87,9 @@ void MyShader::setUniform3f(const std::string& name, const glm::vec3 value){
   	value[2]);
 }
 
-void MyShader::setUniformVec3(const std::string& name, const glm::vec3 value[6]){
+void MyShader::setUniformVec3(const std::string& name, const glm::vec3 value[10]){
 	glUniform3fv(getUniformLocation(name),
-  	6,
+  	10,
   	glm::value_ptr(value[0]));
 }
 

@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,14 +80,14 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(CMAKE_COMMAND) -E cmake_progress_start /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/CMakeFiles /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen/CMakeFiles/progress.marks
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/CMakeFiles 0
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles /home/margaux/Documents/S3_OPENGL_Projet/doxygen/CMakeFiles/progress.marks
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/clean
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/clean
 .PHONY : clean
 
 # The main clean target
@@ -97,22 +97,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/preinstall
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/preinstall
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 doxygen/CMakeFiles/html.dir/rule:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/CMakeFiles/html.dir/rule
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f CMakeFiles/Makefile2 doxygen/CMakeFiles/html.dir/rule
 .PHONY : doxygen/CMakeFiles/html.dir/rule
 
 # Convenience name for target.
@@ -122,7 +122,7 @@ html: doxygen/CMakeFiles/html.dir/rule
 
 # fast build rule for target.
 html/fast:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(MAKE) -f doxygen/CMakeFiles/html.dir/build.make doxygen/CMakeFiles/html.dir/build
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(MAKE) -f doxygen/CMakeFiles/html.dir/build.make doxygen/CMakeFiles/html.dir/build
 .PHONY : html/fast
 
 # Help Target
@@ -145,6 +145,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

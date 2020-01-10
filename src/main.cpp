@@ -98,6 +98,7 @@ int main(int argc, char** argv) {
             world.draw(MVMatrix, ctrlIsPressed);
 
         }else{
+            camera.stopMovement();
             menu.draw();
         }
         // Update the display

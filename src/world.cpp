@@ -59,23 +59,28 @@ void World::draw(const glm::mat4 MVMatrix, const bool ctrlIsPressed){
 }
 void World::handleEvents(const SDLKey e, const bool ctrlIsPressed){
 	m_pinceau->handleEvents(e);
-	if(e == SDLK_DELETE){
-        for(uint i=0; i<m_allCubes.size(); i++){
-        	m_allCubes[i]->deleteCube(m_selector->getPosition());
-        }
-	}else if(e == SDLK_RETURN){
-		if(ctrlIsPressed){
-			replace(m_selector->getPosition(), m_pinceau->getType());
-		}else{
-			addCube(m_selector->getPosition(), m_pinceau->getType());
-		}
-    }else if(e == SDLK_n){
-        changeNightMode();
-    }
 
-	for(uint i=0; i<m_allCubes.size(); i++){
-		m_allCubes[i]->handleEvents(e, m_selector->getPosition(), m_pinceau->getType());
-	}
+	/*Handle Cube events*/
+	switch(e){
+    	case SDLK_DELETE:	for(uint i=0; i<m_allCubes.size(); i++){
+				        		m_allCubes[i]->deleteCube(m_selector->getPosition());
+				        	}
+		break;
+		case SDLK_RETURN:	if(ctrlIsPressed){
+								replace(m_selector->getPosition(), m_pinceau->getType());
+							}else{
+								addCube(m_selector->getPosition(), m_pinceau->getType());
+							}
+		break;
+		case SDLK_n : 		changeNightMode();
+		break;
+        case SDLK_c : 		digCube(m_selector->getPosition(), m_pinceau->getType());
+        break;
+        case SDLK_e: 		extrudeCube(m_selector->getPosition(), m_pinceau->getType());
+        break;
+        
+        default: break;
+    }
 
 	m_selector->handleEvents(e);
 }
@@ -113,4 +118,27 @@ void World::changeNightMode(){
 	for(int i=0; i!=REACHEND; ++i){
 	    m_allCubes[i]->changeNightMode();
     }
+}
+
+int World::findLastCube(const glm::vec3 position){
+	glm::vec3 positionTmp = glm::vec3(position.x, WORLD_DEPTH+1, position.z);
+	while(existsSmth(positionTmp)){
+		positionTmp.y++;
+	}
+    return positionTmp.y;
+}
+
+/*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est
+S'il n'y a pas de cube, ça en ajoute un à y=0*/
+void World::extrudeCube(glm::vec3 position, const typeCube typePinceau){
+    int yMax = findLastCube(position);
+    position.y = yMax;
+    m_allCubes[typePinceau]->addCube(position);
+}
+
+/*On a le curseur à un endroit et on veut enlever le dernier cube en haut de l'endroit où on est*/
+void World::digCube(glm::vec3 position, const typeCube typePinceau){
+    int yMax = findLastCube(position);
+    position.y = yMax-1;
+    m_allCubes[typePinceau]->deleteCube(position);
 }

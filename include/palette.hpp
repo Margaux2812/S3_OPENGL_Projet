@@ -1,10 +1,4 @@
 #pragma once
-
-/*!
- * \file palette.hpp
- * \brief Create a palette
- */
-
 #include "myshader.hpp"
 #include "texture.hpp"
 #include "vertex.hpp"
@@ -34,29 +28,8 @@ private:
 	};
 
 public:
-	/**
-	 * \brief Construct a new Palette object
-	 * 
-	 */
 	Palette();
-
-	/**
-	 * @brief Destroy the Palette object
-	 * 
-	 */
-
 	~Palette();
-
-	/**
-	 * @brief Draw the OpenGL palette object 
-	 * 
-	 */
 	void draw();
-
-	/**
-	 * @brief Update palette texture
-	 * 
-	 * @param type type of cube selected
-	 */
 	void update(const typeCube type);
 };

@@ -9,7 +9,7 @@ out vec4 fFragColor;
 
 uniform sampler2D u_Texture;
 uniform vec3 uLightDir;
-uniform vec3 uLightPonct[6];
+uniform vec3 uLightPonct[10];
 
 /*L'ambiance de jour on va mettre 0.8 et l'ambiance de nuit 0.2*/
 uniform float uAmbiantLight;
@@ -26,7 +26,7 @@ void main() {
 	/*Luminosité ponctuelle*/
 
 	float luminositePonct = 0;
-	for(int i=0; i < 6; i++){
+	for(int i=0; i < 10; i++){
         if(uLightPonct[i] != vec3(0,0,0)){
             luminositePonct += getPonctLuminosity(uLightPonct[i]);
         }

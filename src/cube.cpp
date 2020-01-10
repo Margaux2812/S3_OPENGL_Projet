@@ -235,20 +235,6 @@ void Cube::setIbo(GLuint const newIbo){
 ///////////////////////// EVENT MANAGER ///////////////////////
 ///////////////////////////////////////////////////////////////
 
-/*Peu importe le type de pinceau, on doit pouvoir supprimer un cube*/
-void Cube::handleEvents(const SDLKey e, const glm::vec3 position, const typeCube type){
-    if(type == m_type){
-        switch(e){
-            case SDLK_e: extrudeCube(position);
-            break;
-            case SDLK_c : digCube(position);
-            break;
-            
-            default: break;
-        }
-    }
-}
-
 void Cube::changeNightMode(){
     nightMode = !nightMode;
 }
@@ -372,32 +358,4 @@ void Cube::loadMonde(){
             }
         }
     }
-}
-
-int Cube::findLastCube(const glm::vec3 position){
-    int yMax = WORLD_DEPTH;
-    for (int i=1; i< int(m_positionsCubes.size()); i++ ){
-        if((glm::length(position.x-m_positionsCubes[i].x) < 0.1f) && (glm::length(position.z-m_positionsCubes[i].z) < 0.1f)){
-            if(m_positionsCubes[i].y > yMax)
-                yMax = m_positionsCubes[i].y;
-        }
-    }
-    return yMax;
-}
-
-/*On a le curseur à un endroit et on veut ajouter un dernier cube en haut de l'endroit où on est
-S'il n'y a pas de cube, ça en ajoute un à y=0*/
-void Cube::extrudeCube(glm::vec3 position){
-    int yMax = findLastCube(position);
-    position.y = yMax+1;
-    m_positionsCubes.push_back(position);
-    updateGPU();
-}
-
-/*On a le curseur à un endroit et on veut enlever le dernier cube en haut de l'endroit où on est*/
-void Cube::digCube(glm::vec3 position){
-    int yMax = findLastCube(position);
-    position.y = yMax;
-    deleteCube(position);
-    updateGPU();
 }

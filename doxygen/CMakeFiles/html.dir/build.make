@@ -43,10 +43,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet
+CMAKE_SOURCE_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet
+CMAKE_BINARY_DIR = /home/margaux/Documents/S3_OPENGL_Projet
 
 # Utility rule file for html.
 
@@ -54,8 +54,8 @@ CMAKE_BINARY_DIR = /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENG
 include doxygen/CMakeFiles/html.dir/progress.make
 
 doxygen/CMakeFiles/html:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen && /usr/bin/doxygen /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen/Doxyfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/margaux/Documents/S3_OPENGL_Projet/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
+	cd /home/margaux/Documents/S3_OPENGL_Projet/doxygen && /usr/bin/doxygen /home/margaux/Documents/S3_OPENGL_Projet/doxygen/Doxyfile
 
 html: doxygen/CMakeFiles/html
 html: doxygen/CMakeFiles/html.dir/build.make
@@ -68,10 +68,10 @@ doxygen/CMakeFiles/html.dir/build: html
 .PHONY : doxygen/CMakeFiles/html.dir/build
 
 doxygen/CMakeFiles/html.dir/clean:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen && $(CMAKE_COMMAND) -P CMakeFiles/html.dir/cmake_clean.cmake
+	cd /home/margaux/Documents/S3_OPENGL_Projet/doxygen && $(CMAKE_COMMAND) -P CMakeFiles/html.dir/cmake_clean.cmake
 .PHONY : doxygen/CMakeFiles/html.dir/clean
 
 doxygen/CMakeFiles/html.dir/depend:
-	cd /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen /home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/doxygen/CMakeFiles/html.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/margaux/Documents/S3_OPENGL_Projet && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/margaux/Documents/S3_OPENGL_Projet /home/margaux/Documents/S3_OPENGL_Projet/doxygen /home/margaux/Documents/S3_OPENGL_Projet /home/margaux/Documents/S3_OPENGL_Projet/doxygen /home/margaux/Documents/S3_OPENGL_Projet/doxygen/CMakeFiles/html.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : doxygen/CMakeFiles/html.dir/depend
 

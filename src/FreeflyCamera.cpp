@@ -2,6 +2,7 @@
 #include "../include/cube.hpp"
 #include <math.h>
 #include <iostream>
+#include <stdlib.h> 
 
 FreeflyCamera::FreeflyCamera(){
 	m_Position = initialPos();
@@ -149,6 +150,18 @@ void FreeflyCamera::handleKeyboardEventsUp(const SDLKey e){
     }
 }
 
+void FreeflyCamera::stopMovement(){
+    forwardPressed = false;
+    backwardPressed = false;
+    leftPressed = false;
+    rightPressed = false;
+    upPressed = false;
+    downPressed = false;
+    moveFront(0);
+    moveLeft(0);
+    moveUp(0);
+}
+
 void FreeflyCamera::handleMouseEvents(const SDL_Event e){
     if(!mouseEnteredScreen){
         SDL_ShowCursor(SDL_DISABLE);
@@ -156,11 +169,10 @@ void FreeflyCamera::handleMouseEvents(const SDL_Event e){
         SDL_WM_GrabInput(SDL_GRAB_ON);
         mouseEnteredScreen = true;
     }
-    if ( e.motion.xrel != 0 ) {
+    if ( abs(e.motion.xrel) > abs(e.motion.yrel) ) {
       rotateUp( float(-e.motion.xrel) * cameraSpeedRotation);
     }
-    if ( e.motion.yrel != 0 ) {
+    if ( abs(e.motion.xrel) < abs(e.motion.yrel) ) {
       rotateLeft( float(-e.motion.yrel) * cameraSpeedRotation);
     }
-    //SDL_WarpMouse(400, 300);
 }

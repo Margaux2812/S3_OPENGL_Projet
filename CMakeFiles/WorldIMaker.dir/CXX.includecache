@@ -6,11 +6,15 @@
 
 #IncludeRegexTransform: 
 
-/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/include/display.hpp
-iostream
+/home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
+eigen3/Eigen/Dense
 -
 
-/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/src/display.cpp
-../include/display.hpp
-/home/laurelenn/Dropbox/Importants/IMAC/A2/S3-OpenGL/S3_OPENGL_Projet/include/display.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/src/radialBasisFunctions.cpp
+../include/radialBasisFunctions.hpp
+/home/margaux/Documents/S3_OPENGL_Projet/include/radialBasisFunctions.hpp
+math.h
+-
+iostream
+-
 

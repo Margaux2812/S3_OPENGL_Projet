@@ -1,19 +1,8 @@
 #pragma once
 
-
-/*!
- * \file sound.hpp
- * \brief Handle SDL_mixer functionnalities
- */
-
 #include <SDL/SDL_mixer.h>
 #include <iostream>
 
-/**
- * @brief Play Music
- * 
- * @return int 
- */
 inline int playMusic(){
     if(Mix_OpenAudio(44100, MIX_DEFAULT_FORMAT, MIX_DEFAULT_CHANNELS, 1024) == -1){
         std::cout <<"ERROR initializing mix" << std::endl;

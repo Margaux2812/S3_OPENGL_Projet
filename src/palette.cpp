@@ -78,6 +78,10 @@ void Palette::update(const typeCube type){
 	    break;
 	    case BARBARA: m_texture = new Texture("assets/textures/palette/palette_6.png");
 	    break;
+        case JULES  : m_texture = new Texture("assets/textures/palette/palette_7.png");
+        break;
+        case IMAC   : m_texture = new Texture("assets/textures/palette/palette_8.png");
+        break;
 	    default: break;
 	}
 }
