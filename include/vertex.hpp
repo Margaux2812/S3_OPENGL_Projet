@@ -1,11 +1,24 @@
 #pragma once
 
+/*!
+ * \file vertex.hpp
+ * \brief Create a vertex
+ */
+
 #include "../lib/glimac/include/glm.hpp"
 
+/**
+ * @brief structure for Vertex3DColor
+ * 
+ */
 struct Vertex3DColor{
     glm::vec3 position;
     glm::vec3 color;
 
+    /**
+     * @brief Construct a new Vertex 3 D Color object
+     * 
+     */
     Vertex3DColor(){
         this->position.x = 0;
         this->position.y = 0;
@@ -15,6 +28,12 @@ struct Vertex3DColor{
         this->color.b = 0;
     }
 
+    /**
+     * @brief Construct a new Vertex 3 D Color object
+     * 
+     * @param position 
+     * @param color 
+     */
     Vertex3DColor(glm::vec3 position, glm::vec3 color)
     : position(position), 
         color(color)
@@ -22,11 +41,19 @@ struct Vertex3DColor{
     }
 };
 
+/**
+ * @brief Structure for Vertex3D
+ * 
+ */
 struct Vertex3D{
     glm::vec3 position;
     glm::vec3 normals;
     glm::vec2 texCoords;
 
+    /**
+     * @brief Construct a new Vertex 3 D object
+     * 
+     */
     Vertex3D(){
         this->position.x = 0;
         this->position.y = 0;
@@ -38,6 +65,13 @@ struct Vertex3D{
         this->texCoords.y = 0;
     }
 
+    /**
+     * @brief Construct a new Vertex 3 D object
+     * 
+     * @param position 
+     * @param normals 
+     * @param texCoords 
+     */
     Vertex3D(glm::vec3 position, glm::vec3 normals, glm::vec2 texCoords)
     : position(position), 
         normals(normals),
@@ -46,10 +80,19 @@ struct Vertex3D{
     }
 };
 
+
+/**
+ * @brief Structure for VertexTex
+ * 
+ */
 struct VertexTex{
     glm::vec2 position;
     glm::vec2 texCoords;
 
+    /**
+     * @brief Construct a new VertexTex object
+     * 
+     */
     VertexTex(){
         this->position.x = 0;
         this->position.y = 0;
@@ -57,6 +100,12 @@ struct VertexTex{
         this->texCoords.y = 0;
     }
 
+/**
+ * @brief Construct a new VertexTex object
+ * 
+ * @param position 
+ * @param texCoords 
+ */
     VertexTex(glm::vec2 position, glm::vec2 texCoords)
     : position(position),
         texCoords(texCoords)
@@ -64,6 +113,15 @@ struct VertexTex{
     }
 };
 
+/**
+ * @brief test if the value is between my min and max
+ * 
+ * @param value 
+ * @param min 
+ * @param max 
+ * @return true if min <= value <= max
+ * @return false if value < min or value > max
+ */
 bool floatIsBetween(const float value, const int min, const int max);
 
 const float SCREEN_WIDTH = 800.f;

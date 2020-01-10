@@ -5,3 +5,8 @@
 #include "../include/typeCube.hpp"
 #include "../include/world.hpp"
 #include "../include/sound.hpp"
+
+/*!
+ * \file all.hpp
+ * \brief Include all files required
+ */
